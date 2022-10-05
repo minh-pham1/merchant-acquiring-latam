@@ -1,6 +1,6 @@
 {
-  "title": "REPLACE ME > Developer Studio",
-  "name": "REPLACE ME > DeveloperPortal",
+  "title": "Merchant Acquiring - LATAM",
+  "name": "MerchantAcquiringLATAM",
   "brand": "Fiserv",
   "brandLogoURL": "https://raw.githubusercontent.com/Fiserv/Developer-Portal-Tenant-API/develop/assets/images/Fiserv_Logo.jpg",
   "solution": ["financial-institutions"],
@@ -31,12 +31,12 @@
     "logoURL": "https://raw.githubusercontent.com/Fiserv/Developer-Portal-Tenant-API/develop/assets/images/Portal_Logo.png",
     "description": "To onboard properly into the Developer Studio as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
     "longDescription":"To onboard properly into the Developer Studi as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
-    "apiSpecification": "/v1/apis/<name_of_tenant>",
-    "layout": "/v1/layouts/<name_of_tenant>",
-    "documentation": "/v1/docs/<name_of_tenant>",
-    "documenttree": "/v1/docs/<name_of_tenant>",
-    "documenttreeV2": "/v2/docs/<name_of_tenant>",
-    "sandbox": "/v1/sandboxrun/<name_of_tenant>",
+    "apiSpecification": "/v1/apis/MerchantAcquiringLATAM",
+    "layout": "/v1/layouts/MerchantAcquiringLATAM",
+    "documentation": "/v1/docs/MerchantAcquiringLATAM",
+    "documenttree": "/v1/docs/MerchantAcquiringLATAM",
+    "documenttreeV2": "/v2/docs/MerchantAcquiringLATAM",
+    "sandbox": "/v1/sandboxrun/MerchantAcquiringLATAM",
     "feature":[
       {
         "name": "sandBox",
@@ -58,19 +58,19 @@
   },
   "supportConfig": [{ 
     "bug": {
-      "label": "bug,CommerceHub",
+      "label": "bug,MerchantAcquiringLATAM",
       "template": "bug.md",
-      "assignees": "<github-id>"
+      "assignees": "CinthyaRivera"
     },  
     "feedback": {
-      "label": "feedback,CommerceHub",
+      "label": "feedback,MerchantAcquiringLATAM",
       "template": "feedback.md",
-      "assignees": "<github-id>"
+      "assignees": "CinthyaRivera"
     },
     "enhancement": {
-      "label": "enhancement,CommerceHub",
+      "label": "enhancement,MerchantAcquiringLATAM",
       "template": "feature.md",
-      "assignees": "<github-id>"
+      "assignees": "CinthyaRivera"
     }
   }]
 }
