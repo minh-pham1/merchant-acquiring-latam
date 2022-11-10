@@ -31,8 +31,10 @@
 - sections:
   - title: Getting Started
     link: docs/getting-started.md
-- sections:
-  - title: Release notes
     sections:
-    - title: november
-      link: docs/release-notes/2022/november.md
+    - title: Payments
+    - title: Boarding
+    - title: Logistitcs
+      sections:
+      - title: november
+        link: docs/release-notes/2022/november.md
