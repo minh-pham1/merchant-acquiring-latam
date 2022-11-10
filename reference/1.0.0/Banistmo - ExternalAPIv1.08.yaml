@@ -8,7 +8,8 @@ servers:
   - url: 'http://localhost:9000'
     description: Generated server url
 tags:
-  - name: Application-Controller
+x-proxy-name: reference
+- name: Application-Controller
     description: Application's data to be boarded
   - name: Terminal-Controller
     description: Application's data to be boarded
