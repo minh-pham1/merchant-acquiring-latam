@@ -23,6 +23,3 @@ November 2022
 ## Deprecated
 
 - regarded as obsolete and best avoided
-
-
-
