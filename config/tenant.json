@@ -22,7 +22,7 @@
       {
         "version": "1.0.0",
         "versionType": "major",
-        "releaseNotesPath": "docs/release-notes/2022/march.md",
+        "releaseNotesPath": "docs/release-notes/2022/november.md",
         "apiSpecFileNames": ["openapi"]
       }
   ],
