@@ -28,3 +28,4 @@ Whatever your business needs – be it full, semi or direct we've got your integ
 ## Earn Revenue
 
 Leverage one of our flexible commercial business models and get paid when signing up customers for payment processing.
+
