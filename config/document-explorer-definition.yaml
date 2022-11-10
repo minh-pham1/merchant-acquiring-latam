@@ -34,8 +34,8 @@
     sections:
     - title: Boarding
       link: docs/boarding.md
-    - title: Logistitcs
-      link: docs/logistics.md
+#    - title: Logistitcs
+#      link: docs/logistics.md
 #    - title: Payments
 #      link: docs/payments.md
 #- sections:
