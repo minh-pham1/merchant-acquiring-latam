@@ -29,8 +29,8 @@
   "product": {
     "featured": true,
     "logoURL": "https://raw.githubusercontent.com/Fiserv/Developer-Portal-Tenant-API/develop/assets/images/Portal_Logo.png",
-    "description": "To onboard properly into the Developer Studio as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
-    "longDescription":"To onboard properly into the Developer Studi as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
+    "description": "Expand your business’ reach by taking the acceptance process to a different level. Merchants will expand their service and provide different experiences to their clients by leveraging new features and services at the point-of-sale, in real-time to increase their billing and usage.",
+    "longDescription":"Expand your business’ reach by taking the acceptance process to a different level. Merchants will expand their service and provide different experiences to their clients by leveraging new features and services at the point-of-sale, in real-time to increase their billing and usage.",
     "apiSpecification": "/v1/apis/MerchantAcquiringLATAM",
     "layout": "/v1/layouts/MerchantAcquiringLATAM",
     "documentation": "/v1/docs/MerchantAcquiringLATAM",
@@ -40,7 +40,7 @@
     "feature":[
       {
         "name": "sandBox",
-        "value": false
+        "value": true
       },
       {
         "name": "plugins",
