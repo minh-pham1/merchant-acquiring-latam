@@ -55,22 +55,5 @@
         "value": false
       }
     ]
-  },
-  "supportConfig": [{ 
-    "bug": {
-      "label": "bug,MerchantAcquiringLATAM",
-      "template": "bug.md",
-      "assignees": "CinthyaRivera"
-    },  
-    "feedback": {
-      "label": "feedback,MerchantAcquiringLATAM",
-      "template": "feedback.md",
-      "assignees": "CinthyaRivera"
-    },
-    "enhancement": {
-      "label": "enhancement,MerchantAcquiringLATAM",
-      "template": "feature.md",
-      "assignees": "CinthyaRivera"
-    }
-  }]
+  }
 }
