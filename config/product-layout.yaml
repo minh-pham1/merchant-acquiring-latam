@@ -30,10 +30,9 @@
 header:
   productName: Merchant Acquiring - LATAM
   productionDescription: Expand your business’ reach by taking the acceptance process to a different level. Merchants will expand their service and provide different experiences to their clients by leveraging new features and services at the point-of-sale, in real-time to increase their billing and usage.
-  whoIsItFor: Merchant
   image: 
     link: "/assets/images/Fiserv_Logo.jpg"
-    altText: REPLACEME™
+    altText: Fiserv
 featuredFeatures:
   - title: REPLACE ME
     description:  REPLACE ME
