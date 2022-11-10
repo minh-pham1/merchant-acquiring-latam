@@ -36,8 +36,8 @@
       link: docs/boarding.md
     - title: Logistitcs
       link: docs/logistics.md
-#    - title: Payments
-#      link: docs/payments.md
-#- sections:
-#  - title: november
-#    link: docs/release-notes/2022/november.md
+    - title: Payments
+      link: docs/payments.md
+- sections:
+  - title: november
+    link: docs/release-notes/2022/november.md
