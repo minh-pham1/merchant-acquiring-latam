@@ -33,11 +33,11 @@
     link: docs/getting-started.md
     sections:
     - title: Payments
-      link: docs/getting-started-payments.md
+      link: docs/payments.md
     - title: Boarding
-      link: docs/getting-started-boarding.md
+      link: docs/boarding.md
     - title: Logistitcs
-      link: docs/getting-started-logistics.md
-- sections:
-  - title: november
-    link: docs/release-notes/2022/november.md
+      link: docs/logistics.md
+#- sections:
+#  - title: november
+#    link: docs/release-notes/2022/november.md
