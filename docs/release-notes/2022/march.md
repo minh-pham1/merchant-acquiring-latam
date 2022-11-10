@@ -1,12 +1,12 @@
 # Release Notes
 
-March 03 2022
+November 2022
 
 ## v1.0.0 (api version)
 
 ## What's New
 
-- Something new that was added or introduced like a documents or a services.  [Possible link to the doc](?path=/docs/getting-started.md)
+- Introduction
 
 ## Enhancements
 
@@ -25,5 +25,4 @@ March 03 2022
 - regarded as obsolete and best avoided
 
 
-March 17 2022
 
