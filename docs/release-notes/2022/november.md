@@ -7,6 +7,9 @@ November 2022
 ## What's New
 
 - Introduction
+- Payments
+- Boarding
+- Logistics
 
 ## Enhancements
 
