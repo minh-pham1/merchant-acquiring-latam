@@ -35,6 +35,6 @@
     - title: Payments
     - title: Boarding
     - title: Logistitcs
-      sections:
-      - title: november
-        link: docs/release-notes/2022/november.md
+#      sections:
+#      - title: november
+#        link: docs/release-notes/2022/november.md
