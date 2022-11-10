@@ -4,7 +4,7 @@
 version: 1.0.0
 recipes:
 - link: recipes/Recipe-1.md
-  title: Payment with JS
+  title: Payment with JSon
   type: recipe
 - link: recipes/Recipe-2.md
   title: Payment with Py
