@@ -63,6 +63,8 @@
         link: 3-11-recurring-payments.md
       - title: Tokenisation
         link: 3-12-tokenisation.md
+      - title: Error codes
+        link: 3-13-error-codes.md
 - sections:
   - title: November
     link: docs/release-notes/2022/november.md
