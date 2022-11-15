@@ -41,6 +41,8 @@
       sections:
       - title: Request Types
         link: docs/request-types.md
+      - title: Payment Methods
+        link: docs/payment-methods.md
 - sections:
   - title: November
     link: docs/release-notes/2022/november.md
