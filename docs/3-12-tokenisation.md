@@ -88,6 +88,7 @@ Use the following sample generator to see payloads and responses:
 ```
 
 ## Updating Payment Tokens
+
 You can update one or more Payment Tokens at a time, and change the settings associated with the Token, or the payment card associated with the Token. To make these updates, make a PATCH to /payment-tokens using requestType ```PaymentCardPaymentTokenUpdateRequest```.
 
 The ```PaymentTokens``` object is a list, and can include multiple payment tokens. See the example below to see how to construct the payload. Each of the token objects below includes the updates required - these will automatically be written to the token record on our systems if the request is processed successfully.
@@ -143,6 +144,7 @@ If one of the updates fails, this will be specified in the response - see below 
 ```
 
 ## Other Payment Token Functions
+
 A payment token can be deleted by sending a DELETE to /payment-tokens/{token-id}.
 
 You can retrieve the payment card data associated with a token, and the token settings, by sending a GET to /payment-tokens/{token-id}.
