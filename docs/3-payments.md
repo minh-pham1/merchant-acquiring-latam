@@ -169,7 +169,7 @@ Both the ```billing``` and ```shipping``` objects follow the same structure:
 ```
 
 The flow below shows a standard payments process using a card payment transaction.
-![standard payments process!](/assets/images/standard-payment-process.png "Standard payment process")
+![standard payments process!](/assets/images/3-payment-process.png "Standard payment process")
 
 
 **Verify a card payment**
