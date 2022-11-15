@@ -57,14 +57,14 @@ For cases, where you would require 3-D Secure authentication to be included, you
 |redirectAttribute Name	|	Mandatory/Optional	|Description|
 |----------------------|----------------------|-----------|
 |```authenticateTransaction```	|mandatory	|Indicates whether a 3-D Secure authentication is requested for this transaction. Values accepted: • true|
-|```challengeIndicator```|	mandatory	|Indicates whether a challenge is requested for this transaction. If not submitted in the request a default value '01' is populated automatically.<br />Values accepted: • 01 = No preference • 02 = No challenge requested • 03 = Challenge requested (3DS Requestor preference) • 04 = Challenge requested (Mandate)|
-|```language```	|mandatory	|Value representing the browser language as defined in IETF BCP47, example of frequently used languages:<br />English: en <br />Spanish: es <br />French: fr <br />German: de <br />Portuguese: pt <br />Hindi: hi|
-|```threeDSEmvCoMessageCategory```|	optional	|Identifies the category of the message for a specific use case. If not submitted in the request a default value '01' is populated automatically. <br />Values accepted: <br />• 01 = Payment Authentication (default value) <br />• 02 = Non-Payment Authentication|
-|```mobileMode```	|optional	|Boolean that represents the request for utilizing hosted payment pages mobile mode. <br />Values accepted: <br />• true <br />• false|
-|```browserJavaScriptEnabled```	|optional	|Boolean that represents the ability of the cardholder browser to execute JavaScript. <br />Values accepted: <br />• true <br />• false|
-|```threeDSTransactionType```	|optional	|Identifies the type of transaction being authenticated. If not submitted in the request a default value '01' is populated automatically. <br />Values accepted: <br />• 01 = Goods/ Service Purchase (default value) <br />• 03 = Check Acceptance <br />• 10 = Account Funding <br />• 11 = Quasi-Cash Transaction <br />• 28 = Prepaid Activation and Load
-|```skipTRA```	|optional	|Boolean that represents the ability to skip Transaction Risk Analysis result recommendation on a transaction level. Available only for stores enabled with TRA service. <br />Values accepted: <br />• true <br />• false|
-|```override3dsCountryExclusion```	|optional	|Boolean that overrides Dynamic 3-D Secure country exclusion setup. <br />Values accepted: <br />• true <br />• false|
+|```challengeIndicator```|	mandatory	|Indicates whether a challenge is requested for this transaction. If not submitted in the request a default value '01' is populated automatically. Values accepted: • 01 = No preference • 02 = No challenge requested • 03 = Challenge requested (3DS Requestor preference) • 04 = Challenge requested (Mandate)|
+|```language```	|mandatory	|Value representing the browser language as defined in IETF BCP47, example of frequently used languages: English: en  Spanish: es  French: fr  German: de  Portuguese: pt  Hindi: hi|
+|```threeDSEmvCoMessageCategory```|	optional	|Identifies the category of the message for a specific use case. If not submitted in the request a default value '01' is populated automatically.  Values accepted:  • 01 = Payment Authentication (default value)  • 02 = Non-Payment Authentication|
+|```mobileMode```	|optional	|Boolean that represents the request for utilizing hosted payment pages mobile mode.  Values accepted:  • true  • false|
+|```browserJavaScriptEnabled```	|optional	|Boolean that represents the ability of the cardholder browser to execute JavaScript.  Values accepted:  • true  • false|
+|```threeDSTransactionType```	|optional	|Identifies the type of transaction being authenticated. If not submitted in the request a default value '01' is populated automatically.  Values accepted:  • 01 = Goods/ Service Purchase (default value)  • 03 = Check Acceptance  • 10 = Account Funding  • 11 = Quasi-Cash Transaction  • 28 = Prepaid Activation and Load
+|```skipTRA```	|optional	|Boolean that represents the ability to skip Transaction Risk Analysis result recommendation on a transaction level. Available only for stores enabled with TRA service.  Values accepted:  • true  • false|
+|```override3dsCountryExclusion```	|optional	|Boolean that overrides Dynamic 3-D Secure country exclusion setup.  Values accepted:  • true  • false|
 
 The following JSON document represents an example of a transaction including minimal set of mandatory 'redirectAttributes':
 
