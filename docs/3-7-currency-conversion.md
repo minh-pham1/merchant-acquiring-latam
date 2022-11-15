@@ -11,7 +11,7 @@ We provide 2 types of Currency Conversion, one in which you'll request the optim
 To use our currency conversion services, use the POST method to ``/exchange-rates`` to request a price and exchange rate from our exchange rate providers. As with our other services, this resource is polymorphic. This means you'll need to submit a request type to tell the Exchange Rates resource how to treat your request.
 
 |**Currency Conversion Type**	|**requestType**|	**Currency Conversion Scenario**|
-|---------------------------|----------|--------------------------------|
+|---------------------------|----------|---------------------------------|
 |Exchange Rate Request	|DCCExchangeRateRequest	|Use this requestType to request a currency, price and exchange rate for a specific transaction, applicable to the customer for which you are requesting a rate.|
 |Dynamic Pricing Request	|DynamicPricingExchangeRateRequest	|Use this requestType to request all available currencies and rates for a transaction.|
 
