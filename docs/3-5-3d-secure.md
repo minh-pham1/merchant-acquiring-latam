@@ -484,7 +484,7 @@ After you received the data from the ACS, you need to submit them to the Gateway
 
 *Note: The element ```merchantData``` might not be returned by all issuers, in case you have not received it in the previous step, please do not submit in the next PATCH request.*
 
-**PATCH /ipgrestapi/v2/services/payments/{ipgTransactionId}**
+**PATCH /ipgrestapi/v2/services/payments/{ipgTransactionId}
 
 ```json
 {
