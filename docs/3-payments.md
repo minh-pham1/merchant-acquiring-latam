@@ -57,7 +57,7 @@ You'll use the same endpoint to execute a payment for all of these variations, b
 
 As an example, you'll use the ```PaymentCardSaleTransaction``` requestType to take a normal card payment when a customer wants to check out. You can then use a secondary transaction requestType` to refund or void the transaction.
 
-Example
+## Example
 
 ```json
 {
