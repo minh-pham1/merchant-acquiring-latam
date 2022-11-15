@@ -44,7 +44,7 @@ The following JSON document represents an example of a response:
 }
 ```
 
->🚧 Note. Please note, that after your customer completed their payment, you will receive HTML formatted response instead of a JSON formatted response.
+> Note. Please note, that after your customer completed their payment, you will receive HTML formatted response instead of a JSON formatted response.
 <!-- theme: warning -->
 
 > hola
@@ -56,8 +56,8 @@ For cases, where you would require 3-D Secure authentication to be included, you
 
 |redirectAttribute Name	|	Mandatory/Optional	|Description|
 |----------------------|----------------------|-----------|
-|```authenticateTransaction```	|mandatory	|Indicates whether a 3-D Secure authentication is requested for this transaction. <br />Values accepted: <br />• true|
-|```challengeIndicator```|	mandatory	|Indicates whether a challenge is requested for this transaction. If not submitted in the request a default value '01' is populated automatically.<br />Values accepted: <br />• 01 = No preference <br />• 02 = No challenge requested <br />• 03 = Challenge requested (3DS Requestor preference) <br />• 04 = Challenge requested (Mandate)|
+|```authenticateTransaction```	|mandatory	|Indicates whether a 3-D Secure authentication is requested for this transaction. Values accepted: • true|
+|```challengeIndicator```|	mandatory	|Indicates whether a challenge is requested for this transaction. If not submitted in the request a default value '01' is populated automatically.<br />Values accepted: • 01 = No preference • 02 = No challenge requested • 03 = Challenge requested (3DS Requestor preference) • 04 = Challenge requested (Mandate)|
 |```language```	|mandatory	|Value representing the browser language as defined in IETF BCP47, example of frequently used languages:<br />English: en <br />Spanish: es <br />French: fr <br />German: de <br />Portuguese: pt <br />Hindi: hi|
 |```threeDSEmvCoMessageCategory```|	optional	|Identifies the category of the message for a specific use case. If not submitted in the request a default value '01' is populated automatically. <br />Values accepted: <br />• 01 = Payment Authentication (default value) <br />• 02 = Non-Payment Authentication|
 |```mobileMode```	|optional	|Boolean that represents the request for utilizing hosted payment pages mobile mode. <br />Values accepted: <br />• true <br />• false|
