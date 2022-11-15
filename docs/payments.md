@@ -24,7 +24,7 @@ Our Payments API have a consistent Header structure based on a set of Parameters
 
 The header is constructed as per the following example.
 
-```
+```json
 {
   "method": "post",
   "url": "https://prod.emea.api.fiservapps.com/ipp/payments-gateway/v2/payments",
@@ -59,7 +59,7 @@ As an example, you'll use the ```PaymentCardSaleTransaction``` requestType to ta
 
 Example
 
-```
+```json
 {
   "requestType": "PaymentCardSaleTransaction",
   "transactionAmount": {
@@ -78,7 +78,8 @@ Example
   }
 }
 ```
-```
+
+```json
 {
   "requestType": "ReturnTransaction",
   "transactionAmount": {
@@ -113,7 +114,7 @@ Primary transactions are used to execute a customer payment, pre-authorisation o
 
 The ```PaymentCardSaleTransaction``` request type requires the following fields to post a Primary Transaction.
 
-```
+```json
 {
   "method": "post",
   "url": "https://prod.api.firstdata.com/ipp/payments-gateway/v2/payments",
@@ -150,7 +151,7 @@ We also recommend you include billing information and shipping information as th
 
 Both the ```billing``` and ```shipping``` objects follow the same structure:
 
-```
+```json
 {
   "name": "Alec Leamas",
   "customerId": "1234567890",
@@ -166,6 +167,7 @@ Both the ```billing``` and ```shipping``` objects follow the same structure:
   }
 }
 ```
+
 The flow below shows a standard payments process using a card payment transaction.
 ![standard payments process!](/assets/images/standard-payment-process.png "Standard payment process")
 
