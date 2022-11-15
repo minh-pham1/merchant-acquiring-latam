@@ -44,10 +44,10 @@ The following JSON document represents an example of a response:
 }
 ```
 
-> Note. Please note, that after your customer completed their payment, you will receive HTML formatted response instead of a JSON formatted response.
+> Note. Please note, that after your customer completed their payment, you will receive HTML formatted response instead of a JSON formatted response
 <!-- theme: warning -->
 
-> hola
+> 🚧 Note.
 <!-- theme: warning -->
 
 ## 3-D Secure
