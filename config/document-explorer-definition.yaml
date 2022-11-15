@@ -51,6 +51,8 @@
         link: docs/3-5-3d-secure.md
       - title: Card Verification
         link: docs/3-6-card-verification.md
+      - title: Currency Conversion
+        link: docs/3-7-currency-conversion.md
 - sections:
   - title: November
     link: docs/release-notes/2022/november.md
