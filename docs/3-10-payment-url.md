@@ -1,6 +1,6 @@
 # Payment URL
 
-**/payment-url**
+## /payment-url
 
 Payment URL is a functionality that allows you to provide a link to your customers (e.g. in an email invoice, WhatsApp message, SMS, QR code, etc. which then takes the customer to a Fiserv-hosted page to securely make the payment with their preferred payment method, whenever convenient for them.
 
@@ -17,6 +17,7 @@ The Gateway provides
 - A hosted result page that tells the customer if the payment was successful or not, including a Retry button where the customer can chose a different payment method in case the transaction was not successful
 
 ## Creating a Payment URL
+
 Use POST to make a call to /payment-url and specify the values for the payload as defined in the following table.
 
 |**Attribute**|	**Explanation**|
