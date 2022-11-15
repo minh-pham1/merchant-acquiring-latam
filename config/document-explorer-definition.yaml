@@ -59,6 +59,8 @@
         link: 3-9-orders.md
       - title: Payment Url
         link: 3-10-payment-url.md
+      - title: Recurring Payments
+        link: 3-11-recurring-payments.md
 - sections:
   - title: November
     link: docs/release-notes/2022/november.md
