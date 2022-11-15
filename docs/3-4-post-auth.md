@@ -1,6 +1,6 @@
 # Post-authorisation & Returns
 
-/payments/{transaction-id}
+## /payments/{transaction-id}
 
 Use secondary transactions to Void an original transaction, Return against an original transaction or to complete a Post-Auth transaction. The ```transactionId``` Parameter, populated for the original transaction that requires a secondary action, must be populated for each of these request types.
 
