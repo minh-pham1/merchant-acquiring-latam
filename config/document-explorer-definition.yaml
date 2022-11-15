@@ -45,6 +45,8 @@
         link: docs/3-2-payment-methods.md
       - title: Payment Types
         link: docs/3-3-payment-types.md
+      - title: Post-authorisation & Returns
+        link: docs/3-4-post-auth.md
 - sections:
   - title: November
     link: docs/release-notes/2022/november.md
