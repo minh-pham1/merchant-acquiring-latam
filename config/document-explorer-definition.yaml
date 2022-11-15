@@ -57,6 +57,8 @@
         link: docs/3-8-managed-redirect.md
       - title: Orders
         link: 3-9-orders.md
+      - title: Payment Url
+        link: 3-10-payment-url.md
 - sections:
   - title: November
     link: docs/release-notes/2022/november.md
