@@ -1,4 +1,4 @@
-# Introduction
+# Introduction.
 
 ## We make commerce easy
 
