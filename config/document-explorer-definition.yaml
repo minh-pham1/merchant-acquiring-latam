@@ -56,15 +56,15 @@
       - title: Managed Redirect
         link: docs/3-8-managed-redirect.md
       - title: Orders
-        link: 3-9-orders.md
+        link: docs/3-9-orders.md
       - title: Payment Url
-        link: 3-10-payment-url.md
+        link: docs/3-10-payment-url.md
       - title: Recurring Payments
-        link: 3-11-recurring-payments.md
+        link: docs/3-11-recurring-payments.md
       - title: Tokenisation
-        link: 3-12-tokenisation.md
+        link: docs/3-12-tokenisation.md
       - title: Error codes
-        link: 3-13-error-codes.md
+        link: docs/3-13-error-codes.md
 - sections:
   - title: November
     link: docs/release-notes/2022/november.md
