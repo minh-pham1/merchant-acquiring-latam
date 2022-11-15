@@ -61,6 +61,8 @@
         link: 3-10-payment-url.md
       - title: Recurring Payments
         link: 3-11-recurring-payments.md
+      - title: Tokenisation
+        link: 3-12-tokenisation.md
 - sections:
   - title: November
     link: docs/release-notes/2022/november.md
