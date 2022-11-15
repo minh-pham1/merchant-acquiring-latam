@@ -4,7 +4,7 @@ To create a customer payment using a Primary Transaction, you must include the p
 
 To take a Card Payment, use the PaymentCardPaymentMethod:
 
-```
+```json
 {
   "paymentCard": {
     "number": "5424180279791732",
@@ -19,7 +19,7 @@ To take a Card Payment, use the PaymentCardPaymentMethod:
 
 To take a Token Payment, use the PaymentTokenPaymentMethod:
 
-```
+```json
 {
   "paymentToken": {
     "value": "1235325235236",
@@ -48,7 +48,7 @@ You must be signed up for SEPA payments and have a mandate reference ID to suppl
 
 The SEPA PaymentMethod Object is shown below:
 
-```
+```json
 {
   "sepa": {
     "iban": "DE34500100600032121604",
