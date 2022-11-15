@@ -175,6 +175,7 @@ The flow below shows a standard payments process using a card payment transactio
 
 **Verify a card payment**
 **Open Recipe**
+
 **Look up card information**
 **Open Recipe**
 
