@@ -55,6 +55,8 @@
         link: docs/3-7-currency-conversion.md
       - title: Managed Redirect
         link: docs/3-8-managed-redirect.md
+      - title: Orders
+        link: 3-9-orders.md
 - sections:
   - title: November
     link: docs/release-notes/2022/november.md
