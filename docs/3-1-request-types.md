@@ -16,6 +16,6 @@ Different payment actions require different requestType values. The table below 
 
 For Primary Transactions, the decision matrix for defining which requestType to use is laid out below:
 
-![Request Type Decision Matrix!](/assets/images/decision-matrix.png "Request Type Decision Matrix")
+![Request Type Decision Matrix!](/assets/images/3-1-decision-matrix.png "Request Type Decision Matrix")
 
 The differences that are required in the JSON for each of these request types are explained through the rest of this guide.
