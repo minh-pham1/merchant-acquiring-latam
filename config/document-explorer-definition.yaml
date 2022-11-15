@@ -43,6 +43,8 @@
         link: docs/3-1-request-types.md
       - title: Payment Methods
         link: docs/3-2-payment-methods.md
+      - title: Payment Types
+        link: docs/3-3-payment-types.md
 - sections:
   - title: November
     link: docs/release-notes/2022/november.md
