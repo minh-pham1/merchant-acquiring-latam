@@ -16,7 +16,7 @@ The next diagram shows the flow when your customer has to authenticate, which me
 
 ## How to implement 3-D Secure using our API
 
-**Step 1: Initiate a payment**
+### Step 1: Initiate a payment
 
 Use either the payment card or the payment token to initiate a Primary Payment Transaction.
 
@@ -69,7 +69,7 @@ The following JSON document represents an example of a Sale transaction request 
 
 Not all Issuers support the collection of browser data using the 3DSMethod Form. In those cases, no data will be posted to the methodNotificationURL, and the flow should continue by posting a status of ```EXPECTED_BUT_NOT_RECEIVED``` – see below.
 
-**Step 2: 3-D Secure Authentication Response**
+### Step 2: 3-D Secure Authentication Response
 
 Our response will include a ```3DSMethod``` element, which generates a hidden iframe that helps to collect the browser data for the issuers. This information adds to the overall consumer profile and helps in identifying potentially fraudulent transactions. It also increases the probability of a frictionless, successful transaction.
 
@@ -147,7 +147,7 @@ The following JSON document represents an example of a response:
 }
 ```
 
-**Step 3: 3DSMethod Notification Request & Response**
+### Step 3: 3DSMethod Notification Request & Response
 
 The 3-D Secure 'methodForm' is used to provide details of the cardholder environment to the Issuer Access Control Server (ACS). The ```methodForm``` contains the HTML for a hidden iFrame which is to be included in your web page. This will force the information to be automatically posted to the ACS server via Fiserv. The HTML information is a self-contained HTML block that does not need to be modified or posted, as it will be taken care of automatically when the page in which it is inserted is rendered. Alternatively, this can be created on a page which never becomes visible to the cardholder.
 
@@ -178,13 +178,12 @@ You need to wait a minimum of **10 seconds** for the above POST operation to com
 |NOT_EXPECTED|	You have NOT submitted the element ```methodNotificationURL``` in the initial Sale transaction request.|
 
 
-> 🚧
-There may be occasions where you will observe duplicate responses to your '3DSMethod Notification URL' or 'Term URL', this could be due to duplicate requests being sent from an issuers ACS or perhaps user behaviour within the browser. It is recommended that you build handling into your system, so in the event you receive a duplicate response to your '3DSMethod Notification URL' or 'Term URL' you do not then send an additional/duplicated request to the Gateway.
+> 🚧 There may be occasions where you will observe duplicate responses to your '3DSMethod Notification URL' or 'Term URL', this could be due to duplicate requests being sent from an issuers ACS or perhaps user behaviour within the browser. It is recommended that you build handling into your system, so in the event you receive a duplicate response to your '3DSMethod Notification URL' or 'Term URL' you do not then send an additional/duplicated request to the Gateway.
 <!-- theme: warning -->
 
 ## Frictionless Flow
 
-**Step 4: Request to continue with 3DS Authentication**
+### Step 4: Request to continue with 3DS Authentication
 
 Once the 3DS Method call has been completed, you need to notify the Gateway, that the authentication process can continue by submitting the 'methodNotificationStatus' element with the values based on corresponding conditions from the 3DSMethod form above. This is done by performing a **PATCH** operation on the original transaction.
 
@@ -210,7 +209,7 @@ The following JSON document represents an example of a request to be sent after 
 }
 ```
 
-**Step 5: Final 3DS Response**
+### Step 5: Final 3DS Response
 
 When it is determined that a frictionless flow has been performed (i.e. the customer has been fully authenticated by their bank without the need for direct interaction), the 3-D Secure process is completed and transaction authorization is processed.
 
@@ -250,7 +249,7 @@ The following JSON document represents an example of a response you receive from
 
 The challenge flow is triggered, when the transaction is not considered as low risk or when the Issuer requires additional authentication by the cardholder. The whole process starts with an initial Authorisation or Sale transaction request through the step where 3DSMethod is displayed, as described in Steps 1 through 4 above.
 
-**Step 6: Request to continue with 3DS Authentication**
+### Step 6: Request to continue with 3DS Authentication
 
 Once the 3DS Method call has been completed, you need to notify the Gateway that the authentication process can continue by submitting the 'methodNotificationStatus' element with the values based on corresponding conditions from the 3DS Method Form above. This is done by performing a **PATCH** operation on the original transaction.
 
@@ -266,7 +265,7 @@ The following JSON document represents an example of a request to be sent after 
 }
 ```
 
-**Step 7: Gateway respond to continue 3DS Authentication**
+### Step 7: Gateway respond to continue 3DS Authentication
 
 For the challenge flow, the transaction status will be returned as follows:
 
@@ -310,7 +309,7 @@ The following JSON document represents an example of a response:
 }
 ```
 
-**Step 8: Cardholder Challenge**
+### Step 8: Cardholder Challenge
 
 In the next step you need to POST data to the indicated ```acsURL``` usually implemented as an auto-submit form. This needs to be implemented within your website. The cardholder will be redirected to the ACS and presented with the UI to collect the authentication details - for example enter one-time-password or perform authentication using their banking app. After the authentication is completed, the consumer is redirected back to your webpage.
 
@@ -333,7 +332,7 @@ Example:
 
 When the authentication is completed, an authentication response will be posted to the URL specified in the 'termURL' field.
 
-**Step 9: Request to complete transaction**
+### Step 9: Request to complete transaction
 
 After you received the data from the ACS, you need to submit them to the Gateway in ```cRes``` element together with the reference to the original transaction. This is done by sending **PATCH** request to the original transaction and includes the following values:
 
@@ -365,7 +364,7 @@ The following JSON document represents an example of a request with 'cRes' eleme
 }
 ```
 
-**Step 10 – Final response**
+### Step 10 – Final response
 
 Since this transaction was initiated as a 'Sale', the authorization is performed as part of this final step, if the authentication was successful.
 
