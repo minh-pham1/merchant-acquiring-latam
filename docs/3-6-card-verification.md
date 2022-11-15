@@ -1,4 +1,4 @@
-## Card Verification 
+## Card Verification
 
 /card-verification Use the Card Verification service to check a card is available for charging before a customer uses it to pay. Submit the payload below using a POST method to the /card-verification API and we'll perform a zero value authorisation against the card to ensure it isn't fraudulent, blacklisted, expired or blocked. Essentially it lets us check whether the card and account are in good standing and available to make payment.
 
