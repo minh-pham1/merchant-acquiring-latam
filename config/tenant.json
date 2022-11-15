@@ -59,5 +59,21 @@
       }
     ]
   },
-  "supportConfig": ""
+  "supportConfig": [{ 
+    "bug": {
+      "label": "",
+      "template": "",
+      "assignees": ""
+    },  
+    "feedback": {
+      "label": "",
+      "template": "",
+      "assignees": ""
+    },
+    "enhancement": {
+      "label": "",
+      "template": "",
+      "assignees": ""
+    }
+  }]
 }
