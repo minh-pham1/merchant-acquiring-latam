@@ -49,6 +49,8 @@
         link: docs/3-4-post-auth.md
       - title: 3-D Secure
         link: docs/3-5-3d-secure.md
+      - title: Card Verification
+        link: docs/3-6-card-verification.md
 - sections:
   - title: November
     link: docs/release-notes/2022/november.md
