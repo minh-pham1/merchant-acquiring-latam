@@ -40,7 +40,7 @@
       link: docs/payments.md
       sections:
       - title: Request Types
-        link: docs/requestTypes.md
+        link: docs/request-types.md
 - sections:
   - title: November
     link: docs/release-notes/2022/november.md
