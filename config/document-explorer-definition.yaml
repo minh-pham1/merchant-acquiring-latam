@@ -47,6 +47,8 @@
         link: docs/3-3-payment-types.md
       - title: Post-authorisation & Returns
         link: docs/3-4-post-auth.md
+      - title: 3-D Secure
+        link: docs/3-5-3d-secure.md
 - sections:
   - title: November
     link: docs/release-notes/2022/november.md
