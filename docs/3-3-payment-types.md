@@ -16,7 +16,7 @@ See the following table for some detail on the combined set of card brands / sch
 |--------|-------|------------|
 |```VISA```	|Visa	|Most common card scheme supported almost everywhere|
 |```MC```	|MasterCard	|Second most common card scheme supported almost everywhere|
-|```MAESTRO```	|Maestro	|Brand of debit cards owned by Mastercard, will be phased out of use in Europe starting in 2023|
+|```MAESTRO```	|Maestro	|Brand of debit cards owned by Mastercard, will be phased out of use in [Europe starting in 2023](https://en.wikipedia.org/wiki/Maestro_(debit_card))|
 |```DINERS```	|Diners Club	|Card brand owned by Discover|
 |```CUP```	|China UnionPay	|National bank card network in China|
 |```JCB```	|JCB	|Internation payment brand based in Japan, works with Discover and AMEX|
