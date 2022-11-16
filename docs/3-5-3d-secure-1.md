@@ -17,7 +17,7 @@ Es decir todas las transacciones con los siguientes requestType, pasan por 3DS.
 
 Por ello es importante que comprendamos el flujo de las transacciones con 3DSecure, a continuación el diagram de un flujo de autenticación 3DS V2, para mayor información ver la descripción de cada uno de los procesos según el número debajo.
 
-*IMAGE*
+IMAGEN AQUI
 
 ## 1
 
@@ -201,7 +201,7 @@ Deberás implementar un formulario que se envie automáticamente dentro de tu si
 
 Una vez enviado el POST, el comprador será redirigido a la pantalla de autenticación 3DS en dónde se le solicitará ingresar su token/clave (esta clave depende del banco emisor y del mecanísmo que el banco utilice).
 
-*IMAGE*
+IMAGEN AQUI
 
 ## 9
 
