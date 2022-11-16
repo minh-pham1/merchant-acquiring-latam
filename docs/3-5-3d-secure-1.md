@@ -17,9 +17,10 @@ Es decir todas las transacciones con los siguientes requestType, pasan por 3DS.
 
 Por ello es importante que comprendamos el flujo de las transacciones con 3DSecure, a continuación el diagram de un flujo de autenticación 3DS V2, para mayor información ver la descripción de cada uno de los procesos según el número debajo.
 
-**IMAGE**
+*IMAGE*
 
 ## 1
+
 Primary Transaction se refiere a la transacción inicial donde dentro del payload podremos encontrar el tipo de operativa que se quiere realizar (venta directa, venta msi, etc.) y la información del tarjetahabiente. Esta petición inicial siempre deberá incluir el objeto authenticationRequest y deberá contener los siguientes parámetros:
 
 
@@ -27,7 +28,7 @@ Primary Transaction se refiere a la transacción inicial donde dentro del payloa
 |----------|-----------|
 |```authenticationType```|Protocolo solicitado para la autenticación. Deberá ser establecido con el valor Secure3DAuthenticationRequest|
 |```termURL```|Es la url de callback en donde se reciben los resultados del proceso de autenticación desde el servidor ACS (Access Control Server) quien se encarga de ejecutar la autenticación del tarjetahabiente.|
-|```methodNotificationURL```|Se utiliza para recibir una notificación cuando el formulario 3DSMethod sea completado, por medio de un POST http a una url definida. La URL deberá ser única y capaz de identificar la transacción a la que pertenece. Adicionalmente es posible enviar la referencia de la transacción dentro de la URL como un parámetro GET (queryString). Ejemplo: https://www.mywebshop.com/process3dSecureMethod?reference=12345612352|
+|```methodNotificationURL```|Se utiliza para recibir una notificación cuando el formulario 3DSMethod sea completado, por medio de un POST http a una url definida. La URL deberá ser única y capaz de identificar la transacción a la que pertenece. Adicionalmente es posible enviar la referencia de la transacción dentro de la URL como un parámetro GET (queryString). Ejemplo: <https://www.mywebshop.com/process3dSecureMethod?reference=12345612352/>|
 |```challengeIndicator```|En caso de tener alguna preferencia sobre el flujo de autenticación a seguir, puedes anexar este parámetro opcional con alguno de los valores enlistados a continuación. En caso de no enviarlo, el valor predeterminado será seteado en “01” – No preference.“01” = No preference (No tienes preferencia sobre el flujo)“02” = No challenge requested (Prefieres no solicitar challenge)“03” = Challenge requested: 3DS Requestor Preference (Prefieres que se solicite challenge) “04” = Challenge requested: Mandate (Existen algunas regiones en donde es obligatorio el uso de challenge)|
 |```challengeWindowSize```|Puedes anexar este parametro si deseas establecer el tamaño de la ventana de autenticación mostrada al tarjetahabiente durante la autenticación. Los valores posibles a enviar son. 01 = 250 x 400 02 = 390 x 400 03 = 500 x 600 04 = 600 x 400 05 = Full screen|
 
@@ -61,6 +62,7 @@ El siquiente JSON representa una transacción de venta con los requerimientos m�
   }
 }
 ```
+
 ## 2
 
 Si la respuesta del Gateway contiene el elemento ‘3DSMethod’ , se deberá incrustar este elemento dentro de tu sitio como un iframe oculto; no se presenta ninguna interfaz gráfica y su unica funcionalidad es recoletar información del usuario, ayudando a identificar potenciales transacciones fraudulentas.
@@ -106,12 +108,13 @@ A continuación se muestra un JSON de respuesta con este formato:
   }
 }
 ```
+
 ## 4
 
 No todos los emisores soportan la recolección de datos usando el formulario de 3DSMethod. Si no se obtiene un iframe de respuesta en un lapso de 10 segundos, en estos escenarios no se enviará ninguna información a methodNotificationURL y el flujo deberá continuar enviando el estatus.
 EXPECTED_BUT_NOT_RECEIVED 
 
-Esto se realiza enviando una petición PATCH con la siguiente información: method HTTP PATCH apuntar hacia el URL https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}. Donde el ipgTransactionId lo obtendremos de la respuesta previa.
+Esto se realiza enviando una petición PATCH con la siguiente información: method HTTP PATCH apuntar hacia el URL <https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}/>. Donde el ipgTransactionId lo obtendremos de la respuesta previa.
 
 ```json
 {
@@ -127,7 +130,7 @@ NOTA: El campo storeId no es mandatorio.
 ## 5
 
 RECEIVED = Si recibiste la notificación dentro de los primeros 10 segundos a la url definida en tu methodNotificationURL.
-Esto se realiza enviando una petición PATCH con la siguiente información: method HTTP PATCH apuntar hacia el URL https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}. Donde el ipgTransactionId lo obtendremos de la respuesta previa.
+Esto se realiza enviando una petición PATCH con la siguiente información: method HTTP PATCH apuntar hacia el URL <https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}/>. Donde el ipgTransactionId lo obtendremos de la respuesta previa.
 
 ```json
 {
@@ -198,7 +201,7 @@ Deberás implementar un formulario que se envie automáticamente dentro de tu si
 
 Una vez enviado el POST, el comprador será redirigido a la pantalla de autenticación 3DS en dónde se le solicitará ingresar su token/clave (esta clave depende del banco emisor y del mecanísmo que el banco utilice).
 
-**IMAGE**
+*IMAGE*
 
 ## 9
 
@@ -212,7 +215,7 @@ Cuando se ingresa la clave correcta, el comprador será redirigido a la URL que 
 
 Completar la transacción
 
-Dentro de tu termURL deerás construir una petición PATCH para confirmar los resultados de la autenticación al Gateway. Los componentes a enviar dentro de la petición son los siguientes:method HTTP PATCH apuntar hacia el URL https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}. Donde el ipgTransactionId lo obtendremos de la respuesta previa.
+Dentro de tu termURL deerás construir una petición PATCH para confirmar los resultados de la autenticación al Gateway. Los componentes a enviar dentro de la petición son los siguientes:method HTTP PATCH apuntar hacia el URL <https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}/>. Donde el ipgTransactionId lo obtendremos de la respuesta previa.
 
 ```json
 {
