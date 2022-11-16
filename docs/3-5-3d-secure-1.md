@@ -61,9 +61,9 @@ El siquiente JSON representa una transacción de venta con los requerimientos m�
 }
 ```
 
-2. Si la respuesta del Gateway contiene el elemento ‘3DSMethod’ , se deberá incrustar este elemento dentro de tu sitio como un iframe oculto; no se presenta ninguna interfaz gráfica y su unica funcionalidad es recoletar información del usuario, ayudando a identificar potenciales transacciones fraudulentas.
+1. Si la respuesta del Gateway contiene el elemento ‘3DSMethod’ , se deberá incrustar este elemento dentro de tu sitio como un iframe oculto; no se presenta ninguna interfaz gráfica y su unica funcionalidad es recoletar información del usuario, ayudando a identificar potenciales transacciones fraudulentas.
 
-3. A continuación se muestra un JSON de respuesta con este formato:
+1. A continuación se muestra un JSON de respuesta con este formato:
 
 ```json
 {
@@ -103,7 +103,7 @@ El siquiente JSON representa una transacción de venta con los requerimientos m�
 }
 ```
 
-4. No todos los emisores soportan la recolección de datos usando el formulario de 3DSMethod. Si no se obtiene un iframe de respuesta en un lapso de 10 segundos, en estos escenarios no se enviará ninguna información a methodNotificationURL y el flujo deberá continuar enviando el estatus.
+1. No todos los emisores soportan la recolección de datos usando el formulario de 3DSMethod. Si no se obtiene un iframe de respuesta en un lapso de 10 segundos, en estos escenarios no se enviará ninguna información a methodNotificationURL y el flujo deberá continuar enviando el estatus.
 EXPECTED_BUT_NOT_RECEIVED 
 
 Esto se realiza enviando una petición PATCH con la siguiente información: method HTTP PATCH apuntar hacia el URL https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}. Donde el ipgTransactionId lo obtendremos de la respuesta previa.
@@ -119,7 +119,7 @@ Esto se realiza enviando una petición PATCH con la siguiente información: meth
 
 NOTA: El campo storeId no es mandatorio.
 
-5. RECEIVED = Si recibiste la notificación dentro de los primeros 10 segundos a la url definida en tu methodNotificationURL.
+1. RECEIVED = Si recibiste la notificación dentro de los primeros 10 segundos a la url definida en tu methodNotificationURL.
 Esto se realiza enviando una petición PATCH con la siguiente información: method HTTP PATCH apuntar hacia el URL https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}. Donde el ipgTransactionId lo obtendremos de la respuesta previa.
 
 ```json
@@ -133,9 +133,9 @@ Esto se realiza enviando una petición PATCH con la siguiente información: meth
 
 NOTA: El campo storeId no es mandatorio.
 
-6. Una vez se haya concluido este flujo el sistema determinara por que tipo de flujo de 3DS podrá tomarse la transacción. Cuando una transacción es considerada de bajo riesgo, es aplicado el flujo Frictionless o sin fricción. En este caso, el Gateway procedera a autorizar la transacción sin algún input adicional por parte del tarjetahabiente.
+1. Una vez se haya concluido este flujo el sistema determinara por que tipo de flujo de 3DS podrá tomarse la transacción. Cuando una transacción es considerada de bajo riesgo, es aplicado el flujo Frictionless o sin fricción. En este caso, el Gateway procedera a autorizar la transacción sin algún input adicional por parte del tarjetahabiente.
 
-7. Cuando se completa el llamado al API y el sistema detecta que se trata de un flujo con Challenge, la transacción no es autorizada de forma inmediata. En su lugar, obtendrás el estatus WAITING y los parámetros para redirigir al tarjetahabiente con el Directory Server del emisor para poder autenticar la operación:
+1. Cuando se completa el llamado al API y el sistema detecta que se trata de un flujo con Challenge, la transacción no es autorizada de forma inmediata. En su lugar, obtendrás el estatus WAITING y los parámetros para redirigir al tarjetahabiente con el Directory Server del emisor para poder autenticar la operación:
 
 ```json
 {
@@ -183,17 +183,17 @@ Deberás implementar un formulario que se envie automáticamente dentro de tu si
 </form>
 ```
 
-8. Una vez enviado el POST, el comprador será redirigido a la pantalla de autenticación 3DS en dónde se le solicitará ingresar su token/clave (esta clave depende del banco emisor y del mecanísmo que el banco utilice).
+1. Una vez enviado el POST, el comprador será redirigido a la pantalla de autenticación 3DS en dónde se le solicitará ingresar su token/clave (esta clave depende del banco emisor y del mecanísmo que el banco utilice).
 
 **IMAGE**
 
-9. Cuando se ingresa la clave correcta, el comprador será redirigido a la URL que recibimos en "termURL" junto con las siguientes claves-valor como parámetros POST
+1. Cuando se ingresa la clave correcta, el comprador será redirigido a la URL que recibimos en "termURL" junto con las siguientes claves-valor como parámetros POST
 
 |**Key**|**Value**|
 |-------|---------|
 |```cRes```|	Cadena que contiene información cifrada, resultado de la autenticación|
 
-10. Completar la transacción
+1. Completar la transacción
 
 Dentro de tu termURL deerás construir una petición PATCH para confirmar los resultados de la autenticación al Gateway. Los componentes a enviar dentro de la petición son los siguientes:method HTTP PATCH apuntar hacia el URL https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}. Donde el ipgTransactionId lo obtendremos de la respuesta previa.
 
