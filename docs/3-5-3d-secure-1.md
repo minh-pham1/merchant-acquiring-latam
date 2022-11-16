@@ -17,7 +17,7 @@ Es decir todas las transacciones con los siguientes requestType, pasan por 3DS.
 
 Por ello es importante que comprendamos el flujo de las transacciones con 3DSecure, a continuación el diagram de un flujo de autenticación 3DS V2, para mayor información ver la descripción de cada uno de los procesos según el número debajo.
 
-IMAGE
+**IMAGE**
 
 1. Primary Transaction se refiere a la transacción inicial donde dentro del payload podremos encontrar el tipo de operativa que se quiere realizar (venta directa, venta msi, etc.) y la información del tarjetahabiente. Esta petición inicial siempre deberá incluir el objeto authenticationRequest y deberá contener los siguientes parámetros:
 
@@ -93,7 +93,7 @@ El siquiente JSON representa una transacción de venta con los requerimientos m�
       &lt;input type="hidden" name="3DSMethodData"
       value="eyAidGhyZWVEU1NlcnZlclRyYW5zSUQiIDogIjAwMDAwMDAwLTU2NzYtNTY2My04MDAwLTAwMDAw    &amp;#10;MDAwNDFhOSIsICJ0aHJlZURTTWV0aG9kTm90aWZpY2F0aW9uVVJMIiA6ICJodHRwczovL2xvY2Fs&amp;#10;aG9zdC5tb2RpcnVtLmNvbTo4NTQzL21kcGF5bXBpL01lcmNoYW50U2VydmVyP21uPVkmdHhpZD0x&amp;#10;NjgwOSZkaWdlc3Q9aSUyQnhhUEF5NWFOcVJRbllqNmozbWFDZlFJbTdFdjJYTmkwNnh6YmZNJTJG&amp;#10;R3MlM0QiIH0"/&gt; &lt;input type="hidden"
       name="threeDSMethodData"            
-      value="eyAidGhyZWVEU1NlcnZlclRyYW5zSUQiIDogIjAwMDAwMDAwLTU2NzYtNTY2My04MDAwLTAwMDAw&amp;#10;MDAwNDFhOSIsICJ0aHJlZURTTWV0aG9kTm90aWZpY2F0aW9uVVJMIiA6ICJodHRwczovL2xvY 2Fs&amp;#10;aG9zdC5tb2RpcnVtLmNvbTo4NTQzL21kcGF5bXBpL01lcmNoYW50U2VydmVyP21uPVkmdHhpZD0x&amp;#10;NjgwOSZkaWdlc3Q9aSUyQnhhUEF5NWFOcV JRbllqNmozbWFDZlFJbTdFdjJYTmkwNnh6YmZNJTJG&amp;#10;R3MlM0QiIH0"/&gt;
+  value="eyAidGhyZWVEU1NlcnZlclRyYW5zSUQiIDogIjAwMDAwMDAwLTU2NzYtNTY2My04MDAwLTAwMDAw&amp;#10;MDAwNDFhOSIsICJ0aHJlZURTTWV0aG9kTm90aWZpY2F0aW9uVVJMIiA6ICJodHRwczovL2xvY 2Fs&amp;#10;aG9zdC5tb2RpcnVtLmNvbTo4NTQzL21kcGF5bXBpL01lcmNoYW50U2VydmVyP21uPVkmdHhpZD0x&amp;#10;NjgwOSZkaWdlc3Q9aSUyQnhhUEF5NWFOcV JRbllqNmozbWFDZlFJbTdFdjJYTmkwNnh6YmZNJTJG&amp;#10;R3MlM0QiIH0"/&gt;
       &lt;/form&gt;&lt;script type="text/javascript"
       xmlns="http://www.w3.org/1999/xhtml"&gt;
       document.getElementById("tdsMmethodForm").submit(); &lt;/script&gt;",
@@ -118,3 +118,130 @@ Esto se realiza enviando una petición PATCH con la siguiente información: meth
 ```
 
 NOTA: El campo storeId no es mandatorio.
+
+5. RECEIVED = Si recibiste la notificación dentro de los primeros 10 segundos a la url definida en tu methodNotificationURL.
+Esto se realiza enviando una petición PATCH con la siguiente información: method HTTP PATCH apuntar hacia el URL https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}. Donde el ipgTransactionId lo obtendremos de la respuesta previa.
+
+```json
+{
+  "authenticationType": "Secure3D21AuthenticationUpdateRequest",
+  "storeId": "12345500000",
+  "methodNotificationStatus": "RECEIVED",
+  "securityCode": "XXX"
+}
+```
+
+NOTA: El campo storeId no es mandatorio.
+
+6. Una vez se haya concluido este flujo el sistema determinara por que tipo de flujo de 3DS podrá tomarse la transacción. Cuando una transacción es considerada de bajo riesgo, es aplicado el flujo Frictionless o sin fricción. En este caso, el Gateway procedera a autorizar la transacción sin algún input adicional por parte del tarjetahabiente.
+
+7. Cuando se completa el llamado al API y el sistema detecta que se trata de un flujo con Challenge, la transacción no es autorizada de forma inmediata. En su lugar, obtendrás el estatus WAITING y los parámetros para redirigir al tarjetahabiente con el Directory Server del emisor para poder autenticar la operación:
+
+```json
+{
+  "clientRequestId": "30dd879c-ee2f-11db-8314-0800200c9a66",
+  "apiTraceId": "rrt-0c80a3403e2c2def0-d-ea-28805-6810951-2",
+  "ipgTransactionId": "838916029301",
+  "transactionType": "SALE",
+  "transactionTime": 1518811817,
+  "approvedAmount": {
+    "total": 122.04,
+    "currency": "USD"
+  },
+  "transactionStatus": "WAITING",
+  "authenticationResponse": {
+    "type": "3D_SECURE",
+    "version": "2.1",
+    "params": {
+      "acsURL": "https://3ds-acs.test.modirum.com/mdpayacs/pareq",
+      "termURL": "https://www.mywebshop.com/process3dSecure/",
+      "cReq": "ewogICAiYWNzVHJhbCIgOiA...wMDAtMDAwMDAwMDA0MWE5Igp9",
+      "sessiondata": "50F2156E03083CA665BCB4.."
+    }
+  }
+}
+```
+
+El campo authenticationResponse contendrá la siguiente información:
+
+
+|**Parameter**|**Description**|
+|----------|-----------|
+|```type```|3D_SECURE|
+|```version``` |2.1.0 (3DS VERSION)|
+|```acsURL|URL al sitio del emisor para redireccionar al tarjetahabiente y postear cReq y sessionData|
+|```termURL```|URL del comercio en donde se recibirán los resultados de autenticación|
+|```cReq```|Mensaje codificado devuelto desde el ACS|
+|```sessionData```|Parámetros de sesión usados para la autenticación. Este campo no siempre es retornado|
+
+Deberás implementar un formulario que se envie automáticamente dentro de tu sitio web.
+
+```xml
+<form name="frm" method="POST" action="{value obtained on acsURL}">
+  <input type="hidden" name="creq" value="ewogICAiYWNzVHJhbCIgOi...wMDAtMDAwMDAwMDA0MWE5Igp9">
+  <input type="hidden" name="threeDSSessionData" value="50F2156E03083CA665BCB4..">
+</form>
+```
+
+8. Una vez enviado el POST, el comprador será redirigido a la pantalla de autenticación 3DS en dónde se le solicitará ingresar su token/clave (esta clave depende del banco emisor y del mecanísmo que el banco utilice).
+
+**IMAGE**
+
+9. Cuando se ingresa la clave correcta, el comprador será redirigido a la URL que recibimos en "termURL" junto con las siguientes claves-valor como parámetros POST
+
+|**Key**|**Value**|
+|-------|---------|
+|```cRes```|	Cadena que contiene información cifrada, resultado de la autenticación|
+
+10. Completar la transacción
+
+Dentro de tu termURL deerás construir una petición PATCH para confirmar los resultados de la autenticación al Gateway. Los componentes a enviar dentro de la petición son los siguientes:method HTTP PATCH apuntar hacia el URL https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}. Donde el ipgTransactionId lo obtendremos de la respuesta previa.
+
+```json
+{
+  "authenticationType": "Secure3D21AuthenticationUpdateRequest",
+  "storeId": "12345500000",
+  "billingAddress": {
+    "company": "Test Company",
+    "address1": "5565 Glenridge Conn",
+    "address2": "Suite 123",
+    "city": "Atlanta",
+    "region": "Georgia",
+    "postalCode": "30342",
+    "country": "USA"
+  },
+  "securityCode": "123",
+  "acsResponse": {
+    "cRes": "ewogICAiYWNzUmVmZX…Fuc1N0YXR…IKfQ=="
+  }
+}
+```
+
+La respuesta a esta petición deberá contener el resultado final de la autenticación:
+
+```json
+{
+  "clientRequestId": "30dd879c-ee2f-11db-8314-0800200c9a66",
+  "apiTraceId": "rrt-0c80a3403e2c2def0-d-ea-28805-6810951-2",
+  "ipgTransactionId": "838916029301",
+  "transactionType": "SALE",
+  "transactionTime": 1518811817,
+  "approvedAmount": {
+    "total": 122.04,
+    "currency": "USD"
+  },
+  "transactionStatus": "APPROVED",
+  "schemeTransactionId": "019078743804756",
+  "processor": {
+    "responseCode": "00",
+    "responseMessage": "APPROVED",
+    "authorizationCode": "OK7118"
+  },
+  "secure3dResponse": {
+    "responseCode3dSecure": "1"
+  }
+}
+```
+
+11. Mapeamos de manera correcta nuestra respuesta según la sección de Manejo de Respuestas en este manual.
+
