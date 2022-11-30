@@ -4,6 +4,7 @@
 We show you how to generate the signature required for use with our payments API.
 
 ---
+
 - [Step 1: Import required libraries](#step-1-import-required-libraries)
 - [Step 2: Add your API key & secret key](#step-2-add-api-key-and-secret-key)
 - [Step 3: Generate a unique ID for each request](#step-3-genetate-unique-id)
@@ -19,6 +20,7 @@ We show you how to generate the signature required for use with our payments API
 
 Generating the message signature requires that we hash the payload of the API call.
 Firstly, import the required libraries.
+
 ```phyton
 import hmac
 import hashlib
@@ -102,7 +104,7 @@ type: tab
 titles: Request, Response
 -->
 
-##### Example of a charge payload request using `dynamicDescriptors`.
+### Example of a charge payload request using `dynamicDescriptors`
 
 ```json
  {
@@ -146,7 +148,7 @@ titles: Request, Response
 type: tab
 -->
 
-##### Example of a charge (201: Created) response.
+### Example of a charge (201: Created) response
 
 <!-- theme: info -->
 > See [Response Handling](?path=docs/Resources/Guides/Response-Codes/Response-Handling.md) for more information.
@@ -222,6 +224,7 @@ type: tab
 
 
 ---
+
 ## See also
 
 - [API Explorer](./api/?type=post&path=/payments/v1/charges)
