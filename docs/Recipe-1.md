@@ -87,6 +87,7 @@ Insert your API key and secret here
 ## Step 3: Process Payment
 
 The benefits of a encyrpted PIN Pad solution are:
+
 - Reduced coding effort for the developer because the encryption handling is already implemented by the third party vendor
 - All forms of electronic payment are accepted
 - Business security by enabling acceptance of chip and signature, and chip and PIN
@@ -96,6 +97,7 @@ The benefits of a encyrpted PIN Pad solution are:
 ## Step 4: Finalize Transaction
 
 The benefits of a encyrpted PIN Pad solution are:
+
 - Reduced coding effort for the developer because the encryption handling is already implemented by the third party vendor
 - All forms of electronic payment are accepted
 - Faster payment improving the customer experience
