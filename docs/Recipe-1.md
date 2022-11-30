@@ -16,6 +16,7 @@ We show you how to generate the signature required for use with our payments API
 ---
 
 ## Step 1: Import required libraries
+
 Generating the message signature requires that we hash the payload of the API call.
 Firstly, import the required libraries.
 ```phyton
@@ -53,6 +54,7 @@ print(r.content)
 ```
 
 ## Step 2: Add your API key & secret key
+
 Insert your API key and secret here
 
 ```json
@@ -81,6 +83,7 @@ Insert your API key and secret here
 ```
 
 ## Step 3: Process Payment
+
 The benefits of a encyrpted PIN Pad solution are:
 - Reduced coding effort for the developer because the encryption handling is already implemented by the third party vendor
 - All forms of electronic payment are accepted
@@ -89,6 +92,7 @@ The benefits of a encyrpted PIN Pad solution are:
 > Commerce Hub highly recommends testing against our sandbox and end to end environments before using our production environment.
 
 ## Step 4: Finalize Transaction
+
 The benefits of a encyrpted PIN Pad solution are:
 - Reduced coding effort for the developer because the encryption handling is already implemented by the third party vendor
 - All forms of electronic payment are accepted
@@ -219,6 +223,7 @@ type: tab
 
 ---
 ## See also
+
 - [API Explorer](./api/?type=post&path=/payments/v1/charges)
 - [Charge Request](?path=docs/Resources/API-Documents/Payments/Charges.md)
 - [EMV Chip and PIN](?path=docs/In-Person/Encrypted-Payments/EMV.md)
