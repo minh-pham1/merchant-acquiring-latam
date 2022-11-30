@@ -1,30 +1,60 @@
-# Recipe #1
+# Generate a message signature
 
-The PIN Pad or device used to capture the payment source is connected to the terminal or software. The PIN Pad encrypts the customer's payment source and sends the encryption data to the terminal or software. The terminal or software initiates the RESTful API transaction with the encrypted payment source from the 3rd party device.
 
-Commerce Hub supports the following encrypted payment source types: [EMV chip and PIN](?path=docs/In-Person/Encrypted-Payments/EMV.md), [track data (magstripe)](?path=docs/In-Person/Encrypted-Payments/Track.md), NFC/contactless, and [manual entry (EMV fallback)](?path=docs/In-Person/Encrypted-Payments/Manual.md).
-
----
-- [Step 1: Create Keys](#step-1-create-keys)
-- [Step 2: Get Payment Details](#step-2-get-payment-details)
-- [Step 3: Process Payment](#step-3-process-payment)
-- [Step 4: Finalize Transaction](#step-4-finalize-transaction)
-
+We show you how to generate the signature required for use with our payments API.
 
 ---
+- [Step 1: Import required libraries](#step-1-import-required-libraries)
+- [Step 2: Add your API key & secret key](#step-2-add-api-key-and-secret-key)
+- [Step 3: Generate a unique ID for each request](#step-3-genetate-unique-id)
+- [Step 4: Generate the unix time](#step-4-generate-unix-time)
+- [Step 5: Combine all of these ingredients into a string](#step-5-combine-into-string)
+- [Step 6: Hash using SHA256](#step-6-hash-using-sha256)
+- [Step 7: Set up your headers](#step-7-set-up-headers)
+- [Step 8: Make the request](#step-8-make-request)
 
-## Step 1: Create Keys
-The benefits of a encyrpted PIN Pad solution are:
-- Reduced coding effort for the developer because the encryption handling is already implemented by the third party vendor
-- All forms of electronic payment are accepted
-- Faster payment improving the customer experience
-- Business security by enabling acceptance of chip and signature, and chip and PIN
+---
 
-## Step 2: Get payment details
-The benefits of a encyrpted PIN Pad solution are:
-- All forms of electronic payment are accepted
-- Faster payment improving the customer experience
-- Business security by enabling acceptance of chip and signature, and chip and PIN
+## Step 1: Import required libraries
+Generating the message signature requires that we hash the payload of the API call.
+Firstly, import the required libraries.
+```phyton
+import hmac
+import hashlib
+import base64
+import requests
+import time
+import uuid
+
+key = 'Insert your API key here'
+secret = 'Insert your API secret here'
+content = 'Insert your request content here'
+url = 'Insert your target url here'
+
+clientRequestId = str(uuid.uuid4())
+
+timestamp = str(int(time.time()))
+
+message = '{}{}{}{}'.format(apiKey, clientRequestId, timestamp, str(content))
+
+signature = hmac.new(apiSecret.encode(), message.encode(), hashlib.sha256).digest()
+b64_sig = base64.b64encode(signature).decode()
+
+headers = {
+    'Api-Key': apiKey,
+    'Timestamp': timestamp,
+    'Client-Request-Id': clientRequestId,
+    'Message-Signature': b64_sig
+}
+print(headers)
+
+r = requests.post(url, content, headers=headers)
+print(r.content)
+```
+
+## Step 2: Add your API key & secret key
+Insert your API key and secret here
+
 ```json
 {
   "amount": {
