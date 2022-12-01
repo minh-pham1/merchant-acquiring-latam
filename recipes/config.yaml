@@ -3,6 +3,6 @@
 ---
 version: 1.0.0
 Guidelines:
-- link: recipes/recipe-1.md
-  title: Recipes
+- link: recipes/Recipe-1.md
+  title: Message signature
   type: recipe
