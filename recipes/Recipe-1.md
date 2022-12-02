@@ -49,19 +49,34 @@ clientRequestId = str(uuid.uuid4())
 
 ## Step 4: Generate the unix time
 
-```json
-clientRequestId = str(uuid.uuid4())
-```
 <!--
 type: tab
-titles: Request, Response
+titles: Javascript, Pyhton, Java
 -->
 
+### Javascript
 
+```javascript
+  var time = new Date().getTime();
+```
 
+<!--
+type: tab
+-->
 
+```pyhton
+clientRequestId = str(uuid.uuid4())
+```
 
+<!-- type: tab-end -->
 
+<!-- type: tab -->
+
+```java
+            final String timestamp = Long.toString(Instant.now().toEpochMilli());
+```
+
+<!-- type: tab-end -->
 
 ## Step 4: Finalize Transaction
 
