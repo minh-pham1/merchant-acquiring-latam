@@ -40,8 +40,7 @@ The header is constructed as per the following example.
 
 **Generating a message signature is a key component of this API. You can learn more here:
 
-**Generate a message signature**
-**Open Recipe**
+[**Generate a message signature**](recipes/Recipes-1.md)
 
 ## Polymorphism
 
