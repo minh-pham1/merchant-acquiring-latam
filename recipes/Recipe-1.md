@@ -68,8 +68,6 @@ type: tab
 clientRequestId = str(uuid.uuid4())
 ```
 
-<!-- type: tab-end -->
-
 <!-- type: tab -->
 
 ```java
