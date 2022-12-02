@@ -49,33 +49,4 @@ clientRequestId = str(uuid.uuid4())
 
 ## Step 4: Generate the unix time
 
-<!--
-type: tab
-titles: Javascript, Pyhton, Java
--->
 
-### Javascript
-
-```javascript
-  var time = new Date().getTime();
-```
-
-<!--
-type: tab
--->
-
-### Python
-
-```python
-clientRequestId = str(uuid.uuid4())
-```
-
-<!-- type: tab -->
-
-### Java
-
-```java
-            final String timestamp = Long.toString(Instant.now().toEpochMilli());
-```
-
-<!-- type: tab-end -->
