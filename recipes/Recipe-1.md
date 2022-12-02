@@ -28,31 +28,6 @@ import base64
 import requests
 import time
 import uuid
-
-key = 'Insert your API key here'
-secret = 'Insert your API secret here'
-content = 'Insert your request content here'
-url = 'Insert your target url here'
-
-clientRequestId = str(uuid.uuid4())
-
-timestamp = str(int(time.time()))
-
-message = '{}{}{}{}'.format(apiKey, clientRequestId, timestamp, str(content))
-
-signature = hmac.new(apiSecret.encode(), message.encode(), hashlib.sha256).digest()
-b64_sig = base64.b64encode(signature).decode()
-
-headers = {
-    'Api-Key': apiKey,
-    'Timestamp': timestamp,
-    'Client-Request-Id': clientRequestId,
-    'Message-Signature': b64_sig
-}
-print(headers)
-
-r = requests.post(url, content, headers=headers)
-print(r.content)
 ```
 
 ## Step 2: Add your API key & secret key
@@ -60,39 +35,33 @@ print(r.content)
 Insert your API key and secret here
 
 ```json
-{
-  "amount": {
-    "total": "12.04",
-    "currency": "USD"
-  },
-  "paymentSource": {
-    "sourceType": "PaymentCard",
-    "card": {
-      "cardData": "4005550000000019",
-      "expirationMonth": "02",
-      "expirationYear": "2035",
-      "securityCode": "123"
-    }
-  },
-  "transactionDetails": {
-    "captureFlag": true
-  },
-  "merchantDetails":{
-      "merchantId": "123456789789567",
-      "terminalId": "123456"
-    }
-}
+key = 'Insert your API key here'
+secret = 'Insert your API secret here'
 ```
 
-## Step 3: Process Payment
+## Step 3: Generate a unique ID for each request
 
-The benefits of a encyrpted PIN Pad solution are:
+We can use this track your individual API calls later
 
-- Reduced coding effort for the developer because the encryption handling is already implemented by the third party vendor
-- All forms of electronic payment are accepted
-- Business security by enabling acceptance of chip and signature, and chip and PIN
-<!-- theme: info -->
-> Commerce Hub highly recommends testing against our sandbox and end to end environments before using our production environment.
+```json
+clientRequestId = str(uuid.uuid4())
+```
+
+## Step 4: Generate the unix time
+
+```json
+clientRequestId = str(uuid.uuid4())
+```
+<!--
+type: tab
+titles: Request, Response
+-->
+
+
+
+
+
+
 
 ## Step 4: Finalize Transaction
 
