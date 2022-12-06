@@ -6,7 +6,7 @@ recipes:
 - link: recipes/2-card-payment.md
   title: Make a card payment
   type: recipe
-- link: recipes/Recipe-3.md
+- link: recipes/3-refund-transaction.md
   title: Refund a transaction
   type: recipe
 - link: recipes/Recipe-4.md
