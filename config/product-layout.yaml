@@ -40,9 +40,9 @@ featuredFeatures:
     bullets: ["REPLACEME", "REPLACEME" ]  
     relatedDocs:
       - relatedDoc: 
-        title: REPLACEME
-        description: REPLACEME
-        link: ./docs/REPLACE-ME1.md
+        title: Clover
+        description: Add semi-integrated payments to your iOS, Android or Windows POS using our attractive Clover Mini or Go hardware.
+        link: https://www.clover.com/pos/integration-services
       - relatedDoc: 
         title: REPLACEME
         description: REPLACEME
