@@ -32,7 +32,7 @@ import uuid
 
 ## Step 2: Add your API key & secret key
 
-Insert your API key and secret here
+Insert your API key and secret here.
 
 ```python
 key = 'Insert your API key here'
@@ -41,7 +41,7 @@ secret = 'Insert your API secret here'
 
 ## Step 3: Generate a unique ID for each request
 
-We can use this track your individual API calls later
+We can use this track your individual API calls later.
 
 ```python
 clientRequestId = str(uuid.uuid4())
@@ -53,4 +53,44 @@ clientRequestId = str(uuid.uuid4())
 timestamp = str(int(time.time()))
 ```
 
+## Step 5: Combine all of these ingredients into a string
 
+To prepare our message for signing, we need to combine all the ingredients together into a string.
+
+```python
+message = '{}{}{}{}'.format(apiKey, clientRequestId, timestamp, str(content))
+```
+
+## Step 6: Hash using SHA256
+
+Using your desired library, take the message and using the secret key, create the hash and then base64 encode it.
+
+There are libraries that may make this easier, such as CryptoJS in our javascript example.
+
+```python
+signature = hmac.new(apiSecret.encode(), message.encode(), hashlib.sha256).digest()
+b64_sig = base64.b64encode(signature).decode()
+```
+
+## Step 7: Set up your headers
+
+We need to add the signature, along with some of the values used as headers to the request.
+
+```python
+headers = {
+    'Api-Key': apiKey,
+    'Timestamp': timestamp,
+    'Client-Request-Id': clientRequestId,
+    'Message-Signature': b64_sig
+}
+print(headers)
+```
+
+## Step 8: Make the request!
+
+Submit your request along with the message signature headers.
+
+```python
+r = requests.post(url, content, headers=headers)
+print(r.content)
+```
