@@ -9,3 +9,9 @@ recipes:
 - link: recipes/Recipe-3.md
   title: Refund a transaction
   type: recipe
+- link: recipes/Recipe-4.md
+  title: Verify a card payment
+  type: recipe
+- link: recipes/Recipe-5.md
+  title: Look up card information
+  type: recipe
