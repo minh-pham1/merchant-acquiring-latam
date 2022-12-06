@@ -40,7 +40,7 @@ The header is constructed as per the following example.
 
 Generating a message signature is a key component of this API. You can learn more here:
 
-[Generate a message signature](merchant-acquiring-latam/recipes/1-generate-message.md)
+[Generate a message signature](https://dev-developerstudio.fiserv.com/product/MerchantAcquiringLATAM/recipes/1-generate-message.md)
 
 
 ## Polymorphism
@@ -91,7 +91,7 @@ As an example, you'll use the ```PaymentCardSaleTransaction``` requestType to ta
 
 These examples are show below:
 
-[Make a card payment](recipes/2-card-payment.md)
+[Make a card payment](https://dev-developerstudio.fiserv.com/product/MerchantAcquiringLATAM/recipes/recipes/2-card-payment.md)
 
 [Refund a transaction](recipes/3-refund-transaction.md)
 
