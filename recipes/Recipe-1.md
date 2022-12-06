@@ -21,7 +21,7 @@ We show you how to generate the signature required for use with our payments API
 Generating the message signature requires that we hash the payload of the API call.
 Firstly, import the required libraries.
 
-```phyton
+```python
 import hmac
 import hashlib
 import base64
@@ -34,7 +34,7 @@ import uuid
 
 Insert your API key and secret here
 
-```json
+```python
 key = 'Insert your API key here'
 secret = 'Insert your API secret here'
 ```
@@ -43,10 +43,27 @@ secret = 'Insert your API secret here'
 
 We can use this track your individual API calls later
 
-```json
+```python
 clientRequestId = str(uuid.uuid4())
 ```
 
 ## Step 4: Generate the unix time
 
+```python
+timestamp = str(int(time.time()))
+```
 
+<!--
+type: tab
+titles: Javascript, Python, Java
+-->
+
+ejemplo Javascript
+
+<!--
+type: tab
+-->
+
+ejemplo Python
+
+<!-- type: tab end -->
