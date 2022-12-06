@@ -53,17 +53,4 @@ clientRequestId = str(uuid.uuid4())
 timestamp = str(int(time.time()))
 ```
 
-<!--
-type: tab
-titles: Javascript, Python, Java
--->
 
-ejemplo Javascript
-
-<!--
-type: tab
--->
-
-ejemplo Python
-
-<!-- type: tab end -->
