@@ -3,14 +3,14 @@
 We show you how to generate the signature required for use with our payments API.
 
 ---
-- [Step 1: Import required libraries](#step-1-)
-- [Step 2: Add your API key & secret key](#step-2-)
-- [Step 3: Generate a unique ID for each request](#step-3-)
-- [Step 4: Generate the unix time](#step-4-
-- [Step 5: Combine all of these ingredients into a string](#step-5-)
-- [Step 6: Hash using SHA256](#step-6-)
-- [Step 7: Set up your headers](#step-7-)
-- [Step 8: Make the request](#step-8-)
+- [Step 1: Import required libraries](#step-1-import-required-libraries)
+- [Step 2: Add your API key & secret key](#step-2-add-api-secret-key)
+- [Step 3: Generate a unique ID for each request](#step-3-generate-unique-id)
+- [Step 4: Generate the unix time](#step-4-generate-unix-time)
+- [Step 5: Combine all of these ingredients into a string](#step-5-combine-ingredients)
+- [Step 6: Hash using SHA256](#step-6-hash-sha256)
+- [Step 7: Set up your headers](#step-7-set-up-headers)
+- [Step 8: Make the request](#step-8-make-request)
 
 ---
 
