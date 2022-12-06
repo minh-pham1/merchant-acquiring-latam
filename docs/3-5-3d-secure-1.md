@@ -1,28 +1,28 @@
 # 3DSecure Flow
 
-3D Secure es la nueva forma de pago desarrollada por Visa y Mastercard que posibilita la realización de compras seguras en Internet y autentifica al comprador como legítimo titular de la tarjeta que está utilizando.
+3D Secure is the new form of payment developed by Visa and Mastercard that makes possible to perform secure purchases on the Internet and authenticates the buyer as the legitimate holder of the card they are using.
 
-A partir de ahora solo podrás comprar si se pasa por un flujo de autenticación, el cual autorizará la compra en ese preciso momento. Si no es completado este flujo,  el cliente no podrá terminar la compra con la tarjeta.
+From now on you can only buy if you go through an authentication flow, which will authorize the purchase at that precise moment. If this flow is not completed, the customer will not be able to complete the purchase with the card.
 
-De esta manera se hace imposible el fraude en la red y garantiza la total seguridad en las transacciones.
+In this way fraud in the network is impossible and guarantees total security in transactions.
 
-LA MAYORÍA las transacciones que realicemos por default necesitan pasar por el flujo de 3DSecure en nuestras tiendas: ventas directas, ventas a msi, ventas con token, recurrencias calendarizas, pre-auth, con la única excepción de las transacciones recurrentes MIT (Merchant Initiated Transactions), generación de tokens, generación de paymentURL y postauth.
+**MOST of the transactions that we carry out by default need to go through the 3DSecure flow in our stores:** direct sales, msi sales, sales with token, scheduled recurrences, pre-auth, **with the sole exception of MIT recurring transactions** (Merchant Initiated Transactions), **token generation, paymentURL generation, and postauth.**
 
-Es decir todas las transacciones con los siguientes requestType, pasan por 3DS.
+In other words, all transactions with the following requestTypes go through 3DS.
 
 - PaymentCardPreAuthTransaction (preauthorization with card)
 - PaymentCardSaleTransaction (sales with card)
 - PaymentTokenPreAuthTransaction (preauthorization with token)
 - PaymentTokenSaleTransaction (sales with token)
 
-Por ello es importante que comprendamos el flujo de las transacciones con 3DSecure, a continuación el diagram de un flujo de autenticación 3DS V2, para mayor información ver la descripción de cada uno de los procesos según el número debajo.
+For this reason it is important that we understand the flow of transactions with 3DSecure, below is the diagram of a 3DS V2 authentication flow, for more information see the description of each of the processes according to the number below.
+for this reason it is important that we understand the flow of transactions with 3DSecure, below is the diagram of a 3DS V2 authentication flow, for more information see the description of each of the processes according to the number below.
 
 IMAGEN AQUI
 
 ## 1
 
-Primary Transaction se refiere a la transacción inicial donde dentro del payload podremos encontrar el tipo de operativa que se quiere realizar (venta directa, venta msi, etc.) y la información del tarjetahabiente. Esta petición inicial siempre deberá incluir el objeto authenticationRequest y deberá contener los siguientes parámetros:
-
+Primary Transaction refers to the initial transaction where within the payload we can find the type of operation to be carried out (direct sale, msi sale, etc.) and the cardholder's information. This initial request must always include the **authenticationRequest** object and must contain the following parameters:
 
 |**Parameters**|**Description**|
 |----------|-----------|
@@ -32,9 +32,9 @@ Primary Transaction se refiere a la transacción inicial donde dentro del payloa
 |```challengeIndicator```|En caso de tener alguna preferencia sobre el flujo de autenticación a seguir, puedes anexar este parámetro opcional con alguno de los valores enlistados a continuación. En caso de no enviarlo, el valor predeterminado será seteado en “01” – No preference.“01” = No preference (No tienes preferencia sobre el flujo)“02” = No challenge requested (Prefieres no solicitar challenge)“03” = Challenge requested: 3DS Requestor Preference (Prefieres que se solicite challenge) “04” = Challenge requested: Mandate (Existen algunas regiones en donde es obligatorio el uso de challenge)|
 |```challengeWindowSize```|Puedes anexar este parametro si deseas establecer el tamaño de la ventana de autenticación mostrada al tarjetahabiente durante la autenticación. Los valores posibles a enviar son. 01 = 250 x 400 02 = 390 x 400 03 = 500 x 600 04 = 600 x 400 05 = Full screen|
 
-Es recomendable proporcionar los datos de facturación y envío dentro de la transacción para reducir el riesgo de rechazos por autenticación. Para realizar esto, asegurate de proporcionar los datos dentro de tu petición de venta.
+It is recommended provide billing and shipping information within the transaction to reduce the risk of authentication rejections. To do this, make sure to provide the data within your sales request.
 
-El siquiente JSON representa una transacción de venta con los requerimientos mínimos:
+The following JSON represents a sales transaction with the minimum requirements:
 
 ```json
 {
@@ -65,11 +65,11 @@ El siquiente JSON representa una transacción de venta con los requerimientos m�
 
 ## 2
 
-Si la respuesta del Gateway contiene el elemento ‘3DSMethod’ , se deberá incrustar este elemento dentro de tu sitio como un iframe oculto; no se presenta ninguna interfaz gráfica y su unica funcionalidad es recoletar información del usuario, ayudando a identificar potenciales transacciones fraudulentas.
+If the response from the Gateway contains the '3DSMethod' element, this element should be embed within your site as a hidden iframe; No graphical interface is presented and its only functionality is to collect user information, helping to identify potential fraudulent transactions.
 
 ## 3
 
-A continuación se muestra un JSON de respuesta con este formato:
+Here is a JSON response in this format:
 
 ```json
 {
@@ -111,10 +111,10 @@ A continuación se muestra un JSON de respuesta con este formato:
 
 ## 4
 
-No todos los emisores soportan la recolección de datos usando el formulario de 3DSMethod. Si no se obtiene un iframe de respuesta en un lapso de 10 segundos, en estos escenarios no se enviará ninguna información a methodNotificationURL y el flujo deberá continuar enviando el estatus.
-EXPECTED_BUT_NOT_RECEIVED 
+Not all issuers support data collection using the 3DSMethod form. If no response iframe is returned within 10 seconds, in these scenarios no information will be returned to methodNotificationURL and the flow should continue to send status.
+**EXPECTED_BUT_NOT_RECEIVED**
 
-Esto se realiza enviando una petición PATCH con la siguiente información: method HTTP PATCH apuntar hacia el URL <https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}/>. Donde el ipgTransactionId lo obtendremos de la respuesta previa.
+This is done by sending a PATCH request with the following information: **method HTTP PATCH** point to the URL <https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}/>. Where the ipgTransactionId will be obtained from the previous response.
 
 ```json
 {
@@ -125,12 +125,12 @@ Esto se realiza enviando una petición PATCH con la siguiente información: meth
 }
 ```
 
-NOTA: El campo storeId no es mandatorio.
+NOTE: The **storeId** field is not mandatory.
 
 ## 5
 
-RECEIVED = Si recibiste la notificación dentro de los primeros 10 segundos a la url definida en tu methodNotificationURL.
-Esto se realiza enviando una petición PATCH con la siguiente información: method HTTP PATCH apuntar hacia el URL <https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}/>. Donde el ipgTransactionId lo obtendremos de la respuesta previa.
+**RECEIVED** = If you received the notification within the first 10 seconds to the url defined in your **methodNotificationURL**.
+This is done by sending a PATCH request with the following information: **method HTTP PATCH** point to the URL <https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}/>. Where the ipgTransactionId will be obtained from the previous response.
 
 ```json
 {
@@ -141,15 +141,15 @@ Esto se realiza enviando una petición PATCH con la siguiente información: meth
 }
 ```
 
-NOTA: El campo storeId no es mandatorio.
+NOTE: The **storeId** field is not mandatory.
 
 ## 6
 
-Una vez se haya concluido este flujo el sistema determinara por que tipo de flujo de 3DS podrá tomarse la transacción. Cuando una transacción es considerada de bajo riesgo, es aplicado el flujo Frictionless o sin fricción. En este caso, el Gateway procedera a autorizar la transacción sin algún input adicional por parte del tarjetahabiente.
+Once this flow has been completed, the system will determine by which type of 3DS flow the transaction can be taken. When a transaction is considered low risk, the **Frictionless** flow is applied. In this case, the Gateway will proceed to authorize the transaction without any additional input from the cardholder.
 
 ## 7
 
-Cuando se completa el llamado al API y el sistema detecta que se trata de un flujo con Challenge, la transacción no es autorizada de forma inmediata. En su lugar, obtendrás el estatus WAITING y los parámetros para redirigir al tarjetahabiente con el Directory Server del emisor para poder autenticar la operación:
+When the API call is completed and the system detects that it is a flow with Challenge, the transaction is not authorized immediately. Instead, you will get the **WAITING** status and the parameters to redirect the cardholder to the issuer's Directory Server in order to authenticate the operation:
 
 ```json
 {
@@ -176,8 +176,7 @@ Cuando se completa el llamado al API y el sistema detecta que se trata de un flu
 }
 ```
 
-El campo authenticationResponse contendrá la siguiente información:
-
+The **authenticationResponse** field will contain the following information:
 
 |**Parameter**|**Description**|
 |----------|-----------|
@@ -188,7 +187,7 @@ El campo authenticationResponse contendrá la siguiente información:
 |```cReq```|Mensaje codificado devuelto desde el ACS|
 |```sessionData```|Parámetros de sesión usados para la autenticación. Este campo no siempre es retornado|
 
-Deberás implementar un formulario que se envie automáticamente dentro de tu sitio web.
+Debe implementar un formulario que se envía automáticamente dentro de su sitio web.
 
 ```xml
 <form name="frm" method="POST" action="{value obtained on acsURL}">
