@@ -37,7 +37,7 @@ featuredFeatures:
   - title: TBD
     description:  REPLACE ME
     tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
-    bullets: ["REPLACEME", "REPLACEME" ]  
+    bullets: ["Hola", "REPLACEME" ]  
     relatedDocs:
       - relatedDoc: 
         title: Clover
@@ -48,8 +48,12 @@ featuredFeatures:
         description: Securely process a wide range of credit, debit and alternative payment options, for both card-present and card-not-present transactions, with our complete set of APIs. Simply manage all transactions from one place, with the comprehensive CardPointe platform.
         link: 
       - relatedDoc: 
-        title: TEST
+        title: Rapid Connect
         description: One stop access to create, test, certify and deliver payment rich applications that seamlessly integrate to First Data Payment Systems.
+        link:
+      - relatedDoc: 
+        title: App Market
+        description: Develop Apps for the Clover Marketplace.
         link: 
     relatedAPIs:
       - relatedAPI: 
