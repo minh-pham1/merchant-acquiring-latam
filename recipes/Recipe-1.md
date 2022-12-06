@@ -1,6 +1,5 @@
 # Generate a message signature
 
-
 We show you how to generate the signature required for use with our payments API.
 
 ---
