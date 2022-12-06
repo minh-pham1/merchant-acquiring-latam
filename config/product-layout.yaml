@@ -42,9 +42,6 @@ featuredFeatures:
       - relatedDoc: 
         title: Clover
         description: Add semi-integrated payments to your iOS, Android or Windows POS using our attractive Clover Mini or Go hardware.
-        image: 
-          link: "/assets/images/3-payment-process.png"
-          altText: Fiserv
         link: 
           type: externalLink
           uri: https://www.clover.com/pos/integration-services
