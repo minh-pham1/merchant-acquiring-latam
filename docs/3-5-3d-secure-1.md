@@ -182,12 +182,12 @@ The **authenticationResponse** field will contain the following information:
 |----------|-----------|
 |```type```|3D_SECURE|
 |```version``` |2.1.0 (3DS VERSION)|
-|```acsURL|URL al sitio del emisor para redireccionar al tarjetahabiente y postear cReq y sessionData|
-|```termURL```|URL del comercio en donde se recibirán los resultados de autenticación|
-|```cReq```|Mensaje codificado devuelto desde el ACS|
-|```sessionData```|Parámetros de sesión usados para la autenticación. Este campo no siempre es retornado|
+|```acsURL|URL to issuer site to redirect cardholder and post cReq and sessionData|
+|```termURL```|URL of the merchant where the authentication results will be received|
+|```cReq```|Encrypted message returned from the ACS|
+|```sessionData```|Session parameters used for authentication. This field is not always returned|
 
-Debe implementar un formulario que se envía automáticamente dentro de su sitio web.
+You should implement a form that is automatically submitted within your website.
 
 ```xml
 <form name="frm" method="POST" action="{value obtained on acsURL}">
@@ -198,23 +198,23 @@ Debe implementar un formulario que se envía automáticamente dentro de su sitio
 
 ## 8
 
-Una vez enviado el POST, el comprador será redirigido a la pantalla de autenticación 3DS en dónde se le solicitará ingresar su token/clave (esta clave depende del banco emisor y del mecanísmo que el banco utilice).
+Once the POST is sent, the buyer will be redirected to the 3DS authentication screen where they will be asked to enter their token/key (this key depends on the issuing bank and the mechanism used by the bank).
 
-IMAGEN AQUI
+![Token request!](/assets/images/3-5-esp-3ds-screen.jpg "Token request")
 
 ## 9
 
-Cuando se ingresa la clave correcta, el comprador será redirigido a la URL que recibimos en "termURL" junto con las siguientes claves-valor como parámetros POST
+When the correct key is entered, the buyer will be redirected to the URL we received in **"termURL"** along with the following key-values as **POST** parameters.
 
 |**Key**|**Value**|
 |-------|---------|
-|```cRes```|	Cadena que contiene información cifrada, resultado de la autenticación|
+|```cRes```|	String containing encrypted information, result of authentication|
 
 ## 10
 
-Completar la transacción
+Complete the transaction
 
-Dentro de tu termURL deerás construir una petición PATCH para confirmar los resultados de la autenticación al Gateway. Los componentes a enviar dentro de la petición son los siguientes:method HTTP PATCH apuntar hacia el URL <https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}/>. Donde el ipgTransactionId lo obtendremos de la respuesta previa.
+Within your termURL you will need to build a PATCH request to confirm the authentication results to the Gateway. The components to send within the request are the following: **method HTTP PATCH** point to the URL <https://cert.api.firstdata.com/gateway/v2/payments/{ipgTransactionId}/>. Where the ipgTransactionId will be obtained from the previous response.
 
 ```json
 {
@@ -236,7 +236,7 @@ Dentro de tu termURL deerás construir una petición PATCH para confirmar los re
 }
 ```
 
-La respuesta a esta petición deberá contener el resultado final de la autenticación:
+The response to this request must contain the final result of the authentication:
 
 ```json
 {
@@ -264,5 +264,4 @@ La respuesta a esta petición deberá contener el resultado final de la autentic
 
 ## 11
 
-Mapeamos de manera correcta nuestra respuesta según la sección de Manejo de Respuestas en este manual.
-
+We correctly mapped our response according to the Response Management section of this manual.
