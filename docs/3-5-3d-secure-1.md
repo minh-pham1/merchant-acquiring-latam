@@ -2,6 +2,20 @@
 
 3D Secure is the new form of payment developed by Visa and Mastercard that makes possible to perform secure purchases on the Internet and authenticates the buyer as the legitimate holder of the card they are using.
 
+When using our Gateway and Fiserv as the 3-D Secure provider, the authentication is performed in-line with the existing transaction flow. The process starts by performing a typical authorization or sale request with a desire to perform 3-D Secure authentication in the request.
+
+The authorization is then placed into a ```WAITING``` status until the authentication process is completed. During authentication, the merchant may be required to update the original transaction request one or more times in order to move the process flow forward.
+
+At the end of the authentication process, the original transaction is updated with the authentication results and the authorization is completed.
+
+The sequence diagrams below map to the steps in the text that follows. The first diagram is for the frictionless flow. This means the issuer does not require the cardholder to authenticate.
+
+![Sequence diagrama for frictionless flow!](/assets/images/3-5-1-3ds-frictionless.png "Frictionless flow")
+
+The next diagram shows the flow when your customer has to authenticate, which means their issuer has requested they provide additional authentication details.
+
+![Sequence diagrama for authenticate!](/assets/images/3-5-2-3ds-auth.png "Authenticate flow")
+
 From now on you can only buy if you go through an authentication flow, which will authorize the purchase at that precise moment. If this flow is not completed, the customer will not be able to complete the purchase with the card.
 
 In this way fraud in the network is impossible and guarantees total security in transactions.
