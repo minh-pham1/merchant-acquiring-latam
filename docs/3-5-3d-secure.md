@@ -30,13 +30,32 @@ You can instruct the payment to use 3-D Secure if you want to enforce it. The re
 
 This message needs to include the ```authenticationRequest``` object in the transaction request message and includes the following values:
 
-|Description	|
-|-------------|
-|```authenticationType```	|
-|```termURL```	|
-|```methodNotifictionURL```	|
-|```challengeIndicator```	|
-|```challengeWindowSize```	|
+|Attribute|Description	|
+|---------|-------------|
+|```authenticationType```	|The value Secure3DAuthenticationRequest is a default value for 3DS authentication request|
+|```termURL```	|Indicates the callback URL where the results of the authentication process should be posted by the ACS server (this is the Access Control Server that executes the cardholder authentication).|
+|```methodNotifictionURL```	|In order to be notified about the 3DSMethod form display completion, you must also submit this element in your transaction request. The URL should be uniquely identifiable, so when there is a notification received on this URL, you should be able to map it with the corresponding transaction. This eliminates any dependency on the Secure3dTransId which you will receive with the 3DSMethod form response. An easy way to ensure correct transaction mapping is to pass a transaction reference as a query string|
+|```challengeIndicator```	|In case you would like to influence which authentication flow should be used, you can submit this optional element with one of the values listed below. In case the Challenge Indicator is not sent within your transaction request, the Gateway will populate the default value “01” – No preference.|
+|```challengeWindowSize```	|If you want to define the size of the challenge window displayed to your customers during the authentication process, you can submit this optional element with one of the values listed below.|
+
+Available values for ```challengeIndicator``` are:
+01 = No preference (You have no preference whether a challenge should be performed. This is the default value)
+02 = No challenge requested (You prefer that no challenge should be performed.)
+03 = Challenge requested: 3DS Requestor Preference (You prefer that a challenge should be performed)
+04 = Challenge requested: Mandate (There are local or regional mandates that mean that a challenge must be performed)
+05 = No challenge requested (Transaction Risk Analysis is already performed)
+06 = No challenge requested (Data Share Only)
+07 = No challenge requested (SCA is already performed)
+08 = No challenge requested (Utilize whitelist exemption if no challenge required)
+09 = Challenge requested (Whitelist prompt requested if challenge required)
+
+Available values for ```challengeWindowSize``` are:
+
+01 = 250 x 400
+02 = 390 x 400
+03 = 500 x 600
+04 = 600 x 400
+05 = Full screen
 
 The following JSON document represents an example of a Sale transaction request with minimal set of elements:
 
@@ -364,7 +383,7 @@ The following JSON document represents an example of a request with 'cRes' eleme
 }
 ```
 
-### Step 10 – Final response
+### Step 10: Final response
 
 Since this transaction was initiated as a 'Sale', the authorization is performed as part of this final step, if the authentication was successful.
 
@@ -572,25 +591,25 @@ The following JSON document represents an example of a sale transaction submitte
 {
   "requestType": "PaymentCardSaleTransaction",
   "transactionAmount": {
-               "total": "12.00",
-               "currency": "EUR"
+    "total": "12.00",
+    "currency": "EUR"
   },
   "paymentMethod": {
-               "paymentCard": {
-                               "number": "401699XXXX0006",
-                               "securityCode": "999",
-                               "expiryDate": {
-                                   "month": "12",
-                                   "year": "24"
-                               }
-               }
+    "paymentCard": {
+      "number": "401699XXXX0006",
+      "securityCode": "999",
+      "expiryDate": {
+        "month": "12",
+        "year": "24"
+      }
+    }
   },
   "authenticationResult": {
-      "authenticationType": "Secure3DAuthenticationResult",
-      "cavv": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
-      "dsTransactionId": "5a56fdc9-6d47-5fee-8000-000000296743",
-      "authenticationResponse": "Y"
-   }
+    "authenticationType": "Secure3DAuthenticationResult",
+    "cavv": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+    "dsTransactionId": "5a56fdc9-6d47-5fee-8000-000000296743",
+    "authenticationResponse": "Y"
+  }
 }
 ```
 
