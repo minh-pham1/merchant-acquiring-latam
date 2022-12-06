@@ -21,8 +21,9 @@ The Gateway provides
 Use POST to make a call to /payment-url and specify the values for the payload as defined in the following table.
 
 |**Attribute**|	**Explanation**|
-|```transactionType```	|this attribute tells our platform what type of transaction to execute when the customer completes the payment via the URL. To take a payment, use SALE. To create a pre-authorization, use PREAUTH. To credit the customer, use CREDIT.|
-|```transactionNotificationURL```	|Set the URL to which you would like notification posted when the payment has been completed by the customer|
+|-----------------|----------------------------------|
+|```transactionType```	|This attribute tells our platform what type of transaction to execute when the customer completes the payment via the URL. To take a payment, use SALE. To create a pre-authorization, use PREAUTH. To credit the customer, use CREDIT.|
+|```transactionNotificationURL```|Set the URL to which you would like notification posted when the payment has been completed by the customer|
 |```expiration```	|This is the date on which the URL will expire and no longer be useable by the customer|
 |```authenticateTransaction```	|set to TRUE to have the transaction authenticated by 3-D Secure (this will happen within our hosted page, not via the REST API driven 3-D Secure flow)|
 |```dynamicMerchantName```	|This sets the merchant name that will appear on the customers card statement, so you can set this to whatever you want to appear there.|
