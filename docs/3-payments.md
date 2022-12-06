@@ -40,8 +40,7 @@ The header is constructed as per the following example.
 
 Generating a message signature is a key component of this API. You can learn more here:
 
-[Generate a message signature](https://dev-developerstudio.fiserv.com/product/MerchantAcquiringLATAM/recipes/?path=recipes/1-generate-message.md&branch=develop)
-
+[Generate a message signature](merchant-acquiring-latam/recipes/1-generate-message.md)
 
 
 ## Polymorphism
@@ -92,10 +91,9 @@ As an example, you'll use the ```PaymentCardSaleTransaction``` requestType to ta
 
 These examples are show below:
 
-[Make a card payment](recipes/3-5-3d-secure.md)
+[Make a card payment](recipes/2-card-payment.md)
 
-**Refund a transaction**
-[Refund a transaction](recipes/3-5-3d-secure.md)
+[Refund a transaction](recipes/3-refund-transaction.md)
 
 ## How the resource works
 
@@ -174,9 +172,6 @@ The flow below shows a standard payments process using a card payment transactio
 ![standard payments process!](/assets/images/3-payment-process.png "Standard payment process")
 
 
-**Verify a card payment**
-**Open Recipe**
+[Verify a card payment](recipes/4-verify-card-payment.md)
 
-**Look up card information**
-**Open Recipe**
-
+[Look up card information](recipes/5-card-information.md)
