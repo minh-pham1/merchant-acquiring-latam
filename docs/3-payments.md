@@ -40,7 +40,7 @@ The header is constructed as per the following example.
 
 Generating a message signature is a key component of this API. You can learn more here:
 
-[Generate a message signature](/recipes/Recipe-1.md)
+[Generate a message signature](recipes/1-generate-message.md)
 
 ## Polymorphism
 
@@ -88,12 +88,12 @@ As an example, you'll use the ```PaymentCardSaleTransaction``` requestType to ta
 }
 ```
 
-**These examples are show below:**
+These examples are show below:
 
-**Make a card payment**
-**Open Recipe**
+[Make a card payment](recipes/3-5-3d-secure.md)
+
 **Refund a transaction**
-**Open Recipe**
+[Refund a transaction](recipes/3-5-3d-secure.md)
 
 ## How the resource works
 
