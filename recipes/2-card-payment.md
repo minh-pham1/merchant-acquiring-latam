@@ -24,7 +24,7 @@ Use PaymentCardSaleTransaction, enter the amount, currency and card details.
 
 ```javascript
       requestType: "PaymentCardSaleTransaction",
-      transactionAmount: { total: "13", currency: "GBP" },
+      transactionAmount: { total: "13", currency: "USD" },
       paymentMethod: {
         paymentCard: {
           number: "1234********1234,
@@ -40,7 +40,7 @@ Use PaymentCardSaleTransaction, enter the amount, currency and card details.
     url,
     {
       requestType: "PaymentCardSaleTransaction",
-      transactionAmount: { total: "13", currency: "GBP" },
+      transactionAmount: { total: "13", currency: "USD" },
       paymentMethod: {
         paymentCard: {
           number: "1234********1234,
