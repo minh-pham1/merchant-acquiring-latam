@@ -67,6 +67,6 @@
         link: docs/3-12-tokenisation.md
       - title: Error codes
         link: docs/3-13-error-codes.md
-- sections:
-  - title: Release notes
-    link: docs/release-notes/2022/november.md
+# - sections:
+#  - title: Release notes
+#    link: docs/release-notes/2022/november.md
