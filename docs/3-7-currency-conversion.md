@@ -1,3 +1,7 @@
+---
+tags: [Getting Started, Payments, Currency Conversion, Types, Dynamic Pricing]
+---
+
 # Currency Conversion
 
 Use our Currency Conversion services to offer your customers the ability to pay in different currencies, typically their own domestic currency when ordering from overseas.
