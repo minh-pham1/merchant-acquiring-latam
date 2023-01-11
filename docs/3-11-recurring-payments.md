@@ -1,3 +1,7 @@
+---
+tags: [Getting Started, Payments, Recurring Payments]
+---
+
 # Recurring Payments
 
 ## /payment-schedule
