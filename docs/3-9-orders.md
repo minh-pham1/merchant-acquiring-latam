@@ -1,3 +1,7 @@
+---
+tags: [Getting Started, Payments, Orders]
+---
+
 # Orders
 
 ## /orders/{order-id}
