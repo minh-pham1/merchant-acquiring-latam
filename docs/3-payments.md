@@ -1,3 +1,7 @@
+---
+tags: [Payments, API, Header, Parameters, Polymorphism, Primary Transaction]
+---
+
 # Payments
 
 Use this API to accept Payments of all types, and to process secondary actions like Voids, Refunds or Pre-Auth Completions
