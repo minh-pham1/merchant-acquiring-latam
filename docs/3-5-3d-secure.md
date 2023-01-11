@@ -1,3 +1,7 @@
+---
+tags: [Getting Started, Payments, 3-D Secure, Frictionless Flow, Challenge Flow]
+---
+
 # 3-D Secure
 
 When using our Gateway and Fiserv as the 3-D Secure provider, the authentication is performed in-line with the existing transaction flow. The process starts by performing a typical authorization or sale request with a desire to perform 3-D Secure authentication in the request.
