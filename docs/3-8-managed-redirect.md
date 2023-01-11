@@ -1,3 +1,7 @@
+---
+tags: [Getting Started, API Reference, Managed Redirect, Credit Card, 3-D Secure]
+---
+
 # Managed Redirect
 
 Managed Redirect feature significantly reduces development effort needed for an integration of payment methods requiring consumer redirection. A simple API request to the Gateway generates a URL, which is used in the next step to redirect your customers to and let our Hosted Payment Page (Connect) handle the payment process on your behalf.
@@ -43,9 +47,6 @@ The following JSON document represents an example of a response:
    "transactionId": "84400086815"
 }
 ```
-
-> Note. Please note, that after 
-<!-- theme: warning -->
 
 > 🚧 Note. Please note, that after your customer completed their payment, you will receive HTML formatted response instead of a JSON formatted response.
 <!-- theme: warning -->
