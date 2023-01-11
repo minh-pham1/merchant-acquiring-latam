@@ -102,7 +102,6 @@ At this point, a verification request takes place to determine if the 3-D Secure
 
 In the above case the transaction status will appear like so:
 
-
 ```transactionStatus = `APPROVED` || `DECLINED` ```
 
 If the cardholder is verified to be enrolled in the 3-D Secure program, then an 'authenticationResponse' object will be included in the transaction response.
@@ -199,7 +198,6 @@ You need to wait a minimum of **10 seconds** for the above POST operation to com
 |RECEIVED|	You have submitted the element ```methodNotificationURL``` in the initial Sale transaction request and have received the notification from ACS within 10 seconds, you will receive HTTP POST message from ACS, which will contain a unique transaction identifier represented by secure3dTransId|
 |EXPECTED_BUT_NOT_RECEIVED|	You have submitted the element ```methodNotificationURL``` in the initial Sale transaction request and have not received the notification from ACS within 10 seconds.|
 |NOT_EXPECTED|	You have NOT submitted the element ```methodNotificationURL``` in the initial Sale transaction request.|
-
 
 > 🚧 There may be occasions where you will observe duplicate responses to your '3DSMethod Notification URL' or 'Term URL', this could be due to duplicate requests being sent from an issuers ACS or perhaps user behaviour within the browser. It is recommended that you build handling into your system, so in the event you receive a duplicate response to your '3DSMethod Notification URL' or 'Term URL' you do not then send an additional/duplicated request to the Gateway.
 <!-- theme: warning -->
