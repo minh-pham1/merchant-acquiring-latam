@@ -111,7 +111,6 @@ To void the Post-Auth, thereby re-opening the Pre-Auth, POST a voidTransaction r
 - [Request Types](?path=docs/3-1-request-types.md)
 - [Payment Methods](?path=docs/3-2-payment-methods.md)
 - [Payment Types](?path=docs/3-3-payment-types.md)
-- [Post-authorisation & Returns](?path=docs/3-4-post-auth.md)
 - [3-D Secure](?path=docs/3-5-3d-secure.md)
 - [Card Verification](?path=docs/3-6-card-verification.md)
 - [Currency Conversion](?path=docs/3-7-currency-conversion.md)
