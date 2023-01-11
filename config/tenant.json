@@ -25,7 +25,8 @@
       "versionType": "major",
       "releaseNotesPath": "docs/release-notes/2022/november.md",
       "apiSpecFileNames": [
-        "openapi"
+        "openapi",
+        "boarding"
       ]
     }
   ],
@@ -59,21 +60,23 @@
       }
     ]
   },
-  "supportConfig": [{ 
-    "bug": {
-      "label": "",
-      "template": "",
-      "assignees": ""
-    },  
-    "feedback": {
-      "label": "",
-      "template": "",
-      "assignees": ""
-    },
-    "enhancement": {
-      "label": "",
-      "template": "",
-      "assignees": ""
+  "supportConfig": [
+    {
+      "bug": {
+        "label": "",
+        "template": "",
+        "assignees": ""
+      },
+      "feedback": {
+        "label": "",
+        "template": "",
+        "assignees": ""
+      },
+      "enhancement": {
+        "label": "",
+        "template": "",
+        "assignees": ""
+      }
     }
-  }]
+  ]
 }
