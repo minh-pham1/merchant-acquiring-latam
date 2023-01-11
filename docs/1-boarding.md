@@ -1,3 +1,7 @@
+---
+tags: [Boarding, API]
+---
+
 # Boarding
 
 ## Latam Merchant Boarding APIs
