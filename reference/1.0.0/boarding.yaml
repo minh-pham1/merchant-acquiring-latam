@@ -18,7 +18,8 @@ paths:
       tags:
         - Application-Controller
       x-proxy-name: Create Application
-      x-child-product-name: Application-Controller
+      x-group-name: Application-Controller
+      x-child-product-name: Boarding
       description: Saves the whole application data.
       operationId: createApplication
       requestBody:
@@ -51,7 +52,8 @@ paths:
       tags:
         - Application-Controller
       x-proxy-name: Retrieve Datafill Combos
-      x-child-product-name: Application-Controller
+      x-group-name: Application-Controller
+      x-child-product-name: Boarding
       description: Retrieves the data that are needed to fulfill the fields for the request. For each field will be returned the the kind of field and it's type and possible values.
       operationId: retrieveDatafillCombos
       responses:
@@ -68,7 +70,8 @@ paths:
       tags:
         - Application-Controller
       x-proxy-name: Retrieve Data Fulfill Combos
-      x-child-product-name: Application-Controller
+      x-group-name: Application-Controller
+      x-child-product-name: Boarding
       description: Retrieves the data that are needed to fulfill the fields for the request based on the country where the enterprise is settled. For each field will be returned the the kind of field and it's type and possible values.
       operationId: retrieveDataFulfillCombos
       parameters:
@@ -91,7 +94,8 @@ paths:
       tags:
         - Application-Controller
       x-proxy-name: Get Application
-      x-child-product-name: Application-Controller
+      x-group-name: Application-Controller
+      x-child-product-name: Boarding
       description: Retrieves the application's data
       operationId: getApplication
       parameters:
@@ -127,7 +131,8 @@ paths:
       tags:
         - Application-Controller
       x-proxy-name: Update Application
-      x-child-product-name: Application-Controller
+      x-group-name: Application-Controller
+      x-child-product-name: Boarding
       description: Updates the whole application data
       operationId: updateApplication
       parameters:
@@ -170,7 +175,8 @@ paths:
       tags:
         - Application-Controller
       x-proxy-name: Add Application Id Board
-      x-child-product-name: Application-Controller
+      x-group-name: Application-Controller
+      x-child-product-name: Boarding
       description: Starts the boarding process. This process is totally asynchronous, and the response will be given by a Message Queue. Please check SucessfulResult and UnsucessfulResult for the returned payloads.
       operationId: startBoarding
       parameters:
@@ -209,7 +215,8 @@ paths:
       tags:
         - Terminal-Controller
       x-proxy-name: New Terminal
-      x-child-product-name: Terminal-Controller
+      x-group-name: Terminal-Controller
+      x-child-product-name: Boarding
       parameters:
         - name: id
           in: path
@@ -255,7 +262,8 @@ paths:
       tags:
         - Terminal-Controller
       x-proxy-name: Update Terminal
-      x-child-product-name: Terminal-Controller
+      x-group-name: Terminal-Controller
+      x-child-product-name: Boarding
       parameters:
         - name: applicationId
           in: path
@@ -298,7 +306,8 @@ paths:
       tags:
         - Terminal-Controller
       x-proxy-name: Delete Terminal
-      x-child-product-name: Terminal-Controller
+      x-group-name: Terminal-Controller
+      x-child-product-name: Boarding
       parameters:
         - name: applicationId
           in: path
@@ -334,7 +343,8 @@ paths:
       tags:
         - Application-Controller
       x-proxy-name: Get Account Fees
-      x-child-product-name: Application-Controller
+      x-group-name: Application-Controller
+      x-child-product-name: Boarding
       description: Read the account fee list.
       operationId: getAccountFees
       responses:
@@ -444,7 +454,8 @@ paths:
       tags:
         - Application-Controller
       x-proxy-name: Get Transaction Charges
-      x-child-product-name: Application-Controller
+      x-group-name: Application-Controller
+      x-child-product-name: Boarding
       description: Retrieves the transaction charges
       responses:
         '200':
@@ -580,7 +591,8 @@ paths:
       tags:
         - Application-Controller
       x-proxy-name: Get Product and Features
-      x-child-product-name: Application-Controller
+      x-group-name: Application-Controller
+      x-child-product-name: Boarding
       description: Retrieves the list of products and features.
       operationId: productNFeatures
       responses:
@@ -645,7 +657,8 @@ paths:
       tags:
         - Application-Controller
       x-proxy-name: Get MCC list
-      x-child-product-name: Application-Controller
+      x-group-name: Application-Controller
+      x-child-product-name: Boarding
       description: Retrieves the list of products and features.
       operationId: mccList
       responses:
