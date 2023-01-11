@@ -1,3 +1,7 @@
+---
+tags: [Getting Started, Payments, Payment Types, Card Brands]
+---
+
 # Payment Types
 
 *This page details some of the common forms of payment which are referenced in many of our APIs.*
