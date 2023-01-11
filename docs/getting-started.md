@@ -27,8 +27,6 @@ description: Create, test, certify and deliver payment-rich applications all thr
 
 <!-- type: row-end -->
 
----
-
 <!-- type: row -->
 
 <!-- type: card
