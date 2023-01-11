@@ -1,3 +1,7 @@
+---
+tags: [Getting Started, Payments, Error codes]
+---
+
 # Error codes
 
 ## AppKey missing in request, 400 BAD REQUEST
