@@ -1,3 +1,7 @@
+---
+tags: [Getting Started, Payments, Request Methods, SEPA Transactions]
+---
+
 # Payment Methods
 
 To create a customer payment using a Primary Transaction, you must include the paymentMethod object in the JSON call. Dependent on the requestType, you’ll make some changes to the paymentMethod object to reflect different payment instruments and transaction types.
