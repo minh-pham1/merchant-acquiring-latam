@@ -25,7 +25,6 @@
       "versionType": "major",
       "releaseNotesPath": "docs/release-notes/2022/november.md",
       "apiSpecFileNames": [
-        "openapi",
         "boarding"
       ]
     }
