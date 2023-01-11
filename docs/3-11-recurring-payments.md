@@ -142,3 +142,24 @@ Cancel a Payment Schedule by making a DELETE call to /payment-schedules/{order-i
 ## Retrieving Payment Schedule data
 
 Retrieve Payment Schedule data by making a GET call to /payment-schedules/{order-id} where the {order-id} value is the ```orderId``` value from the response of the original ```PaymentSchedulesRequest``` POST.
+
+
+
+---
+
+## See Also
+
+- [Request Types](?path=docs/3-1-request-types.md)
+- [Payment Methods](?path=docs/3-2-payment-methods.md)
+- [Payment Types](?path=docs/3-3-payment-types.md)
+- [Post-authorisation & Returns](?path=docs/3-4-post-auth.md)
+- [3-D Secure](?path=docs/3-5-3d-secure.md)
+- [Card Verification](?path=docs/3-6-card-verification.md)
+- [Currency Conversion](?path=docs/3-7-currency-conversion.md)
+- [Managed Redirect](?path=docs/3-8-managed-redirect.md)
+- [Orders](?path=docs/3-9-orders.md)
+- [Payment URL](?path=docs/3-10-payment-url.md)
+- [Tokenisation](?path=docs/3-12-tokenisation.md)
+- [Error codes](?path=docs/3-13-error-codes.md)
+
+---
