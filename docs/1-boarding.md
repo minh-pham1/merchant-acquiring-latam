@@ -1,5 +1,5 @@
 ---
-tags: [Boarding, API]
+tags: [Boarding, API, End-to-end]
 ---
 
 # Boarding
