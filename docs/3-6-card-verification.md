@@ -1,3 +1,7 @@
+---
+tags: [Getting Started, Payments, Card Verification]
+---
+
 # Card Verification
 
 ## /card-verification 
