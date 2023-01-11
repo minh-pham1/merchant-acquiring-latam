@@ -1,3 +1,7 @@
+---
+tags: [Getting Started, Payments, Post-authorisation & Returns]
+---
+
 # Post-authorisation & Returns
 
 ## /payments/{transaction-id}
