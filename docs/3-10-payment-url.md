@@ -1,3 +1,7 @@
+---
+tags: [Getting Started, Payments, Payment URL]
+---
+
 # Payment URL
 
 ## /payment-url
@@ -84,7 +88,6 @@ Other Payment URL functions
 To delete a Payment URL, add your ```storeId``` and the ```transactionId``` from the Payment URL creation request response (```ipgTransactionId```) to the /payment-url header, and use the DELETE method to call the /payment-url API.
 
 You can retrieve the data associated with a payment URL by sending a GET to /paymentURL. Add ```storeId``` and the ```transactionId``` from the Payment URL creation request response (```ipgTransactionId```) to the /payment-url header to retrieve the details for a specific Payment URL, or set ```storeId```, ```fromDate``` and ```toDate``` to call a response with all Payment URLs and their details created within a specific time range.
-
 
 ---
 
