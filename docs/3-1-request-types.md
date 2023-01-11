@@ -1,3 +1,7 @@
+---
+tags: [Getting Started, Payments, Request Types]
+---
+
 # Request Types
 
 Different payment actions require different requestType values. The table below explains the situations in which you might want to use the different requestType values. The technical detail for each of these requestTypes is included in the BodyRequest section of the API explorer. All API calls are ```POST```.
