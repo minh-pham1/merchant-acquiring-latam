@@ -1,5 +1,5 @@
 ---
-tags: [Logistics, API]
+tags: [Logistics, API, LATAM]
 ---
 
 # Logistics
