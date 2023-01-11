@@ -349,7 +349,7 @@ Example:
   <input type=”hidden” name=”creq” value=”ewogICAiYWNzVHJhbCIgOiA...wMDAtMDAwMDAwMDA0MWE5Igp9”>
   <input type=”hidden” name=”threeDSSessionData” value=”50F2156E03083CA665BCB4..”>
 </form>
-```    
+```
 
 When the authentication is completed, an authentication response will be posted to the URL specified in the 'termURL' field.
 
