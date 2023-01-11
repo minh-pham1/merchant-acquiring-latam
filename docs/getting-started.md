@@ -25,6 +25,12 @@ title: One Stop Shop
 description: Create, test, certify and deliver payment-rich applications all through a single interface.
 -->
 
+<!-- type: row-end -->
+
+---
+
+<!-- type: row -->
+
 <!-- type: card
 title: End to End Value
 description: Create rewards programs for your merchants or develop loyalty apps for our Clover Marketplace.
