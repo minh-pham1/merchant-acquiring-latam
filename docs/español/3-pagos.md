@@ -18,7 +18,7 @@ Una vez que haya ejecutado una transacción utilizando estas API, puede recupera
 
 Nuestra API de pagos tiene una estructura de encabezado coherente basada en un conjunto de parámetros. Para crear el encabezado, proporcione los siguientes valores:
 
-|Parametreo de Encabezado|Tipo|	Descripción|
+|Parametro de Encabezado|Tipo|	Descripción|
 | ---------- | ------- | ------- |
 |Content-Type|String|	Defina este atributo como application/json|
 |Client-Request-Id|String|Este es un ID que genera para que podamos realizar un seguimiento mutuo de sus solicitudes. Debe ser único por solicitud. Recomendamos que esté construido en formato UUID de 128 bits.|
