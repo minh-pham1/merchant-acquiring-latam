@@ -2,7 +2,7 @@
 tags: [Getting Started, Payments, Request Methods, SEPA Transactions]
 ---
 
-#  Métodos de Pago
+# Métodos de Pago
 
 Para crear un pago de cliente mediante una Transacción principal, debe incluir el objeto PaymentMethod en la llamada JSON. Según el tipo de solicitud, realizará algunos cambios en el objeto método de pago para reflejar diferentes instrumentos de pago y tipos de transacciones.
 
