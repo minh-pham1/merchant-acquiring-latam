@@ -33,6 +33,7 @@
       link: docs/getting-started.md
     - title: Boarding
       link: docs/1-boarding.md
+      sections:
       - title: Boarding Steps
         link: docs/2-1-boarding-steps.md
       - title: Prerequisite
