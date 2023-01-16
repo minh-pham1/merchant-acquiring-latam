@@ -41,7 +41,7 @@
     - title: Payments
       link: docs/3-payments.md
       sections:
-         - title: Carat
+        - title: Carat
           link: https://dev.softwareexpress.com.br/   
         - title: Request Types
           link: docs/3-1-request-types.md
