@@ -85,7 +85,7 @@
           link: docs/3-1-request-types.md
         - title: Métodos de Pago
           link: docs/3-2-payment-methods.md
-        - title: Tipos de Pago
+        - title: Tipos de Pagos
           link: docs/3-3-payment-types.md
         - title: Pos-autorización & Devoluciones
           link: docs/3-4-post-auth.md
@@ -95,9 +95,9 @@
           link: docs/3-6-card-verification.md
         - title: Conversión de Moneda
           link: docs/3-7-currency-conversion.md
-        - title: Redirección administrada
+        - title: Redirección Administrada
           link: docs/3-8-managed-redirect.md
-        - title: Ordenes
+        - title: Órdenes
           link: docs/3-9-orders.md
         - title: Pago URL
           link: docs/3-10-payment-url.md
