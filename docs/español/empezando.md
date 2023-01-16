@@ -38,7 +38,7 @@ description: Sean cuales sean las necesidades de su empresa, ya sea total, parci
 -->
 
 <!-- type: card
-title: título: Obtenga ingresos
+title: Obtenga ingresos
 description: aproveche uno de nuestros modelos comerciales comerciales flexibles y reciba pagos al registrar clientes para el procesamiento de pagos.
 -->
 
