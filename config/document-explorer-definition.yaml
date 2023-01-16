@@ -72,7 +72,7 @@
       - title: Empezando
         link: docs/español/empezando.md
       - title: Boarding
-        link: docs/1-boarding.md
+        link: docs/español/1-boarding.md
         sections:
         - title: Boarding Steps
           link: docs/2-1-boarding-steps.md
