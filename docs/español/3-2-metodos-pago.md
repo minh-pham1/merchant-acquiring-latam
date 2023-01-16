@@ -41,7 +41,7 @@ Se accede a más información sobre los cambios de carga asociados con cada uno 
 | ------------------| --------- |
 |PAYMENT_CARD	|El método de pago Tarjeta de pago cubre todos los tipos y redes de tarjetas de crédito y débito. Su contrato de adquisición comercial le indicará para cuál de las redes de pago puede aceptar pagos.|
 |PAYMENT_TOKEN	|El método de pago del token de pago le permite utilizar un token creado por nosotros, en lugar de los detalles del método de pago real. Se proporciona más información sobre el uso de tokens aquí.|
-|SEPA	A SEPA |transacción permite al cliente pagarle a través de una solicitud de banco a banco a través de la red europea SEPA.|
+|SEPA	A SEPA |Es la transacción que permite al cliente pagarle a través de una solicitud de banco a banco a través de la red europea SEPA.|
 |WALLET	|Habilita el pago a través de una transacción de Wallet. Las transacciones de billetera requieren un objeto PaymentMethod específico. Se proporciona más información sobre este objeto en la sección Pagos de Wallet.|
 
 ## SEPA Transactions
