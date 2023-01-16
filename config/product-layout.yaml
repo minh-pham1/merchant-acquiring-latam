@@ -79,11 +79,11 @@ featuredFeatures:
       - relatedDoc: 
         title: New Merchant Boarding Steps
         description: the steps of the journey to getting your merchant boarded. 
-        link: "/docs/2-1-boarding-steps.md"
+        link: "/docs/1-1-boarding-steps.md"
       - relatedDoc:
         title: Prerequisites
         description: One part of getting you on board is the configuration of ‘offers’ and the setting of these offers is essential for the onboarding process to work.
-        link: "docs/2-2-prerequisites.md"
+        link: "docs/1-2-prerequisites.md"
     relatedAPIs:
       - relatedAPI: 
         title: Create Application
