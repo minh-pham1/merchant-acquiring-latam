@@ -1,6 +1,6 @@
 # Facilitamos la aceptación
 
-Acceda a un conjunto completo de API al alcance de su mano. Encuentre herramientas para desarrolladores, muestras de código y recursos para ayudar a integrar total o parcialmente sus aplicaciones en la plataforma de comercio de First Data.
+Acceda a un conjunto completo de API al alcance de su mano. Encuentre herramientas para desarrolladores, muestras de código y recursos para ayudar a integrar total o parcialmente sus aplicaciones en la plataforma de comercio de **First Data**.
 
 ¿Quiere aprovechar una nueva fuente de ingresos? Integre a la plataforma Marketplace de First Data e inscriba a los clientes para el procesamiento de pagos directamente desde su sitio, ¡y reciba pagos!
 
