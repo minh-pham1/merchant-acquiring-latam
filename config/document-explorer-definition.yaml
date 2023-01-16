@@ -79,7 +79,7 @@
         - title: Pre-Requisito
           link: docs/español/1-2-prerequisitos.md
       - title: Pagos e-Commerce
-        link: docs/3-payments.md
+        link: docs/español/3-pagos.md
         sections:
         - title: Tipos de solicitudes
           link: docs/3-1-request-types.md
