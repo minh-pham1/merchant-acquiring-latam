@@ -12,7 +12,7 @@ La solución de embarque comercial es un requisito previo clave para el procesam
 
 <!--
 type: tab
-titles: ¿Por qué utilizar la API de Boarding?, ¿Qué proporcionan las API de Boarding?
+titles: ¿Por qué utilizar la API de Boarding?,¿Qué proporcionan las API de Boarding?
 -->
 
 Hay múltiples componentes involucrados en el procesamiento de transacciones. Cada sistema es responsable de uno o más de los siguientes procesos de ejemplo:
