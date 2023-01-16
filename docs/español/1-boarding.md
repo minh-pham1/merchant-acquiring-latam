@@ -12,14 +12,14 @@ La solución de embarque comercial es un requisito previo clave para el procesam
 
 <!--
 type: tab
-titles: ¿Por qué utilizar la API de Boarding?,¿Qué proporcionan las API de Boarding?
+titles: ¿Por qué utilizar las APIs de Boarding?,¿Qué proporcionan las API de Boarding?
 -->
 
 Hay múltiples componentes involucrados en el procesamiento de transacciones. Cada sistema es responsable de uno o más de los siguientes procesos de ejemplo:
 
-Autorizaciones de transacciones Compensación, liquidación y financiación de transacciones Facturación e inventario Gestión de relaciones con clientes Notificaciones Gestión de usuarios Evaluación de riesgo crediticio Cada uno de esos sistemas necesita conocer algunos de los detalles del comerciante. Y esos detalles deben proporcionárseles para permitir el procesamiento de transacciones de extremo a extremo para un comerciante.
+Autorizaciones de transacciones, compensación, liquidación y financiación de transacciones Facturación e inventario Gestión de relaciones con clientes, Notificaciones, Gestión de usuarios, Evaluación de riesgo crediticio. Cada uno de esos sistemas necesita conocer algunos de los detalles del comerciante. Y esos detalles deben proporcionárseles para permitir el procesamiento de transacciones de extremo a extremo para un comerciante.
 
-En lugar de tener que ingresar los detalles requeridos del comerciante en cada sistema individualmente o incluso manualmente, la API de embarque proporciona automatización. Esto mejora la calidad de los datos y reduce las posibilidades de errores de escritura. Además, el proceso general de activación comercial se acelera significativamente.
+En lugar de tener que ingresar los detalles requeridos del comerciante en cada sistema individualmente o incluso manualmente, las API de Boarding proporcionan automatización. Esto mejora la calidad de los datos y reduce las posibilidades de errores de escritura. Además, el proceso general de activación comercial se acelera significativamente.
 
 <!--
 type: tab
