@@ -81,34 +81,32 @@
       - title: Pagos e-Commerce
         link: docs/3-payments.md
         sections:
-        - title: Request Types
+        - title: Tipos de solicitudes
           link: docs/3-1-request-types.md
-        - title: Payment Methods
+        - title: Métodos de Pago
           link: docs/3-2-payment-methods.md
-        - title: Payment Types
+        - title: Tipos de Pago
           link: docs/3-3-payment-types.md
-        - title: Post-authorisation & Returns
+        - title: Pos-autorización & Devoluciones
           link: docs/3-4-post-auth.md
         - title: 3-D Secure
           link: docs/3-5-3d-secure.md
-        - title: Card Verification
+        - title: Verificación de Tarjeta
           link: docs/3-6-card-verification.md
-        - title: Currency Conversion
+        - title: Conversión de Moneda
           link: docs/3-7-currency-conversion.md
-        - title: Managed Redirect
+        - title: Redirección administrada
           link: docs/3-8-managed-redirect.md
-        - title: Orders
+        - title: Ordenes
           link: docs/3-9-orders.md
-        - title: Payment URL
+        - title: Pago URL
           link: docs/3-10-payment-url.md
-        - title: Recurring Payments
+        - title: Pagos Recurrentes
           link: docs/3-11-recurring-payments.md
-        - title: Tokenisation
+        - title: Tokenización
           link: docs/3-12-tokenisation.md
-        - title: Error codes
-          link: docs/3-13-error-codes.md
-      
-    
+        - title: Códigos de Error
+          link: docs/3-13-error-codes.md  
   # - title: Logistitcs
   #   link: docs/2-logistics.md
   # - sections:
