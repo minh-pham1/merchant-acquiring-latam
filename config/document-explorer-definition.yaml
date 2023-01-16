@@ -74,9 +74,9 @@
       - title: Boarding
         link: docs/español/1-boarding.md
         sections:
-        - title: Boarding Steps
+        - title: Pasos Boarding
           link: docs/español/1-1-pasos-boarding.md
-        - title: Prerequisite
+        - title: Pre-Requisito
           link: docs/español/1-2-prerequisitos.md
       - title: Pagos e-Commernce
         link: docs/3-payments.md
