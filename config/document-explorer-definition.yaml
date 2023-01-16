@@ -33,8 +33,8 @@
       link: docs/getting-started.md
     - title: Boarding
       link: docs/1-boarding.md
-    - title: Logistitcs
-      link: docs/2-logistics.md
+    # - title: Logistitcs
+    #   link: docs/2-logistics.md
     - title: Payments
       link: docs/3-payments.md
       sections:
@@ -48,8 +48,8 @@
           link: docs/3-4-post-auth.md
         - title: 3-D Secure
           link: docs/3-5-3d-secure.md
-        - title: 3-D Secure - 2
-          link: docs/3-5-3d-secure-1.md
+      #  - title: 3-D Secure - 2
+      #    link: docs/3-5-3d-secure-1.md
         - title: Card Verification
           link: docs/3-6-card-verification.md
         - title: Currency Conversion
