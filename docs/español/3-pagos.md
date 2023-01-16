@@ -2,31 +2,31 @@
 tags: [Payments, API, Header, Parameters, Polymorphism, Primary Transaction]
 ---
 
-# Payments
+# Pagos e-Commerce
 
-Use this API to accept Payments of all types, and to process secondary actions like Voids, Refunds or Pre-Auth Completions
+Use esta API para aceptar pagos de todo tipo y para procesar acciones secundarias como anulaciones, reembolsos o finalizaciones previas a la autorización.
 
-You can use our payment API to offer a range of payment methods to your customers. It allows you to take payment using whatever the most appropriate transaction type is.
+Puede utilizar nuestra API de pago para ofrecer una variedad de métodos de pago a sus clientes. Le permite recibir pagos utilizando el tipo de transacción más apropiado.
 
-Fiserv’s Payment API supports the following major payment methods; ```Visa```, ```Mastercard```, ```Amex```, ```Apple Pay```, ```Google Pay```, ```Sepa```, as well as multiple other international and local payment methods. To gain access to payment methods beyond this main set, please contact your integration services representative.
+La API de pago de Fiserv admite los siguientes métodos de pago principales; ```Visa```, ```Mastercard```, ```Amex```, ```Apple Pay```, ```Google Pay```, ```Sepa```, así como muchos otros métodos de pago internacionales y locales. Para obtener acceso a métodos de pago más allá de este conjunto principal, comuníquese con su representante de servicios de integración.
 
-Our payments end points can be used to create and complete a payment, create and manage a recurring payment schedule, generate a payment link to send to a customer, verify a customer’s card or offer them the option to pay in their local currency.
+Nuestros puntos finales de pagos se pueden usar para crear y completar un pago, crear y administrar un cronograma de pago recurrente, generar un enlace de pago para enviar a un cliente, verificar la tarjeta de un cliente u ofrecerles la opción de pagar en su moneda local.
 
-Once you’ve executed a transaction using these APIs, you can retrieve all the detail you need on the transaction using our Merchant Intelligence APIs.
+Una vez que haya ejecutado una transacción utilizando estas API, puede recuperar todos los detalles que necesita sobre la transacción utilizando nuestras API de Merchant Intelligence.
 
-## Header and Parameters
+## Encabezado y Parametros
 
-Our Payments API have a consistent Header structure based on a set of Parameters. To create the header, provide the following values:
+Nuestra API de pagos tiene una estructura de encabezado coherente basada en un conjunto de parámetros. Para crear el encabezado, proporcione los siguientes valores:
 
 |Header Parameter|Type|	Description|
 | ---------- | ------- | ------- |
-|Content-Type|String|	Define this attribute as application/json|
-|Client-Request-Id|String|This is an ID you generate so we can mutually track your requests. It should be unique per request. We recommend this is built in 128-bit UUID format.|
-|Api-Key|String|This is the key you'll use to identify yourself to us. You'll be given a key for development and testing, then a different key when you're ready to go live.|
-|Timestamp|Integer|You should define this as an epoch timestamp in milliseconds. This is used for message signature generation and for time limit control.
-|Message-Signature|String|We use this for security. The Message-Signature is the Base64 encoded HMAC hash (SHA256 algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal.|
+|Content-Type|String|	Defina este atributo como application/json|
+|Client-Request-Id|String|Este es un ID que genera para que podamos realizar un seguimiento mutuo de sus solicitudes. Debe ser único por solicitud. Recomendamos que esté construido en formato UUID de 128 bits.|
+|Api-Key|String|Esta es la clave que utilizará para identificarse con nosotros. Se le dará una clave para el desarrollo y las pruebas, luego una clave diferente cuando esté listo para comenzar.|
+|Timestamp|Integer|Debe definir esto como una marca de tiempo de época en milisegundos. Esto se utiliza para la generación de firmas de mensajes y para el control de límites de tiempo.|
+|Message-Signature|String|samos esto por seguridad. La firma del mensaje es el hash HMAC codificado en Base64 (algoritmo SHA256 con el secreto de la API como clave). Para obtener más información, consulte la documentación de apoyo en Developer Portal.|
 
-The header is constructed as per the following example.
+El encabezado se construye según el siguiente ejemplo.
 
 ```json
 {
@@ -42,26 +42,26 @@ The header is constructed as per the following example.
 }
 ```
 
-Generating a message signature is a key component of this API. You can learn more here:
+La generación de una firma de mensaje es un componente clave de esta API. Puedes aprender más aqui:
 
 [Generate a message signature](?path=recipes/1-generate-message.md)
 
 
-## Polymorphism
+## Polimorfismo
 
-Our Payments API is Polymorphic - this means that you can submit various request types with different payloads to the same API resource and generate different payments types and responses.
+Nuestra API de pagos es polimórfica, lo que significa que puede enviar varios tipos de solicitudes con diferentes cargas útiles al mismo recurso de API y generar diferentes tipos de pagos y respuestas.
 
-The term is taken from chemistry - Polymorphism is the ability of solid materials to exist in two or more crystalline forms with different arrangements.
+El término se toma de la química: el polimorfismo es la capacidad de los materiales sólidos para existir en dos o más formas cristalinas con diferentes arreglos.
 
-When we apply this to API design, it means the same API can be used for multiple payment actions. We enable this by defining different schemas for the payload body, each of which is used for a payment action.
+Cuando aplicamos esto al diseño de API, significa que la misma API se puede usar para múltiples acciones de pago. Habilitamos esto definiendo diferentes esquemas para el cuerpo de la carga útil, cada uno de los cuales se usa para una acción de pago.
 
-Polymorphism for our Payments API is based on request types (the ```requestType``` field), which enables you to distinguish between customer payments based on the type of transaction (```sale```, ```refund```, ```cancellation```, etc.) and the payment method the customer wants to use (credit or debit cart, digital wallet, SEPA, Paypal etc.).
+El polimorfismo de nuestra API de pagos se basa en los tipos de solicitud (el campo ```requestType```), lo que le permite distinguir entre pagos de clientes según el tipo de transacción (```venta```, ```reembolso` ``, ```cancelación```, etc.) y el método de pago que el cliente desea utilizar (carrito de crédito o débito, monedero digital, SEPA, Paypal, etc.).
 
-You'll use the same endpoint to execute a payment for all of these variations, but the ```requestType``` value you submit, and the other objects in the payload, will vary dependent on the type of customer payment you are trying to take.
+Utilizará el mismo punto final para ejecutar un pago para todas estas variaciones, pero el valor ```requestType``` que envíe y los otros objetos en la carga útil variarán según el tipo de pago del cliente que esté intentando. tomar.
 
-As an example, you'll use the ```PaymentCardSaleTransaction``` requestType to take a normal card payment when a customer wants to check out. You can then use a secondary transaction requestType` to refund or void the transaction.
+Como ejemplo, usará el tipo de solicitud ```PaymentCardSaleTransaction``` para aceptar un pago normal con tarjeta cuando un cliente desea pagar. A continuación, puede utilizar un tipo de solicitud de transacción secundaria` para reembolsar o anular la transacción.
 
-## Example
+## Ejemplo
 
 ```json
 {
@@ -93,29 +93,29 @@ As an example, you'll use the ```PaymentCardSaleTransaction``` requestType to ta
 }
 ```
 
-These examples are show below:
+Estos ejemplos se muestran a continuación:
 
 [Make a card payment](?path=recipes/2-card-payment.md)
 
 [Refund a transaction](?path=recipes/3-refund-transaction.md)
 
-## How the resource works
+## Cómo funciona el recurso
 
-The ```/payments``` endpoint allows you to ```create```, ```inquire``` about, and ```finalize``` payment transactions.
+El extremo ```/pagos``` le permite ```crear```, ```consultar``` y ```finalizar``` transacciones de pago.
 
-It will enable you to ```void``` a previous transaction, to ```refund``` a previous transaction or to execute ```partial refunds``` or ```voids```. Finally, and where necessary, it will enable you to ```pre-authorise``` transactions that can be completed later.
+Le permitirá ```anular``` una transacción anterior, ```reembolsar``` una transacción anterior o ejecutar ```reembolsos parciales``` o ```voids```. Finalmente, y cuando sea necesario, le permitirá ```preautorizar``` transacciones que pueden completarse más tarde.
 
-The API enables you to make payments using different payment instruments, via credit or debit cards, tokens or through local payments methods such as SEPA DD or Paypal account. All of these methods are explained below.
+La API le permite realizar pagos utilizando diferentes instrumentos de pago, a través de tarjetas de crédito o débito, tokens o mediante métodos de pago locales como SEPA DD o cuenta de Paypal. Todos estos métodos se explican a continuación.
 
-You can use the API to accept wallet transactions via payment methods such as Apple Pay or Google Pay. It will allow you to use extra authentication protocols to ensure customer payments are safer, and to protect you from fraud.
+Puede usar la API para aceptar transacciones de billetera a través de métodos de pago como Apple Pay o Google Pay. Le permitirá utilizar protocolos de autenticación adicionales para garantizar que los pagos de los clientes sean más seguros y para protegerlo contra el fraude.
 
-Our Payments API has two main uses - Primary and Secondary Transactions. Primary transactions are typical sale transactions, pre-authorisations or credits. Secondary Transactions let you refund a transaction, void a transaction or complete a pre-authorisation.
+Nuestra API de pagos tiene dos usos principales: transacciones primarias y secundarias. Las transacciones primarias son transacciones típicas de venta, preautorizaciones o créditos. Las transacciones secundarias le permiten reembolsar una transacción, anular una transacción o completar una preautorización.
 
-## Creating a 'primary' transaction
+## Creando una transacción 'primaria'
 
-Primary transactions are used to execute a customer payment, pre-authorisation or credit transaction without reference to a prior transaction. For this walkthrough, we’re going to use the PaymentCardSaleTransaction request type (all request types should have links), which you can use for a normal credit or debit card payment transaction without reference to a previous transaction. Each of the different request types, the scenarios in which you might want to use them, and the differences in the JSON for each request type, are explained within this guide.
+Las transacciones primarias se utilizan para ejecutar un pago de un cliente, una autorización previa o una transacción de crédito sin referencia a una transacción anterior. Para este tutorial, usaremos el tipo de solicitud PaymentCardSaleTransaction (todos los tipos de solicitud deben tener enlaces), que puede usar para una transacción de pago con tarjeta de crédito o débito normal sin referencia a una transacción anterior. En esta guía se explican cada uno de los diferentes tipos de solicitudes, los escenarios en los que es posible que desee utilizarlos y las diferencias en el JSON para cada tipo de solicitud.
 
-The ```PaymentCardSaleTransaction``` request type requires the following fields to post a Primary Transaction.
+El tipo de solicitud ```PaymentCardSaleTransaction``` requiere los siguientes campos para publicar una transacción principal.
 
 ```json
 {
@@ -148,12 +148,12 @@ The ```PaymentCardSaleTransaction``` request type requires the following fields 
 }
 ```
 
-Within the model, the most important objects are the ```transactionAmount``` and the ```paymentMethod```. Without these objects, we can't process the payment.
+Dentro del modelo, los objetos más importantes son ```transactionAmount``` y ```paymentMethod```. Sin estos objetos, no podemos procesar el pago.
 
-We also recommend you include billing information and shipping information as this allows the 3DSecure fingerprint check to run in the background (see the [Implementing 3DSecure](?path=docs/3-5-3d-secure.md) page for more information). This makes the checkout process frictionless for your customer and allows our fraud systems to protect you more easily.
+También le recomendamos que incluya información de facturación e información de envío, ya que esto permite que la verificación de huellas dactilares de 3DSecure se ejecute en segundo plano (consulte la página [Implementación de 3DSecure](?path=docs/3-5-3d-secure.md) para obtener más información) . Esto hace que el proceso de pago sea sencillo para su cliente y permite que nuestros sistemas antifraude lo protejan más fácilmente.
 
 
-Both the ```billing``` and ```shipping``` objects follow the same structure:
+Tanto los objetos ```billing``` como ```shipping``` siguen la misma estructura:
 
 ```json
 {
@@ -172,7 +172,7 @@ Both the ```billing``` and ```shipping``` objects follow the same structure:
 }
 ```
 
-The flow below shows a standard payments process using a card payment transaction.
+El siguiente flujo muestra un proceso de pago estándar mediante una transacción de pago con tarjeta.
 ![standard payments process!](/assets/images/3-payment-process.png "Standard payment process")
 
 
