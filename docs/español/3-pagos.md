@@ -175,7 +175,6 @@ Tanto los objetos ```billing``` como ```shipping``` siguen la misma estructura:
 El siguiente flujo muestra un proceso de pago estándar mediante una transacción de pago con tarjeta.
 ![standard payments process!](/assets/images/3-payment-process.png "Standard payment process")
 
-
 [Verify a card payment](?path=recipes/4-verify-card-payment.md)
 
 [Look up card information](?path=recipes/5-card-information.md)
