@@ -30,11 +30,11 @@ The API key must be provided as the value of the `appKey` header field of each A
 Alliance specific values
 Before you start constructing the json payload, please make sure you have the values for the following objects:
 
-`allianceCode`
-`partnerCode` (only in case you are going to integrate a Partner)
-`accountType`
-`accountTypeSysId`
-`customFieldCode`
+1. `allianceCode`
+1. `partnerCode` (only in case you are going to integrate a Partner)
+1. `accountType`
+1. `accountTypeSysId`
+1. `customFieldCode`
 
 Values for those objects are always Alliance/Partner specific and need to be pre-agreed with Fiserv or obtained before you submit your first boarding requests. Whether you need to have all of the above listed values depends on the set of services you will activate for the merchants and on the type of the business that you are.
 
