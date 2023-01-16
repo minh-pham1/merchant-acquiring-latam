@@ -22,6 +22,7 @@ There are two kinds of offers that can be set up:
 4. Out of the box this criteria includes MCC, Average Transaction Value, Annual Turnover and Address options.
 
 ## Access
+
 You need to have an **API key** linked with the Alliance or Partner you plan to onboard the merchants for.|
 
 The API key must be provided as the value of the `appKey` header field of each API call.
