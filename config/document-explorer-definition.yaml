@@ -84,7 +84,7 @@
         - title: Tipos de solicitudes
           link: docs/3-1-request-types.md
         - title: Métodos de Pago
-          link: docs/3-2-payment-methods.md
+          link: docs/español/3-2-metodos-pago.md
         - title: Tipos de Pagos
           link: docs/3-3-payment-types.md
         - title: Pos-autorización & Devoluciones
