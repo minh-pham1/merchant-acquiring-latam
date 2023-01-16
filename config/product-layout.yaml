@@ -34,40 +34,40 @@ header:
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: Fiserv
 featuredFeatures:
-  - title: TBD
-    description:  REPLACE ME
-    tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
-    bullets: ["Hola", "REPLACEME" ]  
+  - title: Online Payments
+    description:  Create a seamless and secure purchase experience across all online and digital channels by leveraging our comprehensive set of features that will enable you to accept all major payment methods and enhance your customer's online shopping experience
+    tags: ["Payments"]
+    bullets: ["Payments"]  
     relatedDocs:
       - relatedDoc: 
-        title: Clover
-        description: Add semi-integrated payments to your iOS, Android or Windows POS using our attractive Clover Mini or Go hardware.
-        link: 
+        title: Recurring Payments
+        description: The payment schedules API allows you to create and manage a recurring payment schedule for an individual consumer.
+        link: "docs/3-11-recurring-payments.md"
+      - relatedDoc:
+        title: 3-D Secure
+        description: When using our Gateway and Fiserv as the 3-D Secure provider, the authentication is performed in-line with the existing transaction flow.
+        link: "docs/3-5-3d-secure.md"
       - relatedDoc: 
-        title: card Pointe
-        description: Securely process a wide range of credit, debit and alternative payment options, for both card-present and card-not-present transactions, with our complete set of APIs. Simply manage all transactions from one place, with the comprehensive CardPointe platform.
-        link: 
+        title: Tokenisation
+        description: Tokens are useful when storing the details of a customer’s payment instruments to secure and speed up checkout later.
+        link: "docs/3-12-tokenisation.md"
       - relatedDoc: 
-        title: Rapid Connect
-        description: One stop access to create, test, certify and deliver payment rich applications that seamlessly integrate to First Data Payment Systems.
-        link:
-      - relatedDoc: 
-        title: App Market
-        description: Develop Apps for the Clover Marketplace.
-        link: 
+        title: Payment URL
+        description: Payment URL is a functionality that allows you to provide a link to your customers which then takes the customer to a Fiserv-hosted page to securely make the payment with their preferred payment method, whenever convenient for them.
+        link: "docs/3-10-payment-url.md"
     relatedAPIs:
       - relatedAPI: 
-        title: REPLACEME
-        description: REPLACEME
-        type: "patch"        
-        path: "/v1/REPLACEME1"
-      - relatedAPI: 
-        title: REPLACEME
-        description: REPLACEME
+        title: Account Verification
+        description: Use this to perform an account verification for a payment card or payment token
         type: "post"        
-        path: "/v1/REPLACEME2"
+        path: "/account-verification"
       - relatedAPI: 
-        title: REPLACEME
-        description: REPLACEME
-        type: "get"        
-        path: "/v1/REPLACEME3"
+        title: URL Creation
+        description: Use this to generate an embedding payment link.
+        type: "post"        
+        path: "/payment-url"
+      - relatedAPI: 
+        title: Token Creation
+        description: Use this to create a payment token from a payment card.
+        type: "post"        
+        path: "/payment-tokens"
