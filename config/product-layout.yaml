@@ -71,3 +71,40 @@ featuredFeatures:
         description: Use this to create a payment token from a payment card.
         type: "post"        
         path: "/payment-tokens"
+  - title: Merchant and Terminal Boarding
+    description:  Onboard merchants to start accepting payments online or in-store, and streamline your process for registering new terminals and equipment.
+    tags: ["Boarding"]
+    bullets: ["Boarding"]  
+    relatedDocs:
+      - relatedDoc: 
+        title: Recurring Payments
+        description: The payment schedules API allows you to create and manage a recurring payment schedule for an individual consumer.
+        link: "docs/3-11-recurring-payments.md"
+      - relatedDoc:
+        title: 3-D Secure
+        description: When using our Gateway and Fiserv as the 3-D Secure provider, the authentication is performed in-line with the existing transaction flow.
+        link: "docs/3-5-3d-secure.md"
+      - relatedDoc: 
+        title: Tokenisation
+        description: Tokens are useful when storing the details of a customer’s payment instruments to secure and speed up checkout later.
+        link: "docs/3-12-tokenisation.md"
+      - relatedDoc: 
+        title: Payment URL
+        description: Payment URL is a functionality that allows you to provide a link to your customers which then takes the customer to a Fiserv-hosted page to securely make the payment with their preferred payment method, whenever convenient for them.
+        link: "docs/3-10-payment-url.md"
+    relatedAPIs:
+      - relatedAPI: 
+        title: Create Application
+        description: Saves the whole application data.
+        type: "post"        
+        path: "/api/v1/application"
+      - relatedAPI: 
+        title: Update Application
+        description: Update the whole application data.
+        type: "put"        
+        path: "/api/v1/application/{id}"
+      - relatedAPI: 
+        title: New Terminal
+        description: Adds a new terminal to an already boarded application.
+        type: "post"        
+        path: "/api/v1/application/{id}/terminals"
