@@ -81,7 +81,7 @@
       - title: Pagos e-Commerce
         link: docs/español/3-pagos.md
         sections:
-        - title: Tipos de solicitudes
+        - title: Tipos de Solicitudes
           link: docs/3-1-request-types.md
         - title: Métodos de Pago
           link: docs/español/3-2-metodos-pago.md
