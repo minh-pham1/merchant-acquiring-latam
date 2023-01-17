@@ -44,7 +44,7 @@ Se accede a más información sobre los cambios de carga asociados con cada uno 
 |SEPA	A SEPA |Es la transacción que permite al cliente pagarle a través de una solicitud de banco a banco a través de la red europea SEPA.|
 |WALLET	|Habilita el pago a través de una transacción de Wallet. Las transacciones de billetera requieren un objeto PaymentMethod específico. Se proporciona más información sobre este objeto en la sección Pagos de Wallet.|
 
-## SEPA Transactions
+## Transacciones SEPA
 
 Para usar el tipo de solicitud ```SepaSaleTransaction```, el objeto paymentMethod se reemplaza por el objeto sepa. El objeto sepa incluye todos los puntos de datos necesarios para ejecutar una transacción sepa. Sepa significa "Área Única Europea de Pagos" y permite que los pagos se ejecuten inmediatamente entre cuentas bancarias a bajo costo. Actualmente, esta capacidad solo está habilitada para pagos nacionales en Alemania. Se añadirán países adicionales en un futuro próximo.
 
