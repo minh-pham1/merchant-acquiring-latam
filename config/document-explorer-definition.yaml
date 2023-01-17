@@ -41,8 +41,6 @@
     - title: Payments
       link: docs/3-payments.md
       sections:
-        - title: Carat
-          link: <https://dev.softwareexpress.com.br/>
         - title: Request Types
           link: docs/3-1-request-types.md
         - title: Payment Methods
@@ -109,8 +107,11 @@
           link: docs/3-12-tokenisation.md
         - title: Códigos de Error
           link: docs/3-13-error-codes.md  
-  # - title: Logistitcs
-  #   link: docs/2-logistics.md
-  # - sections:
-  #  - title: Release notes
-  #    link: docs/release-notes/2022/november.md
+  #       - title: Carat
+  #        link: <https://dev.softwareexpress.com.br/>
+  #       - title: Logistitcs
+  #        link: docs/2-logistics.md
+      - title: Related links
+        link: docs/related-links.md
+      - title: Release notes
+        link: docs/release-notes/2023/january.md
