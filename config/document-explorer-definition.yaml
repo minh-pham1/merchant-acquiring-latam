@@ -107,11 +107,11 @@
           link: docs/3-12-tokenisation.md
         - title: Códigos de Error
           link: docs/3-13-error-codes.md  
-  #       - title: Carat
-  #        link: <https://dev.softwareexpress.com.br/>
-  #       - title: Logistitcs
-  #        link: docs/2-logistics.md
       - title: Related links
         link: docs/related-links.md
       - title: Release notes
         link: docs/release-notes/2023/january.md
+  #    - title: Carat
+  #      link: <https://dev.softwareexpress.com.br/>
+  #    - title: Logistitcs
+  #      link: docs/2-logistics.md
