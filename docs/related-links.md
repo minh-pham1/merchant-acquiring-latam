@@ -13,7 +13,7 @@ Integrate to First Data or Build Apps for Clover Marketplace.
 <!-- type: card
 title: Clover
 description: Add semi-integrated payments to your iOS, Android or Windows POS using our attractive Clover Mini or Go hardware.
-link: <https://www.clover.com/pos/integration-services>
+link: ?path=https://www.clover.com/pos/integration-services
 -->
 
 <!-- type: card
