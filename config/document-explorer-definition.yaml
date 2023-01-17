@@ -106,7 +106,10 @@
         - title: Tokenización
           link: docs/3-12-tokenisation.md
         - title: Códigos de Error
-          link: docs/3-13-error-codes.md  
+          link: docs/3-13-error-codes.md
+          sections:
+          - title: Related links
+            link: docs/related-links.md 
     - title: Release notes
       link: docs/release-notes/2023/january.md
   #    - title: Related links
