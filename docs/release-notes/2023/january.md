@@ -1,5 +1,5 @@
 ---
-tags: [Release Notes, December]
+tags: [Release Notes, January]
 ---
 
 # Release Notes
