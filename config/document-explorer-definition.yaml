@@ -29,6 +29,38 @@
 ################################################################################
 
 - sections:
+    - title: Español
+      sections:
+      - title: Pagos e-Commerce
+        link: docs/español/3-pagos.md
+        sections:
+        - title: Tipos de Solicitudes
+          link: docs/3-1-request-types.md
+        - title: Métodos de Pago
+          link: docs/español/3-2-metodos-pago.md
+        - title: Tipos de Pagos
+          link: docs/3-3-payment-types.md
+        - title: Pos-autorización & Devoluciones
+          link: docs/3-4-post-auth.md
+        - title: 3-D Secure
+          link: docs/3-5-3d-secure.md
+        - title: Verificación de Tarjeta
+          link: docs/3-6-card-verification.md
+        - title: Conversión de Moneda
+          link: docs/3-7-currency-conversion.md
+        - title: Redirección Administrada
+          link: docs/3-8-managed-redirect.md
+        - title: Órdenes
+          link: docs/3-9-orders.md
+        - title: Pago URL
+          link: docs/3-10-payment-url.md
+        - title: Pagos Recurrentes
+          link: docs/3-11-recurring-payments.md
+        - title: Tokenización
+          link: docs/3-12-tokenisation.md
+        - title: Códigos de Error
+          link: docs/3-13-error-codes.md
+          sections:
     - title: Getting Started
       link: docs/getting-started.md
     - title: Boarding
@@ -69,53 +101,18 @@
           link: docs/3-12-tokenisation.md
         - title: Error codes
           link: docs/3-13-error-codes.md
-    - title: Español
-      sections:
-      - title: Empezando
-        link: docs/español/empezando.md
-      - title: Boarding
-        link: docs/español/1-boarding.md
-        sections:
-        - title: Pasos Boarding
-          link: docs/español/1-1-pasos-boarding.md
-        - title: Pre-Requisito
-          link: docs/español/1-2-prerequisitos.md
-      - title: Pagos e-Commerce
-        link: docs/español/3-pagos.md
-        sections:
-        - title: Tipos de Solicitudes
-          link: docs/3-1-request-types.md
-        - title: Métodos de Pago
-          link: docs/español/3-2-metodos-pago.md
-        - title: Tipos de Pagos
-          link: docs/3-3-payment-types.md
-        - title: Pos-autorización & Devoluciones
-          link: docs/3-4-post-auth.md
-        - title: 3-D Secure
-          link: docs/3-5-3d-secure.md
-        - title: Verificación de Tarjeta
-          link: docs/3-6-card-verification.md
-        - title: Conversión de Moneda
-          link: docs/3-7-currency-conversion.md
-        - title: Redirección Administrada
-          link: docs/3-8-managed-redirect.md
-        - title: Órdenes
-          link: docs/3-9-orders.md
-        - title: Pago URL
-          link: docs/3-10-payment-url.md
-        - title: Pagos Recurrentes
-          link: docs/3-11-recurring-payments.md
-        - title: Tokenización
-          link: docs/3-12-tokenisation.md
-        - title: Códigos de Error
-          link: docs/3-13-error-codes.md
-          sections:
-          - title: Related links
-            link: docs/related-links.md 
+    - title: Related links
+      link: docs/related-links.md 
     - title: Release notes
       link: docs/release-notes/2023/january.md
-  #    - title: Related links
-  #      link: docs/related-links.md 
-  #    - title: Carat
-  #      link: <https://dev.softwareexpress.com.br/>
-
+    - title: Related links
+      link: docs/related-links.md 
+  #    - title: Empezando
+  #      link: docs/español/empezando.md
+  #    - title: Boarding
+  #      link: docs/español/1-boarding.md
+  #      sections:
+  #      - title: Pasos Boarding
+  #        link: docs/español/1-1-pasos-boarding.md
+  #      - title: Pre-Requisito
+  #        link: docs/español/1-2-prerequisitos.md
