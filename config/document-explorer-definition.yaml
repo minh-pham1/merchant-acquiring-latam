@@ -31,6 +31,8 @@
 - sections:
     - title: Español
       sections:
+      - title: Empezando
+        link: docs/español/empezando.md
       - title: Pagos e-Commerce
         link: docs/español/pagos/3-pagos.md
         sections:
@@ -105,8 +107,6 @@
       link: docs//english/related-links.md 
     - title: Release notes
       link: docs/release-notes/2023/january.md
-  #    - title: Empezando
-  #      link: docs/español/empezando.md
   #    - title: Boarding
   #      link: docs/español/1-boarding.md
   #      sections:
