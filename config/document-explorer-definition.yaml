@@ -38,6 +38,8 @@
         link: docs/1-1-boarding-steps.md
       - title: Prerequisite
         link: docs/1-2-prerequisites.md
+    - title: Logistitcs
+      link: docs/2-logistics.md
     - title: Payments
       link: docs/3-payments.md
       sections:
@@ -116,5 +118,4 @@
   #      link: docs/related-links.md 
   #    - title: Carat
   #      link: <https://dev.softwareexpress.com.br/>
-  #    - title: Logistitcs
-  #      link: docs/2-logistics.md
+
