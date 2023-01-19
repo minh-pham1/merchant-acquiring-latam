@@ -42,19 +42,19 @@ featuredFeatures:
       - relatedDoc: 
         title: Recurring Payments
         description: The payment schedules API allows you to create and manage a recurring payment schedule for an individual consumer.
-        link: "docs/3-11-recurring-payments.md"
+        link: "docs/english/payments/3-11-recurring-payments.md"
       - relatedDoc:
         title: 3-D Secure
         description: When using our Gateway and Fiserv as the 3-D Secure provider, the authentication is performed in-line with the existing transaction flow.
-        link: "docs/3-5-3d-secure.md"
+        link: "docs/english/payments/3-5-3d-secure.md"
       - relatedDoc: 
         title: Tokenisation
         description: Tokens are useful when storing the details of a customer’s payment instruments to secure and speed up checkout later.
-        link: "docs/3-12-tokenisation.md"
+        link: "docs/english/payments/3-12-tokenisation.md"
       - relatedDoc: 
         title: Payment URL
         description: Payment URL is a functionality that allows you to provide a link to your customers which then takes the customer to a Fiserv-hosted page to securely make the payment with their preferred payment method, whenever convenient for them.
-        link: "docs/3-10-payment-url.md"
+        link: "docs/english/payments/3-10-payment-url.md"
     relatedAPIs:
       - relatedAPI: 
         title: Account Verification
@@ -79,11 +79,11 @@ featuredFeatures:
       - relatedDoc: 
         title: New Merchant Boarding Steps
         description: the steps of the journey to getting your merchant boarded. 
-        link: "/docs/1-1-boarding-steps.md"
+        link: "/docs/english/boarding/1-1-boarding-steps.md"
       - relatedDoc:
         title: Prerequisites
         description: One part of getting you on board is the configuration of ‘offers’ and the setting of these offers is essential for the onboarding process to work.
-        link: "docs/1-2-prerequisites.md"
+        link: "docs/english/boarding/1-2-prerequisites.md"
     relatedAPIs:
       - relatedAPI: 
         title: Create Application
