@@ -64,16 +64,16 @@
     - title: Getting Started
       link: docs/english/getting-started.md
     - title: Boarding
-      link: docs/1-boarding.md
+      link: docs/english/boarding/1-boarding.md
       sections:
       - title: Boarding Steps
-        link: docs/1-1-boarding-steps.md
+        link: docs/english/boarding/1-1-boarding-steps.md
       - title: Prerequisite
-        link: docs/1-2-prerequisites.md
+        link: docs/english/boarding/1-2-prerequisites.md
     - title: Logistitcs
-      link: docs/2-logistics.md
+      link: docs/english/logistics/2-logistics.md
     - title: Payments
-      link: docs/3-payments.md
+      link: docs/english/payments/3-payments.md
       sections:
         - title: Request Types
           link: docs/3-1-request-types.md
