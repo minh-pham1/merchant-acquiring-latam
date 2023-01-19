@@ -32,12 +32,12 @@
     - title: Español
       sections:
       - title: Pagos e-Commerce
-        link: docs/español/3-pagos.md
+        link: docs/español/pagos/3-pagos.md
         sections:
         - title: Tipos de Solicitudes
           link: docs/3-1-request-types.md
         - title: Métodos de Pago
-          link: docs/español/3-2-metodos-pago.md
+          link: docs/español/pagos/3-2-metodos-pago.md
         - title: Tipos de Pagos
           link: docs/3-3-payment-types.md
         - title: Pos-autorización & Devoluciones
@@ -76,31 +76,31 @@
       link: docs/english/payments/3-payments.md
       sections:
         - title: Request Types
-          link: docs/3-1-request-types.md
+          link: docs/english/payments/3-1-request-types.md
         - title: Payment Methods
-          link: docs/3-2-payment-methods.md
+          link: docs/english/payments/3-2-payment-methods.md
         - title: Payment Types
-          link: docs/3-3-payment-types.md
+          link: docs/english/payments/3-3-payment-types.md
         - title: Post-authorisation & Returns
-          link: docs/3-4-post-auth.md
+          link: docs/english/payments/3-4-post-auth.md
         - title: 3-D Secure
-          link: docs/3-5-3d-secure.md
+          link: docs/english/payments/3-5-3d-secure.md
         - title: Card Verification
-          link: docs/3-6-card-verification.md
+          link: docs/english/payments/3-6-card-verification.md
         - title: Currency Conversion
-          link: docs/3-7-currency-conversion.md
+          link: docs/english/payments/3-7-currency-conversion.md
         - title: Managed Redirect
-          link: docs/3-8-managed-redirect.md
+          link: docs/english/payments/3-8-managed-redirect.md
         - title: Orders
-          link: docs/3-9-orders.md
+          link: docs/english/payments/3-9-orders.md
         - title: Payment URL
-          link: docs/3-10-payment-url.md
+          link: docs/english/payments/3-10-payment-url.md
         - title: Recurring Payments
-          link: docs/3-11-recurring-payments.md
+          link: docs/english/payments/3-11-recurring-payments.md
         - title: Tokenisation
-          link: docs/3-12-tokenisation.md
+          link: docs/english/payments/3-12-tokenisation.md
         - title: Error codes
-          link: docs/3-13-error-codes.md
+          link: docs/english/payments/3-13-error-codes.md
     - title: Related links
       link: docs//english/related-links.md 
     - title: Release notes
