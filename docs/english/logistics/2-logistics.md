@@ -6,7 +6,7 @@ tags: [Logistics, API, LATAM]
 
 ## Latam Merchant Logistics APIs
 
-At the acquirer business, field services providers play an important role to enable business to run, by deploying new terminals, paper rolls, providing maintenance to broken terminals, exchanging SimCards carriers and removing equipment’s from merchants whenever required. To trigger a service order to an appropriate field services provider Fiserv made available a set of APIs, described at this document, which will be divided in two main sections, being the first one dedicated for the financial institutions to provide merchant support and the second part designed to assist a new service provider when integrating with Fiserv.
+At the acquirer business, field services are essential for enabling businesses to operate. They deploy new terminals, provide maintenance for broken terminals, deliver paper rolls, exchange SIM cards, and remove equipment from merchants when necessary. To facilitate service orders to the right field services provider, Fiserv has developed a set of APIs outlined in this document. These APIs are divided into two main sections: the first one is intended for financial institutions and acquirers providing merchant support, while the second is designed to assist new service providers when integrating with Fiserv.
 
 ---
 
