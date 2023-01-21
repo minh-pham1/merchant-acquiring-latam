@@ -76,6 +76,7 @@ Main APIs available here to be used by the field services provider will be:
 |Ticket List details|	Fiserv|	Financial institution and Field Services provider|	API to enable query Service order details based on a Service order number|
 
 Pre-requisite for the APIs consumption is the acquisition of a private certificate, that will be address in further details in this content.
+
 The second method will be via XML files exchange, once per day, in which Fiserv expect from its Field Services vendor to communicate every asset position change occurred in the previous day, incorporating (i) terminals or SimCards moving from centralized stock to advanced location and vice versa, (ii) terminals or SimCards moving from advanced location to merchants and vice versa, (iii) terminals or SimCards moving from internal triage to repair and vice versa.
 
 
