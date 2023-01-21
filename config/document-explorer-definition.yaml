@@ -64,7 +64,10 @@
           link: docs/3-12-tokenisation.md
         - title: Códigos de Error
           link: docs/3-13-error-codes.md
-          sections:
+    - title: Portuguese
+      sections:
+      - title: Logistics
+        link: docs/portuguese/logistics/2-logistics.md          
     - title: Getting Started
       link: docs/english/getting-started.md
     - title: Boarding
