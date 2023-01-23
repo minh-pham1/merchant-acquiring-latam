@@ -36,3 +36,11 @@ Main APIs available here to be used by the Financial Institution will be:
 |Terminal List|	Fiserv	|Financial Institution|	API to enable query on the terminals assigned to a particular merchant|
 |Product|	Fiserv|	Financial Institution|	API to enable confirm terminal model based on a serial number|
 |Ticket List details|	Fiserv|	Financial institution and Field Services Provider|	API to enable query Service order details based on a Service order number|
+
+---
+
+## See Also
+
+- [Field Services Provider](?path=docs/english/logistics/2-2-field-services-provider.md )
+
+---
