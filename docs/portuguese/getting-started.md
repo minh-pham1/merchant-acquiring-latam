@@ -3,7 +3,7 @@
 Acesso a um conjunto completo de APIs na ponta dos seus dedos. Encontre ferramentas de desenvolvimento, exemplos de código e recursos para assistência a uma integração completa ou parcial das suas aplicações na plataforma de comércio digital da Fiserv.
 Quer explorar uma nova linha de negócio? Integre-se com a plataforma de comércio digital da Fiserv e configure seus clientes para capturar suas transações diretamente do nosso site – e receba!
 
---
+---
 
 <!-- type: row -->
 
