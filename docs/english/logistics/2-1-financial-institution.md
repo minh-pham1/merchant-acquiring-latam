@@ -1,3 +1,7 @@
+---
+tags: [Financial Institution, Logistics, API, LATAM]
+---
+
 # Financial Institution
 
 In different occasions a merchant might request services that will require an intervention from one of Fiserv certified Field Services provider and there are some ground rules that requires attention before learning how to use the APIs:
