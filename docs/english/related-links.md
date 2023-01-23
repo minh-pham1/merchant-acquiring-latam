@@ -9,7 +9,7 @@ tags: [Related links, API, LATAM]
 [Carat](https://dev.softwareexpress.com.br/)
 
 
-## Integrate to First Data or Build Apps for Clover Marketplace.
+## Integrate to First Data or Build Apps for Clover Marketplace
 
 ---
 
