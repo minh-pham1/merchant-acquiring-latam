@@ -35,6 +35,11 @@
         link: docs/español/empezando.md
       - title: Logistics
         link: docs/español/logistics/2-logistics.md
+        sections:
+        - title: Financial Institution
+          link: docs/español/logistics/2-1-financial-institution.md
+        - title: Field Services Provider
+          link: docs/español/logistics/2-2-field-services-provider.md         
       - title: Pagos e-Commerce
         link: docs/español/pagos/3-pagos.md
         sections:
