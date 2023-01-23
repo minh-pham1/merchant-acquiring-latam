@@ -39,31 +39,31 @@
         link: docs/español/pagos/3-pagos.md
         sections:
         - title: Tipos de Solicitudes
-          link: docs/3-1-request-types.md
+          link: docs/english/3-1-request-types.md
         - title: Métodos de Pago
           link: docs/español/pagos/3-2-metodos-pago.md
         - title: Tipos de Pagos
-          link: docs/3-3-payment-types.md
+          link: docs/english/3-3-payment-types.md
         - title: Pos-autorización & Devoluciones
-          link: docs/3-4-post-auth.md
+          link: docs/english/3-4-post-auth.md
         - title: 3-D Secure
-          link: docs/3-5-3d-secure.md
+          link: docs/english/3-5-3d-secure.md
         - title: Verificación de Tarjeta
-          link: docs/3-6-card-verification.md
+          link: docs/english/3-6-card-verification.md
         - title: Conversión de Moneda
-          link: docs/3-7-currency-conversion.md
+          link: docs/english/3-7-currency-conversion.md
         - title: Redirección Administrada
-          link: docs/3-8-managed-redirect.md
+          link: docs/english/3-8-managed-redirect.md
         - title: Órdenes
-          link: docs/3-9-orders.md
+          link: docs/english/3-9-orders.md
         - title: Pago URL
-          link: docs/3-10-payment-url.md
+          link: docs/english/3-10-payment-url.md
         - title: Pagos Recurrentes
-          link: docs/3-11-recurring-payments.md
+          link: docs/english/3-11-recurring-payments.md
         - title: Tokenización
-          link: docs/3-12-tokenisation.md
+          link: docs/english/3-12-tokenisation.md
         - title: Códigos de Error
-          link: docs/3-13-error-codes.md
+          link: docs/english/3-13-error-codes.md
     - title: English
       sections: 
       - title: Getting Started
