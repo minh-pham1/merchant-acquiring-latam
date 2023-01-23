@@ -11,7 +11,7 @@ tags: [Related links, API, LATAM, Carat, Clover]
 
 ## Integrate to First Data or Build Apps for Clover Marketplace
 
----
+
 
 <!-- type: row -->
 
