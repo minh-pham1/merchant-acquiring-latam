@@ -4,9 +4,12 @@ tags: [Related links, API, LATAM]
 
 # Related links
 
-[Carat]([url](https://dev.softwareexpress.com.br/))
+## Carat
 
-Integrate to First Data or Build Apps for Clover Marketplace.
+[Carat](https://dev.softwareexpress.com.br/)
+
+
+## Integrate to First Data or Build Apps for Clover Marketplace.
 
 ---
 
