@@ -117,10 +117,15 @@
         link: docs/release-notes/2023/january.md
     - title: Portuguese
       sections:
-      - title: Getting Started
+      - title: Começando
         link: docs/portuguese/getting-started.md
       - title: Logistics
-        link: docs/portuguese/logistics/2-logistics.md          
+        link: docs/portuguese/logistics/2-logistics.md   
+        sections:
+        - title: Financial Institution
+          link: docs/portuguese/logistics/2-1-financial-institution.md
+        - title: Field Services Provider
+          link: docs/portuguese/logistics/2-2-field-services-provider.md  
   #    - title: Boarding
   #      link: docs/español/1-boarding.md
   #      sections:
