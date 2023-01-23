@@ -64,24 +64,22 @@
           link: docs/3-12-tokenisation.md
         - title: Códigos de Error
           link: docs/3-13-error-codes.md
-    - title: Portuguese
-      sections:
-      - title: Logistics
-        link: docs/portuguese/logistics/2-logistics.md          
-    - title: Getting Started
-      link: docs/english/getting-started.md
-    - title: Boarding
-      link: docs/english/boarding/1-boarding.md
-      sections:
-      - title: Boarding Steps
-        link: docs/english/boarding/1-1-boarding-steps.md
-      - title: Prerequisite
-        link: docs/english/boarding/1-2-prerequisites.md
-    - title: Logistitcs
-      link: docs/english/logistics/2-logistics.md
-    - title: Payments
-      link: docs/english/payments/3-payments.md
-      sections:
+    - title: English
+      sections: 
+      - title: Getting Started
+        link: docs/english/getting-started.md
+      - title: Boarding
+        link: docs/english/boarding/1-boarding.md
+        sections:
+        - title: Boarding Steps
+          link: docs/english/boarding/1-1-boarding-steps.md
+        - title: Prerequisite
+          link: docs/english/boarding/1-2-prerequisites.md
+      - title: Logistitcs
+        link: docs/english/logistics/2-logistics.md
+      - title: Payments
+        link: docs/english/payments/3-payments.md
+        sections:
         - title: Request Types
           link: docs/english/payments/3-1-request-types.md
         - title: Payment Methods
@@ -108,10 +106,14 @@
           link: docs/english/payments/3-12-tokenisation.md
         - title: Error codes
           link: docs/english/payments/3-13-error-codes.md
-    - title: Related links
-      link: docs/english/related-links.md 
-    - title: Release notes
-      link: docs/release-notes/2023/january.md
+      - title: Related links
+        link: docs/english/related-links.md
+      - title: Release notes
+        link: docs/release-notes/2023/january.md
+    - title: Portuguese
+      sections:
+      - title: Logistics
+        link: docs/portuguese/logistics/2-logistics.md          
   #    - title: Boarding
   #      link: docs/español/1-boarding.md
   #      sections:
