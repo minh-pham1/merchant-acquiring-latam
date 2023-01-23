@@ -1,6 +1,7 @@
 # Financial Institution
 
 In different occasions a merchant might request services that will require an intervention from one of Fiserv certified Field Services provider and there are some ground rules that requires attention before learning how to use the APIs:
+
 1. There must be an active merchant at the member level to be able to request a new terminal and the identification of such member must be known in advance,
 2. There must be an active terminal for the merchant selected at the member level to place a paper roll request and both identifications must be known before placing the request,
 3. There must be an active terminal for the merchant selected at the member level to place its withdrawal which means, you can’t, for seasonal periods, request a terminal to be installed at a future date and at the same time, request its withdrawal a few weeks / months later. The withdrawal service order can only be placed once the terminal is installed at the merchant location
