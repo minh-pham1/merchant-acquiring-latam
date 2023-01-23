@@ -64,7 +64,7 @@ featuredFeatures:
         type: "post"        
         path: "/api/v1/application/{id}/terminals"
   - title: Logistics
-    description:  TBD.
+    description:  Request new terminals to expand merchant business, paper rolls to keep selling, terminal replacements, withdrawals and confirm status for your field services requests..
     tags: ["Logistics"]
     bullets: ["Logistics"]  
     relatedDocs:
