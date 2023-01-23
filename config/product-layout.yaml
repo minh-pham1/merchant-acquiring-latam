@@ -34,6 +34,64 @@ header:
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: Fiserv
 featuredFeatures:
+  - title: Merchant and Terminal Boarding
+    description:  Onboard merchants to start accepting payments online or in-store, and streamline your process for registering new terminals and equipment.
+    tags: ["Boarding"]
+    bullets: ["Boarding"]  
+    relatedDocs:
+      - relatedDoc: 
+        title: New Merchant Boarding Steps
+        description: the steps of the journey to getting your merchant boarded. 
+        link: "/docs/english/boarding/1-1-boarding-steps.md"
+      - relatedDoc:
+        title: Prerequisites
+        description: One part of getting you on board is the configuration of ‘offers’ and the setting of these offers is essential for the onboarding process to work.
+        link: "docs/english/boarding/1-2-prerequisites.md"
+    relatedAPIs:
+      - relatedAPI: 
+        title: Create Application
+        description: Saves the whole application data.
+        type: "post"        
+        path: "/api/v1/application"
+      - relatedAPI: 
+        title: Update Application
+        description: Update the whole application data.
+        type: "put"        
+        path: "/api/v1/application/{id}"
+      - relatedAPI: 
+        title: New Terminal
+        description: Adds a new terminal to an already boarded application.
+        type: "post"        
+        path: "/api/v1/application/{id}/terminals"
+  - title: Logistics
+    description:  TBD.
+    tags: ["Logistics"]
+    bullets: ["Logistics"]  
+    relatedDocs:
+      - relatedDoc: 
+        title: Financial Institution
+        description: Intended for financial institutions and acquirers providing merchant support
+        link: "docs/english/logistics/2-1-financial-institution.md"
+      - relatedDoc:
+        title: Field Services Provider
+        description: designed to assist new service providers when integrating with Fiserv.
+        link: "docs/english/logistics/2-2-field-services-provider.md"
+    relatedAPIs:
+      - relatedAPI: 
+        title: Cancel Order
+        description: Cancel Order.
+        type: "post"        
+        path: "/v1/cancel-order"
+      - relatedAPI: 
+        title: Install
+        description: Post API Install Request.
+        type: "post"        
+        path: "/v1/install"
+      - relatedAPI: 
+        title: Reschedule
+        description: Post API Reschedule the Visit of Technician.
+        type: "post"        
+        path: "/v1/reschedule"
   - title: Online Payments
     description:  Create a seamless and secure purchase experience across all online and digital channels by leveraging our comprehensive set of features that will enable you to accept all major payment methods and enhance your customer's online shopping experience
     tags: ["Payments"]
@@ -71,32 +129,3 @@ featuredFeatures:
         description: Use this to create a payment token from a payment card.
         type: "post"        
         path: "/payment-tokens"
-  - title: Merchant and Terminal Boarding
-    description:  Onboard merchants to start accepting payments online or in-store, and streamline your process for registering new terminals and equipment.
-    tags: ["Boarding"]
-    bullets: ["Boarding"]  
-    relatedDocs:
-      - relatedDoc: 
-        title: New Merchant Boarding Steps
-        description: the steps of the journey to getting your merchant boarded. 
-        link: "/docs/english/boarding/1-1-boarding-steps.md"
-      - relatedDoc:
-        title: Prerequisites
-        description: One part of getting you on board is the configuration of ‘offers’ and the setting of these offers is essential for the onboarding process to work.
-        link: "docs/english/boarding/1-2-prerequisites.md"
-    relatedAPIs:
-      - relatedAPI: 
-        title: Create Application
-        description: Saves the whole application data.
-        type: "post"        
-        path: "/api/v1/application"
-      - relatedAPI: 
-        title: Update Application
-        description: Update the whole application data.
-        type: "put"        
-        path: "/api/v1/application/{id}"
-      - relatedAPI: 
-        title: New Terminal
-        description: Adds a new terminal to an already boarded application.
-        type: "post"        
-        path: "/api/v1/application/{id}/terminals"
