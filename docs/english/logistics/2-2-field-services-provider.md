@@ -31,3 +31,11 @@ Main APIs available here to be used by the field services provider will be:
 Pre-requisite for the APIs consumption is the acquisition of a private certificate, that will be address in further details in this content.
 
 The second method will be via XML files exchange, once per day, in which Fiserv expect from its Field Services vendor to communicate every asset position change occurred in the previous day, incorporating 1. terminals or SimCards moving from centralized stock to advanced location and vice versa, 2. terminals or SimCards moving from advanced location to merchants and vice versa, 3. terminals or SimCards moving from internal triage to repair and vice versa.
+
+---
+
+## See Also
+
+- [Financial Institution](?path=docs/english/logistics/2-1-financial-institution.md)
+
+---
