@@ -17,7 +17,7 @@ tags: [Related links, API, LATAM, Carat, Clover]
 
 <!-- type: card
 title: Clover
-description: Add semi-integrated payments to your iOS, Android or Windows POS using our attractive Clover Mini or Go hardware. [Clover]([https://www.postman.com/](https://www.clover.com/pos/integration-services))
+description: Add semi-integrated payments to your iOS, Android or Windows POS using our attractive Clover Mini or Go hardware. [Clover](https://www.clover.com/pos/integration-services)
 -->
 
 <!-- type: card
