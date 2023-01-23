@@ -117,6 +117,8 @@
         link: docs/release-notes/2023/january.md
     - title: Portuguese
       sections:
+      - title: Getting Started
+        link: docs/portuguese/getting-started.md
       - title: Logistics
         link: docs/portuguese/logistics/2-logistics.md          
   #    - title: Boarding
