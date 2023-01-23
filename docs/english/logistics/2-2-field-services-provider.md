@@ -1,3 +1,7 @@
+---
+tags: [Field Services Provider, Logistics, API, LATAM]
+---
+
 # Field Services Provider
 
 Fiserv does not extend to its field services vendors access to its ticketing tool system (TMP), once it was not designed to elaborate routes, maintain mandatory documentation for ticket closure or cancellation. Fiserv expects its field services partners to utilize their internal platforms and integrate a specific set of controls to ensure visibility of the service orders assigned to the vendor and to ensure tracking of the assets from Fiserv or it’s associated financial institutions in possession of the field services provider.
