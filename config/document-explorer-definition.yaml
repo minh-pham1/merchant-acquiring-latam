@@ -64,11 +64,11 @@
         - title: Pago URL
           link: docs/español/pagos/3-10-pago-url.md
         - title: Pagos Recurrentes
-          link: docs/english/3-11-recurring-payments.md
+          link: docs/español/pagos/3-11-pagos-recurrentes.md
         - title: Tokenización
-          link: docs/english/3-12-tokenisation.md
+          link: docs/español/pagos/3-12-tokenizacion.md
         - title: Códigos de Error
-          link: docs/english/3-13-error-codes.md
+          link: docs/español/pagos/3-13-codigos-error.md
     - title: English
       sections: 
       - title: Getting Started
