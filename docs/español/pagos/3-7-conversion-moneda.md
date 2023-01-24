@@ -144,11 +144,11 @@ Para usar esta tasa en una transacción, incluya el objeto ```currencyConversion
 - [Pos-autorización & Devoluciones](?path=docs/español/pagos/3-4-post-aut.md)
 - [3-D Secure](?path=docs/español/pagos/3-5-3d-secure.md)
 - [Verificación de Tarjeta](?path=docs/español/pagos/3-6-verificacion-tarjeta.md)
-- [Redirección Administrada](?path=docs/3-8-managed-redirect.md)
-- [Órdenes](?path=docs/3-9-orders.md)
-- [URL Pago](?path=docs/3-10-payment-url.md)
-- [Pagos Recurrentes](?path=docs/3-11-recurring-payments.md)
-- [Tokenización](?path=docs/3-12-tokenisation.md)
-- [Códigos de Error](?path=docs/3-13-error-codes.md)
+- [Redirección Administrada](?path=docs/español/pagos/3-8-redireccion-administrada.md)
+- [Pedidos](?path=docs/español/pagos/3-9-pedidos.md)
+- [URL Pago](?path=docs/español/pagos/3-10-pago-url.md)
+- [Pagos Recurrentes](?path=docs/español/pagos/3-11-pagos-recurrentes.md)
+- [Tokenización](?path=docs/español/pagos/3-12-tokenizacion.md)
+- [Códigos de Error](?path=docs/español/pagos/3-13-codigos-error.md)
 
 ---
