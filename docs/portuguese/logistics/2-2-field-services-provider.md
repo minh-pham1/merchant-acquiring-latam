@@ -10,23 +10,23 @@ Existem duas formas através das quais essa integração se realizará. A primei
 
 As principais APIs entregues para utilização do provedor de field services são:
 
-|API|	Responsável API	|	Usuário da API|	Descrição|
-|---|-------------|---------|-----------|
-|Ticket update|	Provedor field services|	Fiserv|	API para habilitar a criação de Service Orders na plataforma do provedor de field services |
-|New ticket|	Provedor field services|	Fiserv|	API para habilitar a atualização de Service Orders na plataforma do provedor de field services |
-|Uninstall|	Fiserv|	Instituição Financeira|	API para habilitar a criação de Service Orders para pedir retirada de terminais|
-|Supply request|	Fiserv|	Instituição Financeira|	API para habilitar a criação de Service Orders para solicitação de bobina|
-|Re-schedule|	Fiserv|	Instituição Financeira e Provedor field services|	API para habilitar a atualização de Service Orders (exclusivamente para reprogramação de datas)|
-|Order Update|	Fiserv|	Field Services provider|	API para habilitar atualização de Service Orders associadas a um provedor de field services|
-|Maintenance / Replacement|	Fiserv|	Instituição Financeira|	API para habilitar a criação de Service Orders pedindo uma troca de terminal|
-|Maintenance / Change Technology|	Fiserv|	Instituição Financeira|	API para habilitar a criação de Service Orders pedindo a troca de tecnologia de um terminal|
-|Maintenance / Change Carrier|	Fiserv|	Instituição Financeira|	API para habilitar a criação de Service Orders pedindo uma troca de SimCard|
-|Install|	Fiserv|	Instituição Financeira|	API para habilitar a criação de Service Orders pedindo a instalação de um terminal|
-|Cancel order|	Fiserv|	Instituição Financeira e Provedor field services|	API para habilitar o cancelamento de uma Service Order aberta previamente|
-|Ticket List|	Fiserv|	Instituição Financeira|	API para habilitar a consulta de Service Orders associadas a um estabelecimento em particular|
-|Terminal List|	Fiserv	|Instituição Financeira|	API para habilitar a consulta de terminais associados a um estabelecimento em particular|
-|Product|	Fiserv|	Instituição Financeira|	API para habilitar a consulta de terminais associados a um estabelecimento em particular|
-|Ticket List details|	Fiserv|Instituição Financeira e Provedor field services	|API para habilitar a consulta de detalhes de uma Service Order de acordo ao seu número de registro|
+| API                             | Responsável API         | Usuário da API                                   | Descrição                                                                                          |
+|---------------------------------|-------------------------|--------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| Ticket update                   | Provedor field services | Fiserv                                           | API para habilitar a criação de Service Orders na plataforma do provedor de field services         |
+| New ticket                      | Provedor field services | Fiserv                                           | API para habilitar a atualização de Service Orders na plataforma do provedor de field services     |
+| Uninstall                       | Fiserv                  | Instituição Financeira                           | API para habilitar a criação de Service Orders para pedir retirada de terminais                    |
+| Supply request                  | Fiserv                  | Instituição Financeira                           | API para habilitar a criação de Service Orders para solicitação de bobina                          |
+| Re-schedule                     | Fiserv                  | Instituição Financeira e Provedor field services | API para habilitar a atualização de Service Orders (exclusivamente para reprogramação de datas)    |
+| Order Update                    | Fiserv                  | Field Services provider                          | API para habilitar atualização de Service Orders associadas a um provedor de field services        |
+| Maintenance / Replacement       | Fiserv                  | Instituição Financeira                           | API para habilitar a criação de Service Orders pedindo uma troca de terminal                       |
+| Maintenance / Change Technology | Fiserv                  | Instituição Financeira                           | API para habilitar a criação de Service Orders pedindo a troca de tecnologia de um terminal        |
+| Maintenance / Change Carrier    | Fiserv                  | Instituição Financeira                           | API para habilitar a criação de Service Orders pedindo uma troca de SimCard                        |
+| Install                         | Fiserv                  | Instituição Financeira                           | API para habilitar a criação de Service Orders pedindo a instalação de um terminal                 |
+| Cancel order                    | Fiserv                  | Instituição Financeira e Provedor field services | API para habilitar o cancelamento de uma Service Order aberta previamente                          |
+| Ticket List                     | Fiserv                  | Instituição Financeira                           | API para habilitar a consulta de Service Orders associadas a um estabelecimento em particular      |
+| Terminal List                   | Fiserv                  | Instituição Financeira                           | API para habilitar a consulta de terminais associados a um estabelecimento em particular           |
+| Product                         | Fiserv                  | Instituição Financeira                           | API para habilitar a consulta de terminais associados a um estabelecimento em particular           |
+| Ticket List details             | Fiserv                  | Instituição Financeira e Provedor field services | API para habilitar a consulta de detalhes de uma Service Order de acordo ao seu número de registro |
 
 Pré-requisito para a utilização destas APIs é a aquisição de um certificado digital privado, que será detalhado nesse material.
 
