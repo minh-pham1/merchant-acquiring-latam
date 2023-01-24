@@ -24,16 +24,16 @@ The Gateway provides
 
 Use POST to make a call to /payment-url and specify the values for the payload as defined in the following table.
 
-|**Attribute**|	**Explanation**|
-|-----------------|----------------------------------|
-|```transactionType```	|This attribute tells our platform what type of transaction to execute when the customer completes the payment via the URL. To take a payment, use SALE. To create a pre-authorization, use PREAUTH. To credit the customer, use CREDIT.|
-|```transactionNotificationURL```|Set the URL to which you would like notification posted when the payment has been completed by the customer|
-|```expiration```	|This is the date on which the URL will expire and no longer be useable by the customer|
-|```authenticateTransaction```	|set to TRUE to have the transaction authenticated by 3-D Secure (this will happen within our hosted page, not via the REST API driven 3-D Secure flow)|
-|```dynamicMerchantName```	|This sets the merchant name that will appear on the customers card statement, so you can set this to whatever you want to appear there.|
-|```invoiceNumber```|	Put your invoice number here.|
-|```purchaseOrderNumber```	|Put the customers Purchase Order number here.|
-|```hostedPaymentPageText```	|This sets the text that will appear on the hosted payment page that the customer uses to make payment|
+| **Attribute**                    | **Explanation**                                                                                                                                                                                                                         |
+|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ```transactionType```            | This attribute tells our platform what type of transaction to execute when the customer completes the payment via the URL. To take a payment, use SALE. To create a pre-authorization, use PREAUTH. To credit the customer, use CREDIT. |
+| ```transactionNotificationURL``` | Set the URL to which you would like notification posted when the payment has been completed by the customer                                                                                                                             |
+| ```expiration```                 | This is the date on which the URL will expire and no longer be useable by the customer                                                                                                                                                  |
+| ```authenticateTransaction```    | set to TRUE to have the transaction authenticated by 3-D Secure (this will happen within our hosted page, not via the REST API driven 3-D Secure flow)                                                                                  |
+| ```dynamicMerchantName```        | This sets the merchant name that will appear on the customers card statement, so you can set this to whatever you want to appear there.                                                                                                 |
+| ```invoiceNumber```              | Put your invoice number here.                                                                                                                                                                                                           |
+| ```purchaseOrderNumber```        | Put the customers Purchase Order number here.                                                                                                                                                                                           |
+| ```hostedPaymentPageText```      | This sets the text that will appear on the hosted payment page that the customer uses to make payment                                                                                                                                   |
 
 The example below creates a URL for a sale payment to send to a customer.
 
@@ -84,7 +84,8 @@ The sample generator below shows the associated details for the /payments-url AP
 }
 ```
 
-Other Payment URL functions
+## Other Payment URL functions
+
 To delete a Payment URL, add your ```storeId``` and the ```transactionId``` from the Payment URL creation request response (```ipgTransactionId```) to the /payment-url header, and use the DELETE method to call the /payment-url API.
 
 You can retrieve the data associated with a payment URL by sending a GET to /paymentURL. Add ```storeId``` and the ```transactionId``` from the Payment URL creation request response (```ipgTransactionId```) to the /payment-url header to retrieve the details for a specific Payment URL, or set ```storeId```, ```fromDate``` and ```toDate``` to call a response with all Payment URLs and their details created within a specific time range.
