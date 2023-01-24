@@ -184,7 +184,7 @@ El siguiente flujo muestra un proceso de pago estándar mediante una transacció
 
 - [Tipos de Solicitud](?path=docs/español/pagos/3-1-tipos-solicitudes.md)
 - [Métodos de Pagos](?path=docs/español/pagos/3-2-metodos-pago.md)
-- [Tipos de Pagos](?path=docs/3-3-payment-types.md)
+- [Formas de Pagos](?path=docs/español/pagos/3-3-formas-pagos.md)
 - [Pos-autorización & Devoluciones](?path=docs/3-4-post-auth.md)
 - [3-D Secure](?path=docs/3-5-3d-secure.md)
 - [Verificación de Tarjeta](?path=docs/3-6-card-verification.md)
