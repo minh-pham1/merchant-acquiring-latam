@@ -43,7 +43,7 @@ tags: [Getting Started, Payments, Error codes]
 } 
 ```
 
-##  HMAC Caducado, 403 Forbidden
+## HMAC Caducado, 403 Forbidden
 
 ```json
 {
