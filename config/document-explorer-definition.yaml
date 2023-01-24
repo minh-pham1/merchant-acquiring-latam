@@ -50,7 +50,7 @@
         - title: Formas de Pagos
           link: docs/español/pagos/3-3-formas-pagos.md
         - title: Pos-autorización & Devoluciones
-          link: docs/english/3-4-post-auth.md
+          link: docs/español/pagos/3-4-post-aut.md
         - title: 3-D Secure
           link: docs/english/3-5-3d-secure.md
         - title: Verificación de Tarjeta
