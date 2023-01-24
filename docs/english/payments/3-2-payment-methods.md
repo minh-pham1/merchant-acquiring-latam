@@ -37,12 +37,12 @@ Within the paymentMethod object, you’ll provide different values dependent on 
 
 Further information on the payload changes associated with each of these methods is accessed via clicking the paymentMethodType.
 
-|paymentMethodType	|Description|
-| ------------------| --------- |
-|PAYMENT_CARD	|The Payment Card payment method covers all Credit and Debit Card types and networks. Your merchant acquiring contract will tell you which of the payment networks you can accept payments for.|
-|PAYMENT_TOKEN	|The Payment Token payment method enables you to use a token created by us, instead of the actual payment method details. More information is provided on using Tokens here.|
-|SEPA	A SEPA |transaction enables the customer to pay you via a bank-to-bank request over the European SEPA network.|
-|WALLET	|Enables payment via a Wallet transaction. Wallet transactions require a specific paymentMethod object. More information on this object is provided in the Wallet Payments section.|
+| paymentMethodType | Description                                                                                                                                                                                    |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PAYMENT_CARD      | The Payment Card payment method covers all Credit and Debit Card types and networks. Your merchant acquiring contract will tell you which of the payment networks you can accept payments for. |
+| PAYMENT_TOKEN     | The Payment Token payment method enables you to use a token created by us, instead of the actual payment method details. More information is provided on using Tokens here.                    |
+| SEPA	A SEPA        | This transaction enables the customer to pay you via a bank-to-bank request over the European SEPA network.                                                                                         |
+| WALLET            | Enables payment via a Wallet transaction. Wallet transactions require a specific paymentMethod object. More information on this object is provided in the Wallet Payments section.             |
 
 ## SEPA Transactions
 
