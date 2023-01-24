@@ -134,6 +134,7 @@ Para crear un pago programado utilizando un pago único ya enviado, envíe la ca
   }
 }
 ```
+
 ## Actualización de un pago programado
 
 Para actualizar un pago programado, use PATCH para hacer una llamada a /pago-programas/{order-id} donde el valor de {order-id} es el valor ```orderId``` de la respuesta del ``` original PaymentSchedulesRequest``` POST. Use la misma estructura de carga útil que para configurar el cronograma de pago, pero identifique el cronograma de pago para la actualización especificando ```orderId``` en la respuesta de ```PaymentSchedulesRequest``` original en /payment-schedules/{ Solicitar ID}. Realice actualizaciones en el programa de pago, el método de pago o el monto de la transacción según sea necesario en la carga útil de la llamada PATCH.
