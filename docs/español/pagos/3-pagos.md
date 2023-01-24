@@ -193,7 +193,7 @@ El siguiente flujo muestra un proceso de pago estándar mediante una transacció
 - [Pedidos](?path=docs/español/pagos/3-9-pedidos.md)
 - [URL Pago](?path=docs/español/pagos/3-10-pago-url.md)
 - [Pagos Recurrentes](?path=docs/español/pagos/3-11-pagos-recurrentes.md)
-- [Tokenización](?path=docs/3-12-tokenisation.md)
-- [Códigos de Error](?path=docs/3-13-error-codes.md)
+- [Tokenización](?path=docs/español/pagos/3-12-tokenizacion.md)
+- [Códigos de Error](?path=docs/español/pagos/3-13-codigos-error.md)
 
 ---
