@@ -69,6 +69,8 @@
           link: docs/español/pagos/3-12-tokenizacion.md
         - title: Códigos de Error
           link: docs/español/pagos/3-13-codigos-error.md
+      - title: Related links
+        link: docs/español/related-links.md
     - title: English
       sections: 
       - title: Getting Started
