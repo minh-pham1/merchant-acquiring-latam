@@ -90,6 +90,7 @@ La transacción de autorización previa original se incrementará/reducirá seg�
 ## Completar y anular transacciones de autorización previa
 
 Para completar una autorización previa, POST una transacción posterior a la autenticación para completar la autorización previa, publique una transacción secundaria en /payments/{transaction-id} indicando el valor del campo ```orderId``` de la respuesta asociada con la transacción pre-autorización original en {transaction-id}. El objeto splitShipment habilita varias autorizaciones posteriores parciales en escenarios en los que hay varios envíos contra una única autorización previa original.
+
 ```json
 {
   "requestType": "PostAuthTransaction",
@@ -108,19 +109,19 @@ Para anular la autenticación posterior y, por lo tanto, volver a abrir la auten
 
 ---
 
-## See Also
+## Ver más
 
-- [Request Types](?path=docs/3-1-request-types.md)
-- [Payment Methods](?path=docs/3-2-payment-methods.md)
-- [Payment Types](?path=docs/3-3-payment-types.md)
+- [Tipos de Solicitud](?path=docs/español/pagos/3-1-tipos-solicitudes.md)
+- [Métodos de Pagos](?path=docs/español/pagos/3-2-metodos-pago.md)
+- [Formas de Pagos](?path=docs/español/pagos/3-3-formas-pagos.md)
 - [3-D Secure](?path=docs/3-5-3d-secure.md)
-- [Card Verification](?path=docs/3-6-card-verification.md)
-- [Currency Conversion](?path=docs/3-7-currency-conversion.md)
-- [Managed Redirect](?path=docs/3-8-managed-redirect.md)
-- [Orders](?path=docs/3-9-orders.md)
-- [Payment URL](?path=docs/3-10-payment-url.md)
-- [Recurring Payments](?path=docs/3-11-recurring-payments.md)
-- [Tokenisation](?path=docs/3-12-tokenisation.md)
-- [Error codes](?path=docs/3-13-error-codes.md)
+- [Verificación de Tarjeta](?path=docs/3-6-card-verification.md)
+- [Conversion de Moneda](?path=docs/3-7-currency-conversion.md)
+- [Redirección Administrada](?path=docs/3-8-managed-redirect.md)
+- [Órdenes](?path=docs/3-9-orders.md)
+- [URL Pago](?path=docs/3-10-payment-url.md)
+- [Pagos Recurrentes](?path=docs/3-11-recurring-payments.md)
+- [Tokenización](?path=docs/3-12-tokenisation.md)
+- [Códigos de Error](?path=docs/3-13-error-codes.md)
 
 ---
