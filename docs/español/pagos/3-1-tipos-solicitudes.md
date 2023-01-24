@@ -42,3 +42,4 @@ Las diferencias que se requieren en el JSON para cada uno de estos tipos de soli
 - [Códigos de Error](?path=docs/español/pagos/3-13-codigos-error.md)
 
 ---
+
