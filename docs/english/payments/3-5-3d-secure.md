@@ -34,13 +34,13 @@ You can instruct the payment to use 3-D Secure if you want to enforce it. The re
 
 This message needs to include the ```authenticationRequest``` object in the transaction request message and includes the following values:
 
-|Attribute|Description	|
-|---------|-------------|
-|```authenticationType```	|The value Secure3DAuthenticationRequest is a default value for 3DS authentication request|
-|```termURL```	|Indicates the callback URL where the results of the authentication process should be posted by the ACS server (this is the Access Control Server that executes the cardholder authentication).|
-|```methodNotifictionURL```	|In order to be notified about the 3DSMethod form display completion, you must also submit this element in your transaction request. The URL should be uniquely identifiable, so when there is a notification received on this URL, you should be able to map it with the corresponding transaction. This eliminates any dependency on the Secure3dTransId which you will receive with the 3DSMethod form response. An easy way to ensure correct transaction mapping is to pass a transaction reference as a query string|
-|```challengeIndicator```	|In case you would like to influence which authentication flow should be used, you can submit this optional element with one of the values listed below. In case the Challenge Indicator is not sent within your transaction request, the Gateway will populate the default value “01” – No preference.|
-|```challengeWindowSize```	|If you want to define the size of the challenge window displayed to your customers during the authentication process, you can submit this optional element with one of the values listed below.|
+| Attribute                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ```authenticationType```   | The value Secure3DAuthenticationRequest is a default value for 3DS authentication request                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ```termURL```              | Indicates the callback URL where the results of the authentication process should be posted by the ACS server (this is the Access Control Server that executes the cardholder authentication).                                                                                                                                                                                                                                                                                                                            |
+| ```methodNotifictionURL``` | In order to be notified about the 3DSMethod form display completion, you must also submit this element in your transaction request. The URL should be uniquely identifiable, so when there is a notification received on this URL, you should be able to map it with the corresponding transaction. This eliminates any dependency on the Secure3dTransId which you will receive with the 3DSMethod form response. An easy way to ensure correct transaction mapping is to pass a transaction reference as a query string |
+| ```challengeIndicator```   | In case you would like to influence which authentication flow should be used, you can submit this optional element with one of the values listed below. In case the Challenge Indicator is not sent within your transaction request, the Gateway will populate the default value “01” – No preference.                                                                                                                                                                                                                    |
+| ```challengeWindowSize```  | If you want to define the size of the challenge window displayed to your customers during the authentication process, you can submit this optional element with one of the values listed below.                                                                                                                                                                                                                                                                                                                           |
 
 Available values for ```challengeIndicator``` are:
 01 = No preference (You have no preference whether a challenge should be performed. This is the default value)
@@ -112,12 +112,12 @@ While awaiting the response the transaction will have the following transaction 
 
 The ```authenticationResponse``` object will contain the following values:
 
-|Attribute	|Value|
-|----------|------|
-|```type```	|3D_SECURE|
-|```version```	|2.1 or 2.2|
-|```secure3DMethod/methodForm```	|HTML form data with hidden iFrame used to collect the web browser data for the Issuer.|
-|```secure3DMethod/secure3dTransId```	|A unique identifier for the transaction provided by the Issuer ACS server.|
+| Attribute                            | Value                                                                                  |
+|--------------------------------------|----------------------------------------------------------------------------------------|
+| ```type```                           | 3D_SECURE                                                                              |
+| ```version```                        | 2.1 or 2.2                                                                             |
+| ```secure3DMethod/methodForm```      | HTML form data with hidden iFrame used to collect the web browser data for the Issuer. |
+| ```secure3DMethod/secure3dTransId``` | A unique identifier for the transaction provided by the Issuer ACS server.             |
 
 The following JSON document represents an example of a response:
 
@@ -193,11 +193,11 @@ The ```threeDSServerTransID``` is not required for any further 3DS processing. H
 
 You need to wait a minimum of **10 seconds** for the above POST operation to complete and then determine the methodNotificationStatus as follows:
 
-|Status	|Description|
-|-------|-----------|
-|RECEIVED|	You have submitted the element ```methodNotificationURL``` in the initial Sale transaction request and have received the notification from ACS within 10 seconds, you will receive HTTP POST message from ACS, which will contain a unique transaction identifier represented by secure3dTransId|
-|EXPECTED_BUT_NOT_RECEIVED|	You have submitted the element ```methodNotificationURL``` in the initial Sale transaction request and have not received the notification from ACS within 10 seconds.|
-|NOT_EXPECTED|	You have NOT submitted the element ```methodNotificationURL``` in the initial Sale transaction request.|
+| Status                    | Description                                                                                                                                                                                                                                                                                      |
+|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| RECEIVED                  | You have submitted the element ```methodNotificationURL``` in the initial Sale transaction request and have received the notification from ACS within 10 seconds, you will receive HTTP POST message from ACS, which will contain a unique transaction identifier represented by secure3dTransId |
+| EXPECTED_BUT_NOT_RECEIVED | You have submitted the element ```methodNotificationURL``` in the initial Sale transaction request and have not received the notification from ACS within 10 seconds.                                                                                                                            |
+| NOT_EXPECTED              | You have NOT submitted the element ```methodNotificationURL``` in the initial Sale transaction request.                                                                                                                                                                                          |
 
 > 🚧 There may be occasions where you will observe duplicate responses to your '3DSMethod Notification URL' or 'Term URL', this could be due to duplicate requests being sent from an issuers ACS or perhaps user behaviour within the browser. It is recommended that you build handling into your system, so in the event you receive a duplicate response to your '3DSMethod Notification URL' or 'Term URL' you do not then send an additional/duplicated request to the Gateway.
 <!-- theme: warning -->
@@ -294,14 +294,14 @@ For the challenge flow, the transaction status will be returned as follows:
 
 The response will contain an ```authenticationResponse``` object with the following fields:
 
-|**Field**|	**Description**|
-|-----|------------|
-|```type```|	3D_SECURE|
-|```version```	|2.1 or 2.2|
-|```acsURL```	|The URL to which the 'cReq and 'sessionData' values should be posted for the cardholder challenge to take place.|
-|```termURL```|	The URL where the results of the authentication will be posted.|
-|```cReq```|	An encoded challenge request message returned from the ACS server.|
-|```sessionData```|	An encoded list of session parameters to be used for authentication. Note that this value may not always be provided.|
+| **Field**         | Description                                                                                                           |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------|
+| ```type```        | 3D_SECURE                                                                                                             |
+| ```version```     | 2.1 or 2.2                                                                                                            |
+| ```acsURL```      | The URL to which the 'cReq and 'sessionData' values should be posted for the cardholder challenge to take place.      |
+| ```termURL```     | The URL where the results of the authentication will be posted.                                                       |
+| ```cReq```        | An encoded challenge request message returned from the ACS server.                                                    |
+| ```sessionData``` | An encoded list of session parameters to be used for authentication. Note that this value may not always be provided. |
 
 The following JSON document represents an example of a response:
 
@@ -338,9 +338,9 @@ You need to POST the ```cReq``` and the ```sessionData``` values to the URL spec
 
 This information is posted using the following field names:
 
-|**```cReq```**	|The entire base64 encoded cReq message as obtained above.|
-|--------------|----------------------------------------------------------|
-|**```threeDSSessionData```**	|The entire base64 encoded sessionData message as obtained above.|
+| **```cReq```**               | The entire base64 encoded cReq message as obtained above.        |
+|------------------------------|------------------------------------------------------------------|
+| **```threeDSSessionData```** | The entire base64 encoded sessionData message as obtained above. |
 
 Example:
 
@@ -357,9 +357,9 @@ When the authentication is completed, an authentication response will be posted 
 
 After you received the data from the ACS, you need to submit them to the Gateway in ```cRes``` element together with the reference to the original transaction. This is done by sending **PATCH** request to the original transaction and includes the following values:
 
-|**```authenticationType```**|	**Secure3D21AuthenticationUpdateRequest**|
-|----------------------------|-------------------------------------------|
-|**```acsResponse/cRes```**|	The ```cRes``` data posted to the ```termURL``` by the ACS server.|
+| **```authenticationType```** | **Secure3D21AuthenticationUpdateRequest**                          |
+|------------------------------|--------------------------------------------------------------------|
+| **```acsResponse/cRes```**   | The ```cRes``` data posted to the ```termURL``` by the ACS server. |
 
 It is highly recommended to include the optional cardholder billing address and the security code at this time.
 
@@ -572,20 +572,20 @@ The following JSON document represents an example of a response you receive from
 
 In case you are using your own / external 3DS service provider and plan to send authorization request to the Gateway, you need to submit the authentication values obtained from your 3DS service provider.
 
-|**Field**|	**Description**|
-|-----|------------|
-|```authenticationType```| Used for submitting authentication result performed by an external 3-D Secure service provider|
-|```cavv	```|Authentication value obtained in the authentication response from external 3-D Secure service provider|
-|```dsTransactionId```	|Authentication transaction reference ID, obtained from external 3-D Secure provider|
-|```authenticationResponse	```|Represents the result of the authentication, allowed values are : Y = fully authenticated transaction, A = Successful Authentication Attempt, U = Unable to Authenticate by DS or ACS|
+| **Field**                    | **Description**                                                                                                                                                                       |
+|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ```authenticationType```     | Used for submitting authentication result performed by an external 3-D Secure service provider                                                                                        |
+| ```cavv	```                   | Authentication value obtained in the authentication response from external 3-D Secure service provider                                                                                |
+| ```dsTransactionId```        | Authentication transaction reference ID, obtained from external 3-D Secure provider                                                                                                   |
+| ```authenticationResponse	``` | Represents the result of the authentication, allowed values are : Y = fully authenticated transaction, A = Successful Authentication Attempt, U = Unable to Authenticate by DS or ACS |
 
 Only the following authentication results are eligible to be passed to the authorization host:
 
-|**Use case**	|**authenticationResponse**	|**cavv**	|**responseCode3dSecure**|
-|------------|---------------------------|----------|------------------------|
-|Fully Authenticated transaction (ECI = 02 & 05)	|Y	|value	|1|
-|Successful Authentication Attempt (ECI = 01 & 06)	|A	|value	|4|
-|Unable to authenticate on DS or ACS side (ECI07)	|U	|field must not be submitted|	6|
+| **Use case**                                      | **authenticationResponse** | **cavv**                    | **responseCode3dSecure** |
+|---------------------------------------------------|----------------------------|-----------------------------|--------------------------|
+| Fully Authenticated transaction (ECI = 02 & 05)   | Y                          | value                       | 1                        |
+| Successful Authentication Attempt (ECI = 01 & 06) | A                          | value                       | 4                        |
+| Unable to authenticate on DS or ACS side (ECI07)  | U                          | field must not be submitted | 6                        |
 
 The following JSON document represents an example of a sale transaction submitted to our Gateway after being fully authenticated by an external service provider:
 
