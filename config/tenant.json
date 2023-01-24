@@ -23,9 +23,9 @@
     {
       "version": "1.0.0",
       "versionType": "major",
-      "releaseNotesPath": "docs/release-notes/2022/november.md",
+      "releaseNotesPath": "docs/release-notes/2023/english.md",
       "apiSpecFileNames": [
-        "boarding","payments","logistics"
+        "payments","logistics"
       ]
     }
   ],
