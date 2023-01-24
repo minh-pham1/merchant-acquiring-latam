@@ -18,7 +18,7 @@ Una vez que haya ejecutado una transacción utilizando estas APIs, puede recuper
 
 Nuestra API de pagos tiene una estructura de encabezado coherente basada en un conjunto de parámetros. Para crear el encabezado, proporcione los siguientes valores:
 
-| Parametro de Encabezado | Tipo    | Descripción                                                                                                                                                                                                                       |
+| Parametro de Encabezado | Tipo    | Descripción                                                                                                                                                                                                                        |
 |-------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Content-Type            | String  | Defina este atributo como application/json                                                                                                                                                                                        |
 | Client-Request-Id       | String  | Este es un ID que genera para que podamos realizar un seguimiento mutuo de sus solicitudes. Debe ser único por solicitud. Recomendamos que esté construido en formato UUID de 128 bits.                                           |
@@ -185,8 +185,8 @@ El siguiente flujo muestra un proceso de pago estándar mediante una transacció
 - [Tipos de Solicitud](?path=docs/español/pagos/3-1-tipos-solicitudes.md)
 - [Métodos de Pagos](?path=docs/español/pagos/3-2-metodos-pago.md)
 - [Formas de Pagos](?path=docs/español/pagos/3-3-formas-pagos.md)
-- [Pos-autorización & Devoluciones](?path=docs/3-4-post-auth.md)
-- [3-D Secure](?path=docs/3-5-3d-secure.md)
+- [Pos-autorización & Devoluciones](?path=docs/español/pagos/3-4-post-aut.md)
+- [3-D Secure](?path=docs/español/pagos/3-5-3d-secure.md)
 - [Verificación de Tarjeta](?path=docs/3-6-card-verification.md)
 - [Conversion de Moneda](?path=docs/3-7-currency-conversion.md)
 - [Redirección Administrada](?path=docs/3-8-managed-redirect.md)
