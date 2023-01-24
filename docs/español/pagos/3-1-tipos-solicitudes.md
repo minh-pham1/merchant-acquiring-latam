@@ -28,7 +28,6 @@ Las diferencias que se requieren en el JSON para cada uno de estos tipos de soli
 
 ## Ver más
 
-- [Tipos de Solicitud](?path=docs/español/pagos/3-1-tipos-solicitudes.md)
 - [Métodos de Pagos](?path=docs/español/pagos/3-2-metodos-pago.md)
 - [Formas de Pagos](?path=docs/español/pagos/3-3-formas-pagos.md)
 - [Pos-autorización & Devoluciones](?path=docs/español/pagos/3-4-post-aut.md)
