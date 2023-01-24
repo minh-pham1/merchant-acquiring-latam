@@ -35,9 +35,9 @@ La API /orders le permite publicar una transacción secundaria utilizando su pro
 - [Verificación de Tarjeta](?path=docs/español/pagos/3-6-verificacion-tarjeta.md)
 - [Conversion de Moneda](?path=docs/español/pagos/3-7-conversion-moneda.md)
 - [Redirección Administrada](?path=docs/español/pagos/3-8-redireccion-administrada.md)
-- [URL Pago](?path=docs/3-10-payment-url.md)
-- [Pagos Recurrentes](?path=docs/3-11-recurring-payments.md)
-- [Tokenización](?path=docs/3-12-tokenisation.md)
-- [Códigos de Error](?path=docs/3-13-error-codes.md)
+- [URL Pago](?path=docs/español/pagos/3-10-pago-url.md)
+- [Pagos Recurrentes](?path=docs/español/pagos/3-11-pagos-recurrentes.md)
+- [Tokenización](?path=docs/español/pagos/3-12-tokenizacion.md)
+- [Códigos de Error](?path=docs/español/pagos/3-13-codigos-error.md)
 
 ---
