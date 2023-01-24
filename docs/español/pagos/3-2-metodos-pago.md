@@ -76,7 +76,7 @@ El objeto PaymentMethod de SEPA se muestra a continuación:
 - [Tipos de Solicitud](?path=docs/español/pagos/3-1-tipos-solicitudes.md)
 - [Formas de Pagos](?path=docs/español/pagos/3-3-formas-pagos.md)
 - [Pos-autorización & Devoluciones](?path=docs/español/pagos/3-4-post-aut.md)
-- [3-D Secure](?path=docs/3-5-3d-secure.md)
+- [3-D Secure](?path=docs/español/pagos/3-5-3d-secure.md)
 - [Verificación de Tarjeta](?path=docs/3-6-card-verification.md)
 - [Conversion de Moneda](?path=docs/3-7-currency-conversion.md)
 - [Redirección Administrada](?path=docs/3-8-managed-redirect.md)
