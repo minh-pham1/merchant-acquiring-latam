@@ -108,22 +108,21 @@ To complete a Pre-Auth, POST a postAuth transaction to complete the Pre-Authoris
 
 To void the Post-Auth, thereby re-opening the Pre-Auth, POST a voidTransaction request type as a secondary transaction setting the ```orderId``` value from the postAuth response as the {transaction-id}. To void the Pre-Authorisation transaction, POST a voidPreAuthTransaction request type as a secondary transaction setting the ```orderId``` value from the Pre-Authorisation response as the {transaction-id}.
 
-
 ---
 
 ## See Also
 
-- [Request Types](?path=docs/3-1-request-types.md)
-- [Payment Methods](?path=docs/3-2-payment-methods.md)
-- [Payment Types](?path=docs/3-3-payment-types.md)
-- [3-D Secure](?path=docs/3-5-3d-secure.md)
-- [Card Verification](?path=docs/3-6-card-verification.md)
-- [Currency Conversion](?path=docs/3-7-currency-conversion.md)
-- [Managed Redirect](?path=docs/3-8-managed-redirect.md)
-- [Orders](?path=docs/3-9-orders.md)
-- [Payment URL](?path=docs/3-10-payment-url.md)
-- [Recurring Payments](?path=docs/3-11-recurring-payments.md)
-- [Tokenisation](?path=docs/3-12-tokenisation.md)
-- [Error codes](?path=docs/3-13-error-codes.md)
+- [Request Types](?path=docs/english/payments/3-1-request-types.md)
+- [Payment Methods](?path=docs/english/payments/3-2-payment-methods.md)
+- [Payment Types](?path=docs/english/payments/3-3-payment-types.md)
+- [3-D Secure](?path=docs/english/payments/3-5-3d-secure.md)
+- [Card Verification](?path=docs/english/payments/3-6-card-verification.md)
+- [Currency Conversion](?path=docs/english/payments/3-7-currency-conversion.md)
+- [Managed Redirect](?path=docs/english/payments/3-8-managed-redirect.md)
+- [Orders](?path=docs/english/payments/3-9-orders.md)
+- [Payment URL](?path=docs/english/payments/3-10-payment-url.md)
+- [Recurring Payments](?path=docs/english/payments/3-11-recurring-payments.md)
+- [Tokenisation](?path=docs/english/payments/3-12-tokenisation.md)
+- [Error codes](?path=docs/english/payments/3-13-error-codes.md)
 
 ---
