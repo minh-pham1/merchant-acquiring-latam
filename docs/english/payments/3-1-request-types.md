@@ -28,17 +28,17 @@ The differences that are required in the JSON for each of these request types ar
 
 ## See Also
 
-- [Payment Methods](?path=docs/3-2-payment-methods.md)
-- [Payment Types](?path=docs/3-3-payment-types.md)
-- [Post-authorisation & Returns](?path=docs/3-4-post-auth.md)
-- [3-D Secure](?path=docs/3-5-3d-secure.md)
-- [Card Verification](?path=docs/3-6-card-verification.md)
-- [Currency Conversion](?path=docs/3-7-currency-conversion.md)
-- [Managed Redirect](?path=docs/3-8-managed-redirect.md)
-- [Orders](?path=docs/3-9-orders.md)
-- [Payment URL](?path=docs/3-10-payment-url.md)
-- [Recurring Payments](?path=docs/3-11-recurring-payments.md)
-- [Tokenisation](?path=docs/3-12-tokenisation.md)
-- [Error codes](?path=docs/3-13-error-codes.md)
+- [Payment Methods](?path=docs/english/payments/3-2-payment-methods.md)
+- [Payment Types](?path=docs/english/payments/3-3-payment-types.md)
+- [Post-authorisation & Returns](?path=docs/english/payments/3-4-post-auth.md)
+- [3-D Secure](?path=docs/english/payments/3-5-3d-secure.md)
+- [Card Verification](?path=docs/english/payments/3-6-card-verification.md)
+- [Currency Conversion](?path=docs/english/payments/3-7-currency-conversion.md)
+- [Managed Redirect](?path=docs/english/payments/3-8-managed-redirect.md)
+- [Orders](?path=docs/english/payments/3-9-orders.md)
+- [Payment URL](?path=docs/english/payments/3-10-payment-url.md)
+- [Recurring Payments](?path=docs/english/payments/3-11-recurring-payments.md)
+- [Tokenisation](?path=docs/english/payments/3-12-tokenisation.md)
+- [Error codes](?path=docs/english/payments/3-13-error-codes.md)
 
 ---
