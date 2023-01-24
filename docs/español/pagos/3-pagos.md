@@ -182,7 +182,7 @@ El siguiente flujo muestra un proceso de pago estándar mediante una transacció
 
 ## Ver más
 
-- [Tipos de Solicitud](?path=docs/3-1-request-types.md)
+- [Tipos de Solicitud](?path=docs/español/pagos/3-1-tipos-solicitudes.md)
 - [Métodos de Pagos](?path=docs/español/pagos/3-2-metodos-pago.md)
 - [Tipos de Pagos](?path=docs/3-3-payment-types.md)
 - [Pos-autorización & Devoluciones](?path=docs/3-4-post-auth.md)
