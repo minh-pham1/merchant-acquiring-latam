@@ -671,7 +671,7 @@ The following JSON document represents an example of a response you receive from
 - [Métodos de Pagos](?path=docs/español/pagos/3-2-metodos-pago.md)
 - [Formas de Pagos](?path=docs/español/pagos/3-3-formas-pagos.md)
 - [Pos-autorización & Devoluciones](?path=docs/español/pagos/3-4-post-aut.md)
-- [Verificación de Tarjeta](?path=docs/3-6-card-verification.md)
+- [Verificación de Tarjeta](?path=docs/español/pagos/3-6-verificacion-tarjeta.md)
 - [Conversion de Moneda](?path=docs/3-7-currency-conversion.md)
 - [Redirección Administrada](?path=docs/3-8-managed-redirect.md)
 - [Órdenes](?path=docs/3-9-orders.md)
