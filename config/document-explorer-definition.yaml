@@ -56,7 +56,7 @@
         - title: Verificación de Tarjeta
           link: docs/español/pagos/3-6-verificacion-tarjeta.md
         - title: Conversión de Moneda
-          link: docs/english/3-7-currency-conversion.md
+          link: docs/español/pagos/3-7-conversion-moneda.md
         - title: Redirección Administrada
           link: docs/english/3-8-managed-redirect.md
         - title: Órdenes
