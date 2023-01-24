@@ -44,11 +44,11 @@
         link: docs/español/pagos/3-pagos.md
         sections:
         - title: Tipos de Solicitudes
-          link: docs/english/3-1-request-types.md
+          link: docs/español/pagos/3-1-tipos-solicitudes.md
         - title: Métodos de Pago
           link: docs/español/pagos/3-2-metodos-pago.md
-        - title: Tipos de Pagos
-          link: docs/english/3-3-payment-types.md
+        - title: Formas de Pagos
+          link: docs/español/pagos/3-3-formas-pagos.md
         - title: Pos-autorización & Devoluciones
           link: docs/english/3-4-post-auth.md
         - title: 3-D Secure
