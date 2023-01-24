@@ -58,17 +58,19 @@ Ejemplos de métodos de pago alternativos (a veces abreviados como APM) son los 
 
 ---
 
-## See Also
+## Ver más
 
 - [Tipos de Solicitud](?path=docs/español/pagos/3-1-tipos-solicitudes.md)
 - [Métodos de Pagos](?path=docs/español/pagos/3-2-metodos-pago.md)
 - [Pos-autorización & Devoluciones](?path=docs/español/pagos/3-4-post-aut.md)
 - [3-D Secure](?path=docs/español/pagos/3-5-3d-secure.md)
 - [Verificación de Tarjeta](?path=docs/español/pagos/3-6-verificacion-tarjeta.md)
-- [Conversion de Moneda](?path=docs/3-7-currency-conversion.md)
-- [Redirección Administrada](?path=docs/3-8-managed-redirect.md)
-- [Órdenes](?path=docs/3-9-orders.md)
-- [URL Pago](?path=docs/3-10-payment-url.md)
-- [Pagos Recurrentes](?path=docs/3-11-recurring-payments.md)
-- [Tokenización](?path=docs/3-12-tokenisation.md)
-- [Códigos de Error](?path=docs/3-13-error-codes.md)
+- [Conversion de Moneda](?path=docs/español/pagos/3-7-conversion-moneda.md)
+- [Redirección Administrada](?path=docs/español/pagos/3-8-redireccion-administrada.md)
+- [Pedidos](?path=docs/español/pagos/3-9-pedidos.md)
+- [URL Pago](?path=docs/español/pagos/3-10-pago-url.md)
+- [Pagos Recurrentes](?path=docs/español/pagos/3-11-pagos-recurrentes.md)
+- [Tokenización](?path=docs/español/pagos/3-12-tokenizacion.md)
+- [Códigos de Error](?path=docs/español/pagos/3-13-codigos-error.md)
+
+---
