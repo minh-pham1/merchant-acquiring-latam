@@ -100,6 +100,7 @@ featuredFeatures:
         description: Use this to create a payment token from a payment card.
         type: "post"        
         path: "/payment-tokens"
+############################################################################
 #  - title: Merchant and Terminal Boarding
 #    description:  Onboard merchants to start accepting payments online or in-store, and streamline your process for registering new terminals and equipment.
 #    tags: ["Boarding"]
@@ -128,4 +129,5 @@ featuredFeatures:
 #        title: New Terminal
 #        description: Adds a new terminal to an already boarded application.
 #        type: "post"        
-#        path: "/api/v1/application/{id}/terminals"        
+#        path: "/api/v1/application/{id}/terminals"
+############################################################################
