@@ -19,23 +19,23 @@ The following diagram helps illustrate timings in which each mentioned API shoul
 
 Main APIs available here to be used by the Financial Institution will be:
 
-|API|	API Owner|	API user|	Purpose|
-|---|-------------|---------|-----------|
-|New ticket|	Field Services Provider|	Fiserv|	API to enable creation of Service Orders on vendor platform|
-|Ticket update|	Field Services Provider|	Fiserv|	API to enable Service Orders update on vendor platform|
-|Uninstall|	Fiserv|	Financial institution|	API to enable creation of Service Orders to withdrawal a terminal|
-|Supply request|	Fiserv|	Financial institution|	API to enable creation of Service Orders for paper roll delivery|
-|Re-schedule|	Fiserv|	Financial Institution and Field Services Provider|	API to enable update on Service Orders (exclusively to postpone due date)|
-|Order Update|	Fiserv|	Field Services provider|	API to enable updates on a Service Order assigned to a Field Services vendor|
-|Maintenance / Replacement|	Fiserv|	Financial institution|	API to enable creation of a Service order requesting a terminal to be replaced|
-|Maintenance / Change Technology|	Fiserv|	Financial institution|	API to enable creation of a Service order requesting a terminal with a different technology|
-|Maintenance / Change Carrier|	Fiserv|	Financial institution|	API to enable creation of a Service order requesting a SimCard exchange|
-|Install|	Fiserv|	Financial institution|	API to enable creation of a Service order requesting installation of a new terminal|
-|Cancel order|	Fiserv|	Financial institution and Field Services Provider|	API to enable cancellation of a previously opened Service order|
-|Ticket List|	Fiserv|	Financial institution|	API to enable query of the Service orders opened on behalf of a Merchant|
-|Terminal List|	Fiserv	|Financial Institution|	API to enable query on the terminals assigned to a particular merchant|
-|Product|	Fiserv|	Financial Institution|	API to enable confirm terminal model based on a serial number|
-|Ticket List details|	Fiserv|	Financial institution and Field Services Provider|	API to enable query Service order details based on a Service order number|
+| API                             | API Owner               | API user                                          | Purpose                                                                                     |
+|---------------------------------|-------------------------|---------------------------------------------------|---------------------------------------------------------------------------------------------|
+| New ticket                      | Field Services Provider | Fiserv                                            | API to enable creation of Service Orders on vendor platform                                 |
+| Ticket update                   | Field Services Provider | Fiserv                                            | API to enable Service Orders update on vendor platform                                      |
+| Uninstall                       | Fiserv                  | Financial institution                             | API to enable creation of Service Orders to withdrawal a terminal                           |
+| Supply request                  | Fiserv                  | Financial institution                             | API to enable creation of Service Orders for paper roll delivery                            |
+| Re-schedule                     | Fiserv                  | Financial Institution and Field Services Provider | API to enable update on Service Orders (exclusively to postpone due date)                   |
+| Order Update                    | Fiserv                  | Field Services provider                           | API to enable updates on a Service Order assigned to a Field Services vendor                |
+| Maintenance / Replacement       | Fiserv                  | Financial institution                             | API to enable creation of a Service order requesting a terminal to be replaced              |
+| Maintenance / Change Technology | Fiserv                  | Financial institution                             | API to enable creation of a Service order requesting a terminal with a different technology |
+| Maintenance / Change Carrier    | Fiserv                  | Financial institution                             | API to enable creation of a Service order requesting a SimCard exchange                     |
+| Install                         | Fiserv                  | Financial institution                             | API to enable creation of a Service order requesting installation of a new terminal         |
+| Cancel order                    | Fiserv                  | Financial institution and Field Services Provider | API to enable cancellation of a previously opened Service order                             |
+| Ticket List                     | Fiserv                  | Financial institution                             | API to enable query of the Service orders opened on behalf of a Merchant                    |
+| Terminal List                   | Fiserv                  | Financial Institution                             | API to enable query on the terminals assigned to a particular merchant                      |
+| Product                         | Fiserv                  | Financial Institution                             | API to enable confirm terminal model based on a serial number                               |
+| Ticket List details             | Fiserv                  | Financial institution and Field Services Provider | API to enable query Service order details based on a Service order number                   |
 
 ---
 
