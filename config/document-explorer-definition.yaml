@@ -54,7 +54,7 @@
         - title: 3-D Secure
           link: docs/español/pagos/3-5-3d-secure.md
         - title: Verificación de Tarjeta
-          link: docs/english/3-6-card-verification.md
+          link: docs/español/pagos/3-6-verificacion-tarjeta.md
         - title: Conversión de Moneda
           link: docs/english/3-7-currency-conversion.md
         - title: Redirección Administrada
