@@ -62,7 +62,7 @@
         - title: Pedidos
           link: docs/español/pagos/3-9-pedidos.md
         - title: Pago URL
-          link: docs/english/3-10-payment-url.md
+          link: docs/español/pagos/3-10-pago-url.md
         - title: Pagos Recurrentes
           link: docs/english/3-11-recurring-payments.md
         - title: Tokenización
