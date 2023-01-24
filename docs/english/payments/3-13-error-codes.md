@@ -109,19 +109,19 @@ tags: [Getting Started, Payments, Error codes]
 
 ---
 
-## See Also
+## Ver más
 
-- [Request Types](?path=docs/english/payments/3-1-request-types.md)
-- [Payment Methods](?path=docs/english/payments/3-2-payment-methods.md)
-- [Payment Types](?path=docs/english/payments/3-3-payment-types.md)
-- [Post-authorisation & Returns](?path=docs/english/payments/3-4-post-auth.md)
-- [3-D Secure](?path=docs/english/payments/3-5-3d-secure.md)
-- [Card Verification](?path=docs/english/payments/3-6-card-verification.md)
-- [Currency Conversion](?path=docs/english/payments/3-7-currency-conversion.md)
-- [Managed Redirect](?path=docs/english/payments/3-8-managed-redirect.md)
-- [Orders](?path=docs/english/payments/3-9-orders.md)
-- [Payment URL](?path=docs/english/payments/3-10-payment-url.md)
-- [Recurring Payments](?path=docs/english/payments/3-11-recurring-payments.md)
-- [Tokenisation](?path=docs/english/payments/3-12-tokenisation.md)
+- [Tipos de Solicitud](?path=docs/español/pagos/3-1-tipos-solicitudes.md)
+- [Métodos de Pagos](?path=docs/español/pagos/3-2-metodos-pago.md)
+- [Formas de Pagos](?path=docs/español/pagos/3-3-formas-pagos.md)
+- [Pos-autorización & Devoluciones](?path=docs/español/pagos/3-4-post-aut.md)
+- [3-D Secure](?path=docs/español/pagos/3-5-3d-secure.md)
+- [Verificación de Tarjeta](?path=docs/español/pagos/3-6-verificacion-tarjeta.md)
+- [Conversion de Moneda](?path=docs/español/pagos/3-7-conversion-moneda.md)
+- [Redirección Administrada](?path=docs/español/pagos/3-8-redireccion-administrada.md)
+- [Pedidos](?path=docs/español/pagos/3-9-pedidos.md)
+- [URL Pago](?path=docs/español/pagos/3-10-pago-url.md)
+- [Pagos Recurrentes](?path=docs/español/pagos/3-11-pagos-recurrentes.md)
+- [Tokenización](?path=docs/español/pagos/3-12-tokenizacion.md)
 
 ---
