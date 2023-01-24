@@ -37,6 +37,7 @@ Para solicitar una tarifa específica para un cliente, use un método POST contr
 El valor BIN es importante ya que le dice al proveedor de tipos de cambio la moneda local de la tarjeta del cliente, lo que les permite proporcionar una tasa y un precio adaptados a ese cliente. El valor BIN son los primeros 6 dígitos del número de tarjeta del cliente.
 
 La respuesta del recurso ```/exchange-rates``` se presentará de la siguiente manera:
+
 ```json
 {
   "clientRequestId": "30dd879c-ee2f-11db-8314-0800200c9a66",
@@ -86,6 +87,7 @@ Para usar esta tasa en una transacción, incluya el objeto ```currencyConversion
 ### Precio dinamico
 
 Para solicitar todas las tasas y monedas disponibles para su transacción, realice una solicitud de método POST utilizando ```dynamicPricingExchangeRateRequest``` requestType.
+
 ```json
 {
   "requestType": "DynamicPricingExchangeRateRequest",
