@@ -71,6 +71,8 @@
           link: docs/español/pagos/3-13-codigos-error.md
       - title: Related links
         link: docs/español/related-links.md
+      - title: Release notes
+        link: docs/release-notes/2023/español.md
     - title: English
       sections: 
       - title: Getting Started
@@ -114,7 +116,7 @@
       - title: Related links
         link: docs/english/related-links.md
       - title: Release notes
-        link: docs/release-notes/2023/january.md
+        link: docs/release-notes/2023/english.md
     - title: Portuguese
       sections:
       - title: Começando
