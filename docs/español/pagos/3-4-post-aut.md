@@ -114,7 +114,7 @@ Para anular la autenticación posterior y, por lo tanto, volver a abrir la auten
 - [Tipos de Solicitud](?path=docs/español/pagos/3-1-tipos-solicitudes.md)
 - [Métodos de Pagos](?path=docs/español/pagos/3-2-metodos-pago.md)
 - [Formas de Pagos](?path=docs/español/pagos/3-3-formas-pagos.md)
-- [3-D Secure](?path=docs/3-5-3d-secure.md)
+- [3-D Secure](?path=docs/español/pagos/3-5-3d-secure.md)
 - [Verificación de Tarjeta](?path=docs/3-6-card-verification.md)
 - [Conversion de Moneda](?path=docs/3-7-currency-conversion.md)
 - [Redirección Administrada](?path=docs/3-8-managed-redirect.md)
