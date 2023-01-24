@@ -59,8 +59,8 @@
           link: docs/español/pagos/3-7-conversion-moneda.md
         - title: Redirección Administrada
           link: docs/español/pagos/3-8-redireccion-administrada.md
-        - title: Órdenes
-          link: docs/english/3-9-orders.md
+        - title: Pedidos
+          link: docs/español/pagos/3-9-pedidos.md
         - title: Pago URL
           link: docs/english/3-10-payment-url.md
         - title: Pagos Recurrentes
