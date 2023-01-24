@@ -23,7 +23,7 @@ See the following table for some detail on the combined set of card brands / sch
 | ```MAESTRO```   | Maestro          | Brand of debit cards owned by Mastercard, will be phased out of use in [Europe starting in 2023](https://en.wikipedia.org/wiki/Maestro_(debit_card)) |
 | ```DINERS```    | Diners Club      | Card brand owned by Discover                                                                                                                         |
 | ```CUP```       | China UnionPay   | National bank card network in China                                                                                                                  |
-| ```JCB```       | JCB              | Internation payment brand based in Japan, works with Discover and AMEX                                                                               |
+| ```JCB```       | JCB              | Internationational payment brand based in Japan, works with Discover and AMEX                                                                        |
 | ```AMEX```      | American Express | Closed-loop payment scheme                                                                                                                           |
 | ```PP```        | Polcard Prepaid  | A type of prepaid card used in Poland                                                                                                                |
 | ```PRIV```      | Private Label    | A card that has been private labeled by another company, usually has another underlying scheme                                                       |
