@@ -47,13 +47,13 @@ To retrieve the status of a transaction you’ve already submitted, place a GET 
 
 The available requestTypes are listed below, with explanation as to what each of them is used for.
 
-|requestType	|Method|	Description|
-|-------------|------|---------------|
-|```VoidTransaction```	|POST	|The VoidTransaction requestType enables you to cancel a transaction you submitted earlier the same day|
-|```VoidPreAuthTransaction```	|POST	|The VoidTransaction requestType enables you to cancel a PreAuthorisation Transaction|
-|```PostAuthTransaction```|	POST	|The PostAuthTransaction requestType enables you to complete a Pre-Authorisation Transaction against the same|
-|```ReturnTransaction```	|POST	|The ReturnTransaction requestType enables you to complete a return against a transaction taken prior to the current day|
-|```Transaction Inquiry```	|GET|	execute a simple GET call against the end point with the ipgtransactionid value from the transaction you want to inquire against|
+| requestType                  | Method | Description                                                                                                                      |
+|------------------------------|--------|----------------------------------------------------------------------------------------------------------------------------------|
+| ```VoidTransaction```        | POST   | The VoidTransaction requestType enables you to cancel a transaction you submitted earlier the same day                           |
+| ```VoidPreAuthTransaction``` | POST   | The VoidTransaction requestType enables you to cancel a PreAuthorisation Transaction                                             |
+| ```PostAuthTransaction```    | POST   | The PostAuthTransaction requestType enables you to complete a Pre-Authorisation Transaction against the same                     |
+| ```ReturnTransaction```      | POST   | The ReturnTransaction requestType enables you to complete a return against a transaction taken prior to the current day          |
+| ```Transaction Inquiry```    | GET    | execute a simple GET call against the end point with the ipgtransactionid value from the transaction you want to inquire against |
 
 ## Additional Payment Scenarios
 
