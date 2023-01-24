@@ -190,7 +190,7 @@ El siguiente flujo muestra un proceso de pago estándar mediante una transacció
 - [Verificación de Tarjeta](?path=docs/español/pagos/3-6-verificacion-tarjeta.md)
 - [Conversion de Moneda](?path=docs/español/pagos/3-7-conversion-moneda.md)
 - [Redirección Administrada](?path=docs/español/pagos/3-8-redireccion-administrada.md)
-- [Órdenes](?path=docs/español/pagos/3-9-ordenes.md)
+- [Pedidos](?path=docs/español/pagos/3-9-pedidos.md)
 - [URL Pago](?path=docs/3-10-payment-url.md)
 - [Pagos Recurrentes](?path=docs/3-11-recurring-payments.md)
 - [Tokenización](?path=docs/3-12-tokenisation.md)
