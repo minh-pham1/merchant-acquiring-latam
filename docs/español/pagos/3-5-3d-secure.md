@@ -43,6 +43,7 @@ Este mensaje debe incluir el objeto ```authenticationRequest``` en el mensaje de
 | ```challengeWindowSize```  | Si desea definir el tamaño de la ventana de desafío que se muestra a sus clientes durante el proceso de autenticación, puede enviar este elemento opcional con uno de los valores que se enumeran a continuación.                                                                                                                                                                                                                                                                                                                                                                           |
 
 Los valores disponibles para ```challengeIndicator``` son:
+
 - 01 = Sin preferencia (No tiene preferencia sobre si se debe realizar un desafío. Este es el valor predeterminado)
 - 02 = No se solicitó ningún desafío (Prefiere que no se realice ningún desafío).
 - 03 = Desafío solicitado: Preferencia del Solicitante 3DS (Prefiere que se realice un desafío)
