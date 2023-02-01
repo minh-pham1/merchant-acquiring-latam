@@ -20,7 +20,7 @@ El siguiente diagrama muestra el flujo cuando su cliente tiene que autenticarse,
 
 ## Cómo implementar 3-D Secure usando nuestra API
 
-### Step 1: Iniciar un pago
+### Paso 1: Iniciar un pago
 
 Utilice la tarjeta de pago o el token de pago para iniciar una transacción de pago principal.
 
@@ -43,23 +43,23 @@ Este mensaje debe incluir el objeto ```authenticationRequest``` en el mensaje de
 | ```challengeWindowSize```  | Si desea definir el tamaño de la ventana de desafío que se muestra a sus clientes durante el proceso de autenticación, puede enviar este elemento opcional con uno de los valores que se enumeran a continuación.                                                                                                                                                                                                                                                                                                                                                                           |
 
 Los valores disponibles para ```challengeIndicator``` son:
-01 = Sin preferencia (No tiene preferencia sobre si se debe realizar un desafío. Este es el valor predeterminado)
-02 = No se solicitó ningún desafío (Prefiere que no se realice ningún desafío).
-03 = Desafío solicitado: Preferencia del Solicitante 3DS (Prefiere que se realice un desafío)
-04 = Desafío solicitado: Mandato (Existen mandatos locales o regionales que significan que se debe realizar un desafío)
-05 = No se solicitó desafío (Análisis de riesgo de transacción ya se realizó)
-06 = No se solicitó desafío (Solo uso compartido de datos)
-07 = No se solicitó desafío (SCA ya se realizó)
-08 = No se solicitó desafío (utilice la exención de la lista blanca si no se requiere desafío)
-09 = Desafío solicitado (solicitud de lista blanca solicitada si se requiere desafío)
+- 01 = Sin preferencia (No tiene preferencia sobre si se debe realizar un desafío. Este es el valor predeterminado)
+- 02 = No se solicitó ningún desafío (Prefiere que no se realice ningún desafío).
+- 03 = Desafío solicitado: Preferencia del Solicitante 3DS (Prefiere que se realice un desafío)
+- 04 = Desafío solicitado: Mandato (Existen mandatos locales o regionales que significan que se debe realizar un desafío)
+- 05 = No se solicitó desafío (Análisis de riesgo de transacción ya se realizó)
+- 06 = No se solicitó desafío (Solo uso compartido de datos)
+- 07 = No se solicitó desafío (SCA ya se realizó)
+- 08 = No se solicitó desafío (utilice la exención de la lista blanca si no se requiere desafío)
+- 09 = Desafío solicitado (solicitud de lista blanca solicitada si se requiere desafío)
 
 Los valores disponibles para ```challengeWindowSize``` son:
 
-01 = 250 x 400
-02 = 390 x 400
-03 = 500 x 600
-04 = 600 x 400
-05 = Full screen
+- 01 = 250 x 400
+- 02 = 390 x 400
+- 03 = 500 x 600
+- 04 = 600 x 400
+- 05 = Full screen
 
 El siguiente documento JSON representa un ejemplo de una solicitud de transacción de venta con un conjunto mínimo de elementos:
 
@@ -119,7 +119,7 @@ El objeto ```authenticationResponse``` contendrá los siguientes valores:
 | ```secure3DMethod/methodForm```      | Datos de formulario HTML con iFrame oculto utilizado para recopilar los datos del navegador web para el Emisor. |
 | ```secure3DMethod/secure3dTransId``` | Un identificador único para la transacción proporcionado por el servidor ACS del emisor.                        |
 
-The following JSON document represents an example of a response:
+El siguiente documento JSON representa un ejemplo de una respuesta:
 
 ```json
 {
@@ -169,13 +169,13 @@ The following JSON document represents an example of a response:
 }
 ```
 
-### Step 3: 3DSMethod Notification Request & Response
+### Paso 3: 3DSMethod Solicitud de notificación y respuesta
 
-The 3-D Secure 'methodForm' is used to provide details of the cardholder environment to the Issuer Access Control Server (ACS). The ```methodForm``` contains the HTML for a hidden iFrame which is to be included in your web page. This will force the information to be automatically posted to the ACS server via Fiserv. The HTML information is a self-contained HTML block that does not need to be modified or posted, as it will be taken care of automatically when the page in which it is inserted is rendered. Alternatively, this can be created on a page which never becomes visible to the cardholder.
+El 'methodForm' de 3-D Secure se utiliza para proporcionar detalles del entorno del titular de la tarjeta al servidor de control de acceso del emisor (ACS). El ```methodForm``` contiene el HTML para un iFrame oculto que se incluirá en su página web. Esto obligará a que la información se publique automáticamente en el servidor ACS a través de Fiserv. La información HTML es un bloque HTML autónomo que no necesita modificarse ni publicarse, ya que se cuidará automáticamente cuando se represente la página en la que se inserta. Alternativamente, esto se puede crear en una página que nunca sea visible para el titular de la tarjeta.
 
-If received properly, the response data will be posted to the URL provided in the original ```methodNotificationURL``` field and the posted message will contain a ```threeDSServerTransID``` field containing the unique ACS transaction id associated with the original request. Note, that the payload for this response will contain a single element called ```threeDSMethodData```. That element will contain a base64 encoded JSON response that contains the ```threeDSServerTransID``` field.
+Si se reciben correctamente, los datos de respuesta se publicarán en la URL proporcionada en el campo ```methodNotificationURL``` original y el mensaje publicado contendrá un campo ```threeDSServerTransID``` que contiene el ID de transacción ACS único asociado con el original solicitud. Tenga en cuenta que la carga útil para esta respuesta contendrá un solo elemento llamado ```tresDSMethodData```. Ese elemento contendrá una respuesta JSON codificada en base64 que contiene el campo ```threeDSServerTransID```.
 
-Example:
+Ejemplo:
 
 ```xml
 <form name="frm" method="POST" action="{value from methodNotificationURL}">
@@ -183,34 +183,34 @@ Example:
 </form>
 ```
 
-Decoded threeDSMethodData:
+Descifrado threeDSMethodData:
 
 ```json
 {"threeDSServerTransID":"3ac7caa7-aa42-2663-791b-2ac05a542c4a"}
 ```
 
-The ```threeDSServerTransID``` is not required for any further 3DS processing. However, it is recommended to save this value for reference to the 3DS Server in the future if necessary.
+El ```threeDSServerTransID``` no es necesario para ningún otro procesamiento de 3DS. Sin embargo, se recomienda guardar este valor como referencia para el servidor 3DS en el futuro si es necesario.
 
-You need to wait a minimum of **10 seconds** for the above POST operation to complete and then determine the methodNotificationStatus as follows:
+Debe esperar un mínimo de ** 10 segundos ** para que se complete la operación POST anterior y luego determinar el estado de notificación del método de la siguiente manera:
 
-| Status                    | Description                                                                                                                                                                                                                                                                                      |
-|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| RECEIVED                  | You have submitted the element ```methodNotificationURL``` in the initial Sale transaction request and have received the notification from ACS within 10 seconds, you will receive HTTP POST message from ACS, which will contain a unique transaction identifier represented by secure3dTransId |
-| EXPECTED_BUT_NOT_RECEIVED | You have submitted the element ```methodNotificationURL``` in the initial Sale transaction request and have not received the notification from ACS within 10 seconds.                                                                                                                            |
-| NOT_EXPECTED              | You have NOT submitted the element ```methodNotificationURL``` in the initial Sale transaction request.                                                                                                                                                                                          |
+| Estatus                   | Descripción                                                                                                                                                                                                                                                                                      |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| RECEIVED                  | Ha enviado el elemento ```methodNotificationURL``` en la solicitud de transacción de Venta inicial y ha recibido la notificación de ACS en 10 segundos, recibirá un mensaje HTTP POST de ACS, que contendrá un identificador de transacción único representado por secure3dTransId. |
+| EXPECTED_BUT_NOT_RECEIVED | Ha enviado el elemento ```methodNotificationURL``` en la solicitud de transacción de Venta inicial y no ha recibido la notificación de ACS en 10 segundos.                                                                                                                          |
+| NOT_EXPECTED              | NO ha enviado el elemento ```methodNotificationURL``` en la solicitud de transacción de venta inicial.                                                                                                                                                                              |
 
-> 🚧 There may be occasions where you will observe duplicate responses to your '3DSMethod Notification URL' or 'Term URL', this could be due to duplicate requests being sent from an issuers ACS or perhaps user behaviour within the browser. It is recommended that you build handling into your system, so in the event you receive a duplicate response to your '3DSMethod Notification URL' or 'Term URL' you do not then send an additional/duplicated request to the Gateway.
-<!-- theme: warning -->
 
-## Frictionless Flow
+> 🚧 Puede haber ocasiones en las que observará respuestas duplicadas a su 'URL de notificación de 3DSMethod' o 'URL de término', esto podría deberse a solicitudes duplicadas enviadas desde el ACS de un emisor o quizás al comportamiento del usuario dentro del navegador. Se recomienda que incorpore el manejo en su sistema, de modo que, en caso de que reciba una respuesta duplicada a su 'URL de notificación de 3DSMethod' o 'URL de término', no envíe una solicitud adicional/duplicada a la puerta de enlace.<!-- theme: warning -->
 
-### Step 4: Request to continue with 3DS Authentication
+## Flujo sin fricción
 
-Once the 3DS Method call has been completed, you need to notify the Gateway, that the authentication process can continue by submitting the 'methodNotificationStatus' element with the values based on corresponding conditions from the 3DSMethod form above. This is done by performing a **PATCH** operation on the original transaction.
+### Paso 4: Solicitud para continuar con la autenticación 3DS
 
-You may also include the optional cardholder billing address and the security code at this time.
+Una vez que se haya completado la llamada al Método 3DS, debe notificar a la puerta de enlace que el proceso de autenticación puede continuar enviando el elemento 'methodNotificationStatus' con los valores basados en las condiciones correspondientes del formulario 3DSMethod anterior. Esto se hace realizando una operación **PATCH** en la transacción original.
 
-The following JSON document represents an example of a request to be sent after ```3DSMethod``` form display:
+También puede incluir la dirección de facturación del titular de la tarjeta opcional y el código de seguridad en este momento.
+
+El siguiente documento JSON representa un ejemplo de una solicitud que se enviará después de mostrar el formulario ```3DSMethod```:
 
 ```json
 {
@@ -230,17 +230,17 @@ The following JSON document represents an example of a request to be sent after 
 }
 ```
 
-### Step 5: Final 3DS Response
+### Paso 5: Respuesta final de 3DS
 
-When it is determined that a frictionless flow has been performed (i.e. the customer has been fully authenticated by their bank without the need for direct interaction), the 3-D Secure process is completed and transaction authorization is processed.
+Cuando se determina que se ha realizado un flujo sin fricciones (es decir, el cliente ha sido completamente autenticado por su banco sin necesidad de interacción directa), se completa el proceso de 3-D Secure y se procesa la autorización de la transacción.
 
-The transaction response contains a secure3dResponse object and the transaction is either approved or declined.
+La respuesta de la transacción contiene un objeto secure3dResponse y la transacción se aprueba o se rechaza.
 
 ```transactionStatus = APPROVED or DECLINED```
 
-The 'secure3dResponse' object will contain the following field: 'responseCode3dSecure'
+El objeto 'secure3dResponse' contendrá el siguiente campo: 'responseCode3dSecure'
 
-The following JSON document represents an example of a response you receive from the API indicating, that the authorisation has been successful:
+El siguiente documento JSON representa un ejemplo de una respuesta que recibe de la API que indica que la autorización se ha realizado correctamente:
 
 ```json
 {
@@ -266,17 +266,17 @@ The following JSON document represents an example of a response you receive from
 }
 ```
 
-## Challenge Flow
+## Flujo de desafío
 
-The challenge flow is triggered, when the transaction is not considered as low risk or when the Issuer requires additional authentication by the cardholder. The whole process starts with an initial Authorisation or Sale transaction request through the step where 3DSMethod is displayed, as described in Steps 1 through 4 above.
+El flujo de desafío se activa cuando la transacción no se considera de bajo riesgo o cuando el Emisor requiere una autenticación adicional por parte del titular de la tarjeta. Todo el proceso comienza con una solicitud inicial de transacción de Autorización o Venta a través del paso donde se muestra 3DSMethod, como se describe en los Pasos 1 a 4 anteriores.
 
-### Step 6: Request to continue with 3DS Authentication
+### Paso 6: Solicitud para continuar con la autenticación 3DS
 
-Once the 3DS Method call has been completed, you need to notify the Gateway that the authentication process can continue by submitting the 'methodNotificationStatus' element with the values based on corresponding conditions from the 3DS Method Form above. This is done by performing a **PATCH** operation on the original transaction.
+Una vez que se haya completado la llamada al método 3DS, debe notificar a la puerta de enlace que el proceso de autenticación puede continuar enviando el elemento 'methodNotificationStatus' con los valores basados en las condiciones correspondientes del formulario del método 3DS anterior. Esto se hace realizando una operación **PATCH** en la transacción original.
 
-You may also include the optional cardholder billing address and the security code at this time.
+También puede incluir la dirección de facturación del titular de la tarjeta opcional y el código de seguridad en este momento.
 
-The following JSON document represents an example of a request to be sent after 3DSMethod form display:
+El siguiente documento JSON representa un ejemplo de una solicitud que se enviará después de la visualización del formulario 3DSMethod:
 
 ```json
 {
@@ -286,24 +286,24 @@ The following JSON document represents an example of a request to be sent after 
 }
 ```
 
-### Step 7: Gateway respond to continue 3DS Authentication
+### Paso 7: Gateway respond to continue 3DS Authentication
 
-For the challenge flow, the transaction status will be returned as follows:
+Para el flujo de desafío, el estado de la transacción se devolverá de la siguiente manera:
 
 ```transactionStatus = "WAITING"```
 
-The response will contain an ```authenticationResponse``` object with the following fields:
+La respuesta contendrá un objeto ```authenticationResponse``` con los siguientes campos:
 
-| **Field**         | Description                                                                                                           |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------|
-| ```type```        | 3D_SECURE                                                                                                             |
-| ```version```     | 2.1 or 2.2                                                                                                            |
-| ```acsURL```      | The URL to which the 'cReq and 'sessionData' values should be posted for the cardholder challenge to take place.      |
-| ```termURL```     | The URL where the results of the authentication will be posted.                                                       |
-| ```cReq```        | An encoded challenge request message returned from the ACS server.                                                    |
-| ```sessionData``` | An encoded list of session parameters to be used for authentication. Note that this value may not always be provided. |
+| **Campo**         | Descripción                                                                                                                                                   |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ```type```        | 3D_SECURE                                                                                                                                                     |
+| ```version```     | 2.1 o 2.2                                                                                                                                                     |
+| ```acsURL```      | La URL en la que se deben publicar los valores 'cReq' y 'session Data' para que se lleve a cabo el desafío del titular de la tarjeta.                         |
+| ```termURL```     | La URL donde se publicarán los resultados de la autenticación.                                                                                                |
+| ```cReq```        | Un mensaje de solicitud de desafío codificado devuelto desde el servidor ACS.                                                                                 |
+| ```sessionData``` | Una lista codificada de parámetros de sesión que se utilizará para la autenticación. Tenga en cuenta que es posible que no siempre se proporcione este valor. |
 
-The following JSON document represents an example of a response:
+El siguiente documento JSON representa un ejemplo de una respuesta:
 
 ```json
 {
@@ -330,19 +330,19 @@ The following JSON document represents an example of a response:
 }
 ```
 
-### Step 8: Cardholder Challenge
+### Paso 8: Desafío del titular de la tarjeta
 
-In the next step you need to POST data to the indicated ```acsURL``` usually implemented as an auto-submit form. This needs to be implemented within your website. The cardholder will be redirected to the ACS and presented with the UI to collect the authentication details - for example enter one-time-password or perform authentication using their banking app. After the authentication is completed, the consumer is redirected back to your webpage.
+En el siguiente paso, debe enviar los datos al ```acsURL``` indicado, que generalmente se implementa como un formulario de envío automático. Esto debe implementarse en su sitio web. El titular de la tarjeta será redirigido al ACS y se le presentará la interfaz de usuario para recopilar los detalles de autenticación, por ejemplo, ingresar una contraseña de un solo uso o realizar la autenticación utilizando su aplicación bancaria. Una vez completada la autenticación, se redirige al consumidor a su página web.
 
-You need to POST the ```cReq``` and the ```sessionData``` values to the URL specified in the ```acsURL``` field.
+Debe publicar los valores ```cReq``` y ```sessionData``` en la URL especificada en el campo ```acsURL```.
 
-This information is posted using the following field names:
+Esta información se publica utilizando los siguientes nombres de campo:
 
-| **```cReq```**               | The entire base64 encoded cReq message as obtained above.        |
-|------------------------------|------------------------------------------------------------------|
-| **```threeDSSessionData```** | The entire base64 encoded sessionData message as obtained above. |
+| **```cReq```**               | Todo el mensaje cReq codificado en base64 como se obtuvo anteriormente.        |
+|------------------------------|--------------------------------------------------------------------------------|
+| **```threeDSSessionData```** | Todo el mensaje sessionData codificado en base64 como se obtuvo anteriormente. |
 
-Example:
+Ejemplo:
 
 ```xml
 <form name="frm" method="POST" action="https://3ds-acs.test.modirum.com/mdpayacs/pareq ">
@@ -351,19 +351,19 @@ Example:
 </form>
 ```
 
-When the authentication is completed, an authentication response will be posted to the URL specified in the 'termURL' field.
+Cuando se complete la autenticación, se publicará una respuesta de autenticación en la URL especificada en el campo 'termURL'.
 
-### Step 9: Request to complete transaction
+### Paso 9: Solicitud para completar la transacción
 
-After you received the data from the ACS, you need to submit them to the Gateway in ```cRes``` element together with the reference to the original transaction. This is done by sending **PATCH** request to the original transaction and includes the following values:
+Después de recibir los datos del ACS, debe enviarlos al Gateway en el elemento ```cRes``` junto con la referencia a la transacción original. Esto se hace enviando una solicitud **PATCH** a la transacción original e incluye los siguientes valores:
 
-| **```authenticationType```** | **Secure3D21AuthenticationUpdateRequest**                          |
-|------------------------------|--------------------------------------------------------------------|
-| **```acsResponse/cRes```**   | The ```cRes``` data posted to the ```termURL``` by the ACS server. |
+| **```authenticationType```** | **Secure3D21AuthenticationUpdateRequest**                            |
+|------------------------------|----------------------------------------------------------------------|
+| **```acsResponse/cRes```**   | Los datos ```cRes``` publicados en ```termURL``` por el servidor ACS.|
 
-It is highly recommended to include the optional cardholder billing address and the security code at this time.
+Se recomienda incluir la dirección de facturación opcional del titular de la tarjeta y el código de seguridad en este momento.
 
-The following JSON document represents an example of a request with 'cRes' element:
+El siguiente documento JSON representa un ejemplo de una solicitud con el elemento 'cRes':
 
 ```json
 {
@@ -385,15 +385,15 @@ The following JSON document represents an example of a request with 'cRes' eleme
 }
 ```
 
-### Step 10: Final response
+### Paso 10: Última respuesta
 
-Since this transaction was initiated as a 'Sale', the authorization is performed as part of this final step, if the authentication was successful.
+Dado que esta transacción se inició como una 'Sale', la autorización se realiza como parte de este paso final, si la autenticación fue exitosa.
 
-The transaction response contains a ```secure3dResponse``` object and the transaction is either approved or declined.
+La respuesta de la transacción contiene un objeto ```secure3dResponse``` y la transacción se aprueba o rechaza.
 
-The ```secure3dResponse``` object will contain the following field: ```responseCode3dSecure```
+El objeto ```secure3dResponse``` contendrá el siguiente campo: ```responseCode3dSecure```
 
-The following JSON document represents an example of a response you receive indicating that the authorization has been successful:
+El siguiente documento JSON representa un ejemplo de una respuesta que recibe que indica que la autorización se ha realizado correctamente:
 
 ```json
 {
@@ -419,11 +419,11 @@ The following JSON document represents an example of a response you receive indi
 }
 ```
 
-## Fallback to 3DS 1.0
+## Retroceder a 3DS 1.0
 
-For cases, where the issuers do not support EMV 3DS protocol yet, the Gateway provides an option to "fallback" to 3DS 1.0 authentication instead.
+Para los casos en los que los emisores aún no son compatibles con el protocolo EMV 3DS, la puerta de enlace ofrece una opción de "retroceso" a la autenticación 3DS 1.0 en su lugar.
 
-In the first step you need to **POST** an API request as for EMV 3DS protocol:
+En el primer paso, debe **POST** una solicitud de API como para el protocolo EMV 3DS:
 
 ```json
 {
@@ -452,7 +452,7 @@ In the first step you need to **POST** an API request as for EMV 3DS protocol:
 }
 ```
 
-You will receive a response from the Gateway indicating, that credit card is enrolled for 3DS version 1 only:
+Recibirá una respuesta del Gateway que indica que la tarjeta de crédito está registrada solo para la versión 1 de 3DS:
 
 ```json
 {
@@ -490,9 +490,9 @@ You will receive a response from the Gateway indicating, that credit card is enr
 }
 ```
 
-In the next step you need to **POST** the data to the indicated URL usually implemented as auto-submit form. This needs to be implemented within your website. We recommend you to POST the challenge request element without capitals (e.g. ‘pareq’) to avoid any problems in a communication with the ACS.
+En el siguiente paso, debe **POST** los datos a la URL indicada que generalmente se implementa como un formulario de envío automático. Esto debe implementarse en su sitio web. Le recomendamos que PUBLIQUE el elemento de solicitud de desafío sin mayúsculas (por ejemplo, 'pareq') para evitar problemas en una comunicación con el ACS.
 
-Example:
+Ejemplo:
 
 ```xml
 <form name="frm" method="POST" action="https://3ds-acs.test.com/mdpayacs/pareq ">
@@ -501,9 +501,9 @@ Example:
 </form>
 ```
 
-After you received the data from the ACS, you need to submit them to the Gateway in ```payerAuthenticationResponse``` element together with the reference to the original transaction. This is done by sending **PATCH** request to the original transaction.
+Después de recibir los datos del ACS, debe enviarlos al Gateway en el elemento ```payerAuthenticationResponse``` junto con la referencia a la transacción original. Esto se hace enviando una solicitud **PATCH** a la transacción original.
 
-*Note: The element ```merchantData``` might not be returned by all issuers, in case you have not received it in the previous step, please do not submit in the next PATCH request.*
+*Nota: Es posible que no todos los emisores devuelvan el elemento ```merchantData```, en caso de que no lo haya recibido en el paso anterior, no lo envíe en la próxima solicitud de PATCH.*
 
 ### PATCH /ipgrestapi/v2/services/payments/{ipgTransactionId}
 
@@ -521,7 +521,7 @@ After you received the data from the ACS, you need to submit them to the Gateway
 }
 ```
 
-The following JSON document represents an example of a response you receive from the Gateway indicating, that the authorization has been successful and flagged as authenticated:
+El siguiente documento JSON representa un ejemplo de una respuesta que recibe del Gateway que indica que la autorización se realizó correctamente y se marcó como autenticada:
 
 ```json
 {
@@ -568,26 +568,26 @@ The following JSON document represents an example of a response you receive from
 }
 ```
 
-## Authentication with external 3DS provider
+## Autenticación con proveedor 3DS externo
 
-In case you are using your own / external 3DS service provider and plan to send authorization request to the Gateway, you need to submit the authentication values obtained from your 3DS service provider.
+En caso de que esté utilizando su propio proveedor de servicios 3DS o externo y planee enviar una solicitud de autorización al Gateway, debe enviar los valores de autenticación obtenidos de su proveedor de servicios 3DS.
 
-| **Field**                    | **Description**                                                                                                                                                                       |
+| **Field**                    | **Descripción**                                                                                                                                                                       |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ```authenticationType```     | Used for submitting authentication result performed by an external 3-D Secure service provider                                                                                        |
-| ```cavv	```                   | Authentication value obtained in the authentication response from external 3-D Secure service provider                                                                                |
+| ```cavv	```                | Authentication value obtained in the authentication response from external 3-D Secure service provider                                                                                |
 | ```dsTransactionId```        | Authentication transaction reference ID, obtained from external 3-D Secure provider                                                                                                   |
-| ```authenticationResponse	``` | Represents the result of the authentication, allowed values are : Y = fully authenticated transaction, A = Successful Authentication Attempt, U = Unable to Authenticate by DS or ACS |
+| ```authenticationResponse``` | Represents the result of the authentication, allowed values are : Y = fully authenticated transaction, A = Successful Authentication Attempt, U = Unable to Authenticate by DS or ACS |
 
-Only the following authentication results are eligible to be passed to the authorization host:
+Solo los siguientes resultados de autenticación son elegibles para pasar al host de autorización:
 
-| **Use case**                                      | **authenticationResponse** | **cavv**                    | **responseCode3dSecure** |
-|---------------------------------------------------|----------------------------|-----------------------------|--------------------------|
-| Fully Authenticated transaction (ECI = 02 & 05)   | Y                          | value                       | 1                        |
-| Successful Authentication Attempt (ECI = 01 & 06) | A                          | value                       | 4                        |
-| Unable to authenticate on DS or ACS side (ECI07)  | U                          | field must not be submitted | 6                        |
+| **Caso de uso**                                       | **authenticationResponse** | **cavv**                     | **responseCode3dSecure** |
+|-------------------------------------------------------|----------------------------|------------------------------|--------------------------|
+| Transacción completamente autenticada (ECI = 02 & 05) | Y                          | valor                        | 1                        |
+| Intento de autenticación exitoso (ECI = 01 & 06)      | A                          | valor                        | 4                        |
+| No se puede autenticar en el lado DS o ACS (ECI07)    | U                          | el campo no debe ser enviado | 6                        |
 
-The following JSON document represents an example of a sale transaction submitted to our Gateway after being fully authenticated by an external service provider:
+El siguiente documento JSON representa un ejemplo de una transacción de venta enviada a nuestro Gateway después de haber sido completamente autenticada por un proveedor de servicios externo:
 
 ```json
 {
@@ -615,7 +615,7 @@ The following JSON document represents an example of a sale transaction submitte
 }
 ```
 
-The following JSON document represents an example of a response you receive from the Gateway indicating, that the authorization has been successful and flagged as fully authenticated:
+El siguiente documento JSON representa un ejemplo de una respuesta que recibe del Gateway que indica que la autorización se realizó correctamente y se marcó como totalmente autenticada:
 
 ```json
 {
