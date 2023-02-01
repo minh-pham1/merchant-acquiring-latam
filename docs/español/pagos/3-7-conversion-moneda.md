@@ -16,7 +16,6 @@ Para utilizar nuestros servicios de conversión de divisas, utilice el método P
 
 | **Tipo de conversión de moneda** |            **requestType**            |                                                                       **Escenario de conversión de moneda**                                                                       |
 |:--------------------------------:|:-------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| ------------------------------   | ------------------ ------------------ | -------------------------------- -------------------------------------------------- -------------------------------------------------- -----------------------------              |
 | Solicitud de tipo de cambio      | DCCExchangeRateRequest                | Use este tipo de solicitud para solicitar una moneda, un precio y una tasa de cambio para una transacción específica, aplicable al cliente para el que está solicitando una tasa. |
 | Solicitud de precios dinámicos   | DynamicPricingExchangeRateRequest     | Use este tipo de solicitud para solicitar todas las monedas y tasas disponibles para una transacción.                                                                             |
 
