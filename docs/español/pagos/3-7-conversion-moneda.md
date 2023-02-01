@@ -15,7 +15,7 @@ Ofrecemos 2 tipos de conversión de divisas, uno en el que solicitará la divisa
 Para utilizar nuestros servicios de conversión de divisas, utilice el método POST para ``/exchange-rates`` para solicitar un precio y tipo de cambio de nuestros proveedores de tipo de cambio. Al igual que con nuestros otros servicios, este recurso es polimórfico. Esto significa que deberá enviar un tipo de solicitud para indicarle al recurso de tipos de cambio cómo tratar su solicitud.
 
 | **Tipo de conversión de moneda** |            **requestType**            |                                                                       **Escenario de conversión de moneda**                                                                       |
-|:--------------------------------:|:-------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Solicitud de tipo de cambio      | DCCExchangeRateRequest                | Use este tipo de solicitud para solicitar una moneda, un precio y una tasa de cambio para una transacción específica, aplicable al cliente para el que está solicitando una tasa. |
 | Solicitud de precios dinámicos   | DynamicPricingExchangeRateRequest     | Use este tipo de solicitud para solicitar todas las monedas y tasas disponibles para una transacción.                                                                             |
 
