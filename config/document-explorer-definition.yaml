@@ -127,7 +127,11 @@
         - title: Financial Institution
           link: docs/portuguese/logistics/2-1-financial-institution.md
         - title: Field Services Provider
-          link: docs/portuguese/logistics/2-2-field-services-provider.md  
+          link: docs/portuguese/logistics/2-2-field-services-provider.md
+      - title: Related links
+        link: docs/portuguese/related-links.md
+      - title: Release notes
+        link: docs/release-notes/2023/portuguese.md
   #    - title: Boarding
   #      link: docs/español/1-boarding.md
   #      sections:
