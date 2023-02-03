@@ -27,6 +27,9 @@ paths:
     post:
       tags:
         - Token
+      x-proxy-name: createToken
+      x-group-name: Token
+      x-child-product-name: Boarding
       description: generates token
       operationId: createToken
       parameters:
@@ -61,6 +64,9 @@ paths:
     post:
       tags:
         - Application-Status-History
+      x-proxy-name: saveStatus
+      x-group-name: Status History
+      x-child-product-name: Boarding
       operationId: saveStatus
       requestBody:
         content:
@@ -79,6 +85,9 @@ paths:
     get:
       tags:
         - Application-Status-History
+      x-proxy-name: findAllByApplicationId
+      x-group-name: Status History
+      x-child-product-name: Boarding
       operationId: findAllByApplicationId
       parameters:
         - name: applicationId
@@ -101,6 +110,9 @@ paths:
     get:
       tags:
         - Application-Status-History
+      x-proxy-name: findLastRecord
+      x-group-name: Status History
+      x-child-product-name: Boarding
       operationId: findLastRecord
       parameters:
         - name: applicationId
@@ -121,6 +133,9 @@ paths:
     post:
       tags:
         - Application-Boarding
+      x-proxy-name: createApplication
+      x-group-name: Boarding.
+      x-child-product-name: Boarding
       description: >-
         Saves the whole application data, including Merchant, Terminal and
         Service Provider if applicable.
@@ -154,6 +169,9 @@ paths:
     get:
       tags:
         - Application-Boarding
+      x-proxy-name: retrieveDatafillCombos
+      x-group-name: Boarding.
+      x-child-product-name: Boarding
       description: >-
         Retrieves the data that are needed to fulfill the fields for the
         request. For each field will be returned the the kind of field and it's
@@ -172,6 +190,9 @@ paths:
     get:
       tags:
         - Application-Boarding
+      x-proxy-name: retrieveDataFulfillCombos
+      x-group-name: Boarding.
+      x-child-product-name: Boarding
       description: >-
         Retrieves the data that are needed to fulfill the fields for the request
         based on the country where the enterprise is settled. For each field
@@ -197,6 +218,9 @@ paths:
     get:
       tags:
         - Application-Boarding
+      x-proxy-name: getApplication
+      x-group-name: Boarding.
+      x-child-product-name: Boarding      
       description: Retrieves the application's data used in boarding
       operationId: getApplication
       parameters:
@@ -231,6 +255,9 @@ paths:
     put:
       tags:
         - Application-Boarding
+      x-proxy-name: updateApplication
+      x-group-name: Boarding.
+      x-child-product-name: Boarding  
       description: Updates the whole application data to be used in boarding
       operationId: updateApplication
       parameters:
@@ -272,6 +299,9 @@ paths:
     post:
       tags:
         - Application-Boarding
+      x-proxy-name: startBoarding
+      x-group-name: Boarding.
+      x-child-product-name: Boarding
       description: >-
         Starts the boarding process. This process is totally asynchronous, and
         the response will be given by another endpoint TBD. Please check
@@ -315,6 +345,9 @@ paths:
       description: Adds a new terminal to an already boarded application
       tags:
         - Terminal
+      x-proxy-name: newTerminal
+      x-group-name: Terminal
+      x-child-product-name: Boarding      
       parameters:
         - name: id
           in: path
@@ -364,6 +397,9 @@ paths:
       description: Updates a already boarded terminal
       tags:
         - Terminal
+      x-proxy-name: updateTerminal
+      x-group-name: Terminal
+      x-child-product-name: Boarding       
       parameters:
         - name: applicationId
           in: path
@@ -409,6 +445,9 @@ paths:
     get:
       tags:
         - Application-Boarding
+      x-proxy-name: getAccountFees
+      x-group-name: Boarding.
+      x-child-product-name: Boarding      
       description: >-
         Retrieves the data from the account fee list, that are needed to fulfill
         the account fields for the request. For each field will be returned the
@@ -520,6 +559,9 @@ paths:
     get:
       tags:
         - Application-Boarding
+      x-proxy-name: transactionCharges
+      x-group-name: Boarding.
+      x-child-product-name: Boarding      
       description: >-
         Retrieves the data from transaction charges, that are needed to fulfill
         the fields for the request. For each field will be returned the the kind
@@ -657,6 +699,9 @@ paths:
     get:
       tags:
         - Application-Boarding
+      x-proxy-name: productNFeatures
+      x-group-name: Boarding.
+      x-child-product-name: Boarding      
       description: >-
         Retrieves the data from products and features list, that are needed to
         fulfill the fields for the request. For each field will be returned the
@@ -725,6 +770,9 @@ paths:
     get:
       tags:
         - Application-Boarding
+      x-proxy-name: mccList
+      x-group-name: Boarding.
+      x-child-product-name: Boarding      
       description: >-
         Retrieves the data from Merchant Category Code (MCC) list, that are
         needed to fulfill the fields for the request. For each field will be
@@ -751,6 +799,9 @@ paths:
     post:
       tags:
         - Service-Provider
+      x-proxy-name: supplyRequest
+      x-group-name: Service Provider
+      x-child-product-name: Boarding
       description: Post API Supply Request (Paper suppl & power cords)
       operationId: supplyRequest
       requestBody:
@@ -779,6 +830,9 @@ paths:
     post:
       tags:
         - Service-Provider
+      x-proxy-name: changeCarrier
+      x-group-name: Service Provider
+      x-child-product-name: Boarding
       description: Post API Maintenance Change Carrier
       operationId: changeCarrier
       requestBody:
@@ -806,6 +860,9 @@ paths:
     post:
       tags:
         - Service-Provider
+      x-proxy-name: cancelOrder
+      x-group-name: Service Provider
+      x-child-product-name: Boarding
       description: Post API Cancel Service Order
       operationId: cancelOrder
       requestBody:
@@ -833,6 +890,9 @@ paths:
     get:
       tags:
         - Service-Provider
+      x-proxy-name: inquiryOfOrderStatus
+      x-group-name: Service Provider
+      x-child-product-name: Boarding
       description: GET API Inquery of Order Data
       operationId: inqueryOfOrderStatus
       parameters:
