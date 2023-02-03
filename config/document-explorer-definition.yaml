@@ -77,6 +77,8 @@
       sections: 
       - title: Getting Started
         link: docs/english/getting-started.md
+      - title: Boarding
+        link: docs/english/boarding/1-boarding.md
       - title: Logistitcs
         link: docs/english/logistics/2-logistics.md
         sections:
@@ -139,8 +141,6 @@
   #        link: docs/español/1-1-pasos-boarding.md
   #      - title: Pre-Requisito
   #        link: docs/español/1-2-prerequisitos.md
-  #     - title: Boarding
-  #       link: docs/english/boarding/1-boarding.md
   #       sections:
   #       - title: Boarding Steps
   #         link: docs/english/boarding/1-1-boarding-steps.md
