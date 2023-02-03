@@ -125,7 +125,7 @@
       sections:
       - title: Começando
         link: docs/portuguese/getting-started.md
-       title: Boarding
+      - title: Boarding
         link: docs/portuguese/boarding/1-boarding.md
       - title: Logistics
         link: docs/portuguese/logistics/2-logistics.md   
