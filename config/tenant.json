@@ -25,7 +25,7 @@
       "versionType": "major",
       "releaseNotesPath": "docs/release-notes/2023/english.md",
       "apiSpecFileNames": [
-        "payments","logistics","LATAM_Merchant_Boarding_API_v2.1_0"
+        "payments","logistics","Boarding"
       ]
     }
   ],
