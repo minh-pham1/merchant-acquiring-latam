@@ -33,6 +33,8 @@
       sections:
       - title: Empezando
         link: docs/español/empezando.md
+      - title: Boarding
+        link: docs/español/boarding/1-boarding.md
       - title: Logistics
         link: docs/español/logistics/2-logistics.md
         sections:
@@ -123,6 +125,8 @@
       sections:
       - title: Começando
         link: docs/portuguese/getting-started.md
+       title: Boarding
+        link: docs/portuguese/boarding/1-boarding.md
       - title: Logistics
         link: docs/portuguese/logistics/2-logistics.md   
         sections:
