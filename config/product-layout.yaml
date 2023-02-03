@@ -34,6 +34,31 @@ header:
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: Fiserv
 featuredFeatures:
+  - title: Boarding
+    description:  Onboard merchants to start accepting payments online or in-store, and streamline your process for registering new terminals and equipment.
+    tags: ["Boarding"]
+    bullets: ["Boarding"]  
+    relatedDocs:
+      - relatedDoc: 
+        title: Boarding
+        description: Boarding end-to-end. 
+        link: "/docs/english/boarding/1-boarding.md"
+    relatedAPIs:
+      - relatedAPI: 
+        title: Create Application
+        description: Saves the whole application data.
+        type: "post"        
+        path: "/api/v1/boarding"
+      - relatedAPI: 
+        title: Update Application
+        description: Update the whole application data.
+        type: "put"        
+        path: "/api/v1/boarding/{id}"
+      - relatedAPI: 
+        title: New Terminal
+        description: Adds a new terminal to an already boarded application.
+        type: "post"        
+        path: "/api/v1/boarding/{id}/terminals"
   - title: Logistics
     description:  Request new terminals to expand merchant business, paper rolls to keep selling, terminal replacements, withdrawals and confirm status for your field services requests..
     tags: ["Logistics"]
@@ -63,7 +88,7 @@ featuredFeatures:
         description: Post API Reschedule the Visit of Technician.
         type: "post"        
         path: "/v1/reschedule"
-  - title: Online Payments
+  - title: Payments
     description:  Create a seamless and secure purchase experience across all online and digital channels by leveraging our comprehensive set of features that will enable you to accept all major payment methods and enhance your customer's online shopping experience
     tags: ["Payments"]
     bullets: ["Payments"]  
@@ -100,28 +125,3 @@ featuredFeatures:
         description: Use this to create a payment token from a payment card.
         type: "post"        
         path: "/payment-tokens"
-  - title: Boarding
-    description:  Onboard merchants to start accepting payments online or in-store, and streamline your process for registering new terminals and equipment.
-    tags: ["Boarding"]
-    bullets: ["Boarding"]  
-    relatedDocs:
-      - relatedDoc: 
-        title: Boarding
-        description: Boarding end-to-end. 
-        link: "/docs/english/boarding/1-boarding.md"
-    relatedAPIs:
-      - relatedAPI: 
-        title: Create Application
-        description: Saves the whole application data.
-        type: "post"        
-        path: "/api/v1/boarding"
-      - relatedAPI: 
-        title: Update Application
-        description: Update the whole application data.
-        type: "put"        
-        path: "/api/v1/boarding/{id}"
-      - relatedAPI: 
-        title: New Terminal
-        description: Adds a new terminal to an already boarded application.
-        type: "post"        
-        path: "/api/v1/boarding/{id}/terminals"
