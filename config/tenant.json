@@ -25,7 +25,7 @@
       "versionType": "major",
       "releaseNotesPath": "docs/release-notes/2023/english.md",
       "apiSpecFileNames": [
-        "payments","logistics"
+        "payments","logistics","boarding"
       ]
     }
   ],
@@ -43,7 +43,7 @@
     "feature": [
       {
         "name": "sandBox",
-        "value": false
+        "value": true
       },
       {
         "name": "plugins",
