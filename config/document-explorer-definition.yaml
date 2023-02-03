@@ -81,7 +81,7 @@
         link: docs/english/getting-started.md
       - title: Boarding
         link: docs/english/boarding/1-boarding.md
-      - title: Logistitcs
+      - title: Logistics
         link: docs/english/logistics/2-logistics.md
         sections:
         - title: Financial Institution
@@ -138,15 +138,3 @@
         link: docs/portuguese/related-links.md
       - title: Release notes
         link: docs/release-notes/2023/portuguese.md
-  #    - title: Boarding
-  #      link: docs/español/1-boarding.md
-  #      sections:
-  #      - title: Pasos Boarding
-  #        link: docs/español/1-1-pasos-boarding.md
-  #      - title: Pre-Requisito
-  #        link: docs/español/1-2-prerequisitos.md
-  #       sections:
-  #       - title: Boarding Steps
-  #         link: docs/english/boarding/1-1-boarding-steps.md
-  #       - title: Prerequisite
-  #         link: docs/english/boarding/1-2-prerequisites.md
