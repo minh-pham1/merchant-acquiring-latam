@@ -6,7 +6,7 @@ tags: [Boarding, API, End-to-end]
 
 ## Latam Merchant Boarding APIs
 
-The merchant boarding solution is a key prerequisite for transaction processing. Before merchants can perform any transaction they must be onboarded. The onboarding process means creating records in Fiserv systems and activating desired services and equipment. It also can include an approval process. As a result of the onboarding process, the merchant and the activated equipment will be ready for transaction processing and the funds can be transferred to their bank account.
+There are multiple components involved in transaction processing. Each system is responsible for one or more of the following example processes:
 
 ---
 
@@ -15,7 +15,6 @@ type: tab
 titles: Why use the boarding API?, What is provided by the boarding APIs?
 -->
 
-There are multiple components involved in transaction processing. Each system is responsible for one or more of the following example processes:
 
 Transaction authorisations Transaction clearing, settlement and funding Billing and inventory Customer relationship management Notifications User management Credit risk assessment Each of those systems need to know about some of the merchant's details. And those details need to be provided to them in order to enable the end to end transaction processing for a merchant.
 
