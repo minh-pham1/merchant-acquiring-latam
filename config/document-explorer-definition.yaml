@@ -53,8 +53,8 @@
           link: docs/español/pagos/3-3-formas-pagos.md
         - title: Pos-autorización & Devoluciones
           link: docs/español/pagos/3-4-post-aut.md
-#         - title: 3-D Secure
-#           link: docs/español/pagos/3-5-3d-secure.md
+        - title: 3-D Secure
+          link: docs/español/pagos/3-5-3d-secure.md
         - title: Verificación de Tarjeta
           link: docs/español/pagos/3-6-verificacion-tarjeta.md
         - title: Conversión de Moneda
