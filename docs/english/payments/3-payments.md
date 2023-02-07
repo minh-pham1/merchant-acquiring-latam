@@ -150,8 +150,7 @@ The ```PaymentCardSaleTransaction``` request type requires the following fields 
 
 Within the model, the most important objects are the ```transactionAmount``` and the ```paymentMethod```. Without these objects, we can't process the payment.
 
-We also recommend you include billing information and shipping information as this allows the 3DSecure fingerprint check to run in the background (see the [Implementing 3DSecure](?path=docs/3-5-3d-secure.md) page for more information). This makes the checkout process frictionless for your customer and allows our fraud systems to protect you more easily.
-
+We also recommend you include billing information and shipping information as this allows the 3DSecure fingerprint check to run in the background (see the [Implementing 3DSecure](?path=docs/english/payments/3-5-3d-secure.md) page for more information). This makes the checkout process frictionless for your customer and allows our fraud systems to protect you more easily.
 
 Both the ```billing``` and ```shipping``` objects follow the same structure:
 
