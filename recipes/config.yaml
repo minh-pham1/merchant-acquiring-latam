@@ -1,0 +1,17 @@
+version: 1.0.0
+recipes:
+- link: recipes/1-generate-message.md
+  title: Message signature
+  type: recipe
+- link: recipes/2-card-payment.md
+  title: Make a card payment
+  type: recipe
+- link: recipes/3-refund-transaction.md
+  title: Refund a transaction
+  type: recipe
+- link: recipes/4-verify-card-payment.md
+  title: Verify a card payment
+  type: recipe
+- link: recipes/5-card-information.md
+  title: Look up card information
+  type: recipe

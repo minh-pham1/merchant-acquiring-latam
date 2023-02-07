@@ -1,38 +1,140 @@
 ################################################################################
-# Copyrights © 2021-2022 Fiserv, Inc. or its affiliates. 
-# Fiserv is a trademark of Fiserv, Inc., 
-# registered or used in the United States and foreign countries, 
-# and may or may not be registered in your country.  
-# All trademarks, service marks, 
-# and trade names referenced in this 
-# material are the property of their 
-# respective owners. This work, including its contents 
-# and programming, is confidential and its use 
-# is strictly limited. This work is furnished only 
-# for use by duly authorized licensees of Fiserv, Inc. 
-# or its affiliates, and their designated agents 
-# or employees responsible for installation or 
-# operation of the products. Any other use, 
-# duplication, or dissemination without the 
-# prior written consent of Fiserv, Inc. 
-# or its affiliates is strictly prohibited. 
-# Except as specified by the agreement under 
-# which the materials are furnished, Fiserv, Inc. 
-# and its affiliates do not accept any liabilities 
-# with respect to the information contained herein 
-# and are not responsible for any direct, indirect, 
-# special, consequential or exemplary damages 
-# resulting from the use of this information. 
-# No warranties, either express or implied, 
-# are granted or extended by this work or 
+# Copyrights © 2021-2022 Fiserv, Inc. or its affiliates.
+# Fiserv is a trademark of Fiserv, Inc.,
+# registered or used in the United States and foreign countries,
+# and may or may not be registered in your country.
+# All trademarks, service marks,
+# and trade names referenced in this
+# material are the property of their
+# respective owners. This work, including its contents
+# and programming, is confidential and its use
+# is strictly limited. This work is furnished only
+# for use by duly authorized licensees of Fiserv, Inc.
+# or its affiliates, and their designated agents
+# or employees responsible for installation or
+# operation of the products. Any other use,
+# duplication, or dissemination without the
+# prior written consent of Fiserv, Inc.
+# or its affiliates is strictly prohibited.
+# Except as specified by the agreement under
+# which the materials are furnished, Fiserv, Inc.
+# and its affiliates do not accept any liabilities
+# with respect to the information contained herein
+# and are not responsible for any direct, indirect,
+# special, consequential or exemplary damages
+# resulting from the use of this information.
+# No warranties, either express or implied,
+# are granted or extended by this work or
 # the delivery of this work
 ################################################################################
 
 - sections:
-  - title: Getting Started
-    link: docs/getting-started.md
-- sections:
-  - title: Release notes
-    sections:
-    - title: March 2022
-      link: docs/release-notes/2022/march.md
+    - title: Español
+      sections:
+      - title: Empezando
+        link: docs/español/empezando.md
+      - title: Boarding
+        link: docs/español/boarding/1-boarding.md
+      - title: Logistics
+        link: docs/español/logistics/2-logistics.md
+        sections:
+        - title: Financial Institution
+          link: docs/español/logistics/2-1-financial-institution.md
+        - title: Field Services Provider
+          link: docs/español/logistics/2-2-field-services-provider.md         
+      - title: Pagos e-Commerce
+        link: docs/español/pagos/3-pagos.md
+        sections:
+        - title: Tipos de Solicitudes
+          link: docs/español/pagos/3-1-tipos-solicitudes.md
+        - title: Métodos de Pago
+          link: docs/español/pagos/3-2-metodos-pago.md
+        - title: Formas de Pagos
+          link: docs/español/pagos/3-3-formas-pagos.md
+        - title: Pos-autorización & Devoluciones
+          link: docs/español/pagos/3-4-post-aut.md
+        - title: 3-D Secure
+          link: docs/español/pagos/3-5-3d-secure.md
+        - title: Verificación de Tarjeta
+          link: docs/español/pagos/3-6-verificacion-tarjeta.md
+        - title: Conversión de Moneda
+          link: docs/español/pagos/3-7-conversion-moneda.md
+        - title: Redirección Administrada
+          link: docs/español/pagos/3-8-redireccion-administrada.md
+        - title: Pedidos
+          link: docs/español/pagos/3-9-pedidos.md
+        - title: Pago URL
+          link: docs/español/pagos/3-10-pago-url.md
+        - title: Pagos Recurrentes
+          link: docs/español/pagos/3-11-pagos-recurrentes.md
+        - title: Tokenización
+          link: docs/español/pagos/3-12-tokenizacion.md
+        - title: Códigos de Error
+          link: docs/español/pagos/3-13-codigos-error.md
+      - title: Related links
+        link: docs/español/related-links.md
+      - title: Release notes
+        link: docs/release-notes/2023/español.md
+    - title: English
+      sections: 
+      - title: Getting Started
+        link: docs/english/getting-started.md
+      - title: Boarding
+        link: docs/english/boarding/1-boarding.md
+      - title: Logistics
+        link: docs/english/logistics/2-logistics.md
+        sections:
+        - title: Financial Institution
+          link: docs/english/logistics/2-1-financial-institution.md
+        - title: Field Services Provider
+          link: docs/english/logistics/2-2-field-services-provider.md       
+      - title: Payments
+        link: docs/english/payments/3-payments.md
+        sections:
+        - title: Request Types
+          link: docs/english/payments/3-1-request-types.md
+        - title: Payment Methods
+          link: docs/english/payments/3-2-payment-methods.md
+        - title: Payment Types
+          link: docs/english/payments/3-3-payment-types.md
+        - title: Post-authorisation & Returns
+          link: docs/english/payments/3-4-post-auth.md
+        - title: 3-D Secure
+          link: docs/english/payments/3-5-3d-secure.md
+        - title: Card Verification
+          link: docs/english/payments/3-6-card-verification.md
+        - title: Currency Conversion
+          link: docs/english/payments/3-7-currency-conversion.md
+        - title: Managed Redirect
+          link: docs/english/payments/3-8-managed-redirect.md
+        - title: Orders
+          link: docs/english/payments/3-9-orders.md
+        - title: Payment URL
+          link: docs/english/payments/3-10-payment-url.md
+        - title: Recurring Payments
+          link: docs/english/payments/3-11-recurring-payments.md
+        - title: Tokenisation
+          link: docs/english/payments/3-12-tokenisation.md
+        - title: Error codes
+          link: docs/english/payments/3-13-error-codes.md
+      - title: Related links
+        link: docs/english/related-links.md
+      - title: Release notes
+        link: docs/release-notes/2023/english.md
+    - title: Portuguese
+      sections:
+      - title: Começando
+        link: docs/portuguese/getting-started.md
+      - title: Boarding
+        link: docs/portuguese/boarding/1-boarding.md
+      - title: Logistics
+        link: docs/portuguese/logistics/2-logistics.md   
+        sections:
+        - title: Financial Institution
+          link: docs/portuguese/logistics/2-1-financial-institution.md
+        - title: Field Services Provider
+          link: docs/portuguese/logistics/2-2-field-services-provider.md
+      - title: Related links
+        link: docs/portuguese/related-links.md
+      - title: Release notes
+        link: docs/release-notes/2023/portuguese.md
