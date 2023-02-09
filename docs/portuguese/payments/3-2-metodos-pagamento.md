@@ -8,7 +8,6 @@ Para criar uma transação de pagamento para um cliente usando uma transação p
 
 Para processar um pagamento de cartão, use “PaymentCardPaymentMethod”:
 
-
 ```json
 {
   "paymentCard": {
