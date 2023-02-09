@@ -7,6 +7,7 @@ tags: [Getting Started, Payments, Orders]
 ## /orders/{order-id}
 
 A API /orders permite que você publique uma transação secundária usando seu próprio ID de pedido. Em vez de enviar o POST com um return ou postauth requestType e o ```ipgTransactionId```, você pode usar seu valor ```orderId```, aquele que você nos forneceu no objeto Order na transação primária enviada para /pagamentos. Além disso, você pode usar GET para extrair detalhes da transação primária usando a mesma referência ```orderId```.
+
 ```json
 {
   "method": "get",
