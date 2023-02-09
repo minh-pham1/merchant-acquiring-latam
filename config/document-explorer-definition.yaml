@@ -41,7 +41,7 @@
         - title: Financial Institution
           link: docs/español/logistics/2-1-financial-institution.md
         - title: Field Services Provider
-          link: docs/español/logistics/2-2-field-services-provider.md         
+          link: docs/español/logistics/2-2-field-services-provider.md
       - title: Pagos e-Commerce
         link: docs/español/pagos/3-pagos.md
         sections:
@@ -134,6 +134,36 @@
           link: docs/portuguese/logistics/2-1-financial-institution.md
         - title: Field Services Provider
           link: docs/portuguese/logistics/2-2-field-services-provider.md
+
+      - title: Pagamentos
+        link: docs/portuguese/payments/3-pagamentos.md
+        sections:
+        - title: Tipos de Requisição
+          link: docs/portuguese/payments/3-1-tipos-requisição.md
+        - title: Métodos de Pagamento
+          link: docs/portuguese/payments/3-2-metodos-pagamento.md
+        - title: Tipos de pagamento
+          link: docs/portuguese/payments/3-3-tipos-pagamento.md
+        - title: Post-authorisation & Returns
+          link: docs/portuguese/payments/3-4-post-auth.md
+        - title: 3-D Secure
+          link: docs/portuguese/payments/3-5-3d-secure.md
+        - title: Verificação de Cartão
+          link: docs/portuguese/payments/3-6-verificação-cartão.md
+        - title: Conversão de Moeda
+          link: docs/portuguese/payments/3-7-conversão-moeda.md
+        - title: Redirecionamento Controlado
+          link: docs/portuguese/payments/3-8-redirecionamento-controlado.md
+        - title: Ordens
+          link: docs/portuguese/payments/3-9-ordens.md
+        - title: Link de Pagamento
+          link: docs/portuguese/payments/3-10-link-pagamento.md
+        - title: Pagamento Recorrente
+          link: docs/portuguese/payments/3-11-pagamento-recorrente.md
+        - title: Tokenização
+          link: docs/portuguese/payments/3-12-tokenização.md
+        - title: Códigos de erro
+          link: docs/portuguese/payments/3-13-codigos-erro.md         
       - title: Related links
         link: docs/portuguese/related-links.md
       - title: Release notes
