@@ -43,23 +43,24 @@ This message needs to include the ```authenticationRequest``` object in the tran
 | ```challengeWindowSize```  | If you want to define the size of the challenge window displayed to your customers during the authentication process, you can submit this optional element with one of the values listed below.                                                                                                                                                                                                                                                                                                                           |
 
 Available values for ```challengeIndicator``` are:
-01 = No preference (You have no preference whether a challenge should be performed. This is the default value)
-02 = No challenge requested (You prefer that no challenge should be performed.)
-03 = Challenge requested: 3DS Requestor Preference (You prefer that a challenge should be performed)
-04 = Challenge requested: Mandate (There are local or regional mandates that mean that a challenge must be performed)
-05 = No challenge requested (Transaction Risk Analysis is already performed)
-06 = No challenge requested (Data Share Only)
-07 = No challenge requested (SCA is already performed)
-08 = No challenge requested (Utilize whitelist exemption if no challenge required)
-09 = Challenge requested (Whitelist prompt requested if challenge required)
+
+- 01 = No preference (You have no preference whether a challenge should be performed. This is the default value)
+- 02 = No challenge requested (You prefer that no challenge should be performed.)
+- 03 = Challenge requested: 3DS Requestor Preference (You prefer that a challenge should be performed)
+- 04 = Challenge requested: Mandate (There are local or regional mandates that mean that a challenge must be performed)
+- 05 = No challenge requested (Transaction Risk Analysis is already performed)
+- 06 = No challenge requested (Data Share Only)
+- 07 = No challenge requested (SCA is already performed)
+- 08 = No challenge requested (Utilize whitelist exemption if no challenge required)
+- 09 = Challenge requested (Whitelist prompt requested if challenge required)
 
 Available values for ```challengeWindowSize``` are:
 
-01 = 250 x 400
-02 = 390 x 400
-03 = 500 x 600
-04 = 600 x 400
-05 = Full screen
+- 01 = 250 x 400
+- 02 = 390 x 400
+- 03 = 500 x 600
+- 04 = 600 x 400
+- 05 = Full screen
 
 The following JSON document represents an example of a Sale transaction request with minimal set of elements:
 

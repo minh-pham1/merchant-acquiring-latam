@@ -279,3 +279,22 @@ The response to this request must contain the final result of the authentication
 ## 11
 
 We correctly mapped our response according to the Response Management section of this manual.
+
+---
+
+## See Also
+
+- [Request Types](?path=docs/english/payments/3-1-request-types.md)
+- [Payment Methods](?path=docs/english/payments/3-2-payment-methods.md)
+- [Payment Types](?path=docs/english/payments/3-3-payment-types.md)
+- [Post-authorisation & Returns](?path=docs/english/payments/3-4-post-auth.md)
+- [Card Verification](?path=docs/english/payments/3-6-card-verification.md)
+- [Currency Conversion](?path=docs/english/payments/3-7-currency-conversion.md)
+- [Managed Redirect](?path=docs/english/payments/3-8-managed-redirect.md)
+- [Orders](?path=docs/english/payments/3-9-orders.md)
+- [Payment URL](?path=docs/english/payments/3-10-payment-url.md)
+- [Recurring Payments](?path=docs/english/payments/3-11-recurring-payments.md)
+- [Tokenisation](?path=docs/english/payments/3-12-tokenisation.md)
+- [Error codes](?path=docs/english/payments/3-13-error-codes.md)
+
+---
