@@ -55,6 +55,7 @@ A resposta do recurso ```/exchange-rates``` será apresentada da seguinte forma:
   }
 }
 ```
+
 Para usar essa taxa em uma transação, inclua o objeto ```currencyConversion``` na requisição de POST de ```/payments``` como a seguir, usando o campo ```inquiryRateId``` da resposta do POST ```/exchange-rates``` feito previamente. Use o valor e a moeda da resposta do POST ```/exchange-rates``` no objeto ```transactionAmount```, e ajuste o ```conversionType``` para "DCC".
 
 ```json
@@ -104,6 +105,7 @@ Com sucesso, a resposta será gerada como a seguir, incluindo o total e o códig
   "foreignAmount": "22.52"
 }
 ```
+
 Para usar essa taxa em uma transação, inclua o objeto ```currencyConversion``` na requisição de POST de ```/payments``` como a seguir, usando o campo ```inquiryRateId``` da resposta do POST ```/exchange-rates``` feito previamente. Use o valor e a moeda da resposta do POST ```/exchange-rates``` no objeto ```transactionAmount```, e ajuste o ```conversionType``` para ```DynamicPricing```.
 
 ```json
