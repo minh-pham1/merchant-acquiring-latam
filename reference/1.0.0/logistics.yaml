@@ -9,7 +9,7 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0
-  version: 20221025_14-18
+  version: 0.1.2
   x-header-api-key: X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB
   x-config:
     tryItOut: true
@@ -24,9 +24,6 @@ paths:
     post:
       tags:
         - transaction-controller
-      x-proxy-name: Uninstall
-      x-group-name: Transaction-controller
-      x-child-product-name: Logistics
       summary: Internal Use Only
       description: Post API Uninstall Request
       operationId: uninstall
@@ -44,7 +41,15 @@ paths:
             application/json:
               schema:
                 allOf:
-                  - $ref: '#/components/schemas/TransactionResponse'
+                  - $ref: '#/components/schemas/RemoteTransactionClient'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
         '500':
           description: Internal Server Error
           content:
@@ -52,13 +57,52 @@ paths:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Uninstall
+      x-group-name: Transaction-Controller
+      x-child-product-name: Logistics
+  /v1/ticket-concluded:
+    post:
+      tags:
+        - transaction-controller
+      summary: External Use
+      description: Post API Ticket Concluded
+      operationId: ticketConcluded
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TicketConcludeView'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/RemoteTransactionClient'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Ticket-Concluded
+      x-group-name: Transaction-Controller
+      x-child-product-name: Logistics
   /v1/suply-request:
     post:
       tags:
         - transaction-controller
-      x-proxy-name: Supply Request
-      x-group-name: Transaction-controller
-      x-child-product-name: Logistics
       summary: External Use
       description: Post API Supply Request (Paper suppl & power cords)
       operationId: supplyRequest
@@ -76,7 +120,15 @@ paths:
             application/json:
               schema:
                 allOf:
-                  - $ref: '#/components/schemas/TransactionResponse'
+                  - $ref: '#/components/schemas/RemoteTransactionClient'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
         '500':
           description: Internal Server Error
           content:
@@ -84,13 +136,13 @@ paths:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Supply
+      x-group-name: Transaction-Controller
+      x-child-product-name: Logistics
   /v1/reschedule:
     post:
       tags:
         - transaction-controller
-      x-proxy-name: Reschedule
-      x-group-name: Transaction-controller
-      x-child-product-name: Logistics      
       summary: Internal Use Only
       description: Post API Reschedule the Visit of Technician
       operationId: reschedule
@@ -108,7 +160,15 @@ paths:
             application/json:
               schema:
                 allOf:
-                  - $ref: '#/components/schemas/TransactionResponse'
+                  - $ref: '#/components/schemas/RemoteTransactionClient'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
         '500':
           description: Internal Server Error
           content:
@@ -116,45 +176,13 @@ paths:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/InternalServerError'
-  /v1/order-update:
-    post:
-      tags:
-        - transaction-controller
-      x-proxy-name: Order Update
-      x-group-name: Transaction-controller
-      x-child-product-name: Logistics 
-      summary: Internal Use Only
-      description: Post API Order Update
-      operationId: orderUpdate
-      requestBody:
-        description: Description of Order Update Model
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/OrderUpdateView'
-        required: true
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                allOf:
-                  - $ref: '#/components/schemas/TransactionResponse'
-        '500':
-          description: Internal Server Error
-          content:
-            application/json:
-              schema:
-                allOf:
-                  - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Reschedule
+      x-group-name: Transaction-Controller
+      x-child-product-name: Logistics
   /v1/maintance/replacement:
     post:
       tags:
         - transaction-controller
-      x-proxy-name: Replacement
-      x-group-name: Transaction-controller
-      x-child-product-name: Logistics 
       summary: Internal Use Only
       description: Post API Maintenance Replacement
       operationId: replacement
@@ -171,7 +199,15 @@ paths:
             application/json:
               schema:
                 allOf:
-                  - $ref: '#/components/schemas/TransactionResponse'
+                  - $ref: '#/components/schemas/RemoteTransactionClient'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
         '500':
           description: Internal Server Error
           content:
@@ -179,13 +215,13 @@ paths:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Replacement
+      x-group-name: Transaction-Controller
+      x-child-product-name: Logistics
   /v1/maintance/change-technology:
     post:
       tags:
         - transaction-controller
-      x-proxy-name: Change Technology
-      x-group-name: Transaction-controller
-      x-child-product-name: Logistics
       summary: Internal Use Only
       description: Post API Maintenance Change Technology
       operationId: changeTechnology
@@ -202,7 +238,15 @@ paths:
             application/json:
               schema:
                 allOf:
-                  - $ref: '#/components/schemas/TransactionResponse'
+                  - $ref: '#/components/schemas/RemoteTransactionClient'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
         '500':
           description: Internal Server Error
           content:
@@ -210,13 +254,13 @@ paths:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Change-Technology
+      x-group-name: Transaction-Controller
+      x-child-product-name: Logistics
   /v1/maintance/change-carrier:
     post:
       tags:
         - transaction-controller
-      x-proxy-name: Change Carrier
-      x-group-name: Transaction-controller
-      x-child-product-name: Logistics
       summary: External Use
       description: Post API Maintenance Change Carrier
       operationId: changeCarrier
@@ -233,7 +277,15 @@ paths:
             application/json:
               schema:
                 allOf:
-                  - $ref: '#/components/schemas/TransactionResponse'
+                  - $ref: '#/components/schemas/RemoteTransactionClient'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
         '500':
           description: Internal Server Error
           content:
@@ -241,13 +293,13 @@ paths:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Change-Carrier
+      x-group-name: Transaction-Controller
+      x-child-product-name: Logistics
   /v1/install:
     post:
       tags:
         - transaction-controller
-      x-proxy-name: Install
-      x-group-name: Transaction-controller
-      x-child-product-name: Logistics
       summary: Internal Use Only
       description: Post API Install Request
       operationId: install
@@ -265,7 +317,15 @@ paths:
             application/json:
               schema:
                 allOf:
-                  - $ref: '#/components/schemas/TransactionResponse'
+                  - $ref: '#/components/schemas/RemoteTransactionClient'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
         '510':
           description: Internal Server Error
           content:
@@ -273,13 +333,13 @@ paths:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Install
+      x-group-name: Transaction-Controller
+      x-child-product-name: Logistics
   /v1/cancel-order:
     post:
       tags:
         - transaction-controller
-      x-proxy-name: Cancel Order
-      x-group-name: Transaction-controller
-      x-child-product-name: Logistics
       summary: External Use
       description: Post API Cancel Order
       operationId: cancelOrder
@@ -296,7 +356,15 @@ paths:
             application/json:
               schema:
                 allOf:
-                  - $ref: '#/components/schemas/TransactionResponse'
+                  - $ref: '#/components/schemas/RemoteTransactionClient'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
         '500':
           description: Internal Server Error
           content:
@@ -304,15 +372,206 @@ paths:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Cancel-Order
+      x-group-name: Transaction-Controller
+      x-child-product-name: Logistics
+  /service-provider/v1/update:
+    post:
+      tags:
+        - service-provider-controller
+      description: POST Update ServiceProvider
+      operationId: updateServiceProvider
+      requestBody:
+        description: Update ServiceProvider
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateServiceProviderView'
+        required: true
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
+        '510':
+          description: Update Server Error
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Update-ServiceProvider
+      x-group-name: ServiceProvider-Controller
+      x-child-product-name: Logistics
+  /service-provider/v1/inquiry-reason-cancellation:
+    post:
+      tags:
+        - service-provider-controller
+      description: POST Inquiry Reason Cancellation ServiceProvider
+      operationId: inquiryReasonCancellationServiceProvider
+      requestBody:
+        description: Update ServiceProvider
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InquiryReasonCancellationServiceProviderView'
+        required: true
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
+        '510':
+          description: Update Server Error
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Inquiry-Reason-Cancellation-ServiceProvider
+      x-group-name: ServiceProvider-Controller
+      x-child-product-name: Logistics
+  /service-provider/v1/inquiry-part-number:
+    post:
+      tags:
+        - service-provider-controller
+      description: POST Inquiry PartNumber ServiceProvider
+      operationId: inquiryPartNumberServiceProvider
+      requestBody:
+        description: Update ServiceProvider
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InquiryPartNumberServiceProviderView'
+        required: true
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
+        '510':
+          description: Update Server Error
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Inquiry-PartNumber-ServiceProvider
+      x-group-name: ServiceProvider-Controller
+      x-child-product-name: Logistics
+  /service-provider/v1/create-employee:
+    post:
+      tags:
+        - service-provider-controller
+      description: Create Employee/Staff ServiceProvider
+      operationId: createEmployeeStaff
+      requestBody:
+        description: New Employee/Staff
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateEmployeeServiceProviderView'
+        required: true
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/RemoteTransactionClient'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
+        '510':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Create-EmployeeStaff-ServiceProvider
+      x-group-name: ServiceProvider-Controller
+      x-child-product-name: Logistics
+  /service-provider/v1/cancel:
+    post:
+      tags:
+        - service-provider-controller
+      description: POST Cancel ServiceProvider
+      operationId: cancelServiceProvider
+      requestBody:
+        description: Cancel ServiceProvider
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CancelServiceProviderView'
+        required: true
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
+        '510':
+          description: Cancel Server Error
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Cancel-ServiceProvider
+      x-group-name: ServiceProvider-Controller
+      x-child-product-name: Logistics
   /v1/ticket-list:
     get:
       tags:
         - transaction-controller
-      x-proxy-name: Ticket List By Merchant
-      x-group-name: Transaction-controller
-      x-child-product-name: Logistics 
       summary: External Use
-      description: GET List Ticket by Merchant. Example = 000000091026298
+      description: GET List Ticket by Merchant. Example = 000000091088516
       operationId: ticketListByMerchant
       parameters:
         - name: merchantId
@@ -328,6 +587,14 @@ paths:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/QueryResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
         '500':
           description: Internal Server Error
           content:
@@ -335,15 +602,15 @@ paths:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Ticket-List
+      x-group-name: Transaction-Controller
+      x-child-product-name: Logistics
   /v1/terminal-list:
     get:
       tags:
         - transaction-controller
-      x-proxy-name: List Of Terminals
-      x-group-name: Transaction-controller
-      x-child-product-name: Logistics 
       summary: External Use
-      description: GET List of Terminal
+      description: 'GET List of Terminal. Example: cardAcceptorIDCode = 000000091088517 and institutionNumber = 00000001'
       operationId: listOfTerminals
       parameters:
         - name: cardAcceptorIDCode
@@ -364,7 +631,15 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/TerminalListResponse'
+                  $ref: '#/components/schemas/TerminalResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
         '500':
           description: Internal Server Error
           content:
@@ -372,15 +647,15 @@ paths:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Terminal-List
+      x-group-name: Transaction-Controller
+      x-child-product-name: Logistics
   /v1/product:
     get:
       tags:
         - transaction-controller
-      x-proxy-name: Product By Serial
-      x-group-name: Transaction-controller
-      x-child-product-name: Logistics 
       summary: Internal Use Only
-      description: GET Product by Serial. Example = 96933301051733028081
+      description: GET Product by Serial. Example = FD500001-00
       operationId: productBySerial
       parameters:
         - name: serial
@@ -396,6 +671,14 @@ paths:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/QueryResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
         '500':
           description: Internal Server Error
           content:
@@ -403,13 +686,47 @@ paths:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Product
+      x-group-name: Transaction-Controller
+      x-child-product-name: Logistics
+  /v1/inquery-reason-cancellation:
+    get:
+      tags:
+        - transaction-controller
+      summary: External Use
+      description: GET Inquery Reason Cancellation
+      operationId: inqueryReasonCancellation
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TerminalResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Inquery-Reason-Cancellation
+      x-group-name: Transaction-Controller
+      x-child-product-name: Logistics
   /v1/inquery-of-order-status:
     get:
       tags:
         - transaction-controller
-      x-proxy-name: Inquery Of Order Status
-      x-group-name: Transaction-controller
-      x-child-product-name: Logistics
       summary: External Use
       description: GET API Inquery of Order Status. Example = 600000128528
       operationId: inqueryOfOrderStatus
@@ -427,6 +744,14 @@ paths:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/QueryResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MessageSourceDTO'
         '500':
           description: Internal Server Error
           content:
@@ -434,572 +759,639 @@ paths:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/InternalServerError'
+      x-proxy-name: Inquery-Order-Status
+      x-group-name: Transaction-Controller
+      x-child-product-name: Logistics
 components:
   schemas:
-    UninstallAdditionalData48:
-      title: additionalData48
+    MessageSourceDTO:
       type: object
       properties:
-        RNID:
-          title: reference number ID
+        code:
           type: string
-          description: '0401'
-          format: 'type: an, length: 12'
-          example: '000000000001'
-        Urgency Code:
-          title: additional data
+        message:
           type: string
-          description: '0402'
-          format: 'type: an, length: 12'
-          example: '000000000725'
-        Type of Technology:
-          title: additional data
-          type: string
-          description: '0405'
-          format: 'type: an, length: 03'
-          example: PGW
-        'Terminal serial number (old) ':
-          title: additional data
-          type: string
-          description: '0407'
-          format: 'type: an, length: 03'
-        Type of Technology (old):
-          title: additional data
-          type: string
-          description: '0408'
-          format: 'type: an, length: 03'
-          example: PGW
-        National Registry of Legal Entities:
-          title: additional data
-          type: string
-          description: '0406'
-          format: 'type: an, length: 14'
-          example: '03823524402'
-        'Merchant Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 60'
-          example: Edmilson
-        'Fantasy Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 45'
-          example: Galego Esp
-        Address:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 50'
-          example: Rua Santa Rosa
-        Number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: '360'
-        Complement:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Loja 26
-        Neighborhood:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Centro
-        'Zip code ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 10'
-          example: '49010640'
-        State:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 02'
-          example: SE
-        City:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Aracaju
-        RG:
-          title: Brazilian Identification Card
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        CNAE:
-          title: National Code of Business Activity
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        'Inscricao Estadual ':
-          title: State Registration
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        Inscricao Municipal:
-          title: Municipal Registration
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        Custumer phone number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 30'
-          example: 01136311548|011965237896
-        Boarding Channel Type:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '033'
-        Boarding Channel Type Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: '        14 FRANQUIAS'
-        'Boarding Channel ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '057'
-        Boarding Channel Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: MASTER FRANQUEADO RE
-        'Boarding Subchannel ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '00001'
-        Boarding Subchannel Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: MIC SERGIPANA DO SERFR
-        'Boarding Agent ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 08'
-          example: '961490'
-        'Boarding Agent Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: CLARA ANGELICASANTOS
-        Institution Number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 08'
-          example: '00000003'
-        Service Contract ID:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '101'
-        Contact:
-          title: Contact Name -  not accept special characters
-          type: string
-          description: '0411'
-          format: 'type: an, length: 20'
-          example: 'Edmilson Correia de '
-        'Time Marked ':
-          type: string
-          description: '0411'
-          format: 'type: an, length: 05'
-        Description of Service:
-          type: string
-          description: '0411'
-          format: 'type: an, length: 50'
-        Notes:
-          type: string
-          description: '0411'
-          format: 'type: an, length: 80'
-        Parameters of LOYALTY:
-          title: 00 - activated / 44  - off
-          type: string
-          description: '0412'
-          format: 'type: an, length: 02'
-          example: '00'
-        Parameters of RECHARGE MOBILE:
-          title: 00 - activated / 44  - off
-          type: string
-          description: '0413'
-          format: 'type: an, length: 02'
-          example: '00'
-      description: Additional Data 48
-      example: 010302000000000000000000000040101260000014317204020120000000000250405003PGW040654100042847344071MESA AUTOMATICA PERCENTUAL5                                 TDM Test Data Team5                          Avenida Aureliano de Figueiredo Pinto             787                                                                   Praia de Belas                     90050190  RSPorto Alegre                                           7711000                                                     011911110000                  001                    001                    00001                    LOGFI APLUCAS HENRIQUE BENTO000000071250411155lucas               14:53oi                                                ola                                                                             041200200041300200043402028400420220309145313
-    UninstallAdditionalData61:
-      title: additionalData61
+    Address:
+      required:
+        - address
+        - city
+        - complement
+        - neighborhood
+        - number
+        - state
+        - zipCode
       type: object
       properties:
-        Working days and time:
-          title: Day + time work Format of day   1 — Sunday  2 — Monday  3 — Tuesday  4 — Wednesday  5 — Thursday  6 — Friday  7 — Saturday Format of time work (00 hours + 00 minutes until 00 hours + 00 minutes)
+        address:
+          maxLength: 50
+          minLength: 0
           type: string
-          description: '0423'
-          format: 'type: an, length: 63'
-          example: '100000000209001800309001800409001800509001800609001800700000000'
-        Quantity of product list:
-          title: additional data
+          description: Address
+          example: Avenida Aureliano de Figueiredo Pinto
+        number:
+          maxLength: 35
+          minLength: 0
           type: string
-          description: '0510'
-          format: 'type: an, length: 03'
+          description: Number
+          example: '787'
+        complement:
+          maxLength: 35
+          minLength: 0
+          type: string
+          description: Complement
+          example: Apt 3456
+        neighborhood:
+          maxLength: 35
+          minLength: 0
+          type: string
+          description: Neighborhood
+          example: Praia de Belas
+        zipCode:
+          maxLength: 10
+          minLength: 0
+          type: string
+          description: ZipCode
+          example: '90050190'
+        state:
+          maxLength: 2
+          minLength: 0
+          type: string
+          description: State
+          example: RS
+        city:
+          maxLength: 35
+          minLength: 0
+          type: string
+          description: City
+          example: Porto Alegre
+    Bit48:
+      required:
+        - codSupply
+        - contact
+        - merchant
+        - parametersLoyalty
+        - parametersRechargeMobile
+        - referenceNumberId
+        - scheduleDate
+        - typeTechnology
+        - urgencyCode
+      type: object
+      properties:
+        referenceNumberId:
+          maxLength: 12
+          minLength: 0
+          type: string
+          description: Reference Number ID
+          example: '600000143193'
+        urgencyCode:
+          maxLength: 12
+          minLength: 0
+          type: string
+          description: Urgency Code
+          example: '25'
+        typeTechnology:
+          maxLength: 3
+          minLength: 0
+          type: string
+          description: Type of Technology
+          example: PGW
+        merchant:
+          $ref: '#/components/schemas/Merchant'
+        contact:
+          $ref: '#/components/schemas/Contact'
+        parametersLoyalty:
+          maxLength: 2
+          minLength: 0
+          type: string
+          description: Parameters of LOYALTY
+          example: '00'
+        parametersRechargeMobile:
+          maxLength: 2
+          minLength: 0
+          type: string
+          description: Parameters of RECHARGE MOBILE
+          example: '00'
+        codSupply:
+          maxLength: 2
+          minLength: 0
+          type: string
+          description: 'Code Of Supply '
+          example: B01
+        scheduleDate:
+          maxLength: 12
+          minLength: 0
+          type: string
+          description: 'Data/hora agendada(yyyyMMddhhmm) '
+          example: '201708282359'
+    Bit61:
+      required:
+        - workingDay
+      type: object
+      properties:
+        workingDay:
+          $ref: '#/components/schemas/WorkingDay'
+        quantityProduct:
+          maxLength: 3
+          minLength: 0
+          type: string
+          description: Quantity of Product List
           example: '078'
-        Code Product:
+        productList:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
+        quantityOperator:
+          maxLength: 3
+          minLength: 0
           type: string
-          description: '0511'
-          format: 'type: an, length: 03'
-          example: '001'
-        Description Product:
-          type: string
-          description: '0511'
-          format: 'type: an, length: 20'
-          example: TABLET
-        Quantity:
-          type: string
-          description: '0511'
-          format: 'type: an, length: 02'
-          example: '01'
-        Type of Service to Service Provider:
-          title: I - Include R - Remove B - Both (replace the product)
-          type: string
-          description: '0511'
-          format: 'type: an, length: 01'
-          example: I
-        Quantity of Operators List:
-          title: additional data
-          type: string
-          description: '0512'
-          format: 'type: an, length: 03'
-          example: '002'
-        Code Operator:
-          title: 001 - CHIP Claro002 - CHIP Oi003 - CHIP Tim004 - CHIP Vivo
-          type: string
-          description: '0513'
-          format: 'type: an, length: 03'
-          example: '001'
-        'Description of Operator ':
-          title: additional data
-          type: string
-          description: '0513'
-          format: 'type: an, length: 20'
-          example: CHIP Claro
-        Quantity of CHIP:
-          title: additional data
-          type: string
-          description: '0513'
-          format: 'type: an, length: 02'
-          example: '01'
-        externalMerchantID:
-          title: 'Prefix 27 – Ecommerce BIN28 – Clover BIN '
-          type: string
-          description: '0601'
-          format: 'type: an, length: 20'
-        MCC:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 20'
-        Email:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        Status:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 10'
-        Open Date:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 40'
-        Close Date:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 40'
-        Name:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        Phone:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        Fax:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        chipserialNumberOld:
-          type: string
-        chipserialNumber:
-          type: string
-      description: Additional Data 61
-      example: 0423063100000000208001700308001700408001700508001700608001700700000000064900100428021email.email@fiserv.com
-    UninstallAdditionalData62:
-      title: additionalData62
+          description: Quantity of Operators List
+          example: '2'
+        operatorList:
+          type: array
+          items:
+            $ref: '#/components/schemas/Operator'
+        storeIPG:
+          $ref: '#/components/schemas/StoreIPG'
+        contactIPG:
+          $ref: '#/components/schemas/ContactIPG'
+    Bit62:
+      required:
+        - address
+        - cnpj
+        - fantasyName
+        - merchantName
       type: object
       properties:
-        CNPJ:
-          title: National Registry of Legal Entities
+        cnpj:
+          maxLength: 14
+          minLength: 0
           type: string
-          description: '0417'
-          format: 'type: an length: 14'
-          example: '03823524402'
-        'Merchant Name ':
-          title: reference
+          description: National Registry of Legal Entities
+          example: '11260310000161'
+        merchantName:
+          maxLength: 60
+          minLength: 0
           type: string
-          description: '0417'
-          format: 'type: an length: 60'
-          example: Edmilson
-        'Fantasy Name ':
-          title: reference
+          description: Merchant Name
+          example: MESA AUTOMATICA PERCENTUAL
+        fantasyName:
+          maxLength: 45
+          minLength: 0
           type: string
-          description: '0417'
-          format: 'type: an length: 45'
-          example: Galego Esp
-        Address:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 50'
-          example: Rua Santa Rosa
-        Number:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: '360'
-        Complement:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: Loja 26
-        Neighborhood:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: Centro
-        'Zip code ':
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 10'
-          example: '49010640'
-        State:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 02'
-          example: SE
-        City:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: Aracaju
-      description: Additional Data 62
-      example: '041732100042847344071MESA AUTOMATICA PERCENTUAL5                                 TDM Test Data Team5                          Avenida Aureliano de Figueiredo Pinto             787                                                                   Praia de Belas                     90050190  RSPorto Alegre                       '
-    UninstallAdditionalData63:
-      title: additionalData63
+          description: Fantasy Name
+          example: TDM Test Data Team
+        address:
+          $ref: '#/components/schemas/Address'
+    Bit63:
+      required:
+        - lunchTime
+        - maintenanceTime
       type: object
       properties:
-        'Notes of Special Conditional ':
-          title: additional data
+        idSpecialConditional:
           type: string
-          description: '0606'
-          format: 'type: an, length: LLL'
+          description: ID Special Conditional (UPPER CASE) - AGENDADO; CHIP-EXCLUSIVO; CONSOLIDADO; ESP-RESTRITO; OUVIDORIA; PERSONALIZADO; REINCIDENTE; SEM-CHIP; TERM-NOVO; URGENTE
+          example: URGENTE
+        notesOfSpecialConditional:
+          type: string
+          description: Notes of Special Conditional
           example: 'Notes of Special Conditional '
-        Description Flag:
-          title: additional data
+        descriptionFlag:
           type: string
-          description: '0607'
-          format: 'type: an, length: LLL'
+          description: Description Flag
           example: Atendimento consolidado (múltiplos  terminais mesmo local e data)
-        MobileOperator on Registration - GPRS:01 – Sem CHIP (SIMCARD) 02 – Vivo 03 - Tim 0024 - Claro 05 – Oi 06 - Algar:
-          title: additional data
+        idModal:
           type: string
-          description: '0609'
-          format: 'type: an, length: LLL'
+          description: ID Modal
+          example: '001521'
+        mobileOperatorRegistration:
+          type: string
+          description: MobileOperator on Registration - GPRS:01 – Sem CHIP (SIMCARD) 02 – Vivo 03 - Tim 0024 - Claro 05 – Oi 06 - Algar
           example: '02'
-        Description Motive:
-          title: additional data
+        idMotive:
           type: string
-          description: '0611'
-          format: 'type: an, length: LLL'
+          description: ID Motive
+          example: MCT025
+        descriptionMotive:
+          type: string
+          description: Description Motive
           example: Desistencia
-        'Description Immediate Delivery ':
-          title: additional data
+        idImmediateDelivery:
           type: string
-          description: '0613'
-          format: 'type: an, length: LLL'
+          description: ID Immediate Delivery
+          example: '02'
+        descriptionImmediateDelivery:
+          type: string
+          description: Description Immediate Delivery
           example: Entrega Prioritaria
-        Lunch Time - Sunday:
-          title: additional data
+        simCardType:
           type: string
-          description: '0615'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Lunch Time - Monday:
-          title: additional data
+          description: SIMCARD Type
+          format: 'type: an, length: 2  '
+          example: '01'
+        lunchTime:
+          $ref: '#/components/schemas/LunchTime'
+        maintenanceTime:
+          $ref: '#/components/schemas/MaintenanceTime'
+        longitude:
           type: string
-          description: '0616'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Tuesday:
-          title: additional data
-          type: string
-          description: '0617'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Wednesday:
-          title: additional data
-          type: string
-          description: '0618'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Thursday:
-          title: additional data
-          type: string
-          description: '0619'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Friday:
-          title: additional data
-          type: string
-          description: '0620'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Saturday:
-          title: additional data
-          type: string
-          description: '0621'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Maintenance Time - Sunday:
-          title: additional data
-          type: string
-          description: '0622'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Maintenance Time - Monday:
-          title: additional data
-          type: string
-          description: '0623'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintenance Time - Tuesday:
-          title: additional data
-          type: string
-          description: '0624'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Wednesday:
-          title: additional data
-          type: string
-          description: '0625'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time -Thursday:
-          title: additional data
-          type: string
-          description: '0626'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Friday:
-          title: additional data
-          type: string
-          description: '0627'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Saturday:
-          title: additional data
-          type: string
-          description: '0628'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Geolocation - longitude:
-          title: additional data
-          type: string
-          description: '0629'
-          format: 'type: an, length: LLL'
+          description: Geolocation - Longitude
           example: '-30.028609'
-        Geolocation - latitude:
-          title: additional data
+        latitude:
           type: string
-          description: '0630'
-          format: 'type: an, length: LLL'
+          description: Geolocation - Latitude
           example: '-51.1994847'
-        'Recipient Name ':
-          title: additional data
+        recipientName:
           type: string
-          description: '0631'
-          format: 'type: an, length: LLL'
+          description: Recipient Name
           example: MARCOS PAULO / DIONATAN
-        'Contact Recipient ':
-          title: additional data
+        contactRecipient:
           type: string
-          description: '0632'
-          format: 'type: an, length: LLL'
+          description: Contact Recipient
           example: '69999605000'
-        'Reference Point ':
-          title: additional data
+        referencePoint:
           type: string
-          description: '0633'
-          format: 'type: an, length: LLL'
+          description: Reference Point
           example: POSTO PINHEIRAO
-        Complement:
-          title: additional data
+        complement:
           type: string
-          description: '0634'
-          format: 'type: an, length: LLL'
+          description: Complement
           example: APTO DUS GURI
-        Establishment name:
-          title: additional data
+        establishmentName:
           type: string
-          description: '0635'
-          format: 'type: an, length: LLL'
+          description: Establishment Name
           example: VITORINO CONVENIENCIA COMERCIO DE BEBIDA
-        'Activity branch ':
-          title: additional data
+        activityBranch:
           type: string
-          description: '0636'
-          format: 'type: an, length: LLL'
-          example: Comércio varejista de mercadorias em lojas de conveniência
-        Type Location Delivery:
-          title: additional data
+          description: Activity Branch
+          example: Comércio Varejista de Mercadorias em Lojas de Conveniência
+        typeLocationDelivery:
           type: string
-          description: '0637'
-          format: 'type: an, length: LLL'
+          description: Type Location Delivery
           example: '1'
-        'Free (Advanced Post) ':
-          title: additional data
+        free:
           type: string
-          description: '0638'
-          format: 'type: an, length: LLL'
+          description: Free (Advanced Post)
           example: '00000000014'
-        idmodal:
+        idMaintenanceMotive:
           type: string
-        idmotive:
+          description: Id Maintenance Motive
+          example: C01
+    Contact:
+      required:
+        - contact
+        - descriptionService
+        - notes
+        - timeMarked
+      type: object
+      properties:
+        contact:
+          maxLength: 20
+          minLength: 0
           type: string
-        simcardtype:
+          description: Contact Name -  not accept special characters
+          example: Edmilson Correia
+        timeMarked:
+          maxLength: 5
+          minLength: 0
           type: string
-        idimmediateDelivery:
+          description: Time Marked
+          example: '05'
+        descriptionService:
+          maxLength: 50
+          minLength: 0
           type: string
-        idspecialConditional:
+          description: Description of Service
+          example: Description of Service Exemple
+        notes:
+          maxLength: 80
+          minLength: 0
           type: string
-      description: Additional Data 63
-      example: 0640007API SVC
+          description: Notes
+          example: cGVnYWRpbmhhIGRvIG1hbGFuZHJv
+    ContactIPG:
+      type: object
+      properties:
+        name:
+          maxLength: 40
+          minLength: 0
+          type: string
+          description: Name
+          example: MARISA COMERCIO DE MODA INTIMA LTDA
+        email:
+          maxLength: 40
+          minLength: 0
+          type: string
+          description: Email
+          example: marisa@email.com
+        phone:
+          maxLength: 40
+          minLength: 0
+          type: string
+          description: Phone
+          example: '5521988741470'
+        fax:
+          maxLength: 40
+          minLength: 0
+          type: string
+          description: Fax
+          example: '26353571'
+    LunchTime:
+      type: object
+      properties:
+        sunday:
+          $ref: '#/components/schemas/TimeWorking'
+        monday:
+          $ref: '#/components/schemas/TimeWorking'
+        tuesday:
+          $ref: '#/components/schemas/TimeWorking'
+        wednesday:
+          $ref: '#/components/schemas/TimeWorking'
+        thursday:
+          $ref: '#/components/schemas/TimeWorking'
+        friday:
+          $ref: '#/components/schemas/TimeWorking'
+        saturday:
+          $ref: '#/components/schemas/TimeWorking'
+      description: Lunch Time of Week
+    MaintenanceTime:
+      type: object
+      properties:
+        sunday:
+          $ref: '#/components/schemas/TimeWorking'
+        monday:
+          $ref: '#/components/schemas/TimeWorking'
+        tuesday:
+          $ref: '#/components/schemas/TimeWorking'
+        wednesday:
+          $ref: '#/components/schemas/TimeWorking'
+        thursday:
+          $ref: '#/components/schemas/TimeWorking'
+        friday:
+          $ref: '#/components/schemas/TimeWorking'
+        saturday:
+          $ref: '#/components/schemas/TimeWorking'
+      description: Maintenance Time of Week
+    Merchant:
+      required:
+        - address
+        - boardingAgent
+        - boardingAgentName
+        - boardingChannel
+        - boardingChannelDescription
+        - boardingChannelType
+        - boardingChannelTypeDescription
+        - boardingSubchannel
+        - boardingSubchannelDescription
+        - cnae
+        - cnpj
+        - custumerPhoneNumber
+        - fantasyName
+        - inscricaoEstadual
+        - inscricaoMunicipal
+        - institutionNumber
+        - merchantName
+        - rg
+        - serviceContractID
+      type: object
+      properties:
+        cnpj:
+          maxLength: 14
+          minLength: 0
+          type: string
+          description: National Registry of Legal Entities
+          example: '11260310000161'
+        merchantName:
+          maxLength: 60
+          minLength: 0
+          type: string
+          description: Merchant Name
+          example: MESA AUTOMATICA PERCENTUAL
+        fantasyName:
+          maxLength: 45
+          minLength: 0
+          type: string
+          description: Fantasy Name
+          example: TDM Test Data Team
+        address:
+          $ref: '#/components/schemas/Address'
+        rg:
+          maxLength: 20
+          minLength: 0
+          type: string
+          description: Brazilian Identification Card
+          example: '20989232'
+        cnae:
+          maxLength: 20
+          minLength: 0
+          type: string
+          description: National Code of Business Activity
+          example: '64181518'
+        inscricaoEstadual:
+          maxLength: 20
+          minLength: 0
+          type: string
+          description: State Registration
+          example: '375346732'
+        inscricaoMunicipal:
+          maxLength: 20
+          minLength: 0
+          type: string
+          description: Municipal Registration
+          example: '5575346744'
+        custumerPhoneNumber:
+          maxLength: 30
+          minLength: 0
+          type: string
+          description: Custumer Phone Number
+          example: 01136311548|011965237896
+        boardingChannelType:
+          maxLength: 3
+          minLength: 0
+          type: string
+          description: Boarding Channel Type
+          example: '033'
+        boardingChannelTypeDescription:
+          maxLength: 20
+          minLength: 0
+          type: string
+          description: Boarding Channel Type Description
+          example: 14 FRANQUIAS
+        boardingChannel:
+          maxLength: 3
+          minLength: 0
+          type: string
+          description: Boarding Channel
+          example: '057'
+        boardingChannelDescription:
+          maxLength: 20
+          minLength: 0
+          type: string
+          description: Boarding Channel Description
+          example: MASTER FRANQUEADO RE
+        boardingSubchannel:
+          maxLength: 5
+          minLength: 0
+          type: string
+          description: Boarding Subchannel
+          example: '001'
+        boardingSubchannelDescription:
+          maxLength: 20
+          minLength: 0
+          type: string
+          description: Boarding Subchannel Description
+          example: MIC SERGIPANA DO SER
+        boardingAgent:
+          maxLength: 8
+          minLength: 0
+          type: string
+          description: Boarding Agent
+          example: '00961490'
+        boardingAgentName:
+          maxLength: 20
+          minLength: 0
+          type: string
+          description: Boarding Agent Name
+          example: CLARA ANGELICASANTOS
+        institutionNumber:
+          maxLength: 8
+          minLength: 0
+          type: string
+          description: Institution Number
+          example: '01'
+        serviceContractID:
+          maxLength: 3
+          minLength: 0
+          type: string
+          description: Service Contract ID
+          example: '234'
+    Operator:
+      type: object
+      properties:
+        codeOperator:
+          type: string
+          description: Type of Service to Service Provider
+          example: CHIP_CLARO
+          enum:
+            - SEM_CHIP
+            - CHIP_VIVO
+            - CHIP_TIM
+            - CHIP_CLARO
+            - CHIP_OI
+            - CHIP_ALGAR
+        descriptionOperator:
+          maxLength: 20
+          minLength: 0
+          type: string
+          description: Description of Operator
+          example: CHIP CLARO
+        quantityChip:
+          maxLength: 2
+          minLength: 0
+          type: string
+          description: Quantity of CHIP
+          example: '1'
+        chipSerialNumber:
+          maxLength: 20
+          minLength: 0
+          type: string
+          description: CHIP Serial Number
+          example: 38475-3846
+        chipSerialNumberOld:
+          maxLength: 20
+          minLength: 0
+          type: string
+          description: CHIP Serial Number Old
+          example: 0005-0001
+    Product:
+      type: object
+      properties:
+        codeProduct:
+          maxLength: 3
+          minLength: 0
+          type: string
+          description: Code Product
+          example: '1'
+        descriptionProduct:
+          maxLength: 20
+          minLength: 0
+          type: string
+          description: Description Product
+          example: TABLET
+        quantity:
+          maxLength: 2
+          minLength: 0
+          type: string
+          description: Quantity
+          example: '10'
+        typeServiceProvider:
+          type: string
+          description: Type of Service to Service Provider
+          example: INCLUDE
+          enum:
+            - INCLUDE
+            - REMOVE
+            - BOTH
+    StoreIPG:
+      type: object
+      properties:
+        externalMerchantId:
+          maxLength: 20
+          minLength: 0
+          type: string
+          description: External Merchant Identification
+          example: 27 – Ecommerce BIN
+        mcc:
+          maxLength: 20
+          minLength: 0
+          type: string
+          description: Card Acceptor Business Code
+          example: MCC37462
+        email:
+          maxLength: 150
+          minLength: 0
+          type: string
+          description: Card Acceptor Business Code
+          example: merchant@email.com
+        status:
+          maxLength: 10
+          minLength: 0
+          type: string
+          description: Status
+          example: ACTIVE
+        openDate:
+          type: string
+          description: Open Date
+          example: '2022-12-09'
+        closeDate:
+          type: string
+          description: Close Date
+          example: '2023-01-01'
+    TimeWorking:
+      type: object
+      properties:
+        openingTime:
+          type: string
+          description: Opening Time
+          example: '10:00'
+        openingLunchTime:
+          type: string
+          description: Opening Lunch Time
+          example: '12:00'
+        closingLunchTime:
+          type: string
+          description: Opening Lunch Time
+          example: '13:00'
+        closingTime:
+          type: string
+          description: Opening Time
+          example: '18:00'
     UninstallView:
       required:
         - additionalData48
         - additionalData61
         - additionalData62
+        - additionalData63
       type: object
       properties:
         timeTransaction:
@@ -1011,13 +1403,13 @@ components:
           description: Date, Local Transaction
           example: '0716'
         additionalData48:
-          $ref: '#/components/schemas/UninstallAdditionalData48'
+          $ref: '#/components/schemas/Bit48'
         additionalData61:
-          $ref: '#/components/schemas/UninstallAdditionalData61'
+          $ref: '#/components/schemas/Bit61'
         additionalData62:
-          $ref: '#/components/schemas/UninstallAdditionalData62'
+          $ref: '#/components/schemas/Bit62'
         additionalData63:
-          $ref: '#/components/schemas/UninstallAdditionalData63'
+          $ref: '#/components/schemas/Bit63'
         cardAcceptorTermID:
           type: string
           description: Terminal ID
@@ -1026,17 +1418,128 @@ components:
           type: string
           description: Commercial Establishments
           example: '000000079100131'
-        serviceProviderID:
-          title: Service provider ID
-          type: string
-          description: Service provider ID
-          example: '000000079100131'
         transactionId:
           title: System Retrieval Reference Numbe
           type: string
           description: System Retrieval Reference Numbe
           example: '[20220309;150004;059]'
-    TransactionResponse:
+    WorkingDay:
+      type: object
+      properties:
+        sunday:
+          $ref: '#/components/schemas/WorkingDaySunday'
+        monday:
+          $ref: '#/components/schemas/WorkingDayMonday'
+        tuesday:
+          $ref: '#/components/schemas/WorkingDayTuesday'
+        wednesday:
+          $ref: '#/components/schemas/WorkingDayWednesday'
+        thursday:
+          $ref: '#/components/schemas/WorkingDayThursday'
+        friday:
+          $ref: '#/components/schemas/WorkingDayFriday'
+        saturday:
+          $ref: '#/components/schemas/WorkingDaySaturday'
+      description: Working Day
+    WorkingDayFriday:
+      required:
+        - closingTime
+        - openingTime
+      type: object
+      properties:
+        openingTime:
+          type: string
+          description: Opening Time
+          example: '09:00'
+        closingTime:
+          type: string
+          description: Closing Time
+          example: '18:00'
+    WorkingDayMonday:
+      required:
+        - closingTime
+        - openingTime
+      type: object
+      properties:
+        openingTime:
+          type: string
+          description: Opening Time
+          example: '09:00'
+        closingTime:
+          type: string
+          description: Closing Time
+          example: '18:00'
+    WorkingDaySaturday:
+      required:
+        - closingTime
+        - openingTime
+      type: object
+      properties:
+        openingTime:
+          type: string
+          description: Opening Time
+          example: '09:00'
+        closingTime:
+          type: string
+          description: Closing Time
+          example: '18:00'
+    WorkingDaySunday:
+      required:
+        - closingTime
+        - openingTime
+      type: object
+      properties:
+        openingTime:
+          type: string
+          description: Opening Time
+          example: '09:00'
+        closingTime:
+          type: string
+          description: Closing Time
+          example: '18:00'
+    WorkingDayThursday:
+      required:
+        - closingTime
+        - openingTime
+      type: object
+      properties:
+        openingTime:
+          type: string
+          description: Opening Time
+          example: '09:00'
+        closingTime:
+          type: string
+          description: Closing Time
+          example: '18:00'
+    WorkingDayTuesday:
+      required:
+        - closingTime
+        - openingTime
+      type: object
+      properties:
+        openingTime:
+          type: string
+          description: Opening Time
+          example: '09:00'
+        closingTime:
+          type: string
+          description: Closing Time
+          example: '18:00'
+    WorkingDayWednesday:
+      required:
+        - closingTime
+        - openingTime
+      type: object
+      properties:
+        openingTime:
+          type: string
+          description: Opening Time
+          example: '09:00'
+        closingTime:
+          type: string
+          description: Closing Time
+          example: '18:00'
+    RemoteTransactionClient:
       type: object
       properties:
         msgType:
@@ -1053,7 +1556,7 @@ components:
           type: string
         respCode:
           type: string
-        responseCode:
+        respMessage:
           type: string
         cardAcceptorTermID:
           type: string
@@ -1062,13 +1565,13 @@ components:
         serviceProviderID:
           type: string
         additionalData48:
-          type: string
+          $ref: '#/components/schemas/Bit48'
         additionalData61:
-          type: string
+          $ref: '#/components/schemas/Bit61'
         additionalData62:
-          type: string
+          $ref: '#/components/schemas/Bit62'
         additionalData63:
-          type: string
+          $ref: '#/components/schemas/Bit63'
         transactionId:
           type: string
         sysRetRefNumber:
@@ -1093,367 +1596,56 @@ components:
           enum:
             - 2 - Erro Interno (Meaning Internal Error)
             - 7 - Erro na integracao da API. Detalhe (Meaning Integration Error)
-    SupplyAdditionalData48:
-      title: additionalData48
+    TicketConcludeView:
+      required:
+        - additionalData48
+        - dateTimeTransmission
+        - dateTransaction
+        - timeTransaction
+        - trace
       type: object
       properties:
-        RNID:
-          title: reference number ID
-          type: string
-          description: '0401'
-          format: 'type: an, length: 12'
-          example: '000000000001'
-        Urgency Code:
-          title: additional data
-          type: string
-          description: '0402'
-          format: 'type: an, length: 12'
-          example: '000000000725'
-        National Registry of Legal Entities:
-          title: additional data
-          type: string
-          description: '0406'
-          format: 'type: an, length: 14'
-          example: '03823524402'
-        'Merchant Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 60'
-          example: Edmilson
-        'Fantasy Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 45'
-          example: Galego Esp
-        Address:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 50'
-          example: Rua Santa Rosa
-        Number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: '360'
-        Complement:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Loja 26
-        Neighborhood:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Centro
-        'Zip code ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 10'
-          example: '49010640'
-        State:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 02'
-          example: SE
-        City:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Aracaju
-        RG:
-          title: Brazilian Identification Card
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        CNAE:
-          title: National Code of Business Activity
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        'Inscricao Estadual ':
-          title: State Registration
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        Inscricao Municipal:
-          title: Municipal Registration
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        Custumer phone number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 30'
-          example: 01136311548|011965237896
-        Boarding Channel Type:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '033'
-        Boarding Channel Type Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: '        14 FRANQUIAS'
-        'Boarding Channel ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '057'
-        Boarding Channel Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: MASTER FRANQUEADO RE
-        'Boarding Subchannel ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '00001'
-        Boarding Subchannel Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: MIC SERGIPANA DO SERFR
-        'Boarding Agent ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 08'
-          example: '961490'
-        'Boarding Agent Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: CLARA ANGELICASANTOS
-        Institution Number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 08'
-          example: '00000003'
-        Service Contract ID:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '101'
-        Contact:
-          title: Contact Name -  not accept special characters
-          type: string
-          description: '0411'
-          format: 'type: an, length: 20'
-          example: 'Edmilson Correia de '
-        'Time Marked ':
-          type: string
-          description: '0411'
-          format: 'type: an, length: 05'
-        Description of Service:
-          type: string
-          description: '0411'
-          format: 'type: an, length: 50'
-        Notes:
-          type: string
-          description: '0411'
-          format: 'type: an, length: 80'
-        Code of supply:
-          title: 'B01 - paper roll type 1, B02 - paper roll type 2 '
-          type: string
-          description: '0415'
-          format: 'type: an, length: 03'
-          example: B01
-      description: Additional Data 48
-      example: 0103020                    040101200000024140204020120000000000250405003GPR040646928131651000130                                                    TESTE 32                                     TESTE 32                        Rua Haddock Lobo     550         teste teste               Cerqueira Cesar  01414000SP                     Sao Paulo                                 5510803        191231231231                                                                                                                                           000000031010407020523-545-809         0408003GPR0411025         Andre Rocha00:00041200244041300244041725928131651000130                                                    TESTE 32                                     TESTE 32                        Rua Haddock Lobo     550         teste teste               Cerqueira Cesar  01414000SP                     Sao Paulo0422003986
-    SupplyAdditionalData63:
-      title: additionalData63
-      type: object
-      properties:
-        'Notes of Special Conditional ':
-          title: additional data
-          type: string
-          description: '0606'
-          format: 'type: an, length: LLL'
-          example: 'Notes of Special Conditional '
-        Description Flag:
-          title: additional data
-          type: string
-          description: '0607'
-          format: 'type: an, length: LLL'
-          example: Atendimento consolidado (múltiplos  terminais mesmo local e data)
-        MobileOperator on Registration - GPRS:01 – Sem CHIP (SIMCARD) 02 – Vivo 03 - Tim 0024 - Claro 05 – Oi 06 - Algar:
-          title: additional data
-          type: string
-          description: '0609'
-          format: 'type: an, length: LLL'
-          example: '02'
-        Description Motive:
-          title: additional data
-          type: string
-          description: '0611'
-          format: 'type: an, length: LLL'
-          example: Desistencia
-        'Description Immediate Delivery ':
-          title: additional data
-          type: string
-          description: '0613'
-          format: 'type: an, length: LLL'
-          example: Entrega Prioritaria
-        Lunch Time - Sunday:
-          title: additional data
-          type: string
-          description: '0615'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Lunch Time - Monday:
-          title: additional data
-          type: string
-          description: '0616'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Tuesday:
-          title: additional data
-          type: string
-          description: '0617'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Wednesday:
-          title: additional data
-          type: string
-          description: '0618'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Thursday:
-          title: additional data
-          type: string
-          description: '0619'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Friday:
-          title: additional data
-          type: string
-          description: '0620'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Saturday:
-          title: additional data
-          type: string
-          description: '0621'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Maintenance Time - Sunday:
-          title: additional data
-          type: string
-          description: '0622'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Maintenance Time - Monday:
-          title: additional data
-          type: string
-          description: '0623'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintenance Time - Tuesday:
-          title: additional data
-          type: string
-          description: '0624'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Wednesday:
-          title: additional data
-          type: string
-          description: '0625'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time -Thursday:
-          title: additional data
-          type: string
-          description: '0626'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Friday:
-          title: additional data
-          type: string
-          description: '0627'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Saturday:
-          title: additional data
-          type: string
-          description: '0628'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Geolocation - longitude:
-          title: additional data
-          type: string
-          description: '0629'
-          format: 'type: an, length: LLL'
-          example: '-30.028609'
-        Geolocation - latitude:
-          title: additional data
-          type: string
-          description: '0630'
-          format: 'type: an, length: LLL'
-          example: '-51.1994847'
-        'Recipient Name ':
-          title: additional data
-          type: string
-          description: '0631'
-          format: 'type: an, length: LLL'
-          example: MARCOS PAULO / DIONATAN
-        'Contact Recipient ':
-          title: additional data
-          type: string
-          description: '0632'
-          format: 'type: an, length: LLL'
-          example: '69999605000'
-        'Reference Point ':
-          title: additional data
-          type: string
-          description: '0633'
-          format: 'type: an, length: LLL'
-          example: POSTO PINHEIRAO
-        Complement:
-          title: additional data
-          type: string
-          description: '0634'
-          format: 'type: an, length: LLL'
-          example: APTO DUS GURI
-        Establishment name:
-          title: additional data
-          type: string
-          description: '0635'
-          format: 'type: an, length: LLL'
-          example: VITORINO CONVENIENCIA COMERCIO DE BEBIDA
-        'Activity branch ':
-          title: additional data
-          type: string
-          description: '0636'
-          format: 'type: an, length: LLL'
-          example: Comércio varejista de mercadorias em lojas de conveniência
-        Type Location Delivery:
-          title: additional data
-          type: string
-          description: '0637'
-          format: 'type: an, length: LLL'
-          example: '1'
-        'Free (Advanced Post) ':
-          title: additional data
-          type: string
-          description: '0638'
-          format: 'type: an, length: LLL'
-          example: '00000000014'
-        idmodal:
-          type: string
-        idmotive:
-          type: string
-        simcardtype:
-          type: string
-        idimmediateDelivery:
-          type: string
-        idspecialConditional:
-          type: string
-      description: Additional Data 63
-      example: 0605000060600006080000609007Default0639003   0640010Salesforce
+        dateTimeTransmission:
+          type: string
+          description: DateTime of transmission
+          example: '1027163759'
+        trace:
+          type: string
+          description: Trace
+          example: '999999'
+        timeTransaction:
+          type: string
+          description: Time of transmission
+          example: '163759'
+        dateTransaction:
+          type: string
+          description: Date of transmission
+          example: '1027'
+        cardAcceptorTermID:
+          type: string
+          description: Terminal ID
+          example: PGW35717
+        cardAcceptorIDCode:
+          type: string
+          description: EC
+          example: '000000024448706'
+        serviceProviderID:
+          title: Service provider ID
+          type: string
+          description: Service provider ID
+          example: '000000000131091'
+        additionalData48:
+          $ref: '#/components/schemas/Bit48'
+        transactionId:
+          title: System Retrieval Reference Number
+          type: string
+          description: System Retrieval Reference Number
+          example: '[20210719;112656;223]'
     SupplyRequestView:
       required:
         - additionalData48
+        - additionalData62
+        - additionalData63
         - cardAcceptorIDCode
         - cardAcceptorTermID
         - dateTimeTransmission
@@ -1463,9 +1655,11 @@ components:
       type: object
       properties:
         additionalData48:
-          $ref: '#/components/schemas/SupplyAdditionalData48'
+          $ref: '#/components/schemas/Bit48'
+        additionalData62:
+          $ref: '#/components/schemas/Bit62'
         additionalData63:
-          $ref: '#/components/schemas/SupplyAdditionalData63'
+          $ref: '#/components/schemas/Bit63'
         dateTimeTransmission:
           type: string
           description: DateTime of transmission
@@ -1490,24 +1684,6 @@ components:
           type: string
           description: Service provider ID
           example: '000000019004506'
-    RescheduleAdditionalData48:
-      title: additionalData48
-      type: object
-      properties:
-        Status:
-          title: Status (200 – shipped, 100 – scheduled, 300 – delayded, 400 – concluded, 500 – loss, 600 – hunt , 499 – Unsuccessful Conclusion
-          type: string
-          description: '0999'
-          format: 'type: an, length: 03'
-          example: '200'
-        DateHour:
-          title: 'Data/hora agendada(yyyyMMddhhmm) '
-          type: string
-          description: '0905'
-          format: 'type: an, length: 12'
-          example: '201708282359'
-      description: Additional Data 48
-      example: '09990031000905012202111192115'
     RescheduleView:
       required:
         - additionalData48
@@ -1520,7 +1696,7 @@ components:
       type: object
       properties:
         additionalData48:
-          $ref: '#/components/schemas/RescheduleAdditionalData48'
+          $ref: '#/components/schemas/Bit48'
         dateTimeTransmission:
           type: string
           description: DateTime of transmission
@@ -1545,640 +1721,6 @@ components:
           type: string
           description: System Retrieval Reference Number
           example: '18232042'
-    OrderUpdateAdditionalData61:
-      title: additionalData61
-      type: object
-      properties:
-        country:
-          type: string
-        city:
-          type: string
-        merchantName:
-          type: string
-        workingDay:
-          type: string
-        addressStreet:
-          type: string
-        notes:
-          type: string
-        merchantContact:
-          type: string
-        addressComplement3d4:
-          type: string
-        addressZipCode:
-          type: string
-        serviceDescription:
-          type: string
-        merchantIdentification:
-          type: string
-        scheduledDateandTime:
-          type: string
-        addressNeighborhood:
-          type: string
-        merchantContactNumber:
-          type: string
-        addressComplement4d4:
-          type: string
-      description: Additional Data 61
-      example: 090664220220519235921710755000150DIEGO ROCHA LIMA                                            DIEGO ROCHA LIMA    5332788590                    MARECHAL DEODORO 800                                            SALA1103                                                        CENTRO                                                          800                                                             96020220       Pelotas/RS                              BRAnotacoes gerais                                  Anotacoes gerais                                                                100000000209001800309001800409001800509001800609001800700000000
-    OrderUpdateView:
-      required:
-        - additionalData48
-        - dateTimeTransmission
-        - dateTransaction
-        - originalDataElements
-        - serviceProviderID
-        - sysRetRefNumber
-        - timeTransaction
-      type: object
-      properties:
-        additionalData48:
-          $ref: '#/components/schemas/RescheduleAdditionalData48'
-        additionalData61:
-          $ref: '#/components/schemas/OrderUpdateAdditionalData61'
-        dateTimeTransmission:
-          type: string
-          description: DateTime of transmission
-          example: '1027163759'
-        timeTransaction:
-          type: string
-          description: Time of transmission
-          example: '163759'
-        dateTransaction:
-          type: string
-          description: Date of transmission
-          example: '1027'
-        serviceProviderID:
-          type: string
-          description: Service Provider ID
-          example: '131091'
-        originalDataElements:
-          type: string
-          description: Original Data Elements
-          example: '7314530512114511'
-        sysRetRefNumber:
-          type: string
-          description: System Retrieval Reference Number
-          example: '18232042'
-    ReplacementAdditionalData48:
-      title: additionalData48
-      type: object
-      properties:
-        RNID:
-          title: reference number ID
-          type: string
-          description: '0401'
-          format: 'type: an, length: 12'
-          example: '000000000001'
-        Urgency Code:
-          title: additional data
-          type: string
-          description: '0402'
-          format: 'type: an, length: 12'
-          example: '000000000725'
-        Type of Technology:
-          title: additional data
-          type: string
-          description: '0405'
-          format: 'type: an, length: 03'
-          example: PGW
-        'Terminal serial number (old) ':
-          title: additional data
-          type: string
-          description: '0407'
-          format: 'type: an, length: 03'
-        Type of Technology (old):
-          title: additional data
-          type: string
-          description: '0408'
-          format: 'type: an, length: 03'
-          example: PGW
-        National Registry of Legal Entities:
-          title: additional data
-          type: string
-          description: '0406'
-          format: 'type: an, length: 14'
-          example: '03823524402'
-        'Merchant Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 60'
-          example: Edmilson
-        'Fantasy Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 45'
-          example: Galego Esp
-        Address:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 50'
-          example: Rua Santa Rosa
-        Number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: '360'
-        Complement:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Loja 26
-        Neighborhood:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Centro
-        'Zip code ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 10'
-          example: '49010640'
-        State:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 02'
-          example: SE
-        City:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Aracaju
-        RG:
-          title: Brazilian Identification Card
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        CNAE:
-          title: National Code of Business Activity
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        'Inscricao Estadual ':
-          title: State Registration
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        Inscricao Municipal:
-          title: Municipal Registration
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        Custumer phone number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 30'
-          example: 01136311548|011965237896
-        Boarding Channel Type:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '033'
-        Boarding Channel Type Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: '        14 FRANQUIAS'
-        'Boarding Channel ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '057'
-        Boarding Channel Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: MASTER FRANQUEADO RE
-        'Boarding Subchannel ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '00001'
-        Boarding Subchannel Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: MIC SERGIPANA DO SERFR
-        'Boarding Agent ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 08'
-          example: '961490'
-        'Boarding Agent Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: CLARA ANGELICASANTOS
-        Institution Number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 08'
-          example: '00000003'
-        Service Contract ID:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '101'
-        Contact:
-          title: Contact Name -  not accept special characters
-          type: string
-          description: '0411'
-          format: 'type: an, length: 20'
-          example: 'Edmilson Correia de '
-        'Time Marked ':
-          type: string
-          description: '0411'
-          format: 'type: an, length: 05'
-        Description of Service:
-          type: string
-          description: '0411'
-          format: 'type: an, length: 50'
-        Notes:
-          type: string
-          description: '0411'
-          format: 'type: an, length: 80'
-        Parameters of LOYALTY:
-          title: 00 - activated / 44  - off
-          type: string
-          description: '0412'
-          format: 'type: an, length: 02'
-          example: '00'
-        Parameters of RECHARGE MOBILE:
-          title: 00 - activated / 44  - off
-          type: string
-          description: '0413'
-          format: 'type: an, length: 02'
-          example: '00'
-      description: Additional Data 48
-      example: 040101260000014800604020120000000000250405003GPR040654111260310000161Teste Desenvolvimento                                       Teste Desenvolvimento                        Avenida Manoel Pedro Pimentel                                                     265102 Bloco G                        Continental                        06020194  SPOsasco                                                                                                             11999999999                   007           01. Banco756             BANCOOB99999 PROPOSTA ELETRONICA FCUGDEM      Nome do Agente000000031010411155Nome do Contato                                      Additional Description                                                                Additional Notes0412002440413002000422003986
-    ReplacementAdditionalData61:
-      title: additionalData61
-      type: object
-      properties:
-        Working days and time:
-          title: Day + time work Format of day   1 — Sunday  2 — Monday  3 — Tuesday  4 — Wednesday  5 — Thursday  6 — Friday  7 — Saturday Format of time work (00 hours + 00 minutes until 00 hours + 00 minutes)
-          type: string
-          description: '0423'
-          format: 'type: an, length: 63'
-          example: '100000000209001800309001800409001800509001800609001800700000000'
-        Quantity of product list:
-          title: additional data
-          type: string
-          description: '0510'
-          format: 'type: an, length: 03'
-          example: '078'
-        Code Product:
-          type: string
-          description: '0511'
-          format: 'type: an, length: 03'
-          example: '001'
-        Description Product:
-          type: string
-          description: '0511'
-          format: 'type: an, length: 20'
-          example: TABLET
-        Quantity:
-          type: string
-          description: '0511'
-          format: 'type: an, length: 02'
-          example: '01'
-        Type of Service to Service Provider:
-          title: I - Include R - Remove B - Both (replace the product)
-          type: string
-          description: '0511'
-          format: 'type: an, length: 01'
-          example: I
-        Quantity of Operators List:
-          title: additional data
-          type: string
-          description: '0512'
-          format: 'type: an, length: 03'
-          example: '002'
-        Code Operator:
-          title: 001 - CHIP Claro002 - CHIP Oi003 - CHIP Tim004 - CHIP Vivo
-          type: string
-          description: '0513'
-          format: 'type: an, length: 03'
-          example: '001'
-        'Description of Operator ':
-          title: additional data
-          type: string
-          description: '0513'
-          format: 'type: an, length: 20'
-          example: CHIP Claro
-        Quantity of CHIP:
-          title: additional data
-          type: string
-          description: '0513'
-          format: 'type: an, length: 02'
-          example: '01'
-        externalMerchantID:
-          title: 'Prefix 27 – Ecommerce BIN28 – Clover BIN '
-          type: string
-          description: '0601'
-          format: 'type: an, length: 20'
-        MCC:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 20'
-        Email:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        Status:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 10'
-        Open Date:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 40'
-        Close Date:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 40'
-        Name:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        Phone:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        Fax:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        chipserialNumberOld:
-          type: string
-        chipserialNumber:
-          type: string
-      description: Additional Data 61
-      example: '0423063100000000208001600308001600408001600508001600608001600708001300'
-    ReplacementAdditionalData62:
-      title: additionalData62
-      type: object
-      properties:
-        CNPJ:
-          title: National Registry of Legal Entities
-          type: string
-          description: '0417'
-          format: 'type: an length: 14'
-          example: '03823524402'
-        'Merchant Name ':
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 60'
-          example: Edmilson
-        'Fantasy Name ':
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 45'
-          example: Galego Esp
-        Address:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 50'
-          example: Rua Santa Rosa
-        Number:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: '360'
-        Complement:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: Loja 26
-        Neighborhood:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: Centro
-        'Zip code ':
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 10'
-          example: '49010640'
-        State:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 02'
-          example: SE
-        City:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: Aracaju
-      description: Additional Data 62
-      example: '041732111260310000161Teste Desenvolvimento                                       Teste Desenvolvimento                        Avenida Manoel Pedro Pimentel                                                     265102 Bloco G                        Continental                        06020194  SPOsasco                             '
-    ReplacementAdditionalData63:
-      title: additionalData63
-      type: object
-      properties:
-        'Notes of Special Conditional ':
-          title: additional data
-          type: string
-          description: '0606'
-          format: 'type: an, length: LLL'
-          example: 'Notes of Special Conditional '
-        Description Flag:
-          title: additional data
-          type: string
-          description: '0607'
-          format: 'type: an, length: LLL'
-          example: Atendimento consolidado (múltiplos  terminais mesmo local e data)
-        MobileOperator on Registration - GPRS:01 – Sem CHIP (SIMCARD) 02 – Vivo 03 - Tim 0024 - Claro 05 – Oi 06 - Algar:
-          title: additional data
-          type: string
-          description: '0609'
-          format: 'type: an, length: LLL'
-          example: '02'
-        Description Motive:
-          title: additional data
-          type: string
-          description: '0611'
-          format: 'type: an, length: LLL'
-          example: Desistencia
-        'Description Immediate Delivery ':
-          title: additional data
-          type: string
-          description: '0613'
-          format: 'type: an, length: LLL'
-          example: Entrega Prioritaria
-        Lunch Time - Sunday:
-          title: additional data
-          type: string
-          description: '0615'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Lunch Time - Monday:
-          title: additional data
-          type: string
-          description: '0616'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Tuesday:
-          title: additional data
-          type: string
-          description: '0617'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Wednesday:
-          title: additional data
-          type: string
-          description: '0618'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Thursday:
-          title: additional data
-          type: string
-          description: '0619'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Friday:
-          title: additional data
-          type: string
-          description: '0620'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Saturday:
-          title: additional data
-          type: string
-          description: '0621'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Maintenance Time - Sunday:
-          title: additional data
-          type: string
-          description: '0622'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Maintenance Time - Monday:
-          title: additional data
-          type: string
-          description: '0623'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintenance Time - Tuesday:
-          title: additional data
-          type: string
-          description: '0624'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Wednesday:
-          title: additional data
-          type: string
-          description: '0625'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time -Thursday:
-          title: additional data
-          type: string
-          description: '0626'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Friday:
-          title: additional data
-          type: string
-          description: '0627'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Saturday:
-          title: additional data
-          type: string
-          description: '0628'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Geolocation - longitude:
-          title: additional data
-          type: string
-          description: '0629'
-          format: 'type: an, length: LLL'
-          example: '-30.028609'
-        Geolocation - latitude:
-          title: additional data
-          type: string
-          description: '0630'
-          format: 'type: an, length: LLL'
-          example: '-51.1994847'
-        'Recipient Name ':
-          title: additional data
-          type: string
-          description: '0631'
-          format: 'type: an, length: LLL'
-          example: MARCOS PAULO / DIONATAN
-        'Contact Recipient ':
-          title: additional data
-          type: string
-          description: '0632'
-          format: 'type: an, length: LLL'
-          example: '69999605000'
-        'Reference Point ':
-          title: additional data
-          type: string
-          description: '0633'
-          format: 'type: an, length: LLL'
-          example: POSTO PINHEIRAO
-        Complement:
-          title: additional data
-          type: string
-          description: '0634'
-          format: 'type: an, length: LLL'
-          example: APTO DUS GURI
-        Establishment name:
-          title: additional data
-          type: string
-          description: '0635'
-          format: 'type: an, length: LLL'
-          example: VITORINO CONVENIENCIA COMERCIO DE BEBIDA
-        'Activity branch ':
-          title: additional data
-          type: string
-          description: '0636'
-          format: 'type: an, length: LLL'
-          example: Comércio varejista de mercadorias em lojas de conveniência
-        Type Location Delivery:
-          title: additional data
-          type: string
-          description: '0637'
-          format: 'type: an, length: LLL'
-          example: '1'
-        'Free (Advanced Post) ':
-          title: additional data
-          type: string
-          description: '0638'
-          format: 'type: an, length: LLL'
-          example: '00000000014'
-        idmodal:
-          type: string
-        idmotive:
-          type: string
-        simcardtype:
-          type: string
-        idimmediateDelivery:
-          type: string
-        idspecialConditional:
-          type: string
-      description: Additional Data 63
-      example: 0605007URGENTE0606022Observacoes adicionais0608010459010-001060900201061200120613014Pronta Entrega0639003C02
     ReplacementView:
       required:
         - additionalData48
@@ -2189,18 +1731,17 @@ components:
         - cardAcceptorTermID
         - dateTimeTransmission
         - dateTransaction
-        - serviceProviderID
         - timeTransaction
       type: object
       properties:
         additionalData48:
-          $ref: '#/components/schemas/ReplacementAdditionalData48'
+          $ref: '#/components/schemas/Bit48'
         additionalData61:
-          $ref: '#/components/schemas/ReplacementAdditionalData61'
+          $ref: '#/components/schemas/Bit61'
         additionalData62:
-          $ref: '#/components/schemas/ReplacementAdditionalData62'
+          $ref: '#/components/schemas/Bit62'
         additionalData63:
-          $ref: '#/components/schemas/ReplacementAdditionalData63'
+          $ref: '#/components/schemas/Bit63'
         dateTimeTransmission:
           type: string
           description: Date and Time, Transmission
@@ -2213,10 +1754,6 @@ components:
           type: string
           description: Date, Local Transaction
           example: '0716'
-        serviceProviderID:
-          type: string
-          description: Service Provider ID
-          example: '000000019015643'
         cardAcceptorTermID:
           type: string
           description: Terminal ID
@@ -2233,565 +1770,11 @@ components:
           type: string
           description: System Retrieval Reference Number
           example: '000026283463'
-    ChangeTechnologyAdditionalData48:
-      title: additionalData48
-      type: object
-      properties:
-        RNID:
-          title: reference number ID
-          type: string
-          description: '0401'
-          format: 'type: an, length: 12'
-          example: '000000000001'
-        Urgency Code:
-          title: additional data
-          type: string
-          description: '0402'
-          format: 'type: an, length: 12'
-          example: '000000000725'
-        Type of Technology:
-          title: additional data
-          type: string
-          description: '0405'
-          format: 'type: an, length: 03'
-          example: PGW
-        'Terminal serial number (old) ':
-          title: additional data
-          type: string
-          description: '0407'
-          format: 'type: an, length: 03'
-        Type of Technology (old):
-          title: additional data
-          type: string
-          description: '0408'
-          format: 'type: an, length: 03'
-          example: PGW
-        National Registry of Legal Entities:
-          title: additional data
-          type: string
-          description: '0406'
-          format: 'type: an, length: 14'
-          example: '03823524402'
-        'Merchant Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 60'
-          example: Edmilson
-        'Fantasy Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 45'
-          example: Galego Esp
-        Address:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 50'
-          example: Rua Santa Rosa
-        Number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: '360'
-        Complement:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Loja 26
-        Neighborhood:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Centro
-        'Zip code ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 10'
-          example: '49010640'
-        State:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 02'
-          example: SE
-        City:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Aracaju
-        RG:
-          title: Brazilian Identification Card
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        CNAE:
-          title: National Code of Business Activity
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        'Inscricao Estadual ':
-          title: State Registration
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        Inscricao Municipal:
-          title: Municipal Registration
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        Custumer phone number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 30'
-          example: 01136311548|011965237896
-        Boarding Channel Type:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '033'
-        Boarding Channel Type Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: '        14 FRANQUIAS'
-        'Boarding Channel ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '057'
-        Boarding Channel Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: MASTER FRANQUEADO RE
-        'Boarding Subchannel ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '00001'
-        Boarding Subchannel Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: MIC SERGIPANA DO SERFR
-        'Boarding Agent ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 08'
-          example: '961490'
-        'Boarding Agent Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: CLARA ANGELICASANTOS
-        Institution Number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 08'
-          example: '00000003'
-        Service Contract ID:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '101'
-        Contact:
-          title: Contact Name -  not accept special characters
-          type: string
-          description: '0411'
-          format: 'type: an, length: 20'
-          example: 'Edmilson Correia de '
-        'Time Marked ':
-          type: string
-          description: '0411'
-          format: 'type: an, length: 05'
-        Description of Service:
-          type: string
-          description: '0411'
-          format: 'type: an, length: 50'
-        Notes:
-          type: string
-          description: '0411'
-          format: 'type: an, length: 80'
-        Parameters of LOYALTY:
-          title: 00 - activated / 44  - off
-          type: string
-          description: '0412'
-          format: 'type: an, length: 02'
-          example: '00'
-        Parameters of RECHARGE MOBILE:
-          title: 00 - activated / 44  - off
-          type: string
-          description: '0413'
-          format: 'type: an, length: 02'
-          example: '00'
-      description: Aditional Data 48
-      example: 040101299999999999904020120000000000250405003MVC040654103106213000190SICREDI CARTOES                                             SICREDI CARTOES LTDA                         Rua Engenheiro Francisco Pitta Brito                                              7824 andar torre D                    Jardim Promissao                   04753080  SPSao Paulo                                                                                                                                        019           01. BANCO748             SICREDI00056         BIN-SICREDI F15W8PP       Girlane Souza000000041100411155Atualizacao SICREDI                                                                                                                                        0412002440413002000422003986
-    ChangeTechnologyAdditionalData61:
-      title: additionalData61
-      type: object
-      properties:
-        Working days and time:
-          title: Day + time work Format of day   1 — Sunday  2 — Monday  3 — Tuesday  4 — Wednesday  5 — Thursday  6 — Friday  7 — Saturday Format of time work (00 hours + 00 minutes until 00 hours + 00 minutes)
-          type: string
-          description: '0423'
-          format: 'type: an, length: 63'
-          example: '100000000209001800309001800409001800509001800609001800700000000'
-        Quantity of product list:
-          title: additional data
-          type: string
-          description: '0510'
-          format: 'type: an, length: 03'
-          example: '078'
-        Code Product:
-          type: string
-          description: '0511'
-          format: 'type: an, length: 03'
-          example: '001'
-        Description Product:
-          type: string
-          description: '0511'
-          format: 'type: an, length: 20'
-          example: TABLET
-        Quantity:
-          type: string
-          description: '0511'
-          format: 'type: an, length: 02'
-          example: '01'
-        Type of Service to Service Provider:
-          title: I - Include R - Remove B - Both (replace the product)
-          type: string
-          description: '0511'
-          format: 'type: an, length: 01'
-          example: I
-        Quantity of Operators List:
-          title: additional data
-          type: string
-          description: '0512'
-          format: 'type: an, length: 03'
-          example: '002'
-        Code Operator:
-          title: 001 - CHIP Claro002 - CHIP Oi003 - CHIP Tim004 - CHIP Vivo
-          type: string
-          description: '0513'
-          format: 'type: an, length: 03'
-          example: '001'
-        'Description of Operator ':
-          title: additional data
-          type: string
-          description: '0513'
-          format: 'type: an, length: 20'
-          example: CHIP Claro
-        Quantity of CHIP:
-          title: additional data
-          type: string
-          description: '0513'
-          format: 'type: an, length: 02'
-          example: '01'
-        externalMerchantID:
-          title: 'Prefix 27 – Ecommerce BIN28 – Clover BIN '
-          type: string
-          description: '0601'
-          format: 'type: an, length: 20'
-        MCC:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 20'
-        Email:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        Status:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 10'
-        Open Date:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 40'
-        Close Date:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 40'
-        Name:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        Phone:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        Fax:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        chipserialNumberOld:
-          type: string
-        chipserialNumber:
-          type: string
-      description: Aditional Data 61
-      example: '0423063100000000209001800309001800409001800509001800609001800700000000'
-    ChangeTechnologyAdditionalData62:
-      title: additionalData62
-      type: object
-      properties:
-        CNPJ:
-          title: National Registry of Legal Entities
-          type: string
-          description: '0417'
-          format: 'type: an length: 14'
-          example: '03823524402'
-        'Merchant Name ':
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 60'
-          example: Edmilson
-        'Fantasy Name ':
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 45'
-          example: Galego Esp
-        Address:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 50'
-          example: Rua Santa Rosa
-        Number:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: '360'
-        Complement:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: Loja 26
-        Neighborhood:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: Centro
-        'Zip code ':
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 10'
-          example: '49010640'
-        State:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 02'
-          example: SE
-        City:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: Aracaju
-      description: Aditional Data 62
-      example: '041732103106213000190SICREDI CARTOES                                             SICREDI CARTOES LTDA                         Rua Engenheiro Francisco Pitta Brito                                              7824 andar torre D                    Jardim Promissao                   04753080  SPSao Paulo                          '
-    ChangeTechnologyAdditionalData63:
-      title: additionalData63
-      type: object
-      properties:
-        'Notes of Special Conditional ':
-          title: additional data
-          type: string
-          description: '0606'
-          format: 'type: an, length: LLL'
-          example: 'Notes of Special Conditional '
-        Description Flag:
-          title: additional data
-          type: string
-          description: '0607'
-          format: 'type: an, length: LLL'
-          example: Atendimento consolidado (múltiplos  terminais mesmo local e data)
-        MobileOperator on Registration - GPRS:01 – Sem CHIP (SIMCARD) 02 – Vivo 03 - Tim 0024 - Claro 05 – Oi 06 - Algar:
-          title: additional data
-          type: string
-          description: '0609'
-          format: 'type: an, length: LLL'
-          example: '02'
-        Description Motive:
-          title: additional data
-          type: string
-          description: '0611'
-          format: 'type: an, length: LLL'
-          example: Desistencia
-        'Description Immediate Delivery ':
-          title: additional data
-          type: string
-          description: '0613'
-          format: 'type: an, length: LLL'
-          example: Entrega Prioritaria
-        Lunch Time - Sunday:
-          title: additional data
-          type: string
-          description: '0615'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Lunch Time - Monday:
-          title: additional data
-          type: string
-          description: '0616'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Tuesday:
-          title: additional data
-          type: string
-          description: '0617'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Wednesday:
-          title: additional data
-          type: string
-          description: '0618'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Thursday:
-          title: additional data
-          type: string
-          description: '0619'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Friday:
-          title: additional data
-          type: string
-          description: '0620'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Saturday:
-          title: additional data
-          type: string
-          description: '0621'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Maintenance Time - Sunday:
-          title: additional data
-          type: string
-          description: '0622'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Maintenance Time - Monday:
-          title: additional data
-          type: string
-          description: '0623'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintenance Time - Tuesday:
-          title: additional data
-          type: string
-          description: '0624'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Wednesday:
-          title: additional data
-          type: string
-          description: '0625'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time -Thursday:
-          title: additional data
-          type: string
-          description: '0626'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Friday:
-          title: additional data
-          type: string
-          description: '0627'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Saturday:
-          title: additional data
-          type: string
-          description: '0628'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Geolocation - longitude:
-          title: additional data
-          type: string
-          description: '0629'
-          format: 'type: an, length: LLL'
-          example: '-30.028609'
-        Geolocation - latitude:
-          title: additional data
-          type: string
-          description: '0630'
-          format: 'type: an, length: LLL'
-          example: '-51.1994847'
-        'Recipient Name ':
-          title: additional data
-          type: string
-          description: '0631'
-          format: 'type: an, length: LLL'
-          example: MARCOS PAULO / DIONATAN
-        'Contact Recipient ':
-          title: additional data
-          type: string
-          description: '0632'
-          format: 'type: an, length: LLL'
-          example: '69999605000'
-        'Reference Point ':
-          title: additional data
-          type: string
-          description: '0633'
-          format: 'type: an, length: LLL'
-          example: POSTO PINHEIRAO
-        Complement:
-          title: additional data
-          type: string
-          description: '0634'
-          format: 'type: an, length: LLL'
-          example: APTO DUS GURI
-        Establishment name:
-          title: additional data
-          type: string
-          description: '0635'
-          format: 'type: an, length: LLL'
-          example: VITORINO CONVENIENCIA COMERCIO DE BEBIDA
-        'Activity branch ':
-          title: additional data
-          type: string
-          description: '0636'
-          format: 'type: an, length: LLL'
-          example: Comércio varejista de mercadorias em lojas de conveniência
-        Type Location Delivery:
-          title: additional data
-          type: string
-          description: '0637'
-          format: 'type: an, length: LLL'
-          example: '1'
-        'Free (Advanced Post) ':
-          title: additional data
-          type: string
-          description: '0638'
-          format: 'type: an, length: LLL'
-          example: '00000000014'
-        idmodal:
-          type: string
-        idmotive:
-          type: string
-        simcardtype:
-          type: string
-        idimmediateDelivery:
-          type: string
-        idspecialConditional:
-          type: string
-      description: Aditional Data 63
-      example: 0609002020614009ONE-PIECE
+        transactionId:
+          title: System Retrieval Reference Numbe
+          type: string
+          description: System Retrieval Reference Numbe
+          example: '[20220309;150004;059]'
     ChangeTechnologyView:
       required:
         - additionalData48
@@ -2813,13 +1796,13 @@ components:
           description: Date of transaction
           example: '0926'
         additionalData48:
-          $ref: '#/components/schemas/ChangeTechnologyAdditionalData48'
+          $ref: '#/components/schemas/Bit48'
         additionalData61:
-          $ref: '#/components/schemas/ChangeTechnologyAdditionalData61'
+          $ref: '#/components/schemas/Bit61'
         additionalData62:
-          $ref: '#/components/schemas/ChangeTechnologyAdditionalData62'
+          $ref: '#/components/schemas/Bit62'
         additionalData63:
-          $ref: '#/components/schemas/ChangeTechnologyAdditionalData63'
+          $ref: '#/components/schemas/Bit63'
         cardAcceptorTermID:
           type: string
           description: Terminal ID
@@ -2828,575 +1811,11 @@ components:
           type: string
           description: Commercial Establishments
           example: '000000040534679'
-        serviceProviderID:
-          title: Service provider ID
-          type: string
-          description: Service provider ID
-          example: '000000040534679'
         transactionId:
           title: System Retrieval Reference Numbe
           type: string
           description: System Retrieval Reference Numbe
           example: '[20210719;112656;223]'
-    ChangeCarrierAdditionalData48:
-      title: additionalData48
-      type: object
-      properties:
-        RNID:
-          title: reference number ID
-          type: string
-          description: '0401'
-          format: 'type: an, length: 12'
-          example: '000000000001'
-        Urgency Code:
-          title: additional data
-          type: string
-          description: '0402'
-          format: 'type: an, length: 12'
-          example: '000000000725'
-        Type of Technology:
-          title: additional data
-          type: string
-          description: '0405'
-          format: 'type: an, length: 03'
-          example: PGW
-        'Terminal serial number (old) ':
-          title: additional data
-          type: string
-          description: '0407'
-          format: 'type: an, length: 03'
-        Type of Technology (old):
-          title: additional data
-          type: string
-          description: '0408'
-          format: 'type: an, length: 03'
-          example: PGW
-        National Registry of Legal Entities:
-          title: additional data
-          type: string
-          description: '0406'
-          format: 'type: an, length: 14'
-          example: '03823524402'
-        'Merchant Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 60'
-          example: Edmilson
-        'Fantasy Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 45'
-          example: Galego Esp
-        Address:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 50'
-          example: Rua Santa Rosa
-        Number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: '360'
-        Complement:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Loja 26
-        Neighborhood:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Centro
-        'Zip code ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 10'
-          example: '49010640'
-        State:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 02'
-          example: SE
-        City:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Aracaju
-        RG:
-          title: Brazilian Identification Card
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        CNAE:
-          title: National Code of Business Activity
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        'Inscricao Estadual ':
-          title: State Registration
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        Inscricao Municipal:
-          title: Municipal Registration
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        Custumer phone number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 30'
-          example: 01136311548|011965237896
-        Boarding Channel Type:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '033'
-        Boarding Channel Type Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: '        14 FRANQUIAS'
-        'Boarding Channel ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '057'
-        Boarding Channel Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: MASTER FRANQUEADO RE
-        'Boarding Subchannel ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '00001'
-        Boarding Subchannel Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: MIC SERGIPANA DO SERFR
-        'Boarding Agent ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 08'
-          example: '961490'
-        'Boarding Agent Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: CLARA ANGELICASANTOS
-        Institution Number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 08'
-          example: '00000003'
-        Service Contract ID:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '101'
-        Contact:
-          title: Contact Name -  not accept special characters
-          type: string
-          description: '0411'
-          format: 'type: an, length: 20'
-          example: 'Edmilson Correia de '
-        'Time Marked ':
-          type: string
-          description: '0411'
-          format: 'type: an, length: 05'
-        Description of Service:
-          type: string
-          description: '0411'
-          format: 'type: an, length: 50'
-        Notes:
-          type: string
-          description: '0411'
-          format: 'type: an, length: 80'
-        Parameters of LOYALTY:
-          title: 00 - activated / 44  - off
-          type: string
-          description: '0412'
-          format: 'type: an, length: 02'
-          example: '00'
-        Parameters of RECHARGE MOBILE:
-          title: 00 - activated / 44  - off
-          type: string
-          description: '0413'
-          format: 'type: an, length: 02'
-          example: '00'
-      description: Aditional Data 48
-      example: 040101299999999999904020120000000000250405003MVC040654103106213000190SICREDI CARTOES                                             SICREDI CARTOES LTDA                         Rua Engenheiro Francisco Pitta Brito                                              7824 andar torre D                    Jardim Promissao                   04753080  SPSao Paulo                                                                                                                                        019           01. BANCO748             SICREDI00056         BIN-SICREDI F15W8PP       Girlane Souza000000041100411155Atualizacao SICREDI                                                                                                                                        0412002440413002000422003986
-    ChangeCarrierAdditionalData61:
-      title: additionalData61
-      type: object
-      properties:
-        Working days and time:
-          title: Day + time work Format of day   1 — Sunday  2 — Monday  3 — Tuesday  4 — Wednesday  5 — Thursday  6 — Friday  7 — Saturday Format of time work (00 hours + 00 minutes until 00 hours + 00 minutes)
-          type: string
-          description: '0423'
-          format: 'type: an, length: 63'
-          example: '100000000209001800309001800409001800509001800609001800700000000'
-        Quantity of product list:
-          title: additional data
-          type: string
-          description: '0510'
-          format: 'type: an, length: 03'
-          example: '078'
-        Code Product:
-          type: string
-          description: '0511'
-          format: 'type: an, length: 03'
-          example: '001'
-        Description Product:
-          type: string
-          description: '0511'
-          format: 'type: an, length: 20'
-          example: TABLET
-        Quantity:
-          type: string
-          description: '0511'
-          format: 'type: an, length: 02'
-          example: '01'
-        Type of Service to Service Provider:
-          title: I - Include R - Remove B - Both (replace the product)
-          type: string
-          description: '0511'
-          format: 'type: an, length: 01'
-          example: I
-        Quantity of Operators List:
-          title: additional data
-          type: string
-          description: '0512'
-          format: 'type: an, length: 03'
-          example: '002'
-        Code Operator:
-          title: 001 - CHIP Claro002 - CHIP Oi003 - CHIP Tim004 - CHIP Vivo
-          type: string
-          description: '0513'
-          format: 'type: an, length: 03'
-          example: '001'
-        'Description of Operator ':
-          title: additional data
-          type: string
-          description: '0513'
-          format: 'type: an, length: 20'
-          example: CHIP Claro
-        Quantity of CHIP:
-          title: additional data
-          type: string
-          description: '0513'
-          format: 'type: an, length: 02'
-          example: '01'
-        externalMerchantID:
-          title: 'Prefix 27 – Ecommerce BIN28 – Clover BIN '
-          type: string
-          description: '0601'
-          format: 'type: an, length: 20'
-        MCC:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 20'
-        Email:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        Status:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 10'
-        Open Date:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 40'
-        Close Date:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 40'
-        Name:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        Phone:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        Fax:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        chipserialNumberOld:
-          type: string
-        chipserialNumber:
-          type: string
-      description: Aditional Data 61
-      example: '0423063100000000209001800309001800409001800509001800609001800700000000'
-    ChangeCarrierAdditionalData62:
-      title: additionalData62
-      type: object
-      properties:
-        CNPJ:
-          title: National Registry of Legal Entities
-          type: string
-          description: '0417'
-          format: 'type: an length: 14'
-          example: '03823524402'
-        'Merchant Name ':
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 60'
-          example: Edmilson
-        'Fantasy Name ':
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 45'
-          example: Galego Esp
-        Address:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 50'
-          example: Rua Santa Rosa
-        Number:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: '360'
-        Complement:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: Loja 26
-        Neighborhood:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: Centro
-        'Zip code ':
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 10'
-          example: '49010640'
-        State:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 02'
-          example: SE
-        City:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: Aracaju
-      description: Aditional Data 62
-      example: '041732103106213000190SICREDI CARTOES                                             SICREDI CARTOES LTDA                         Rua Engenheiro Francisco Pitta Brito                                              7824 andar torre D                    Jardim Promissao                   04753080  SPSao Paulo                          '
-    ChangeCarrierAdditionalData63:
-      title: additionalData63
-      type: object
-      properties:
-        'Notes of Special Conditional ':
-          title: additional data
-          type: string
-          description: '0606'
-          format: 'type: an, length: LLL'
-          example: 'Notes of Special Conditional '
-        Description Flag:
-          title: additional data
-          type: string
-          description: '0607'
-          format: 'type: an, length: LLL'
-          example: Atendimento consolidado (múltiplos  terminais mesmo local e data)
-        MobileOperator on Registration - GPRS:01 – Sem CHIP (SIMCARD) 02 – Vivo 03 - Tim 0024 - Claro 05 – Oi 06 - Algar:
-          title: additional data
-          type: string
-          description: '0609'
-          format: 'type: an, length: LLL'
-          example: '02'
-        Description Motive:
-          title: additional data
-          type: string
-          description: '0611'
-          format: 'type: an, length: LLL'
-          example: Desistencia
-        'Description Immediate Delivery ':
-          title: additional data
-          type: string
-          description: '0613'
-          format: 'type: an, length: LLL'
-          example: Entrega Prioritaria
-        Lunch Time - Sunday:
-          title: additional data
-          type: string
-          description: '0615'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Lunch Time - Monday:
-          title: additional data
-          type: string
-          description: '0616'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Tuesday:
-          title: additional data
-          type: string
-          description: '0617'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Wednesday:
-          title: additional data
-          type: string
-          description: '0618'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Thursday:
-          title: additional data
-          type: string
-          description: '0619'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Friday:
-          title: additional data
-          type: string
-          description: '0620'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Saturday:
-          title: additional data
-          type: string
-          description: '0621'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Maintenance Time - Sunday:
-          title: additional data
-          type: string
-          description: '0622'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Maintenance Time - Monday:
-          title: additional data
-          type: string
-          description: '0623'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintenance Time - Tuesday:
-          title: additional data
-          type: string
-          description: '0624'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Wednesday:
-          title: additional data
-          type: string
-          description: '0625'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time -Thursday:
-          title: additional data
-          type: string
-          description: '0626'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Friday:
-          title: additional data
-          type: string
-          description: '0627'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Saturday:
-          title: additional data
-          type: string
-          description: '0628'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Geolocation - longitude:
-          title: additional data
-          type: string
-          description: '0629'
-          format: 'type: an, length: LLL'
-          example: '-30.028609'
-        Geolocation - latitude:
-          title: additional data
-          type: string
-          description: '0630'
-          format: 'type: an, length: LLL'
-          example: '-51.1994847'
-        'Recipient Name ':
-          title: additional data
-          type: string
-          description: '0631'
-          format: 'type: an, length: LLL'
-          example: MARCOS PAULO / DIONATAN
-        'Contact Recipient ':
-          title: additional data
-          type: string
-          description: '0632'
-          format: 'type: an, length: LLL'
-          example: '69999605000'
-        'Reference Point ':
-          title: additional data
-          type: string
-          description: '0633'
-          format: 'type: an, length: LLL'
-          example: POSTO PINHEIRAO
-        Complement:
-          title: additional data
-          type: string
-          description: '0634'
-          format: 'type: an, length: LLL'
-          example: APTO DUS GURI
-        Establishment name:
-          title: additional data
-          type: string
-          description: '0635'
-          format: 'type: an, length: LLL'
-          example: VITORINO CONVENIENCIA COMERCIO DE BEBIDA
-        'Activity branch ':
-          title: additional data
-          type: string
-          description: '0636'
-          format: 'type: an, length: LLL'
-          example: Comércio varejista de mercadorias em lojas de conveniência
-        Type Location Delivery:
-          title: additional data
-          type: string
-          description: '0637'
-          format: 'type: an, length: LLL'
-          example: '1'
-        'Free (Advanced Post) ':
-          title: additional data
-          type: string
-          description: '0638'
-          format: 'type: an, length: LLL'
-          example: '00000000014'
-        idmodal:
-          type: string
-        idmotive:
-          type: string
-        simcardtype:
-          type: string
-        idimmediateDelivery:
-          type: string
-        idspecialConditional:
-          type: string
-      description: Aditional Data 63
-      example: 0609002020614009ONE-PIECE
     ChangeCarrierView:
       required:
         - additionalData48
@@ -3413,14 +1832,18 @@ components:
           type: string
           description: Date of transaction
           example: '0926'
+        dateTimeTransmission:
+          type: string
+          description: DateTime of transmission
+          example: '0926110725'
         additionalData48:
-          $ref: '#/components/schemas/ChangeCarrierAdditionalData48'
+          $ref: '#/components/schemas/Bit48'
         additionalData61:
-          $ref: '#/components/schemas/ChangeCarrierAdditionalData61'
+          $ref: '#/components/schemas/Bit61'
         additionalData62:
-          $ref: '#/components/schemas/ChangeCarrierAdditionalData62'
+          $ref: '#/components/schemas/Bit62'
         additionalData63:
-          $ref: '#/components/schemas/ChangeCarrierAdditionalData63'
+          $ref: '#/components/schemas/Bit63'
         cardAcceptorTermID:
           type: string
           description: Terminal ID
@@ -3429,569 +1852,17 @@ components:
           type: string
           description: Commercial Establishments
           example: '000000040534679'
-        serviceProviderID:
-          title: Service provider ID
-          type: string
-          description: Service provider ID
-          example: '000000040534679'
         transactionId:
           title: System Retrieval Reference Numbe
           type: string
           description: System Retrieval Reference Numbe
           example: '[20210719;112656;223]'
-    InstallAdditionalData48:
-      title: additionalData48
-      type: object
-      properties:
-        RNID:
-          title: reference number ID
-          type: string
-          description: '0401'
-          format: 'type: an, length: 12'
-          example: '000000000001'
-        Urgency Code:
-          title: additional data
-          type: string
-          description: '0402'
-          format: 'type: an, length: 12'
-          example: '000000000725'
-        Type of Technology:
-          title: additional data
-          type: string
-          description: '0405'
-          format: 'type: an, length: 03'
-          example: PGW
-        National Registry of Legal Entities:
-          title: additional data
-          type: string
-          description: '0406'
-          format: 'type: an, length: 14'
-          example: '03823524402'
-        'Merchant Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 60'
-          example: Edmilson
-        'Fantasy Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 45'
-          example: Galego Esp
-        Address:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 50'
-          example: Rua Santa Rosa
-        Number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: '360'
-        Complement:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Loja 26
-        Neighborhood:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Centro
-        'Zip code ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 10'
-          example: '49010640'
-        State:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 02'
-          example: SE
-        City:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 35'
-          example: Aracaju
-        RG:
-          title: Brazilian Identification Card
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        CNAE:
-          title: National Code of Business Activity
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        'Inscricao Estadual ':
-          title: State Registration
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        Inscricao Municipal:
-          title: Municipal Registration
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-        Custumer phone number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 30'
-          example: 01136311548|011965237896
-        Boarding Channel Type:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '033'
-        Boarding Channel Type Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: '        14 FRANQUIAS'
-        'Boarding Channel ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '057'
-        Boarding Channel Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: MASTER FRANQUEADO RE
-        'Boarding Subchannel ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '00001'
-        Boarding Subchannel Description:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: MIC SERGIPANA DO SERFR
-        'Boarding Agent ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 08'
-          example: '961490'
-        'Boarding Agent Name ':
-          type: string
-          description: '0406'
-          format: 'type: an, length: 20'
-          example: CLARA ANGELICASANTOS
-        Institution Number:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 08'
-          example: '00000003'
-        Service Contract ID:
-          type: string
-          description: '0406'
-          format: 'type: an, length: 03'
-          example: '101'
-        Contact:
-          title: Contact Name -  not accept special characters
-          type: string
-          description: '0411'
-          format: 'type: an, length: 20'
-          example: 'Edmilson Correia de '
-        'Time Marked ':
-          type: string
-          description: '0411'
-          format: 'type: an, length: 05'
-        Description of Service:
-          type: string
-          description: '0411'
-          format: 'type: an, length: 50'
-        Notes:
-          type: string
-          description: '0411'
-          format: 'type: an, length: 80'
-        Parameters of LOYALTY:
-          title: 00 - activated / 44  - off
-          type: string
-          description: '0412'
-          format: 'type: an, length: 02'
-          example: '00'
-        Parameters of RECHARGE MOBILE:
-          title: 00 - activated / 44  - off
-          type: string
-          description: '0413'
-          format: 'type: an, length: 02'
-          example: '00'
-      description: Additional Data 48
-      example: 010302000000000000000000000040101260000014319304020120000000000250405003PGW040654100042847344071MESA AUTOMATICA PERCENTUAL5                                 TDM Test Data Team5                          Avenida Aureliano de Figueiredo Pinto             787                                                                   Praia de Belas                     90050190  RSPorto Alegre                                           7711000                                                     011911110000                                                                                         LOGFI APLUCAS HENRIQUE BENTO000000041100411155lucas               14:53oi                                                ola                                                                             041200200041300200043402028400420220309145313
-    InstallAdditionalData61:
-      title: additionalData61
-      type: object
-      properties:
-        Working days and time:
-          title: Day + time work Format of day   1 — Sunday  2 — Monday  3 — Tuesday  4 — Wednesday  5 — Thursday  6 — Friday  7 — Saturday Format of time work (00 hours + 00 minutes until 00 hours + 00 minutes)
-          type: string
-          description: '0423'
-          format: 'type: an, length: 63'
-          example: '100000000209001800309001800409001800509001800609001800700000000'
-        Quantity of product list:
-          title: additional data
-          type: string
-          description: '0510'
-          format: 'type: an, length: 03'
-          example: '078'
-        Code Product:
-          type: string
-          description: '0511'
-          format: 'type: an, length: 03'
-          example: '001'
-        Description Product:
-          type: string
-          description: '0511'
-          format: 'type: an, length: 20'
-          example: TABLET
-        Quantity:
-          type: string
-          description: '0511'
-          format: 'type: an, length: 02'
-          example: '01'
-        Type of Service to Service Provider:
-          title: I - Include R - Remove B - Both (replace the product)
-          type: string
-          description: '0511'
-          format: 'type: an, length: 01'
-          example: I
-        Quantity of Operators List:
-          title: additional data
-          type: string
-          description: '0512'
-          format: 'type: an, length: 03'
-          example: '002'
-        Code Operator:
-          title: 001 - CHIP Claro002 - CHIP Oi003 - CHIP Tim004 - CHIP Vivo
-          type: string
-          description: '0513'
-          format: 'type: an, length: 03'
-          example: '001'
-        'Description of Operator ':
-          title: additional data
-          type: string
-          description: '0513'
-          format: 'type: an, length: 20'
-          example: CHIP Claro
-        Quantity of CHIP:
-          title: additional data
-          type: string
-          description: '0513'
-          format: 'type: an, length: 02'
-          example: '01'
-        externalMerchantID:
-          title: 'Prefix 27 – Ecommerce BIN28 – Clover BIN '
-          type: string
-          description: '0601'
-          format: 'type: an, length: 20'
-        MCC:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 20'
-        Email:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        Status:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 10'
-        Open Date:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 40'
-        Close Date:
-          title: StoreIPG
-          type: string
-          description: '0601'
-          format: 'type: an, length: 40'
-        Name:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        Phone:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        Fax:
-          title: ContactIPG
-          type: string
-          description: '0602'
-          format: 'type: an, length: 40'
-        chipserialNumberOld:
-          type: string
-        chipserialNumber:
-          type: string
-      description: Additional Data 61
-      example: 20180921090007103016000179MARISA FRENHAN COMERCIO DE MODA INTIMA LTDA   ME            MARISA FRENHAN SANTO035032211955|99999999999      DOM PEDRO II436                                                 CENTRO              37470000       Sao Lourenco/MG                BR                                  SEG A SABADO  09:00 AS 19:00 NAO FECHA ALMOCO                                        100000000209001900309001900409001900509001900609001900709001900
-    InstallAdditionalData62:
-      title: additionalData62
-      type: object
-      properties:
-        CNPJ:
-          title: National Registry of Legal Entities
-          type: string
-          description: '0417'
-          format: 'type: an length: 14'
-          example: '03823524402'
-        'Merchant Name ':
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 60'
-          example: Edmilson
-        'Fantasy Name ':
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 45'
-          example: Galego Esp
-        Address:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 50'
-          example: Rua Santa Rosa
-        Number:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: '360'
-        Complement:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: Loja 26
-        Neighborhood:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: Centro
-        'Zip code ':
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 10'
-          example: '49010640'
-        State:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 02'
-          example: SE
-        City:
-          title: reference
-          type: string
-          description: '0417'
-          format: 'type: an length: 35'
-          example: Aracaju
-      description: Additional Data 62
-      example: '0417321   03823524402Edmilson                                                    Galego Esp                                   Rua Santa Rosa                                                                    360Loja 26                            Centro                             49010640  SEAracaju                            '
-    InstallAdditionalData63:
-      title: additionalData63
-      type: object
-      properties:
-        'Notes of Special Conditional ':
-          title: additional data
-          type: string
-          description: '0606'
-          format: 'type: an, length: LLL'
-          example: 'Notes of Special Conditional '
-        Description Flag:
-          title: additional data
-          type: string
-          description: '0607'
-          format: 'type: an, length: LLL'
-          example: Atendimento consolidado (múltiplos  terminais mesmo local e data)
-        MobileOperator on Registration - GPRS:01 – Sem CHIP (SIMCARD) 02 – Vivo 03 - Tim 0024 - Claro 05 – Oi 06 - Algar:
-          title: additional data
-          type: string
-          description: '0609'
-          format: 'type: an, length: LLL'
-          example: '02'
-        Description Motive:
-          title: additional data
-          type: string
-          description: '0611'
-          format: 'type: an, length: LLL'
-          example: Desistencia
-        'Description Immediate Delivery ':
-          title: additional data
-          type: string
-          description: '0613'
-          format: 'type: an, length: LLL'
-          example: Entrega Prioritaria
-        Lunch Time - Sunday:
-          title: additional data
-          type: string
-          description: '0615'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Lunch Time - Monday:
-          title: additional data
-          type: string
-          description: '0616'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Tuesday:
-          title: additional data
-          type: string
-          description: '0617'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Wednesday:
-          title: additional data
-          type: string
-          description: '0618'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Thursday:
-          title: additional data
-          type: string
-          description: '0619'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Friday:
-          title: additional data
-          type: string
-          description: '0620'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Lunch Time - Saturday:
-          title: additional data
-          type: string
-          description: '0621'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Maintenance Time - Sunday:
-          title: additional data
-          type: string
-          description: '0622'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Maintenance Time - Monday:
-          title: additional data
-          type: string
-          description: '0623'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintenance Time - Tuesday:
-          title: additional data
-          type: string
-          description: '0624'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Wednesday:
-          title: additional data
-          type: string
-          description: '0625'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time -Thursday:
-          title: additional data
-          type: string
-          description: '0626'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Friday:
-          title: additional data
-          type: string
-          description: '0627'
-          format: 'type: an, length: 16 '
-          example: '0700080016002000'
-        Maintanance Time - Saturday:
-          title: additional data
-          type: string
-          description: '0628'
-          format: 'type: an, length: 16 '
-          example: '0000000000000000'
-        Geolocation - longitude:
-          title: additional data
-          type: string
-          description: '0629'
-          format: 'type: an, length: LLL'
-          example: '-30.028609'
-        Geolocation - latitude:
-          title: additional data
-          type: string
-          description: '0630'
-          format: 'type: an, length: LLL'
-          example: '-51.1994847'
-        'Recipient Name ':
-          title: additional data
-          type: string
-          description: '0631'
-          format: 'type: an, length: LLL'
-          example: MARCOS PAULO / DIONATAN
-        'Contact Recipient ':
-          title: additional data
-          type: string
-          description: '0632'
-          format: 'type: an, length: LLL'
-          example: '69999605000'
-        'Reference Point ':
-          title: additional data
-          type: string
-          description: '0633'
-          format: 'type: an, length: LLL'
-          example: POSTO PINHEIRAO
-        Complement:
-          title: additional data
-          type: string
-          description: '0634'
-          format: 'type: an, length: LLL'
-          example: APTO DUS GURI
-        Establishment name:
-          title: additional data
-          type: string
-          description: '0635'
-          format: 'type: an, length: LLL'
-          example: VITORINO CONVENIENCIA COMERCIO DE BEBIDA
-        'Activity branch ':
-          title: additional data
-          type: string
-          description: '0636'
-          format: 'type: an, length: LLL'
-          example: Comércio varejista de mercadorias em lojas de conveniência
-        Type Location Delivery:
-          title: additional data
-          type: string
-          description: '0637'
-          format: 'type: an, length: LLL'
-          example: '1'
-        'Free (Advanced Post) ':
-          title: additional data
-          type: string
-          description: '0638'
-          format: 'type: an, length: LLL'
-          example: '00000000014'
-        idmodal:
-          type: string
-        idmotive:
-          type: string
-        simcardtype:
-          type: string
-        idimmediateDelivery:
-          type: string
-        idspecialConditional:
-          type: string
-      description: Additional Data 63
-      example: 0608008MDL59754
     InstallView:
       required:
         - additionalData48
         - additionalData61
         - additionalData62
+        - additionalData63
       type: object
       properties:
         timeTransaction:
@@ -4003,13 +1874,13 @@ components:
           description: Date of transaction
           example: '0926'
         additionalData48:
-          $ref: '#/components/schemas/InstallAdditionalData48'
+          $ref: '#/components/schemas/Bit48'
         additionalData61:
-          $ref: '#/components/schemas/InstallAdditionalData61'
+          $ref: '#/components/schemas/Bit61'
         additionalData62:
-          $ref: '#/components/schemas/InstallAdditionalData62'
+          $ref: '#/components/schemas/Bit62'
         additionalData63:
-          $ref: '#/components/schemas/InstallAdditionalData63'
+          $ref: '#/components/schemas/Bit63'
         cardAcceptorTermID:
           type: string
           description: Terminal ID
@@ -4017,11 +1888,6 @@ components:
         cardAcceptorIDCode:
           type: string
           description: Commercial Establishments
-          example: '000000091088517'
-        serviceProviderID:
-          title: Service provider ID
-          type: string
-          description: Service provider ID
           example: '000000091088517'
         transactionId:
           title: System Retrieval Reference Number
@@ -4059,14 +1925,234 @@ components:
           description: Commercial Establishments
           example: '000000091088517'
         additionalData48:
-          title: additionalData48
-          type: string
-          description: Additional Data 48
-          example: '0401012700000260156'
+          $ref: '#/components/schemas/Bit48'
         respCode:
           type: string
           description: Response Code
           example: '00'
+    Bit48Update:
+      title: serviceUpdateType
+      type: object
+      properties:
+        value:
+          type: string
+          example: '400'
+        detailMotive:
+          type: string
+          example: ESTABELECIMENTO FECHADO
+        descriptionMotiveUpdate:
+          type: string
+          example: ESTABELECIMENTO FECHADO (C/ VISITA)
+        productIdentifierCode:
+          type: string
+          example: FD000105-00
+        motiveId:
+          type: string
+          example: C01
+        scheduleDate:
+          type: string
+          example: '202301302359'
+        productSerialNumber:
+          type: string
+          example: 520-456-989
+        romaneio:
+          type: string
+          example: 34.1/346470
+    UpdateServiceProviderView:
+      required:
+        - additionalData48
+      type: object
+      properties:
+        dateTimeTransmission:
+          type: string
+          description: Date and Time, Transaction
+          example: '0512091032'
+        trace:
+          type: string
+          description: Systems Trace Audit Number
+          example: '41394'
+        timeTransaction:
+          type: string
+          description: Time, Local Transaction
+          example: '091032'
+        dateTransaction:
+          type: string
+          description: "Date, Local Transaction\t"
+          example: '0512'
+        serviceProviderID:
+          title: Service provider ID
+          type: string
+          description: Service provider ID
+          example: '123456'
+        additionalData48:
+          $ref: '#/components/schemas/Bit48Update'
+        originalDataElements:
+          title: originalDataElements (trace + dateTransaction + timeTransaction)
+          type: string
+          description: original data elements
+          example: '1997791222100225'
+        sysRetRefNumber:
+          type: string
+          description: System Retrieval Reference Number
+          example: '981823'
+    InquiryReasonCancellationServiceProviderView:
+      type: object
+      properties:
+        dateTimeTransmission:
+          type: string
+          description: Date and Time, Transaction
+          example: '0513190501'
+        trace:
+          type: string
+          description: Systems Trace Audit Number
+          example: '030001'
+        timeTransaction:
+          type: string
+          description: Time, Local Transaction
+          example: '190501'
+        dateTransaction:
+          type: string
+          description: "Date, Local Transaction\t"
+          example: '0513'
+        serviceProviderID:
+          title: Service provider ID
+          type: string
+          description: Service provider ID
+          example: '900998'
+    InquiryPartNumberServiceProviderView:
+      type: object
+      properties:
+        dateTimeTransmission:
+          type: string
+          description: Date and Time, Transaction
+          example: '1117180059'
+        trace:
+          type: string
+          description: Systems Trace Audit Number
+          example: '785377'
+        timeTransaction:
+          type: string
+          description: Time, Local Transaction
+          example: '180059'
+        dateTransaction:
+          type: string
+          description: "Date, Local Transaction\t"
+          example: '1117'
+        serviceProviderID:
+          title: Service provider ID
+          type: string
+          description: Service provider ID
+          example: '131091'
+    Bit48CreateEmployee:
+      title: additionalData48
+      required:
+        - employeeIdentify
+        - employeeName
+        - status
+      type: object
+      properties:
+        employeeIdentify:
+          type: string
+          description: Identify Employee
+          example: '021510184821'
+        employeeName:
+          type: string
+          description: Name Employee
+          example: Givaldo Lopes Araujo
+        status:
+          maxLength: 2
+          minLength: 0
+          type: string
+          description: 'Status of Employee : 00 - Active, 44 - Blocked'
+          example: '00'
+      description: Additional Data 48
+    CreateEmployeeServiceProviderView:
+      required:
+        - additionalData48
+      type: object
+      properties:
+        dateTimeTransmission:
+          type: string
+          description: Date and Time, Transaction
+          example: '0512220751'
+        additionalData48:
+          $ref: '#/components/schemas/Bit48CreateEmployee'
+        trace:
+          type: string
+          description: Systems Trace Audit Number
+          example: '051222'
+        timeTransaction:
+          type: string
+          description: Time, Local Transaction
+          example: '075110'
+        dateTransaction:
+          type: string
+          description: "Date, Local Transaction\t"
+          example: '0512'
+        serviceProviderID:
+          title: Service provider ID
+          type: string
+          description: Service provider ID
+          example: '131091'
+    Bit48Cancel:
+      title: additionalData48
+      type: object
+      properties:
+        rnid:
+          type: string
+          example: '000003396782'
+        idMotive:
+          type: string
+          example: MCT025
+        descriptionMotive:
+          type: string
+          example: Desistencia
+      description: Additional Data 48
+    CancelServiceProviderView:
+      required:
+        - additionalData48
+      type: object
+      properties:
+        dateTimeTransmission:
+          type: string
+          description: Date and Time, Transaction
+          example: '0630170946'
+        trace:
+          type: string
+          description: Systems Trace Audit Number
+          example: '507695'
+        timeTransaction:
+          type: string
+          description: Time, Local Transaction
+          example: '153030'
+        dateTransaction:
+          type: string
+          description: "Date, Local Transaction\t"
+          example: '0622'
+        cardAcceptorTermID:
+          type: string
+          description: Terminal ID
+          example: PGWJXLIA
+        cardAcceptorIDCode:
+          type: string
+          description: EC
+          example: '000000046461992'
+        serviceProviderID:
+          title: Service provider ID
+          type: string
+          description: Service provider ID
+          example: '123456'
+        additionalData48:
+          $ref: '#/components/schemas/Bit48Cancel'
+        originalDataElements:
+          title: originalDataElements (trace + dateTransaction + timeTransaction)
+          type: string
+          description: original data elements
+          example: '0001681228204453'
+        sysRetRefNumber:
+          type: string
+          description: System Retrieval Reference Number
+          example: '20221228204453'
     QueryResponse:
       type: object
       properties:
@@ -4106,7 +2192,7 @@ components:
           type: string
         modelDescription:
           type: string
-    TerminalListResponse:
+    Terminal:
       type: object
       properties:
         cardAcceptorIDCode:
@@ -4119,10 +2205,17 @@ components:
           type: string
         model:
           type: string
-        typeTecnology:
-          type: string
         vendorName:
           type: string
+        typeTechnology:
+          type: string
+    TerminalResponse:
+      type: object
+      properties:
+        listTerminal:
+          type: array
+          items:
+            $ref: '#/components/schemas/Terminal'
   securitySchemes:
     JWT:
       type: apiKey
