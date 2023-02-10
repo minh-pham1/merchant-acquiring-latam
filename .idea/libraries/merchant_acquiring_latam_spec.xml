@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="merchant-acquiring-latam_spec">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/assets/merchant-acquiring-latam_spec.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
