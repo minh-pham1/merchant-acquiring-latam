@@ -29,7 +29,7 @@ description: Cree, pruebe, certifique y entregue aplicaciones ricas en pagos, to
 
 <!-- type: card
 title: Valor de extremo a extremo
-description: Cree programas de recompensas para sus comerciantes o desarrolle aplicaciones de fidelización para nuestro Clover Marketplace.
+description: Cree programas de recompensas para sus comerciantes o desarrolle aplicaciones de fidelización para nuestro Marketplace.
 -->
 
 <!-- type: card
