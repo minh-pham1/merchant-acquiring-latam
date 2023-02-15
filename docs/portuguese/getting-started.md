@@ -28,7 +28,7 @@ description: Crie, teste, certifique e entregue ótimas aplicações de pagament
 
 <!-- type: card
 title: Valor agregado
-description: Crie programas de recompense para seus clientes ou desenvolva apps de fidelidade no Clover Marketplace.
+description: Crie programas de recompense para seus clientes ou desenvolva apps de fidelidade no Marketplace.
 -->
 
 <!-- type: card
