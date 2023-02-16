@@ -29,7 +29,7 @@ description: Create, test, certify and deliver payment-rich applications all thr
 
 <!-- type: card
 title: End to End Value
-description: Create rewards programs for your merchants or develop loyalty apps for our Clover Marketplace.
+description: Create rewards programs for your merchants or develop loyalty apps for our Marketplace.
 -->
 
 <!-- type: card
