@@ -168,3 +168,65 @@
         link: docs/portuguese/related-links.md
       - title: Release notes
         link: docs/release-notes/2023/portuguese.md
+    - title: Banworks
+      sections:
+        - title: English
+          sections:
+            - title: Home
+              link: docs/english/banworks/HomepageEditada.md
+            - title: Introduction
+              link: docs/english/banworks/APIs-Introduction.md
+            - title: Token Access
+              link: docs/english/banworks/TokenGenerationforWeb-services.md
+            - title: Prepayment Info
+              link: docs/english/banworks/PrepaymentInformation.md
+            - title: Backoffice
+              link: docs/english/banworks/BackofficeInformation.md
+            - title: Update/Get Merchant Info
+              link: docs/english/banworks/UpdateGetMerchantInformation.md
+            - title: Boarding
+              link: docs/english/banworks/BoardingInformation.md
+            - title: Logistic
+              link: docs/english/banworks/LogisticInformation.md
+            - title: Sales
+              link: docs/english/banworks/SalesInformation.md
+        - title: Português
+          sections:
+            - title: Página principal
+              link: docs/portuguese/banworks/HomepageEditada.md
+            - title: Introdução
+              link: docs/portuguese/banworks/APIs-Introduction.md
+            - title: Acesso a Token
+              link: docs/portuguese/banworks/TokenGenerationforWeb-services.md
+            - title: Informações de pré-pagamento
+              link: docs/portuguese/banworks/PrepaymentInformation.md
+            - title: Backoffice
+              link: docs/portuguese/banworks/BackofficeInformation.md
+            - title: Atualizar/Obter informações dos clientes
+              link: docs/portuguese/banworks/UpdateGetMerchantInformation.md
+            - title: Credenciamento
+              link: docs/portuguese/banworks/BoardingInformation.md
+            - title: Logística
+              link: docs/portuguese/banworks/LogisticInformation.md
+            - title: Vendas
+              link: docs/portuguese/banworks/SalesInformation.md
+        - title: Español
+          sections:
+            - title: Pagina principal
+              link: docs/español/banworks/HomepageEditada.md
+            - title: Introducción
+              link: docs/español/banworks/APIs-Introduction.md
+            - title: Acceso a tokens
+              link: docs/español/banworks/TokenGenerationforWeb-services.md
+            - title: Información de prepago
+              link: docs/español/banworks/PrepaymentInformation.md
+            - title: Backoffice
+              link: docs/español/banworks/BackofficeInformation.md
+            - title: Actualizar/Obtener información del cliente
+              link: docs/español/banworks/UpdateGetMerchantInformation.md
+            - title: Acreditación
+              link: docs/español/banworks/BoardingInformation.md
+            - title: Logística
+              link: docs/español/banworks/LogisticInformation.md
+            - title: Ventas
+              link: docs/español/banworks/SalesInformation.md

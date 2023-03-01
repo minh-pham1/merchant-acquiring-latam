@@ -25,7 +25,13 @@
       "versionType": "major",
       "releaseNotesPath": "docs/release-notes/2023/english.md",
       "apiSpecFileNames": [
-        "Boarding","payments","logistics"
+        "Boarding","payments","logistics",
+
+        "Authentication/tokenAccess",
+
+        "banworks/DevicesInformation/deviceAvailability", "banworks/DevicesInformation/devicesFees",
+        "banworks/DevicesInformation/batteryInformation", "banworks/DevicesInformation/deviceBillingHistory",
+        "banworks/vDevicesInformation/devicePaperRoll", "banworks/DevicesInformation/dailyPass"
       ]
     }
   ],
