@@ -27,3 +27,4 @@ v1.0.0 (a versão do documento de openAPI que a define, contendo a mudança)
 ### Caducado
 
 - Portal antigo.
+- teste
