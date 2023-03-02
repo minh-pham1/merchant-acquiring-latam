@@ -52,7 +52,7 @@
         "banworks/PaymentPrepaymentInformation/paymentsInformation", "banworks/PaymentPrepaymentInformation/prepaymentFlagUpdate",
         "banworks/PaymentPrepaymentInformation/prepaymentInformation", "banworks/PaymentPrepaymentInformation/historyFeesConsult",
         "banworks/PaymentPrepaymentInformation/automaticPrepayment", "banworks/PaymentPrepaymentInformation/anticipationsRealized",
-        "banworks/PaymentPrepaymentInformation/splitPayment", "banworks/PaymentPrepaymentInformation/walletPix",
+        "banworks/PaymentPrepaymentInformation/walletPix",
 
         "banworks/SalesInformation/merchantSales", "banworks/SalesInformation/processConsultOperation",
         "banworks/SalesInformation/keyedConsultTransaction", "banworks/SalesInformation/suspendedConsultTransaction",
