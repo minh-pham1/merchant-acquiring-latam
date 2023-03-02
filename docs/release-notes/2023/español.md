@@ -1,10 +1,36 @@
 ---
-tags: [Release Notes, Enerp]
+tags: [Release Notes, Enero, Febrero]
 ---
 
 # Release Notes
 
-## 17 de Enero 2023
+## Febrero 2023
+
+### Qué hay de nuevo
+
+**BANWORKS**
+
+- Device
+- A
+- 
+
+### Mejoras
+
+- N / A
+
+### Fijado
+
+- N / A
+
+### Problemas conocidos
+
+- N / A
+
+### Obsoleto
+
+- N / A
+
+## Enero 2023
 
 v1.0.0 (la versión del documento openAPI que define una API que contiene el cambio)
 
