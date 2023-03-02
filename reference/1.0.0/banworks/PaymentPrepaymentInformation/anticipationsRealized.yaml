@@ -333,8 +333,8 @@ paths:
       tags:
         - Payment & Prepayment Information/Transactions Carried Out
       x-proxy-name: Transactions related to Manual/Automatic Prepayment
-      x-group-name: Transactions related to Manual/Automatic Prepayment
-      x-child-product-name: Payment & Prepayment Information
+      x-group-name: Payment & Prepayment Information
+      x-child-product-name: Banworks
       description: Get details of sales on prepayments made
       operationId: detalhamentoAntecipacoes
       parameters:
