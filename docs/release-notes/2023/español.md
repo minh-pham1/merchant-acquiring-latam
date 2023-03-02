@@ -10,9 +10,13 @@ tags: [Release Notes, Enero, Febrero]
 
 **BANWORKS**
 
-- Device
-- A
-- 
+- Authentication Endpoints
+- Device Information Endpoints
+- Merchant Information Endpoints
+- Online Boarding Endpoints
+- Payment Prepayment Information Endpoints
+- Sales Information Endpoints
+- Service Order Information Endpoints
 
 ### Mejoras
 

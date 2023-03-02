@@ -4,7 +4,37 @@ tags: [Release Notes, January]
 
 # Release Notes
 
-## January 17 2023
+## February 2023
+
+### What's New
+
+**BANWORKS**
+
+- Authentication Endpoints
+- Device Information Endpoints
+- Merchant Information Endpoints
+- Online Boarding Endpoints
+- Payment Prepayment Information Endpoints
+- Sales Information Endpoints
+- Service Order Information Endpoints
+
+### Enhancements
+
+- N / A
+
+### Fixed
+
+- N / A
+
+### Known Issues
+
+- N / A
+
+### Deprecated
+
+- N / A
+
+## January 2023
 
 v1.0.0 (the version of openAPI Document that defines an API containing the change)
 
