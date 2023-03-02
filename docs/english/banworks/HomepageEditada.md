@@ -2,7 +2,7 @@
 
 Welcome to our API support documentation!
 
-For a brief introduction on how to use the APIS, visit our [introduction][1].
+For a brief introduction on how to use the APIS, visit our [introduction](?path=docs/english/banworks/APIs-Introduction.md).
 
 This page describes the REST APIs and resources provided by Fiserv.
 
@@ -18,4 +18,3 @@ This allows developers to use any programming language to access our APIs, secur
 
 To access the APIs, start by acquiring an [Access Token](../api/?type=post&path=/token/)
 
-[1]: /merchant-acquiring-latam/docs/english/banworks/APIs-Introduction.md

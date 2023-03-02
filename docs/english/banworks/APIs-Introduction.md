@@ -88,7 +88,7 @@ Sample of response
 
 ## 3. Authentication
 
-Fiserv APIs use [HMAC Authentication][2].
+Fiserv APIs use [HMAC Authentication](?path=docs/english/banworks/TokenGenerationforWeb-services.md).
 
 To be able to access any of the Codes or APIs described in this platform, it will require the credentials sent by e-mail. Don't have the credentials? Create your account and request an User/Password sending an e-mail to the box **FiservDigitalBrazil@firstdatacorp.com.br**.
 
@@ -104,7 +104,7 @@ You shall send the following parameters in header for each APIs request:
 
 ### 3.1 auth
 
-In **auth** parameter - header - the user must sent the value got in [Token details][2].
+In **auth** parameter - header - the user must sent the value got in [Token details](?path=docs/english/banworks/TokenGenerationforWeb-services.md).
 
 Token sample: "eyJhbGciOiJSUzI1NiIsInR5cCIgO [...] tFlCzaiEx06ETdkwoTC-CfzSaVA"
 
@@ -482,5 +482,5 @@ The response is:
 ```
 
  
- [2]: /merchant-acquiring-latam/docs/english/banworks/TokenGenerationforWeb-services.md
+ 
  [3]: https://www.getpostman.com
