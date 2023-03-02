@@ -23,7 +23,7 @@ Abaixo você pode conferir cada link para acessar o documento detalhado de cada 
 
 [Service Order - Cancelling](../api/?type=post&path=/bwa/wsm/devicerequest/canceloperation/processCancelOperationRequest)
 
-[Service Order - Consult](../api/?type=get&path=bwa/consultaos/{instituicao}/{numeroMerchant})
+[Service Order - Consult](../api/?type=get&path=/bwa/consultaos/{instituicao}/{numeroMerchant})
 
 [Service Order - Terminal Maintenance](../api/?type=post&path=/bwa/wsm/fundingtools/prepayFlag/updatePrepayFlag/)
 
