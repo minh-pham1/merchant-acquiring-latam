@@ -13,9 +13,9 @@ Abaixo você pode conferir cada link para acessar o documento detalhado de cada 
 
 [Merchant Addresses - Update](../api/?type=post&path=/bwa/wsm/merchantinformation/address/updateAddress/)
 
-[Merchant Devices Billing History](../api/?type=get&path=/bwa/cobranca-terminal/v1/consulta/{data}/)
+[Merchant Devices Billing History](../api/?type=get&path=/bwa/cobranca-terminal/v1/consulta/{data})
 
-[Merchant Devices and Fees - Consult](../api/?type=get&path=/bwa/mdr-fees/{institution}/{merchanID}/)
+[Merchant Devices and Fees - Consult](../api/?type=get&path=/bwa/mdr-fees/{institution}/{merchanID})
 
 [Merchant Trade Name - Update](../api/?type=post&path=/bwa/wsm/merchantinformation/tradeName/updateTradeName/)
 
@@ -31,5 +31,5 @@ Abaixo você pode conferir cada link para acessar o documento detalhado de cada 
 
 [Service Order - Cancelling](../api/?type=post&path=/bwa/wsm/devicerequest/canceloperation/processCancelOperationRequest)
 
-[Service Order - Consult](../api/?type=get&path=/bwa/consultaos/{instituicao}/{numeroMerchant}/)
+[Service Order - Consult](../api/?type=get&path=/bwa/consultaos/{instituicao}/{numeroMerchant})
 

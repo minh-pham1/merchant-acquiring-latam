@@ -9,7 +9,7 @@ A continuación puede consultar cada enlace para acceder al documento detallado 
 
 [Token Access](?path=docs/español/banworks/TokenGenerationforWeb-services.md)
 
-[Merchant Authorizations - Consult](../api/?type=post&path=/bwa/autorizacoes/{inst}/{merchant})
+[Merchant Authorizations - Consult](../api/?type=get&path=/bwa/autorizacoes/{inst}/{merchant})
 
 [Merchant Sales (Paid or To Be Received) - Consult](../api/?type=get&path=/bwa/vendas/resources/v1/receber/{inst}/{merchant}/{dataInicio}/{dataFim})
 
