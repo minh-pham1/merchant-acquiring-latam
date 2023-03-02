@@ -88,7 +88,7 @@ Muestra de respuesta
 
 ## 3. Autenticación
 
-Las API de Fiserv usan [autenticación HMAC][2].
+Las API de Fiserv usan [autenticación HMAC](?path=/docs/español/banworks/TokenGenerationforWeb-services.md).
 
 Para poder acceder a cualquiera de los Códigos o APIs descritos en esta plataforma, se requerirán las credenciales enviadas por correo electrónico. ¿No tienes las credenciales? Cree su cuenta y solicite un Usuario/Contraseña enviando un e-mail a la casilla **FiservDigitalBrazil@firstdatacorp.com.br**.
 
@@ -104,7 +104,7 @@ Deberá enviar los siguientes parámetros en el encabezado de cada solicitud de 
 
 ### 3.1 autenticación
 
-En el parámetro **auth** - encabezado - el usuario debe enviar el valor obtenido en [Detalles del token][2].
+En el parámetro **auth** - encabezado - el usuario debe enviar el valor obtenido en [Detalles del token](?path=/docs/english/banworks/TokenGenerationforWeb-services.md).
 
 Muestra de token: "eyJhbGciOiJSUzI1NiIsInR5cCIgO [...] tFlCzaiEx06ETdkwoTC-CfzSaVA"
 
@@ -482,5 +482,5 @@ La respuesta es:
 ```
 
  
- [2]: /merchant-acquiring-latam/docs/español/banworks/TokenGenerationforWeb-services.md
+ 
  [3]: https://www.getpostman.com
