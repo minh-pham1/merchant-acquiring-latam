@@ -17,3 +17,5 @@ Make HTTP requests using GET and POST methods, receive responses in JSON format.
 This allows developers to use any programming language to access our APIs, securely integrate and build many different applications.
 
 To access the APIs, start by acquiring an [Access Token](../api/?type=post&path=/token/)
+
+[1]: /merchant-acquiring-latam/docs/english/banworks/APIs-Introduction.md

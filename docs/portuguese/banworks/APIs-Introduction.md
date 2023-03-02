@@ -482,5 +482,5 @@ A resposta é:
 ```
 
  
- [2]: TokenGenerationforWeb-services.md
+ [2]: /merchant-acquiring-latam/docs/portuguese/banworks/TokenGenerationforWeb-services.md
  [3]: https://www.getpostman.com

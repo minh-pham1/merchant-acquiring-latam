@@ -19,4 +19,4 @@ Isso permite que os desenvolvedores usem qualquer linguagem de programação par
 
 Para acessar as APIs comece adquirindo um [Token Access](../api/?type=post&path=/token/)
 
-[1]: APIs-Introduction.md
+[1]: /merchant-acquiring-latam/docs/portuguese/banworks/APIs-Introduction.md

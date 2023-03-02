@@ -7,28 +7,26 @@ To a brief introduction of how to use the APIS, please access our [introduction]
 
 Below you can check each link to access the detailed document for each Web-services (APIs), so you can develop and implement your business.
 
-[Token Access](TokenGenerationforWeb-services.md)
+[Token Access](/merchant-acquiring-latam/docs/english/banworks/TokenGenerationforWeb-services.md)
 
-[Existing Customer Validation](https://docs-qa.firstdata.com/org/brazilapi/docs/api/001-sba-val-cadastro)
+[Merchant Addresses - Update](../api/?type=post&path=/bwa/wsm/merchantinformation/address/updateAddress/)
 
-[Merchant Addresses - Update](../api/?type=post&path=/updateAddress/)
+[Merchant Devices and Fees - Consult](../api/?type=get&path=/bwa/mdr-fees/{institution}/{merchanID}/)
 
-[Merchant Devices and Fees - Consult](../api/?type=get&path=/mdr-fees/{institution}/{merchanID}/)
+[Merchant Customer Information - Consult](../api/?type=get&path=/bwa/estabelecimento/v2)
 
-[Merchant Customer Information - Consult](../api/?type=get&path=/estabelecimento/v2)
+[Merchant Trade Name - Update](../api/?type=post&path=/bwa/wsm/merchantinformation/tradeName/updateTradeName/)
 
-[Merchant Trade Name - Update](../api/?type=post&path=/updateTradeName/)
+[Operations - Consult](../api/?type=post&path=/bwa/wsm/devicerequest/consultoperation/processConsultOperationRequest/)
 
-[Operations - Consult](../api/?type=post&path=/processConsultOperationRequest/)
+[Proposal Status - Consult (Out of Online Boarding)](../api/?type=get&path=/bwa/proposta/status/{inst}/{doc})
 
-[Proposal Status - Consult (Out of Online Boarding)](../api/?type=get&path=/status/{inst}/{doc})
+[Prepayment - Enable/Disable](../api/?type=post&path=/bwa/wsm/fundingtools/prepayFlag/updatePrepayFlag/)
 
-[Prepayment - Enable/Disable](../api/?type=post&path=/updatePrepayFlag/)
+[Prepayment - Consult/Request/Cancel](../api/?type=get&path=/bwa/antecipacao-automatica/v1/antecipacao/)
 
-[Prepayment - Consult/Request/Cancel](../api/?type=get&path=/antecipacao-automatica/v1/antecipacao/)
+[Service Fees (MDR) - Consult](../api/?type=get&path=/bwa/mdr-fees/v2)
 
-[Service Fees (MDR) - Consult](../api/?type=get&path=/mdr-fees/v2)
+[Zipcode (CEP) - Consult](../api/?type=get&path=/bwa/cep-service/cep/{cep})
 
-[Zipcode (CEP) - Consult](../api/?type=get&path=/cep/{cep})
-
-[1]:  APIs-Introduction.md
+[1]:  /merchant-acquiring-latam/docs/english/banworks/APIs-Introduction.md

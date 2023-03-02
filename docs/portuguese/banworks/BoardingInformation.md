@@ -9,14 +9,14 @@ Abaixo você pode conferir cada link para acessar o documento detalhado de cada 
 
 [Token Access](../api/?type=post&path=/token/)
 
-[Merchant Information - Consult](../api/?type=get&path=/v1/consultaEstabelecimento/{clientNumber})
+[Merchant Information - Consult](../api/?type=get&path=/bwa/atualiza-socio/v1/consultaEstabelecimento/{clientNumber})
 
-[Online Boarding and Status](../api/?type=post&path=//api/proposal)
+[Online Boarding and Status](../api/?type=post&path=/api/proposal)
 
-[Payment Settlement Account - Validation](../api/?type=post&path=/validar)
+[Payment Settlement Account - Validation](../api/?type=post&path=/bwa/domicilio-bancario/validar)
 
-[Payment Settlement Account - Update](../api/?type=post&path=/paymentAccountInfo/)
+[Payment Settlement Account - Update](../api/?type=post&path=/bwa/wsm/merchantinformation/accounts/paymentAccountInfo/)
 
-[Zipcode (CEP) - Consult](../api/?type=get&path=/cep/{cep})
+[Zipcode (CEP) - Consult](../api/?type=get&path=/bwa/cep-service/cep/{cep})
 
-[1]: APIs-Introduction.md
+[1]: /merchant-acquiring-latam/docs/portuguese/banworks/APIs-Introduction.md

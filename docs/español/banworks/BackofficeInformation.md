@@ -11,26 +11,26 @@ A continuación puede consultar cada enlace para acceder al documento detallado 
 
 [Token Access](../api/?type=post&path=/token/)
 
-[Merchant Addresses - Update](../api/?type=post&path=/updateAddress/)
+[Merchant Addresses - Update](../api/?type=post&path=/bwa/wsm/merchantinformation/address/updateAddress/)
 
-[Merchant Devices Billing History](../api/?type=get&path=/cobranca-terminal/v1/consulta/{data}/)
+[Merchant Devices Billing History](../api/?type=get&path=/bwa/cobranca-terminal/v1/consulta/{data}/)
 
-[Merchant Devices and Fees - Consult](../api/?type=get&path=/mdr-fees/{institution}/{merchanID}/)
+[Merchant Devices and Fees - Consult](../api/?type=get&path=/bwa/mdr-fees/{institution}/{merchanID}/)
 
-[Merchant Trade Name - Update](../api/?type=post&path=/updateTradeName/)
+[Merchant Trade Name - Update](../api/?type=post&path=/bwa/wsm/merchantinformation/tradeName/updateTradeName/)
 
-[Merchant Working Hours - Update](../api/?type=post&path=/updateWorkingHours/)
+[Merchant Working Hours - Update](../api/?type=post&path=/bwa/wsm/merchantinformation/workingHours/updateWorkingHours/)
 
-[Requests (Cases) - Open](../api/?type=get&path=/config/motivos)
+[Requests (Cases) - Open](../api/?type=get&path=/bwa/wsm/merchantinformation/workingHours/config/motivos)
 
-[Requests (Cases) - Search](../api/?type=get&path=/config/sub-motivos/{Id})
+[Requests (Cases) - Search](../api/?type=get&path=/bwa/abertura-caso/config/sub-motivos/{Id})
 
-[Paper Roll - Request](../api/?type=get&path=/{instituicao}/{merchant}/{logico})
+[Paper Roll - Request](../api/?type=get&path=/bwa/solicitabobina/{instituicao}/{merchant}/{logico})
 
-[Service Order - Terminal Maintenance](../api/?type=post&path=/updatePrepayFlag/)
+[Service Order - Terminal Maintenance](../api/?type=post&path=/bwa/wsm/fundingtools/prepayFlag/updatePrepayFlag/)
 
-[Service Order - Cancelling](../api/?type=post&path=/canceloperation/processCancelOperationRequest)
+[Service Order - Cancelling](../api/?type=post&path=/bwa/wsm/devicerequest/canceloperation/processCancelOperationRequest)
 
-[Service Order - Consult](../api/?type=get&path=/consultaos/{instituicao}/{numeroMerchant}/)
+[Service Order - Consult](../api/?type=get&path=/bwa/consultaos/{instituicao}/{numeroMerchant}/)
 
-[1]: APIs-Introduction.md
+[1]: /merchant-acquiring-latam/docs/español/banworks/APIs-Introduction.md

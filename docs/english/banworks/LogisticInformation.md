@@ -9,24 +9,24 @@ Below you can check each link to access the detailed document for each Web-servi
 
 [Token Access](../api/?type=post&path=/token/)
 
-[Logistic Information - Add/Consult](../api/?type=post&path=/dados-logistica/)
+[Logistic Information - Add/Consult](../api/?type=post&path=/bwa/dados-logistica/)
 
-[Merchant Addresses - Update](../api/?type=post&path=/updateAddress/)
+[Merchant Addresses - Update](../api/?type=post&path=/bwa/wsm/merchantinformation/address/updateAddress/)
 
-[Merchant Contact Information - Update](../api/?type=post&path=/updateContactInformation/)
+[Merchant Contact Information - Update](../api/?type=post&path=/bwa/wsm/merchantinformation/contact/updateContactInformation/)
 
-[Merchant Working Hours - Update](../api/?type=post&path=/updateWorkingHours/)
+[Merchant Working Hours - Update](../api/?type=post&path=/bwa/wsm/merchantinformation/workingHours/updateWorkingHours/)
 
-[Paper Roll - Request](../api/?type=get&path=/{instituicao}/{merchant}/{logico})
+[Paper Roll - Request](../api/?type=get&path=/bwa/solicitabobina/{instituicao}/{merchant}/{logico})
 
-[Prepayment - Enable/Disable](../api/?type=post&path=/updatePrepayFlag/)
+[Prepayment - Enable/Disable](../api/?type=post&path=/bwa/wsm/fundingtools/prepayFlag/updatePrepayFlag/)
 
-[Service Order - Cancelling](../api/?type=post&path=/canceloperation/processCancelOperationRequest)
+[Service Order - Cancelling](../api/?type=post&path=/bwa/wsm/devicerequest/canceloperation/processCancelOperationRequest)
 
-[Service Order - Consult](../api/?type=get&path=/consultaos/{instituicao}/{numeroMerchant}/)
+[Service Order - Consult](../api/?type=get&path=bwa/consultaos/{instituicao}/{numeroMerchant}/)
 
-[Service Order - Terminal Maintenance](../api/?type=post&path=/updatePrepayFlag/)
+[Service Order - Terminal Maintenance](../api/?type=post&path=/bwa/wsm/fundingtools/prepayFlag/updatePrepayFlag/)
 
-[Zipcode (CEP) - Consult](../api/?type=get&path=/cep/{cep})
+[Zipcode (CEP) - Consult](../api/?type=get&path=/bwa/cep-service/cep/{cep})
 
-[1]: APIs-Introduction.md
+[1]: /merchant-acquiring-latam/docs/english/banworks/APIs-Introduction.md

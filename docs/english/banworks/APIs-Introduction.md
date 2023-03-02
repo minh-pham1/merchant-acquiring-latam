@@ -306,7 +306,7 @@ The response is:
 
 ### 6.1 Sample in Postman
 
-Following in POST request for address update in [Postman][6]
+Following in POST request for address update in [Postman][3]
 
 ![Imagem mostrando a URL da API de atualização de endereços](../../assets/images/address-url.JPG "post request")
 
@@ -482,5 +482,5 @@ The response is:
 ```
 
  
- [2]: TokenGenerationforWeb-services.md
+ [2]: /merchant-acquiring-latam/docs/english/banworks/TokenGenerationforWeb-services.md
  [3]: https://www.getpostman.com

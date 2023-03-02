@@ -17,4 +17,4 @@ Abaixo você pode conferir cada link para acessar o documento detalhado de cada 
 [Token Access](../api/?type=post&path=/token/)
 
 
-[1]: APIs-Introduction.md
+[1]: /merchant-acquiring-latam/docs/portuguese/banworks/APIs-Introduction.md

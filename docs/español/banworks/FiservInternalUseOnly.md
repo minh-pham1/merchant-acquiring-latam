@@ -7,6 +7,6 @@ Para una breve introducción sobre cómo usar APIS, acceda a nuestra [introducci
 
 A continuación puede consultar cada enlace para acceder al documento detallado de cada servicio web (API), para que pueda desarrollar e implementar su negocio.
 
-[Token](TokenGenerationforWeb-services.md)
+[Token](/merchant-acquiring-latam/docs/español/banworks/TokenGenerationforWeb-services.md)
 
-[1]: APIs-Introduction.md
+[1]: /merchant-acquiring-latam/docs/español/banworks/APIs-Introduction.md
