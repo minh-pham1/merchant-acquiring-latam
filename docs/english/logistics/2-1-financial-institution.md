@@ -6,11 +6,11 @@ tags: [Financial Institution, Logistics, API, LATAM]
 
 In different occasions a merchant might request services that will require an intervention from one of Fiserv certified Field Services provider and there are some ground rules that requires attention before learning how to use the APIs:
 
-1. There must be an active merchant at the member level to be able to request a new terminal and the identification of such member must be known in advance,
-2. There must be an active terminal for the merchant selected at the member level to place a paper roll request and both identifications must be known before placing the request,
-3. There must be an active terminal for the merchant selected at the member level to place its withdrawal which means, you can’t, for seasonal periods, request a terminal to be installed at a future date and at the same time, request its withdrawal a few weeks / months later. The withdrawal service order can only be placed once the terminal is installed at the merchant location
+1. There must be an active merchant at the member level to be able to request a new terminal and the identification of such member must be known in advance.
+2. There must be an active terminal for the merchant selected at the member level to place a paper roll request and both identifications must be known before placing the request.
+3. There must be an active terminal for the merchant selected at the member level to place its withdrawal which means, you can’t, for seasonal periods, request a terminal to be installed at a future date and at the same time, request its withdrawal a few weeks / months later. The withdrawal service order can only be placed once the terminal is installed at the merchant location.
 4. It is vital for the success of the service order that the merchant directions are confirmed with the business owner or representative before generating the request because they can’t be changed later.
-5. Due to the integration method between Fiserv and our certified Field Services Provider, updates take place near real time, helping to provide accurate information
+5. Due to the integration method between Fiserv and our certified Field Services Provider, updates take place near real time, helping to provide accurate information.
 6. To use the APIs described in this document, an enrollment process at this developer portal must be concluded. Such process will generate the credentials required to use as parameters during an API request.
 
 The following diagram helps illustrate timings in which each mentioned API should be used.
@@ -19,7 +19,7 @@ The following diagram helps illustrate timings in which each mentioned API shoul
 
 Main APIs available here to be used by the Financial Institution will be:
 
-| API                             | API Owner               | API user                                          | Purpose                                                                                     |
+| API                             | API Owner               | API User                                          | Purpose                                                                                     |
 |---------------------------------|-------------------------|---------------------------------------------------|---------------------------------------------------------------------------------------------|
 | New ticket                      | Field Services Provider | Fiserv                                            | API to enable creation of Service Orders on vendor platform                                 |
 | Ticket update                   | Field Services Provider | Fiserv                                            | API to enable Service Orders update on vendor platform                                      |

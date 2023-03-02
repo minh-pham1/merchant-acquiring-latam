@@ -2,7 +2,7 @@
 
 Access a complete set of APIs right at your fingertips. Find developer tools, code samples and resources to help fully or semi integrate your apps into First Data's commerce platform.
 
-Want to tap into a new revenue stream? Integrate to First Data's Marketplace platform and sign up customers for payment processing directly from your site - and get paid!
+Want to tap into a new revenue stream? Integrate to First Data's Marketplace platform and sign-up customers for payment processing directly from your site - and get paid!
 
 ---
 
