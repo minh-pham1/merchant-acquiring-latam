@@ -33,4 +33,4 @@ Below you can check each link to access the detailed document for each Web-servi
 
 [Service Order - Consult](../api/?type=get&path=/bwa/consultaos/{instituicao}/{numeroMerchant}/)
 
-[1]: APIs-Introduction.md
+

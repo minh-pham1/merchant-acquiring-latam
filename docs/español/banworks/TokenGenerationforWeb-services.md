@@ -3,7 +3,7 @@
 
 ¡Bienvenido a nuestra documentación de soporte de API!
 
-Para obtener una breve introducción sobre cómo usar las API, acceda a nuestra [introducción][1].
+Para obtener una breve introducción sobre cómo usar las API, acceda a nuestra [introducción](?path=docs/español/banworks/APIs-Introduction.md).
 
 A continuación puede consultar cada enlace para acceder al documento detallado de cada servicio web (API), para que pueda desarrollar e implementar su negocio.
 
@@ -17,4 +17,3 @@ A continuación puede consultar cada enlace para acceder al documento detallado 
 [Token Access](../api/?type=post&path=/token/)
 
 
-[1]: /merchant-acquiring-latam/docs/español/banworks/APIs-Introduction.md
