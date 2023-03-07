@@ -19,7 +19,7 @@ Isso permite que os desenvolvedores usen qualquer linguagem de programação par
 
 Para acceder como APIs comece adquirindo um [Token Access](../api/?type=post&path=/token/)
 
-## Autenticação
+## Autenticación
 
 [Token Access](../api/?type=post&path=/token/)
 
@@ -41,7 +41,7 @@ Para acceder como APIs comece adquirindo um [Token Access](../api/?type=post&pat
 
 [Search for Device Service Types](../api/?type=get&path=/bwa/device-fees/device-service)
 
-## Informações de clientes
+## Información al cliente
 
 [Merchant Debits (fee, refund, reversal, etc)- Consult](../api/?type=get&path=/bwa/ajuste-debitos/v1/obter)
 
@@ -55,7 +55,7 @@ Para acceder como APIs comece adquirindo um [Token Access](../api/?type=post&pat
 
 [Existing Customer Validation - by Institution and Tax ID (CPF/CNPJ) and Service contract](../api/?type=get&path=/bwa/validacao-cliente/v3/credenciamento/documento/{instituicao}/{documento}/{service-contract})
 
-[Existing Customer Validation - Validation by Boarding Channel](../api/?type=get&path=/bwa/validacao-cliente/v2/credenciamento/canal)
+[Existing Customer Validation - Validation by Boarding Channel](../api/?type=post&path=/bwa/validacao-cliente/v2/credenciamento/canal)
 
 [Existing Customer Validation - Validation by MDR Comparison](../api/?type=post&path=/bwa/validacao-cliente/v2/credenciamento/taxa)
 
@@ -135,11 +135,11 @@ Para acceder como APIs comece adquirindo um [Token Access](../api/?type=post&pat
 
 [Merchant Working Hours - Update](../api/?type=post&path=/bwa/wsm/merchantinformation/workingHours/updateWorkingHours/)
 
-## Online Boarding
+## Embarque en línea
 
 [Online Boarding Endpoints](?path=docs/portuguese/banworks/BoardingInformation.md)
 
-## Payment & Prepayment
+## Pago y Prepago
 
 [Payment Settlement Account - Validation](../api/?type=post&path=/bwa/domicilio-bancario/)
 
@@ -189,7 +189,7 @@ Para acceder como APIs comece adquirindo um [Token Access](../api/?type=post&pat
 
 [Wallet - PIX - New Credentials](../api/?type=post&path=/pix/credentials)
 
-## Sales Information
+## Informacion sobre ventas
 
 [Merchant Authorizations History - Consult](../api/?type=get&path=/bwa/autorizacoesbw/v1/autorizacoesbw)
 
@@ -217,7 +217,7 @@ Para acceder como APIs comece adquirindo um [Token Access](../api/?type=post&pat
 
 [Merchant Sales - Suspended Transactions - Consult suspended summarized by Merchant ID](../api/?type=post&path=/bwa/consulta-transacoes-suspensas/v1/consulta/transacaosuspensaSumarizada)
 
-## Service Order Information
+## Información de orden de servicio
 
 [Tax ID (company) Validation(not available PROD)](../api/?type=get&path=/bwa/cnpj/{cnpj})
 

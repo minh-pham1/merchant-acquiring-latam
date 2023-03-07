@@ -18,11 +18,11 @@ This allows developers to use any programming language to access our APIs, secur
 
 To access the APIs, start by acquiring an [Access Token](../api/?type=post&path=/token/)
 
-## Autenticação
+## Authentication
 
 [Token Access](../api/?type=post&path=/token/)
 
-## Dispositivos
+## Devices
 
 [Merchant Devices - Battery Information - Get Terminal battery Information](../api/?type=post&path=/bwa/consulta-bateria/v1/consulta/comportamentoBateria)
 
@@ -40,7 +40,7 @@ To access the APIs, start by acquiring an [Access Token](../api/?type=post&path=
 
 [Search for Device Service Types](../api/?type=get&path=/bwa/device-fees/device-service)
 
-## Informações de clientes
+## Merchant Information
 
 [Merchant Debits (fee, refund, reversal, etc)- Consult](../api/?type=get&path=/bwa/ajuste-debitos/v1/obter)
 
@@ -54,7 +54,7 @@ To access the APIs, start by acquiring an [Access Token](../api/?type=post&path=
 
 [Existing Customer Validation - by Institution and Tax ID (CPF/CNPJ) and Service contract](../api/?type=get&path=/bwa/validacao-cliente/v3/credenciamento/documento/{instituicao}/{documento}/{service-contract})
 
-[Existing Customer Validation - Validation by Boarding Channel](../api/?type=get&path=/bwa/validacao-cliente/v2/credenciamento/canal)
+[Existing Customer Validation - Validation by Boarding Channel](../api/?type=post&path=/bwa/validacao-cliente/v2/credenciamento/canal)
 
 [Existing Customer Validation - Validation by MDR Comparison](../api/?type=post&path=/bwa/validacao-cliente/v2/credenciamento/taxa)
 

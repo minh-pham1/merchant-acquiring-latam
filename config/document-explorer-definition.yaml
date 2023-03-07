@@ -41,15 +41,15 @@
             link: docs/español/banworks/APIs-Introduction.md
           - title: Acceso a tokens
             link: docs/español/banworks/TokenGenerationforWeb-services.md
-          - title: Información de prepago
-            link: docs/español/banworks/PrepaymentInformation.md
-          - title: Backoffice
-            link: docs/español/banworks/BackofficeInformation.md
           - title: Acreditación
             link: docs/español/banworks/BoardingInformation.md
-          - title: Logística
+          - title: Backoffice
+            link: docs/español/banworks/BackofficeInformation.md
+          - title: Información de prepago
+            link: docs/español/banworks/PrepaymentInformation.md
+          - title: Logística & Terminales
             link: docs/español/banworks/LogisticAndDevicesInformation.md
-          - title: Ventas
+          - title: Ventas & Pagos
             link: docs/español/banworks/SalesAndPaymentsInformation.md
       - title: Boarding
         link: docs/español/boarding/1-boarding.md
@@ -103,18 +103,18 @@
             link: docs/english/banworks/HomepageEditada.md
           - title: Introduction
             link: docs/english/banworks/APIs-Introduction.md
-          - title: Token Access
-            link: docs/english/banworks/TokenGenerationforWeb-services.md
-          - title: Prepayment Info
-            link: docs/english/banworks/PrepaymentInformation.md
           - title: Backoffice
             link: docs/english/banworks/BackofficeInformation.md
           - title: Boarding
             link: docs/english/banworks/BoardingInformation.md
-          - title: Logistic
+          - title: Logistic & Devices
             link: docs/english/banworks/LogisticAndDevicesInformation.md
-          - title: Sales
+          - title: Sales & Payments
             link: docs/english/banworks/SalesAndPaymentsInformation.md
+          - title: Prepayment
+            link: docs/english/banworks/PrepaymentInformation.md
+          - title: Token Access
+            link: docs/english/banworks/TokenGenerationforWeb-services.md
       - title: Boarding
         link: docs/english/boarding/1-boarding.md
       - title: Logistics
@@ -175,9 +175,9 @@
             link: docs/portuguese/banworks/BackofficeInformation.md
           - title: Credenciamento
             link: docs/portuguese/banworks/BoardingInformation.md
-          - title: Logística
+          - title: Logística e Terminais
             link: docs/portuguese/banworks/LogisticAndDevicesInformation.md
-          - title: Vendas
+          - title: Vendas & Pagamentos
             link: docs/portuguese/banworks/SalesAndPaymentsInformation.md
       - title: Boarding
         link: docs/portuguese/boarding/1-boarding.md

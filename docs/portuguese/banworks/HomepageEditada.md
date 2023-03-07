@@ -55,7 +55,7 @@ Para acessar as APIs comece adquirindo um [Token Access](../api/?type=post&path=
 
 [Existing Customer Validation - by Institution and Tax ID (CPF/CNPJ) and Service contract](../api/?type=get&path=/bwa/validacao-cliente/v3/credenciamento/documento/{instituicao}/{documento}/{service-contract})
 
-[Existing Customer Validation - Validation by Boarding Channel](../api/?type=get&path=/bwa/validacao-cliente/v2/credenciamento/canal)
+[Existing Customer Validation - Validation by Boarding Channel](../api/?type=post&path=/bwa/validacao-cliente/v2/credenciamento/canal)
 
 [Existing Customer Validation - Validation by MDR Comparison](../api/?type=post&path=/bwa/validacao-cliente/v2/credenciamento/taxa)
 
@@ -135,11 +135,11 @@ Para acessar as APIs comece adquirindo um [Token Access](../api/?type=post&path=
 
 [Merchant Working Hours - Update](../api/?type=post&path=/bwa/wsm/merchantinformation/workingHours/updateWorkingHours/)
 
-## Online Boarding
+## Credenciamento
 
 [Online Boarding Endpoints](?path=docs/portuguese/banworks/BoardingInformation.md)
 
-## Payment & Prepayment
+## Pagamentos e Antecipações
 
 [Payment Settlement Account - Validation](../api/?type=post&path=/bwa/domicilio-bancario/)
 
@@ -189,7 +189,7 @@ Para acessar as APIs comece adquirindo um [Token Access](../api/?type=post&path=
 
 [Wallet - PIX - New Credentials](../api/?type=post&path=/pix/credentials)
 
-## Sales Information
+## Informações de Vendas
 
 [Merchant Authorizations History - Consult](../api/?type=get&path=/bwa/autorizacoesbw/v1/autorizacoesbw)
 

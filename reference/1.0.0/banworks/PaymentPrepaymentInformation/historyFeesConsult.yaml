@@ -525,7 +525,14 @@ components:
           type: string
           description: "Amoutn tax Prepayment"
           example: "260.4"
-
+        valorConfirmadoOriginal:
+          type: string
+          description: "Original Amoutn Confirmed"
+          example: "309.3"
+        valorRejeicaoCer":
+          type: string
+          description: "Rejection CERC Amoutn"
+          example: "309.3"
     PartialContent:
       type: object
       properties:
