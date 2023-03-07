@@ -88,7 +88,7 @@ Exemplo de resposta
 
 ## 3. Authentication
 
-As APIs Fiserv usam [Autenticação HMAC](?path=docs/portuguese/banworks/TokenGenerationforWeb-services.md).
+As APIs Fiserv usam [Autenticação HMAC](?path=docs/portuguese/digitalSolutions/TokenGenerationforWeb-services.md).
 
 Para poder aceder a qualquer um dos Códigos ou APIs descritos nesta plataforma, serão necessárias as credenciais enviadas por e-mail. Não tem as credenciais? Crie sua conta e solicite um Usuário/Senha enviando um e-mail para a caixa **FiservDigitalBrazil@firstdatacorp.com.br**.
 
@@ -104,7 +104,7 @@ Você deve enviar os seguintes parâmetros no cabeçalho para cada solicitação
 
 ### 3.1 auth
 
-No parâmetro **auth** - header - o usuário deve enviar o valor obtido em [Token details](?path=docs/portuguese/banworks/TokenGenerationforWeb-services.md).
+No parâmetro **auth** - header - o usuário deve enviar o valor obtido em [Token details](?path=docs/portuguese/digitalSolutions/TokenGenerationforWeb-services.md).
 
 Amostra de Token  "eyJhbGciOiJSUzI1NiIsInR5cCIgO [...] tFlCzaiEx06ETdkwoTC-CfzSaVA"
 

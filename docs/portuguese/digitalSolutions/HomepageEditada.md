@@ -3,7 +3,7 @@
 
 Bem-vindo à nossa documentação de suporte de APIs!
 
-Para uma breve introdução de como usar o APIS, acesse nossa [introdução](?path=docs/portuguese/banworks/APIs-Introduction.md).
+Para uma breve introdução de como usar o APIS, acesse nossa [introdução](?path=docs/portuguese/digitalSolutions/APIs-Introduction.md).
 
 Esta página descreve as APIs REST e os recursos fornecidos pela Fiserv. 
 
@@ -137,7 +137,7 @@ Para acessar as APIs comece adquirindo um [Token Access](../api/?type=post&path=
 
 ## Credenciamento
 
-[Online Boarding Endpoints](?path=docs/portuguese/banworks/BoardingInformation.md)
+[Online Boarding Endpoints](?path=docs/portuguese/digitalSolutions/BoardingInformation.md)
 
 ## Pagamentos e Antecipações
 
