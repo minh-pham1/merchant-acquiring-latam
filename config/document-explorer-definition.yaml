@@ -33,24 +33,6 @@
       sections:
       - title: Empezando
         link: docs/español/empezando.md
-      - title: Banworks
-        sections:
-          - title: Pagina principal
-            link: docs/español/banworks/HomepageEditada.md
-          - title: Introducción
-            link: docs/español/banworks/APIs-Introduction.md
-          - title: Acceso a tokens
-            link: docs/español/banworks/TokenGenerationforWeb-services.md
-          - title: Acreditación
-            link: docs/español/banworks/BoardingInformation.md
-          - title: Backoffice
-            link: docs/español/banworks/BackofficeInformation.md
-          - title: Información de prepago
-            link: docs/español/banworks/PrepaymentInformation.md
-          - title: Logística & Terminales
-            link: docs/español/banworks/LogisticAndDevicesInformation.md
-          - title: Ventas & Pagos
-            link: docs/español/banworks/SalesAndPaymentsInformation.md
       - title: Boarding
         link: docs/español/boarding/1-boarding.md
       - title: Logistics
@@ -89,6 +71,24 @@
           link: docs/español/pagos/3-12-tokenizacion.md
         - title: Códigos de Error
           link: docs/español/pagos/3-13-codigos-error.md
+      - title: Soluciones Digitales
+        sections:
+          - title: Pagina principal
+            link: docs/español/digitalSolutions/HomepageEditada.md
+          - title: Introducción
+            link: docs/español/digitalSolutions/APIs-Introduction.md
+          - title: Acceso a tokens
+            link: docs/español/digitalSolutions/TokenGenerationforWeb-services.md
+          - title: Acreditación
+            link: docs/español/digitalSolutions/BoardingInformation.md
+          - title: Backoffice
+            link: docs/español/digitalSolutions/BackofficeInformation.md
+          - title: Información de prepago
+            link: docs/español/digitalSolutions/PrepaymentInformation.md
+          - title: Logística & Terminales
+            link: docs/español/digitalSolutions/LogisticAndDevicesInformation.md
+          - title: Ventas & Pagos
+            link: docs/español/digitalSolutions/SalesAndPaymentsInformation.md
       - title: Related links
         link: docs/español/related-links.md
       - title: Release notes
@@ -97,26 +97,26 @@
       sections: 
       - title: Getting Started
         link: docs/english/getting-started.md
-      - title: Banworks
-        sections:
-          - title: Home
-            link: docs/english/banworks/HomepageEditada.md
-          - title: Introduction
-            link: docs/english/banworks/APIs-Introduction.md
-          - title: Backoffice
-            link: docs/english/banworks/BackofficeInformation.md
-          - title: Boarding
-            link: docs/english/banworks/BoardingInformation.md
-          - title: Logistic & Devices
-            link: docs/english/banworks/LogisticAndDevicesInformation.md
-          - title: Sales & Payments
-            link: docs/english/banworks/SalesAndPaymentsInformation.md
-          - title: Prepayment
-            link: docs/english/banworks/PrepaymentInformation.md
-          - title: Token Access
-            link: docs/english/banworks/TokenGenerationforWeb-services.md
       - title: Boarding
         link: docs/english/boarding/1-boarding.md
+      - title: Digital Solutions
+        sections:
+          - title: Home
+            link: docs/english/digitalSolutions/HomepageEditada.md
+          - title: Introduction
+            link: docs/english/digitalSolutions/APIs-Introduction.md
+          - title: Backoffice
+            link: docs/english/digitalSolutions/BackofficeInformation.md
+          - title: Boarding
+            link: docs/english/digitalSolutions/BoardingInformation.md
+          - title: Logistic & Devices
+            link: docs/english/digitalSolutions/LogisticAndDevicesInformation.md
+          - title: Sales & Payments
+            link: docs/english/digitalSolutions/SalesAndPaymentsInformation.md
+          - title: Prepayment
+            link: docs/english/digitalSolutions/PrepaymentInformation.md
+          - title: Token Access
+            link: docs/english/digitalSolutions/TokenGenerationforWeb-services.md
       - title: Logistics
         link: docs/english/logistics/2-logistics.md
         sections:
@@ -161,24 +161,6 @@
       sections:
       - title: Começando
         link: docs/portuguese/getting-started.md
-      - title: Banworks
-        sections:
-          - title: Página principal
-            link: docs/portuguese/banworks/HomepageEditada.md
-          - title: Introdução
-            link: docs/portuguese/banworks/APIs-Introduction.md
-          - title: Acesso a Token
-            link: docs/portuguese/banworks/TokenGenerationforWeb-services.md
-          - title: Informações de Antecipação
-            link: docs/portuguese/banworks/PrepaymentInformation.md
-          - title: Backoffice
-            link: docs/portuguese/banworks/BackofficeInformation.md
-          - title: Credenciamento
-            link: docs/portuguese/banworks/BoardingInformation.md
-          - title: Logística e Terminais
-            link: docs/portuguese/banworks/LogisticAndDevicesInformation.md
-          - title: Vendas & Pagamentos
-            link: docs/portuguese/banworks/SalesAndPaymentsInformation.md
       - title: Boarding
         link: docs/portuguese/boarding/1-boarding.md
       - title: Logistics
@@ -188,7 +170,6 @@
           link: docs/portuguese/logistics/2-1-financial-institution.md
         - title: Field Services Provider
           link: docs/portuguese/logistics/2-2-field-services-provider.md
-
       - title: Pagamentos
         link: docs/portuguese/payments/3-pagamentos.md
         sections:
@@ -218,6 +199,24 @@
           link: docs/portuguese/payments/3-12-tokenização.md
         - title: Códigos de erro
           link: docs/portuguese/payments/3-13-codigos-erro.md         
+      - title: Soluções digitais
+        sections:
+          - title: Página principal
+            link: docs/portuguese/digitalSolutions/HomepageEditada.md
+          - title: Introdução
+            link: docs/portuguese/digitalSolutions/APIs-Introduction.md
+          - title: Acesso a Token
+            link: docs/portuguese/digitalSolutions/TokenGenerationforWeb-services.md
+          - title: Informações de Antecipação
+            link: docs/portuguese/digitalSolutions/PrepaymentInformation.md
+          - title: Backoffice
+            link: docs/portuguese/digitalSolutions/BackofficeInformation.md
+          - title: Credenciamento
+            link: docs/portuguese/digitalSolutions/BoardingInformation.md
+          - title: Logística e Terminais
+            link: docs/portuguese/digitalSolutions/LogisticAndDevicesInformation.md
+          - title: Vendas & Pagamentos
+            link: docs/portuguese/digitalSolutions/SalesAndPaymentsInformation.md
       - title: Related links
         link: docs/portuguese/related-links.md
       - title: Release notes
