@@ -92,7 +92,7 @@ paths:
             type: string
         - name: statusAntecipacao
           in: query
-          description: "Anticipation status. Possible values: '001'(INICIALIZADO) | '002'(PENDENTE) | '003'(RECUSADA) | '004'(VENCIDO)  | '006'(PAGO) | '007'(AGUARDANDO CONFIRMACAO) | '008'(EFETUADA ENVIADA P PAGTO) | '009'(EFET PARC ENVIADA P PAGTO) | '010'(SOLICITACAO NAO APROVADA). Search example: 001,002"
+          description: "Anticipation status. Possible values: '001'(INICIALIZADO) | '002'(PENDENTE) | '003'(RECUSADA) | '004'(VENCIDO)  | '005'(CONFIRMADO) - Apenas para Automática | '006'(PAGO) | '007'(AGUARDANDO CONFIRMACAO) | '008'(EFETUADA ENVIADA P PAGTO) | '009'(EFET PARC ENVIADA P PAGTO) | '010'(SOLICITACAO NAO APROVADA). Search example: 001,002"
           example: "006"
           required: false
           schema:
@@ -525,7 +525,14 @@ components:
           type: string
           description: "Amoutn tax Prepayment"
           example: "260.4"
-
+        valorConfirmadoOriginal:
+          type: string
+          description: "Original Amoutn Confirmed"
+          example: "309.3"
+        valorRejeicaoCer":
+          type: string
+          description: "Rejection CERC Amoutn"
+          example: "309.3"
     PartialContent:
       type: object
       properties:
