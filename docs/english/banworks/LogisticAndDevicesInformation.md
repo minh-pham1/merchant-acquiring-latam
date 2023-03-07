@@ -1,11 +1,11 @@
 
-# Información Logística
+# Logistic Information
 
-¡Bienvenido a nuestra documentación de soporte de API!
+Welcome to our APIs Support Documentation!
 
-Para una breve introducción sobre cómo usar APIS, acceda a nuestra [introducción](?path=docs/español/banworks/APIs-Introduction.md).
+To a brief introduction of how to use the APIS, please access our [introduction](?path=docs/english/banworks/APIs-Introduction.md)..
 
-A continuación puede consultar cada enlace para acceder al documento detallado de cada servicio web (API), para que pueda desarrollar e implementar su negocio.
+Below you can check each link to access the detailed document for each Web-services (APIs), so you can develop and implement your business.
 
 [Token Access](../api/?type=post&path=/token/)
 
@@ -23,9 +23,10 @@ A continuación puede consultar cada enlace para acceder al documento detallado 
 
 [Service Order - Cancelling](../api/?type=post&path=/bwa/wsm/devicerequest/canceloperation/processCancelOperationRequest)
 
-[Service Order - Consult](../api/?type=get&path=bwa/consultaos/{instituicao}/{numeroMerchant}/)
+[Service Order - Consult](../api/?type=get&path=/bwa/consultaos/{instituicao}/{numeroMerchant})
 
 [Service Order - Terminal Maintenance](../api/?type=post&path=/bwa/wsm/fundingtools/prepayFlag/updatePrepayFlag/)
 
 [Zipcode (CEP) - Consult](../api/?type=get&path=/bwa/cep-service/cep/{cep})
+
 

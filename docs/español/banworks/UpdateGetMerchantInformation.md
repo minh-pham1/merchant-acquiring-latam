@@ -11,7 +11,7 @@ A continuación puede consultar cada enlace para acceder al documento detallado 
 
 [Merchant Addresses - Update](../api/?type=post&path=/bwa/wsm/merchantinformation/address/updateAddress/)
 
-[Merchant Devices and Fees - Consult](../api/?type=get&path=/bwa/mdr-fees/{institution}/{merchanID}/)
+[Merchant Devices and Fees - Consult](../api/?type=get&path=/bwa/mdr-fees/{institution}/{merchanID})
 
 [Merchant Customer Information - Consult](../api/?type=get&path=/bwa/estabelecimento/v2)
 

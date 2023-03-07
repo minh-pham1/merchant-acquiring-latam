@@ -62,7 +62,7 @@
         "banworks/ServiceOrderInformation/devicesMaintenance", "banworks/ServiceOrderInformation/serviceOrderCancelling",
         "banworks/ServiceOrderInformation/serviceOrderSearch", "banworks/ServiceOrderInformation/zipcodeConsult",
         "banworks/ServiceOrderInformation/cpfConsult", "banworks/ServiceOrderInformation/cnpjConsult",
-        "banworks/ServiceOrderInformation/microservices"
+        "banworks/ServiceOrderInformation/microservices", "banworks/ServiceOrderInformation/remoteTransaction"
       ]
     }
   ],
