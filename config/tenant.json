@@ -52,17 +52,21 @@
         "digitalSolutions/PaymentPrepaymentInformation/paymentsInformation", "digitalSolutions/PaymentPrepaymentInformation/prepaymentFlagUpdate",
         "digitalSolutions/PaymentPrepaymentInformation/prepaymentInformation", "digitalSolutions/PaymentPrepaymentInformation/historyFeesConsult",
         "digitalSolutions/PaymentPrepaymentInformation/automaticPrepayment", "digitalSolutions/PaymentPrepaymentInformation/anticipationsRealized",
-        "digitalSolutions/PaymentPrepaymentInformation/walletPix",
+        "digitalSolutions/PaymentPrepaymentInformation/walletPix", "digitalSolutions/PaymentPrepaymentInformation/cashflow",
+        "digitalSolutions/PaymentPrepaymentInformation/paymentsMade", "digitalSolutions/PaymentPrepaymentInformation/releasedPayments",
 
         "digitalSolutions/SalesInformation/merchantSales", "digitalSolutions/SalesInformation/processConsultOperation",
         "digitalSolutions/SalesInformation/keyedConsultTransaction", "digitalSolutions/SalesInformation/suspendedConsultTransaction",
         "digitalSolutions/SalesInformation/merchantAuthorizations", "digitalSolutions/SalesInformation/authorizationsHistoryBW",
-        "digitalSolutions/SalesInformation/chargebackExternal",
+        "digitalSolutions/SalesInformation/chargebackExternal", "digitalSolutions/SalesInformation/salesTracking",
 
         "digitalSolutions/ServiceOrderInformation/devicesMaintenance", "digitalSolutions/ServiceOrderInformation/serviceOrderCancelling",
         "digitalSolutions/ServiceOrderInformation/serviceOrderSearch", "digitalSolutions/ServiceOrderInformation/zipcodeConsult",
         "digitalSolutions/ServiceOrderInformation/cpfConsult", "digitalSolutions/ServiceOrderInformation/cnpjConsult",
-        "digitalSolutions/ServiceOrderInformation/microservices", "digitalSolutions/ServiceOrderInformation/remoteTransaction"
+        "digitalSolutions/ServiceOrderInformation/microservices", "digitalSolutions/ServiceOrderInformation/remoteTransaction",
+        "digitalSolutions/ServiceOrderInformation/cancellationReasonTmp", "digitalSolutions/ServiceOrderInformation/consultationPartnerEstablishment",
+        "digitalSolutions/ServiceOrderInformation/contractStatus", "digitalSolutions/ServiceOrderInformation/geoLocation",
+        "digitalSolutions/ServiceOrderInformation/modalConsultation"
       ]
     }
   ],

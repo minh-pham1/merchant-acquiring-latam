@@ -24,8 +24,6 @@ To access the APIs, start by acquiring an [Access Token](../api/?type=post&path=
 
 ## Devices
 
-[Merchant Devices - Battery Information - Get Terminal battery Information](../api/?type=post&path=/bwa/consulta-bateria/v1/consulta/comportamentoBateria)
-
 [Merchant Devices Daily Password - Consult](../api/?type=get&path=/bwa/senha-dia/v1/senha/dia)
 
 [Merchant Device Availability - Consult](../api/?type=get&path=/bwa/tecnologia/habilitadas-ec)
@@ -140,6 +138,18 @@ To access the APIs, start by acquiring an [Access Token](../api/?type=post&path=
 
 ## Payment & Prepayment
 
+[Get transaction details](../api/?type=get&path=/bwa/cashflow/v1/transactionDetails)
+
+[Get cash flow summary by scheme Total](../api/?type=get&path=/bwa/cashflow/v1/summaryByScheme/total)
+
+[Get cash flow summary by scheme for Products](../api/?type=get&path=/bwa/cashflow/v1/summaryByScheme/products)
+
+[Get Summary By Scheme For Period](../api/?type=get&path=/bwa/cashflow/v1/summaryByScheme/period)
+
+[Get resume](../api/?type=get&path=/bwa/cashflow/v1/resume)
+
+[Get cash flow detail by scheme](../api/?type=get&path=/bwa/cashflow/v1/detailByScheme)
+
 [Payment Settlement Account - Validation](../api/?type=post&path=/bwa/domicilio-bancario/)
 
 [Payment Settlement Account - Validation based on Rules for Bank and Type of Account](../api/?type=post&path=/bwa/domicilio-bancario/validar)
@@ -175,6 +185,12 @@ To access the APIs, start by acquiring an [Access Token](../api/?type=post&path=
 [Payments - Search for Payment Order](../api/?type=get&path=/bwa/pagamentos/resources/v1/transacoes/{inst}/{merchant}/{dataInicio}/{dataFim}/{ordemPagamento})
 
 [Payments - Search all Transactions for a period](../api/?type=get&path=/bwa/pagamentos/resources/v1/transacoes/{inst}/{merchant}/{dataInicio}/{dataFim})
+
+[Payments - Get Payments](../api/?type=get&path=/sba/PagamentosRealizados/{inst}/{merchant}/{dataInicio}/{dataFim})
+
+[Detailing payments](../api/?type=post&path=/bwa/pagamentos-liberados/v1/socs/detalhamento)
+
+[Detailing of sales](../api/?type=get&path=/bwa/pagamentos-liberados/v1/rocs/detalhamento)
 
 [Service Order - Terminal Maintenance - Prepayment Flag Update (Turn On/Off)](../api/?type=post&path=/bwa/wsm/fundingtools/prepayFlag/updatePrepayFlag/)
 
@@ -214,6 +230,8 @@ To access the APIs, start by acquiring an [Access Token](../api/?type=post&path=
 
 [Merchant Sales - Canceled - Consult - It allows the selection of MULTIPLE association schema](../api/?type=get&path=/bwa/vendas/resources/v2/canceladas)
 
+[Sales tracking](../api/?type=get&path=/bwa/acompanhamento-vendas/v1/acompanhamentoVendas)
+
 [Operations - Consult](../api/?type=post&path=/bwa/wsm/devicerequest/consultoperation/processConsultOperationRequest/)
 
 [Merchant Sales - Suspended Transactions - Consult](../api/?type=post&path=/bwa/consulta-transacoes-suspensas/v1/consulta/transacaosuspensa)
@@ -221,6 +239,18 @@ To access the APIs, start by acquiring an [Access Token](../api/?type=post&path=
 [Merchant Sales - Suspended Transactions - Consult suspended summarized by Merchant ID](../api/?type=post&path=/bwa/consulta-transacoes-suspensas/v1/consulta/transacaosuspensaSumarizada)
 
 ## Service Order Information
+
+[Find, by code, one cancellation reason registered in BR TMP](../api/?type=get&path=/bwa/service-order-cancellation-reason/{code})
+
+[List all cancellation reasons registered in TMP](../api/?type=get&path=/bwa/service-order-cancellation-reason/)
+
+[Search for Merchant by Partner Tax ID](../api/?type=get&path=/bwa/consulta-estabelecimento-socio/v1/consulta/{documento})
+
+[Merchant Status Update](../api/?type=post&path=/bwa/wsm/fundingtools/contractStatus/updateContractStatus)
+
+[Geo Location](../api/?type=get&path=/bwa/geocode/{address})
+
+[List all the special modals based on the parameters provided](../api/?type=get&path=/bwa/modal/search)
 
 [Tax ID (company) Validation(not available PROD)](../api/?type=get&path=/bwa/cnpj/{cnpj})
 
