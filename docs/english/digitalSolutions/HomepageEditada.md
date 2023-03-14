@@ -150,6 +150,10 @@ To access the APIs, start by acquiring an [Access Token](../api/?type=post&path=
 
 [Transactions related to Manual/Automatic Prepayment - Get details of sales on prepayments made by number](../api/?type=get&path=/bwa/antecipacoes-realizadas/v1/sumarizacao/socNumero)
 
+[Get prepayment status](../api/?type=get&path=/bwa/antecipacoes-realizadas/v1/cerc/status)
+
+[Get prepayment details](../api/?type=get&path=/bwa/antecipacoes-realizadas/v1/cerc/detalhes)
+
 [Transactions related to Manual/Automatic Prepayment](../api/?type=get&path=/bwa/antecipacoes-realizadas/v1/detalhamento/antecipacoesRealizadas)
 
 [Automatic Prepayment - Cancel - Consult Automatic Prepayment](../api/?type=get&path=/bwa/antecipacao-automatica/v1/antecipacao/)
