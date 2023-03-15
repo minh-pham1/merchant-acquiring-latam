@@ -75,22 +75,22 @@
     sections:
       - title: Digital Solutions
         sections:
-          - title: Home
-            link: docs/english/digitalSolutions/HomepageEditada.md
-          - title: Introduction
-            link: docs/english/digitalSolutions/APIs-Introduction.md
-          - title: Backoffice
-            link: docs/english/digitalSolutions/BackofficeInformation.md
-          - title: Boarding
-            link: docs/english/digitalSolutions/BoardingInformation.md
-          - title: Logistic & Devices
-            link: docs/english/digitalSolutions/LogisticAndDevicesInformation.md
-          - title: Sales & Payments
-            link: docs/english/digitalSolutions/SalesAndPaymentsInformation.md
-          - title: Prepayment
-            link: docs/english/digitalSolutions/PrepaymentInformation.md
-          - title: Token Access
-            link: docs/english/digitalSolutions/TokenGenerationforWeb-services.md
+        - title: Home
+          link: docs/english/digitalSolutions/HomepageEditada.md
+        - title: Introduction
+          link: docs/english/digitalSolutions/APIs-Introduction.md
+        - title: Backoffice
+          link: docs/english/digitalSolutions/BackofficeInformation.md
+        - title: Boarding
+          link: docs/english/digitalSolutions/BoardingInformation.md
+        - title: Logistic & Devices
+          link: docs/english/digitalSolutions/LogisticAndDevicesInformation.md
+        - title: Sales & Payments
+          link: docs/english/digitalSolutions/SalesAndPaymentsInformation.md
+        - title: Prepayment
+          link: docs/english/digitalSolutions/PrepaymentInformation.md
+        - title: Token Access
+          link: docs/english/digitalSolutions/TokenGenerationforWeb-services.md
   - title: Related links
     link: docs/english/related-links.md
   - title: Release notes
