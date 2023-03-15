@@ -29,195 +29,65 @@
 ################################################################################
 
 - sections:
-    - title: Español
-      sections:
-      - title: Empezando
-        link: docs/español/empezando.md
+  - title: Getting Started
+    link: docs/english/getting-started.md
+  - title: Boarding
+    link: docs/english/boarding/1-boarding.md
+  - title: Digital Solutions
+    sections:
+      - title: Home
+        link: docs/english/digitalSolutions/HomepageEditada.md
+      - title: Introduction
+        link: docs/english/digitalSolutions/APIs-Introduction.md
+      - title: Backoffice
+        link: docs/english/digitalSolutions/BackofficeInformation.md
       - title: Boarding
-        link: docs/español/boarding/1-boarding.md
-      - title: Logistics
-        link: docs/español/logistics/2-logistics.md
-        sections:
-        - title: Financial Institution
-          link: docs/español/logistics/2-1-financial-institution.md
-        - title: Field Services Provider
-          link: docs/español/logistics/2-2-field-services-provider.md
-      - title: Pagos e-Commerce
-        link: docs/español/pagos/3-pagos.md
-        sections:
-        - title: Tipos de Solicitudes
-          link: docs/español/pagos/3-1-tipos-solicitudes.md
-        - title: Métodos de Pago
-          link: docs/español/pagos/3-2-metodos-pago.md
-        - title: Formas de Pagos
-          link: docs/español/pagos/3-3-formas-pagos.md
-        - title: Pos-autorización & Devoluciones
-          link: docs/español/pagos/3-4-post-aut.md
-        - title: 3-D Secure
-          link: docs/español/pagos/3-5-3d-secure.md
-        - title: Verificación de Tarjeta
-          link: docs/español/pagos/3-6-verificacion-tarjeta.md
-        - title: Conversión de Moneda
-          link: docs/español/pagos/3-7-conversion-moneda.md
-        - title: Redirección Administrada
-          link: docs/español/pagos/3-8-redireccion-administrada.md
-        - title: Pedidos
-          link: docs/español/pagos/3-9-pedidos.md
-        - title: Pago URL
-          link: docs/español/pagos/3-10-pago-url.md
-        - title: Pagos Recurrentes
-          link: docs/español/pagos/3-11-pagos-recurrentes.md
-        - title: Tokenización
-          link: docs/español/pagos/3-12-tokenizacion.md
-        - title: Códigos de Error
-          link: docs/español/pagos/3-13-codigos-error.md
-      - title: Soluciones Digitales
-        sections:
-          - title: Pagina principal
-            link: docs/español/digitalSolutions/HomepageEditada.md
-          - title: Introducción
-            link: docs/español/digitalSolutions/APIs-Introduction.md
-          - title: Acceso a tokens
-            link: docs/español/digitalSolutions/TokenGenerationforWeb-services.md
-          - title: Acreditación
-            link: docs/español/digitalSolutions/BoardingInformation.md
-          - title: Backoffice
-            link: docs/español/digitalSolutions/BackofficeInformation.md
-          - title: Información de prepago
-            link: docs/español/digitalSolutions/PrepaymentInformation.md
-          - title: Logística & Terminales
-            link: docs/español/digitalSolutions/LogisticAndDevicesInformation.md
-          - title: Ventas & Pagos
-            link: docs/español/digitalSolutions/SalesAndPaymentsInformation.md
-      - title: Related links
-        link: docs/español/related-links.md
-      - title: Release notes
-        link: docs/release-notes/2023/español.md
-    - title: English
-      sections: 
-      - title: Getting Started
-        link: docs/english/getting-started.md
-      - title: Boarding
-        link: docs/english/boarding/1-boarding.md
-      - title: Digital Solutions
-        sections:
-          - title: Home
-            link: docs/english/digitalSolutions/HomepageEditada.md
-          - title: Introduction
-            link: docs/english/digitalSolutions/APIs-Introduction.md
-          - title: Backoffice
-            link: docs/english/digitalSolutions/BackofficeInformation.md
-          - title: Boarding
-            link: docs/english/digitalSolutions/BoardingInformation.md
-          - title: Logistic & Devices
-            link: docs/english/digitalSolutions/LogisticAndDevicesInformation.md
-          - title: Sales & Payments
-            link: docs/english/digitalSolutions/SalesAndPaymentsInformation.md
-          - title: Prepayment
-            link: docs/english/digitalSolutions/PrepaymentInformation.md
-          - title: Token Access
-            link: docs/english/digitalSolutions/TokenGenerationforWeb-services.md
-      - title: Logistics
-        link: docs/english/logistics/2-logistics.md
-        sections:
-        - title: Financial Institution
-          link: docs/english/logistics/2-1-financial-institution.md
-        - title: Field Services Provider
-          link: docs/english/logistics/2-2-field-services-provider.md       
-      - title: Payments
-        link: docs/english/payments/3-payments.md
-        sections:
-        - title: Request Types
-          link: docs/english/payments/3-1-request-types.md
-        - title: Payment Methods
-          link: docs/english/payments/3-2-payment-methods.md
-        - title: Payment Types
-          link: docs/english/payments/3-3-payment-types.md
-        - title: Post-authorisation & Returns
-          link: docs/english/payments/3-4-post-auth.md
-        - title: 3-D Secure
-          link: docs/english/payments/3-5-3d-secure.md
-        - title: Card Verification
-          link: docs/english/payments/3-6-card-verification.md
-        - title: Currency Conversion
-          link: docs/english/payments/3-7-currency-conversion.md
-        - title: Managed Redirect
-          link: docs/english/payments/3-8-managed-redirect.md
-        - title: Orders
-          link: docs/english/payments/3-9-orders.md
-        - title: Payment URL
-          link: docs/english/payments/3-10-payment-url.md
-        - title: Recurring Payments
-          link: docs/english/payments/3-11-recurring-payments.md
-        - title: Tokenisation
-          link: docs/english/payments/3-12-tokenisation.md
-        - title: Error codes
-          link: docs/english/payments/3-13-error-codes.md
-      - title: Related links
-        link: docs/english/related-links.md
-      - title: Release notes
-        link: docs/release-notes/2023/english.md
-    - title: Portuguese
-      sections:
-      - title: Começando
-        link: docs/portuguese/getting-started.md
-      - title: Boarding
-        link: docs/portuguese/boarding/1-boarding.md
-      - title: Logistics
-        link: docs/portuguese/logistics/2-logistics.md   
-        sections:
-        - title: Financial Institution
-          link: docs/portuguese/logistics/2-1-financial-institution.md
-        - title: Field Services Provider
-          link: docs/portuguese/logistics/2-2-field-services-provider.md
-      - title: Pagamentos
-        link: docs/portuguese/payments/3-pagamentos.md
-        sections:
-        - title: Tipos de Requisição
-          link: docs/portuguese/payments/3-1-tipos-requisição.md
-        - title: Métodos de Pagamento
-          link: docs/portuguese/payments/3-2-metodos-pagamento.md
-        - title: Tipos de pagamento
-          link: docs/portuguese/payments/3-3-tipos-pagamento.md
-        - title: Post-authorisation & Returns
-          link: docs/portuguese/payments/3-4-post-auth.md
-        - title: 3-D Secure
-          link: docs/portuguese/payments/3-5-3d-secure.md
-        - title: Verificação de Cartão
-          link: docs/portuguese/payments/3-6-verificação-cartão.md
-        - title: Conversão de Moeda
-          link: docs/portuguese/payments/3-7-conversão-moeda.md
-        - title: Redirecionamento Controlado
-          link: docs/portuguese/payments/3-8-redirecionamento-controlado.md
-        - title: Ordens
-          link: docs/portuguese/payments/3-9-ordens.md
-        - title: Link de Pagamento
-          link: docs/portuguese/payments/3-10-link-pagamento.md
-        - title: Pagamento Recorrente
-          link: docs/portuguese/payments/3-11-pagamento-recorrente.md
-        - title: Tokenização
-          link: docs/portuguese/payments/3-12-tokenização.md
-        - title: Códigos de erro
-          link: docs/portuguese/payments/3-13-codigos-erro.md         
-      - title: Soluções digitais
-        sections:
-          - title: Página principal
-            link: docs/portuguese/digitalSolutions/HomepageEditada.md
-          - title: Introdução
-            link: docs/portuguese/digitalSolutions/APIs-Introduction.md
-          - title: Acesso a Token
-            link: docs/portuguese/digitalSolutions/TokenGenerationforWeb-services.md
-          - title: Informações de Antecipação
-            link: docs/portuguese/digitalSolutions/PrepaymentInformation.md
-          - title: Backoffice
-            link: docs/portuguese/digitalSolutions/BackofficeInformation.md
-          - title: Credenciamento
-            link: docs/portuguese/digitalSolutions/BoardingInformation.md
-          - title: Logística e Terminais
-            link: docs/portuguese/digitalSolutions/LogisticAndDevicesInformation.md
-          - title: Vendas & Pagamentos
-            link: docs/portuguese/digitalSolutions/SalesAndPaymentsInformation.md
-      - title: Related links
-        link: docs/portuguese/related-links.md
-      - title: Release notes
-        link: docs/release-notes/2023/portuguese.md
+        link: docs/english/digitalSolutions/BoardingInformation.md
+      - title: Logistic & Devices
+        link: docs/english/digitalSolutions/LogisticAndDevicesInformation.md
+      - title: Sales & Payments
+        link: docs/english/digitalSolutions/SalesAndPaymentsInformation.md
+      - title: Prepayment
+        link: docs/english/digitalSolutions/PrepaymentInformation.md
+      - title: Token Access
+        link: docs/english/digitalSolutions/TokenGenerationforWeb-services.md
+  - title: Logistics
+    link: docs/english/logistics/2-logistics.md
+    sections:
+    - title: Financial Institution
+      link: docs/english/logistics/2-1-financial-institution.md
+    - title: Field Services Provider
+      link: docs/english/logistics/2-2-field-services-provider.md       
+  - title: Payments
+    link: docs/english/payments/3-payments.md
+    sections:
+    - title: Request Types
+      link: docs/english/payments/3-1-request-types.md
+    - title: Payment Methods
+      link: docs/english/payments/3-2-payment-methods.md
+    - title: Payment Types
+      link: docs/english/payments/3-3-payment-types.md
+    - title: Post-authorisation & Returns
+      link: docs/english/payments/3-4-post-auth.md
+    - title: 3-D Secure
+      link: docs/english/payments/3-5-3d-secure.md
+    - title: Card Verification
+      link: docs/english/payments/3-6-card-verification.md
+    - title: Currency Conversion
+      link: docs/english/payments/3-7-currency-conversion.md
+    - title: Managed Redirect
+      link: docs/english/payments/3-8-managed-redirect.md
+    - title: Orders
+      link: docs/english/payments/3-9-orders.md
+    - title: Payment URL
+      link: docs/english/payments/3-10-payment-url.md
+    - title: Recurring Payments
+      link: docs/english/payments/3-11-recurring-payments.md
+    - title: Tokenisation
+      link: docs/english/payments/3-12-tokenisation.md
+    - title: Error codes
+      link: docs/english/payments/3-13-error-codes.md
+  - title: Related links
+    link: docs/english/related-links.md
+  - title: Release notes
+    link: docs/release-notes/2023/english.md
