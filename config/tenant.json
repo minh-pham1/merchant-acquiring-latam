@@ -30,6 +30,7 @@
         "digitalSolutions/Authentication/tokenAccess",
 
         "digitalSolutions/OnlineBoarding/statusProposal", "digitalSolutions/OnlineBoarding/onlineBoarding",
+        "digitalSolutions/OnlineBoarding/onlineBoarding2",
 
         "digitalSolutions/DevicesInformation/deviceAvailability", "digitalSolutions/DevicesInformation/devicesFees",
         "digitalSolutions/DevicesInformation/batteryInformation", "digitalSolutions/DevicesInformation/deviceBillingHistory",
