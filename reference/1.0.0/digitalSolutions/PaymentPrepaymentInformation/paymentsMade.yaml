@@ -1,0 +1,257 @@
+openapi: 3.0.0
+info:
+  description: Api Documentation
+  version: "1.0"
+  title: Api Documentation
+  termsOfService: urn:tos
+  contact: {}
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0
+servers:
+  - url: https://int.api.firstdata.com
+x-header-api-key: 'X0GW3QGOYFn4r7DHcVC8KuatUnNs6MGB'
+x-header-api-secret: 'N93nmFmoY0NzSMC5'
+x-production-url: prod.api.firstdata.com
+x-config:
+  tryItOut: true
+tags:
+  - name: pagamentos-realizados-resource
+    description: Pagamentos Realizados Resource
+paths:
+  "/sba/PagamentosRealizados/{inst}/{merchant}/{dataInicio}/{dataFim}":
+    get:
+      tags:
+        - pagamentos-realizados-resource
+      x-proxy-name: Get Payments
+      x-group-name: Payment & Prepayment Information
+      x-child-product-name: Digital Solutions
+      summary: getPagamentos
+      operationId: getPagamentosUsingGET
+      parameters:
+        - name: Message-Signature
+          in: header
+          description: HMAC
+          required: true
+          example: 1tsmkG9Ip3k2rcO5cETButfP3D/RS6U8troFF+mUrno=
+          schema:
+            type: string
+        - name: Api-Key
+          in: header
+          description: APigee Key
+          required: true
+          example:
+          schema:
+            type: string
+        - name: auth
+          in: header
+          description: Oauth Key
+          required: true
+          example:
+          schema:
+            type: string
+        - name: Timestamp
+          in: header
+          description: Data em formato epoch
+          required: true
+          example: 1563309156733
+          schema:
+            type: string
+        - name: Client-Request-Id
+          in: header
+          description: Deve ser gerada aleatoriamente pelo Cliente
+          required: true
+          example: 6NYHj9Pgyxc84rmafpwG4fjhLwFfJYFVmxJOcgziD0QN3q6mGC
+          schema:
+            type: string
+        - name: codigoBandeira
+          in: header
+          description: "Código da Bandeira. "
+          required: false
+          schema:
+            type: string
+        - name: codigoProduto
+          in: header
+          description: "Código do produto. "
+          required: false
+          schema:
+            type: string
+        - name: dataFim
+          in: path
+          description: Data fim da pesquisa no formato yyyyMMdd
+          required: true
+          schema:
+            type: string
+        - name: dataInicio
+          in: path
+          description: Data inicio da pesquisa no formato yyyyMMdd
+          required: true
+          schema:
+            type: string
+        - name: inst
+          in: path
+          description: Código Instituição
+          required: true
+          schema:
+            type: string
+        - name: merchant
+          in: path
+          description: Código estabelecimento
+          required: true
+          schema:
+            type: string
+        - name: tipoSumarizacao
+          in: header
+          description: "Tipo de sumarização. Valores aceitos: D para data, B para bandeira,
+            P para produto e T para todos os tipos de sumarização"
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Consulta realizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PagamentosRealizados"
+      deprecated: false
+components:
+  schemas:
+    OrdemPagamento:
+      type: object
+      properties:
+        codigoStatusPagto:
+          type: string
+        codigoTipoPagto:
+          type: string
+        dataEfetivaPagto:
+          type: string
+        descStatusPagto:
+          type: string
+        descTipoPagto:
+          type: string
+        numeroBanco:
+          type: string
+        numeroContaCorrente:
+          type: string
+        numeroOrdemPagto:
+          type: string
+        numertoAgencia:
+          type: string
+        transacoesPagas:
+          type: array
+          items:
+            $ref: "#/components/schemas/TransacaoPaga"
+        valorPagtoLiquido:
+          type: string
+      title: OrdemPagamento
+    PagamentosRealizados:
+      type: object
+      properties:
+        codigoRetorno:
+          type: string
+        descricaoRetorno:
+          type: string
+        ordensPagamento:
+          type: array
+          items:
+            $ref: "#/components/schemas/OrdemPagamento"
+        sumarizacaoTransacoesPagas:
+          type: array
+          items:
+            $ref: "#/components/schemas/Sumarizacao"
+      title: PagamentosRealizados
+      xml:
+        name: pagamentos
+        attribute: false
+        wrapped: false
+    Sumarizacao:
+      type: object
+      properties:
+        codTipoTransacao:
+          type: string
+        codigoBandeira:
+          type: string
+        codigoProduto:
+          type: string
+        data:
+          type: string
+        descTipoTransacao:
+          type: string
+        descricaoBandeira:
+          type: string
+        descricaoProduto:
+          type: string
+        qtdTransacoes:
+          type: string
+        valorBrutoMedio:
+          type: string
+        valorBrutoParcela:
+          type: string
+        valorDescontoParcela:
+          type: string
+        valorLiquidoMedio:
+          type: string
+        valorLiquidoParcela:
+          type: string
+      title: Sumarizacao
+    TransacaoPaga:
+      type: object
+      properties:
+        codAutorizacao:
+          type: string
+        codBandeira:
+          type: string
+        codProdutoTransacao:
+          type: string
+        codTipoCaptura:
+          type: string
+        codTipoCartao:
+          type: string
+        codTipoTransacao:
+          type: string
+        comprovante:
+          type: string
+        dataPrevistaPagto:
+          type: string
+        dataTransacao:
+          type: string
+        descBandeira:
+          type: string
+        descProdutoTransacao:
+          type: string
+        descTipoCaptura:
+          type: string
+        descTipoCartao:
+          type: string
+        descTipoTransacao:
+          type: string
+        horaTransacao:
+          type: string
+        indicadorCancelVenda:
+          type: string
+        indicadorCredDeb:
+          type: string
+        numCartao:
+          type: string
+        numTerminal:
+          type: string
+        numeroParcela:
+          type: string
+        numeroParcelado:
+          type: string
+        numeroResumoVenda:
+          type: string
+        numeroTransacao:
+          type: string
+        qtdeParcelas:
+          type: string
+        valorBrutoParcela:
+          type: string
+        valorDescontoParcela:
+          type: string
+        valorLiquidoParcela:
+          type: string
+        valorTotalPlano:
+          type: string
+      title: TransacaoPaga

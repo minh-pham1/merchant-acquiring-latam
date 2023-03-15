@@ -4,6 +4,32 @@ tags: [Release Notes, January]
 
 # Release Notes
 
+## Março 2023
+
+
+### Novidades
+
+- Endpoints relacionados a: Service Order Information (cancellationReasonRMP, consultationPartnerEstablishment, contractStatus, geoLocation, modalConsultation)
+- Endpoints relacionados a: Sales Information (salesTracking)
+- Endpoints relacionados a: Payment & Prepayment (cashflow, paymentsMade, releasedPayments, anticipationsRealized)
+
+### Melhorias
+
+- N / A
+
+### Correções
+
+- **BANWORKS** passa a se chamar **Digital Solutions**
+
+### Erros conhecidos
+
+- N / A
+
+### Caducado
+
+- Merchant Devices - Battery Information - Desligado
+
+
 ## Feverreiro 2023
 
 
