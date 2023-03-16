@@ -103,17 +103,17 @@ These examples are show below:
 
 The ```/payments``` endpoint allows you to ```create```, ```inquire``` about, and ```finalize``` payment transactions.
 
-It will enable you to ```void``` a previous transaction, to ```refund``` a previous transaction or to execute ```partial refunds``` or ```voids```. Finally, and where necessary, it will enable you to ```pre-authorise``` transactions that can be completed later.
+It will enable you to ```void``` a previous transaction, to ```refund``` a previous transaction or to execute ```partial refunds``` or ```voids```. Finally, and where necessary, it will enable you to ```pre-authorize``` transactions that can be completed later.
 
 The API enables you to make payments using different payment instruments, via credit or debit cards, tokens or through local payments methods such as SEPA DD or Paypal account. All of these methods are explained below.
 
 You can use the API to accept wallet transactions via payment methods such as Apple Pay or Google Pay. It will allow you to use extra authentication protocols to ensure customer payments are safer, and to protect you from fraud.
 
-Our Payments API has two main uses - Primary and Secondary Transactions. Primary transactions are typical sale transactions, pre-authorisations or credits. Secondary Transactions let you refund a transaction, void a transaction or complete a pre-authorisation.
+Our Payments API has two main uses - Primary and Secondary Transactions. Primary transactions are typical sale transactions, pre-authorizations or credits. Secondary Transactions let you refund a transaction, void a transaction or complete a pre-authorization.
 
 ## Creating a 'primary' transaction
 
-Primary transactions are used to execute a customer payment, pre-authorisation or credit transaction without reference to a prior transaction. For this walkthrough, we’re going to use the PaymentCardSaleTransaction request type (all request types should have links), which you can use for a normal credit or debit card payment transaction without reference to a previous transaction. Each of the different request types, the scenarios in which you might want to use them, and the differences in the JSON for each request type, are explained within this guide.
+Primary transactions are used to execute a customer payment, pre-authorization or credit transaction without reference to a prior transaction. For this walkthrough, we’re going to use the PaymentCardSaleTransaction request type (all request types should have links), which you can use for a normal credit or debit card payment transaction without reference to a previous transaction. Each of the different request types, the scenarios in which you might want to use them, and the differences in the JSON for each request type, are explained within this guide.
 
 The ```PaymentCardSaleTransaction``` request type requires the following fields to post a Primary Transaction.
 
@@ -183,18 +183,18 @@ The flow below shows a standard payments process using a card payment transactio
 
 ## See Also
 
-- [Request Types](?path=docs/english/payments/3-1-request-types.md)
-- [Payment Methods](?path=docs/english/payments/3-2-payment-methods.md)
-- [Payment Types](?path=docs/english/payments/3-3-payment-types.md)
-- [Post-authorisation & Returns](?path=docs/english/payments/3-4-post-auth.md)
 - [3-D Secure](?path=docs/english/payments/3-5-3d-secure.md)
 - [Card Verification](?path=docs/english/payments/3-6-card-verification.md)
 - [Currency Conversion](?path=docs/english/payments/3-7-currency-conversion.md)
+- [Error codes](?path=docs/english/payments/3-13-error-codes.md)
 - [Managed Redirect](?path=docs/english/payments/3-8-managed-redirect.md)
 - [Orders](?path=docs/english/payments/3-9-orders.md)
+- [Payment Methods](?path=docs/english/payments/3-2-payment-methods.md)
+- [Payment Types](?path=docs/english/payments/3-3-payment-types.md)
 - [Payment URL](?path=docs/english/payments/3-10-payment-url.md)
+- [Post-authorization & Returns](?path=docs/english/payments/3-4-post-auth.md)
 - [Recurring Payments](?path=docs/english/payments/3-11-recurring-payments.md)
-- [Tokenisation](?path=docs/english/payments/3-12-tokenisation.md)
-- [Error codes](?path=docs/english/payments/3-13-error-codes.md)
+- [Request Types](?path=docs/english/payments/3-1-request-types.md)
+- [Tokenization](?path=docs/english/payments/3-12-tokenisation.md)
 
 ---

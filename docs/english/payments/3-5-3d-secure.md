@@ -241,7 +241,7 @@ The transaction response contains a secure3dResponse object and the transaction 
 
 The 'secure3dResponse' object will contain the following field: 'responseCode3dSecure'
 
-The following JSON document represents an example of a response you receive from the API indicating, that the authorisation has been successful:
+The following JSON document represents an example of a response you receive from the API indicating, that the authorization has been successful:
 
 ```json
 {
@@ -269,7 +269,7 @@ The following JSON document represents an example of a response you receive from
 
 ## Challenge Flow
 
-The challenge flow is triggered, when the transaction is not considered as low risk or when the Issuer requires additional authentication by the cardholder. The whole process starts with an initial Authorisation or Sale transaction request through the step where 3DSMethod is displayed, as described in Steps 1 through 4 above.
+The challenge flow is triggered, when the transaction is not considered as low risk or when the Issuer requires additional authentication by the cardholder. The whole process starts with an initial Authorization or Sale transaction request through the step where 3DSMethod is displayed, as described in Steps 1 through 4 above.
 
 ### Step 6: Request to continue with 3DS Authentication
 
@@ -668,17 +668,17 @@ The following JSON document represents an example of a response you receive from
 
 ## See Also
 
-- [Request Types](?path=docs/english/payments/3-1-request-types.md)
-- [Payment Methods](?path=docs/english/payments/3-2-payment-methods.md)
-- [Payment Types](?path=docs/english/payments/3-3-payment-types.md)
-- [Post-authorisation & Returns](?path=docs/english/payments/3-4-post-auth.md)
 - [Card Verification](?path=docs/english/payments/3-6-card-verification.md)
 - [Currency Conversion](?path=docs/english/payments/3-7-currency-conversion.md)
+- [Error codes](?path=docs/english/payments/3-13-error-codes.md)
 - [Managed Redirect](?path=docs/english/payments/3-8-managed-redirect.md)
 - [Orders](?path=docs/english/payments/3-9-orders.md)
+- [Payment Methods](?path=docs/english/payments/3-2-payment-methods.md)
+- [Payment Types](?path=docs/english/payments/3-3-payment-types.md)
 - [Payment URL](?path=docs/english/payments/3-10-payment-url.md)
+- [Post-authorization & Returns](?path=docs/english/payments/3-4-post-auth.md)
 - [Recurring Payments](?path=docs/english/payments/3-11-recurring-payments.md)
-- [Tokenisation](?path=docs/english/payments/3-12-tokenisation.md)
-- [Error codes](?path=docs/english/payments/3-13-error-codes.md)
+- [Request Types](?path=docs/english/payments/3-1-request-types.md)
+- [Tokenization](?path=docs/english/payments/3-12-tokenisation.md)
 
 ---
