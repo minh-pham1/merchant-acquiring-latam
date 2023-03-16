@@ -103,17 +103,17 @@ These examples are show below:
 
 The ```/payments``` endpoint allows you to ```create```, ```inquire``` about, and ```finalize``` payment transactions.
 
-It will enable you to ```void``` a previous transaction, to ```refund``` a previous transaction or to execute ```partial refunds``` or ```voids```. Finally, and where necessary, it will enable you to ```pre-authorise``` transactions that can be completed later.
+It will enable you to ```void``` a previous transaction, to ```refund``` a previous transaction or to execute ```partial refunds``` or ```voids```. Finally, and where necessary, it will enable you to ```pre-authorize``` transactions that can be completed later.
 
 The API enables you to make payments using different payment instruments, via credit or debit cards, tokens or through local payments methods such as SEPA DD or Paypal account. All of these methods are explained below.
 
 You can use the API to accept wallet transactions via payment methods such as Apple Pay or Google Pay. It will allow you to use extra authentication protocols to ensure customer payments are safer, and to protect you from fraud.
 
-Our Payments API has two main uses - Primary and Secondary Transactions. Primary transactions are typical sale transactions, pre-authorisations or credits. Secondary Transactions let you refund a transaction, void a transaction or complete a pre-authorisation.
+Our Payments API has two main uses - Primary and Secondary Transactions. Primary transactions are typical sale transactions, pre-authorizations or credits. Secondary Transactions let you refund a transaction, void a transaction or complete a pre-authorization.
 
 ## Creating a 'primary' transaction
 
-Primary transactions are used to execute a customer payment, pre-authorisation or credit transaction without reference to a prior transaction. For this walkthrough, we’re going to use the PaymentCardSaleTransaction request type (all request types should have links), which you can use for a normal credit or debit card payment transaction without reference to a previous transaction. Each of the different request types, the scenarios in which you might want to use them, and the differences in the JSON for each request type, are explained within this guide.
+Primary transactions are used to execute a customer payment, pre-authorization or credit transaction without reference to a prior transaction. For this walkthrough, we’re going to use the PaymentCardSaleTransaction request type (all request types should have links), which you can use for a normal credit or debit card payment transaction without reference to a previous transaction. Each of the different request types, the scenarios in which you might want to use them, and the differences in the JSON for each request type, are explained within this guide.
 
 The ```PaymentCardSaleTransaction``` request type requires the following fields to post a Primary Transaction.
 
