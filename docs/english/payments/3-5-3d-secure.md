@@ -241,7 +241,7 @@ The transaction response contains a secure3dResponse object and the transaction 
 
 The 'secure3dResponse' object will contain the following field: 'responseCode3dSecure'
 
-The following JSON document represents an example of a response you receive from the API indicating, that the authorisation has been successful:
+The following JSON document represents an example of a response you receive from the API indicating, that the authorization has been successful:
 
 ```json
 {
@@ -269,7 +269,7 @@ The following JSON document represents an example of a response you receive from
 
 ## Challenge Flow
 
-The challenge flow is triggered, when the transaction is not considered as low risk or when the Issuer requires additional authentication by the cardholder. The whole process starts with an initial Authorisation or Sale transaction request through the step where 3DSMethod is displayed, as described in Steps 1 through 4 above.
+The challenge flow is triggered, when the transaction is not considered as low risk or when the Issuer requires additional authentication by the cardholder. The whole process starts with an initial Authorization or Sale transaction request through the step where 3DSMethod is displayed, as described in Steps 1 through 4 above.
 
 ### Step 6: Request to continue with 3DS Authentication
 
