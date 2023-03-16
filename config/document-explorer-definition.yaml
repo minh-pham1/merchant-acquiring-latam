@@ -51,7 +51,7 @@
           link: docs/english/payments/3-6-card-verification.md
         - title: Currency Conversion
           link: docs/english/payments/3-7-currency-conversion.md
-        - title: Error codes
+        - title: Error Codes
           link: docs/english/payments/3-13-error-codes.md
         - title: Managed Redirect
           link: docs/english/payments/3-8-managed-redirect.md
