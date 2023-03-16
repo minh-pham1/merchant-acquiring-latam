@@ -45,32 +45,32 @@
       - title: Payments
         link: docs/english/payments/3-payments.md
         sections:
-        - title: Request Types
-          link: docs/english/payments/3-1-request-types.md
-        - title: Payment Methods
-          link: docs/english/payments/3-2-payment-methods.md
-        - title: Payment Types
-          link: docs/english/payments/3-3-payment-types.md
-        - title: Post-authorisation & Returns
-          link: docs/english/payments/3-4-post-auth.md
         - title: 3-D Secure
           link: docs/english/payments/3-5-3d-secure.md
         - title: Card Verification
           link: docs/english/payments/3-6-card-verification.md
         - title: Currency Conversion
           link: docs/english/payments/3-7-currency-conversion.md
+        - title: Error Codes
+          link: docs/english/payments/3-13-error-codes.md
         - title: Managed Redirect
           link: docs/english/payments/3-8-managed-redirect.md
         - title: Orders
           link: docs/english/payments/3-9-orders.md
+        - title: Payment Methods
+          link: docs/english/payments/3-2-payment-methods.md
+        - title: Payment Types
+          link: docs/english/payments/3-3-payment-types.md          
         - title: Payment URL
           link: docs/english/payments/3-10-payment-url.md
+        - title: Post-authorisation & Returns
+          link: docs/english/payments/3-4-post-auth.md
         - title: Recurring Payments
           link: docs/english/payments/3-11-recurring-payments.md
+        - title: Request Types
+          link: docs/english/payments/3-1-request-types.md
         - title: Tokenisation
           link: docs/english/payments/3-12-tokenisation.md
-        - title: Error codes
-          link: docs/english/payments/3-13-error-codes.md
   - title: Brazil
     sections:
       - title: Digital Solutions

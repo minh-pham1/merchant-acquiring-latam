@@ -1,14 +1,14 @@
 ---
-tags: [Getting Started, Payments, Tokenisation]
+tags: [Getting Started, Payments, Tokenization]
 ---
 
-# Tokenisation
+# Tokenization
 
 ## Tokens
 
 Tokens are useful when storing the details of a customer’s payment instruments to secure and speed up checkout later. When you collect a customer's payment methods, you can request a token, which you can then use in place of a customer’s card details to execute future payments. You will need to store the token on your platform, mapped to the customer’s account details.
 
-Tokens are useful as they reduce the risk of attacks on your and our payments systems being successful. Tokenisation also reduces the PCI Requirement for you, as it means you don't need to store card details within your systems, which should reduce your costs associated with PCI Compliance.
+Tokens are useful as they reduce the risk of attacks on your and our payments systems being successful. Tokenization also reduces the PCI Requirement for you, as it means you don't need to store card details within your systems, which should reduce your costs associated with PCI Compliance.
 
 To generate a Token for future use at the same time as submitting a payment, use the createToken object to set a Token up for multiple use (set reusable to True). In addition, you can create your own token for the merchant, send it to us within the object, and set rules as to whether you want to decline payments with duplicate payment details.
 
@@ -20,15 +20,15 @@ To generate a Token for future use at the same time as submitting a payment, use
    }
 ```
 
-Once the token is created and you have stored it against the customer’s account detail, you can use it to execute payments for the customer. To use a tokenised payment instrument, use the relevant PaymentToken* requestTypes. If you supply a token value, we will store that, otherwise we'll generate a token value and pass it back to you in the response.
+Once the token is created and you have stored it against the customer’s account detail, you can use it to execute payments for the customer. To use a tokenized payment instrument, use the relevant PaymentToken* requestTypes. If you supply a token value, we will store that, otherwise we'll generate a token value and pass it back to you in the response.
 
-When a customer is checking out, and you've previously tokenised their payment details (and you’ve stored the token with the customer’s account record in your systems), you can request token details to enable the customer to confirm they want to pay with the stored payment instrument. To do this, use the GET endpoint, providing the ```tokenid``` to receive a PaymentTokenDetails response. Our suggestion is you use the ```last4``` value and ```brand``` to enable the customer to correctly identify their payment instrument.
+When a customer is checking out, and you've previously tokenized their payment details (and you’ve stored the token with the customer’s account record in your systems), you can request token details to enable the customer to confirm they want to pay with the stored payment instrument. To do this, use the GET endpoint, providing the ```tokenid``` to receive a PaymentTokenDetails response. Our suggestion is you use the ```last4``` value and ```brand``` to enable the customer to correctly identify their payment instrument.
 
 You can then use the Payment Token in the relevant Primary Payment request type to execute the customer payment. To Update or Delete customer payment tokens, see the Token section.
 
 ### Create a Payment Token
 
-To tokenise a payment card separately to a payment, POST the payload below to /payment-tokens (example provided for card, but use the relevant paymentMethod object for the instrument of your choice).
+To tokenize a payment card separately to a payment, POST the payload below to /payment-tokens (example provided for card, but use the relevant paymentMethod object for the instrument of your choice).
 
 ```json
 {
@@ -53,7 +53,7 @@ To tokenise a payment card separately to a payment, POST the payload below to /p
 }
 ```
 
-If you want to set your own value for the token, include the ```value``` attribute in the createToken object. If you don't include this, we'll define the token value and return it in the response as ```value``` attribute in the paymentToken object. The ```reuseable``` attribute is boolean. If set to true, the token can be reused. If false, it has only a single use. The ```declineDuplicates``` attribute is also boolean. If you've provided your own token value for payment instrument, and a payment is submitted with the same payment card, but untokenised, the system will decline the payment (this is a fraud control you can set at token level).
+If you want to set your own value for the token, include the ```value``` attribute in the createToken object. If you don't include this, we'll define the token value and return it in the response as ```value``` attribute in the paymentToken object. The ```reuseable``` attribute is boolean. If set to true, the token can be reused. If false, it has only a single use. The ```declineDuplicates``` attribute is also boolean. If you've provided your own token value for payment instrument, and a payment is submitted with the same payment card, but untokenized, the system will decline the payment (this is a fraud control you can set at token level).
 
 Use the following sample generator to see payloads and responses:
 
@@ -157,17 +157,17 @@ You can retrieve the payment card data associated with a token, and the token se
 
 ## Ver más
 
-- [Tipos de Solicitud](?path=docs/español/pagos/3-1-tipos-solicitudes.md)
-- [Métodos de Pagos](?path=docs/español/pagos/3-2-metodos-pago.md)
-- [Formas de Pagos](?path=docs/español/pagos/3-3-formas-pagos.md)
-- [Pos-autorización & Devoluciones](?path=docs/español/pagos/3-4-post-aut.md)
-- [3-D Secure](?path=docs/español/pagos/3-5-3d-secure.md)
-- [Verificación de Tarjeta](?path=docs/español/pagos/3-6-verificacion-tarjeta.md)
-- [Conversion de Moneda](?path=docs/español/pagos/3-7-conversion-moneda.md)
-- [Redirección Administrada](?path=docs/español/pagos/3-8-redireccion-administrada.md)
-- [Pedidos](?path=docs/español/pagos/3-9-pedidos.md)
-- [URL Pago](?path=docs/español/pagos/3-10-pago-url.md)
-- [Pagos Recurrentes](?path=docs/español/pagos/3-11-pagos-recurrentes.md)
-- [Códigos de Error](?path=docs/español/pagos/3-13-codigos-error.md)
+- [3-D Secure](?path=docs/english/payments/3-5-3d-secure.md)
+- [Card Verification](?path=docs/english/payments/3-6-card-verification.md)
+- [Currency Conversion](?path=docs/english/payments/3-7-currency-conversion.md)
+- [Error codes](?path=docs/english/payments/3-13-error-codes.md)
+- [Managed Redirect](?path=docs/english/payments/3-8-managed-redirect.md)
+- [Orders](?path=docs/english/payments/3-9-orders.md)
+- [Payment Methods](?path=docs/english/payments/3-2-payment-methods.md)
+- [Payment Types](?path=docs/english/payments/3-3-payment-types.md)
+- [Payment URL](?path=docs/english/payments/3-10-payment-url.md)
+- [Post-authorization & Returns](?path=docs/english/payments/3-4-post-auth.md)
+- [Recurring Payments](?path=docs/english/payments/3-11-recurring-payments.md)
+- [Request Types](?path=docs/english/payments/3-1-request-types.md)
 
 ---
