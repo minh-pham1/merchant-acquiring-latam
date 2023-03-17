@@ -21,11 +21,11 @@ tags:
   - name: Search for Reason, Sub-Reason and Symptom for Cases to be opened in Salesforce
   - name: Request Opening (Cases in Salesforce)
 paths:
-  "/bwa/wsm/merchantinformation/workingHours/config/motivos":
+  "/bwa/abertura-caso/config/motivos":
     get:
       tags:
         - Search for Reason, Sub-Reason and Symptom for Cases to be opened in Salesforce
-      x-proxy-name: Merchant Requests (Cases) - Open
+      x-proxy-name: Merchant Requests (Cases) - Search for Reason to be used for Salesforce Case Opening
       x-group-name: Merchant Information & Cases
       x-child-product-name: Digital Solutions
       description: Merchant Requests (Cases) - Open
