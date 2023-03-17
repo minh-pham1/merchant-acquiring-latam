@@ -102,7 +102,7 @@ To access the APIs, start by acquiring an [Access Token](../api/?type=post&path=
 
 [Merchant Relationship Hierarchy - Remove](../api/?type=post&path=/bwa/hierarquia-relacionamento/v1/relacionamento/excluir)
 
-[Merchant Requests (Cases) - Open](../api/?type=get&path=/bwa/wsm/merchantinformation/workingHours/config/motivos)
+[Merchant Requests (Cases) - Search for Reason to be used for Salesforce Case Opening](../api/?type=get&path=/bwa/abertura-caso/config/motivos)
 
 [Merchant Requests (Cases) - Search for Sub-Reasons to be used for Salesforce Case Opening by Reason](../api/?type=get&path=/bwa/abertura-caso/config/sub-motivos/{Id})
 

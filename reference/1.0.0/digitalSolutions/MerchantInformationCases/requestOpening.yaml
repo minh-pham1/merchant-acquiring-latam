@@ -21,7 +21,7 @@ tags:
   - name: Search for Reason, Sub-Reason and Symptom for Cases to be opened in Salesforce
   - name: Request Opening (Cases in Salesforce)
 paths:
-  "/bwa/wsm/merchantinformation/workingHours/config/motivos":
+  "/bwa/abertura-caso/config/motivos":
     get:
       tags:
         - Search for Reason, Sub-Reason and Symptom for Cases to be opened in Salesforce
