@@ -64,7 +64,7 @@ featuredFeatures:
         title: Get Resume
         type: "get"        
         path: "/bwa/cashflow/v1/resume"
-- title: Logistics
+  - title: Logistics
     description: Request new terminals to expand merchant business, paper rolls to keep selling, terminal replacements, withdrawals and confirm status for your field services requests.
     relatedDocs:
       - relatedDoc: 
