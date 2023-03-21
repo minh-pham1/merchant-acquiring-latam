@@ -43,41 +43,46 @@ benefits:
     description: Dedicated specialists and industry experts who understand the complexities of your business.
 featuredFeatures:
   - title: Boarding
-    description:  Onboard merchants to start accepting payments online or in-store, and streamline your process for registering new terminals and equipment.
+    description: Onboard merchants to start accepting payments online or in-store, and streamline your process for registering new terminals and equipment.
     relatedDocs:
       - relatedDoc: 
         title: Boarding
-        description: Boarding end-to-end. 
         link: "/docs/english/boarding/1-boarding.md"
     relatedAPIs:
       - relatedAPI: 
         title: Create Application
-        description: Saves the whole application data.
         type: "post"        
         path: "/api/v1/boarding"
-  - title: Logistics
-    description:  Request new terminals to expand merchant business, paper rolls to keep selling, terminal replacements, withdrawals and confirm status for your field services requests..
+  - title: Digital Solutions
+    description: Digital Solutions.
+    relatedDocs:
+      - relatedDoc: 
+        title: Home
+        link: "docs/english/digitalSolutions/HomepageEditada.md"
+    relatedAPIs:
+      - relatedAPI: 
+        title: Get Resume
+        type: "get"        
+        path: "/bwa/cashflow/v1/resume"
+- title: Logistics
+    description: Request new terminals to expand merchant business, paper rolls to keep selling, terminal replacements, withdrawals and confirm status for your field services requests.
     relatedDocs:
       - relatedDoc: 
         title: Financial Institution
-        description: Intended for financial institutions and acquirers providing merchant support
-        link: "docs/english/logistics/2-1-financial-institution.md"
+        link: "docs/english/logistics/2-logistics.md"
     relatedAPIs:
       - relatedAPI: 
         title: Cancel Order
-        description: Cancel Order.
         type: "post"        
         path: "/v1/cancel-order"
   - title: Payments
-    description:  Create a seamless and secure purchase experience across all online and digital channels by leveraging our comprehensive set of features that will enable you to accept all major payment methods and enhance your customer's online shopping experience
+    description:  Create a seamless and secure purchase experience across all online and digital channels by leveraging our comprehensive set of features that will enable you to accept all major payment methods and enhance your customer's online shopping experience.
     relatedDocs:
       - relatedDoc: 
         title: Recurring Payments
-        description: The payment schedules API allows you to create and manage a recurring payment schedule for an individual consumer.
-        link: "docs/english/payments/3-11-recurring-payments.md"
+        link: "docs/english/payments/3-payments.md"
     relatedAPIs:
       - relatedAPI: 
         title: Account Verification
-        description: Use this to perform an account verification for a payment card or payment token
         type: "post"        
         path: "/account-verification"
