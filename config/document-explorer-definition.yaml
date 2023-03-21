@@ -67,7 +67,7 @@
           link: docs/english/payments/3-11-recurring-payments.md
         - title: Request Types
           link: docs/english/payments/3-1-request-types.md
-        - title: Tokenisation
+        - title: Tokenization
           link: docs/english/payments/3-12-tokenisation.md
   - title: Brazil
     sections:
@@ -89,7 +89,7 @@
           link: docs/english/digitalSolutions/PrepaymentInformation.md
         - title: Token Access
           link: docs/english/digitalSolutions/TokenGenerationforWeb-services.md
-  - title: Related links
+  - title: Related Links
     link: docs/english/related-links.md
-  - title: Release notes
+  - title: Release Notes
     link: docs/release-notes/2023/english.md
