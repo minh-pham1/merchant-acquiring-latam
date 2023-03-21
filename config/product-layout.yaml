@@ -43,6 +43,7 @@ benefits:
     description: Dedicated specialists and industry experts who understand the complexities of your business.
 featuredFeatures:
   - title: Boarding
+    groupName: Merchant Acquiring
     description: Onboard merchants to start accepting payments online or in-store, and streamline your process for registering new terminals and equipment.
     relatedDocs:
       - relatedDoc: 
@@ -54,6 +55,7 @@ featuredFeatures:
         type: "post"        
         path: "/api/v1/boarding"
   - title: Digital Solutions
+    groupName: Merchant Acquiring
     description: Digital Solutions.
     relatedDocs:
       - relatedDoc: 
@@ -65,6 +67,7 @@ featuredFeatures:
         type: "get"        
         path: "/bwa/cashflow/v1/resume"
   - title: Logistics
+    groupName: Merchant Acquiring
     description: Request new terminals to expand merchant business, paper rolls to keep selling, terminal replacements, withdrawals and confirm status for your field services requests.
     relatedDocs:
       - relatedDoc: 
@@ -76,6 +79,7 @@ featuredFeatures:
         type: "post"        
         path: "/v1/cancel-order"
   - title: Payments
+    groupName: Merchant Acquiring
     description:  Create a seamless and secure purchase experience across all online and digital channels by leveraging our comprehensive set of features that will enable you to accept all major payment methods and enhance your customer's online shopping experience.
     relatedDocs:
       - relatedDoc: 
