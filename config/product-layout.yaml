@@ -28,100 +28,65 @@
 # the delivery of this work
 ################################################################################
 header:
-  productName: Merchant Acquiring - LATAM
+#  productName: Merchant Acquiring - LATAM
+#  image: 
+#    link: "/assets/images/Fiserv_Logo.jpg"
+#    altText: Fiserv
   productionDescription: Expand your business’ reach by taking the acceptance process to a different level. Merchants will expand their service and provide different experiences to their clients by leveraging new features and services at the point-of-sale, in real-time to increase their billing and usage.
-  image: 
-    link: "/assets/images/Fiserv_Logo.jpg"
-    altText: Fiserv
+getStarted: docs/english/getting-started.md
+benefits:
+  - title: Customized Solutions
+    description: Whatever your business needs – be it full, semi or direct we've got your integration model.
+  - title: End to End Value
+    description: Create rewards programs for your merchants or develop loyalty apps for our Marketplace.
+  - title: Work with the Best
+    description: Dedicated specialists and industry experts who understand the complexities of your business.
 featuredFeatures:
   - title: Boarding
-    description:  Onboard merchants to start accepting payments online or in-store, and streamline your process for registering new terminals and equipment.
-    tags: ["Boarding"]
-    bullets: ["Boarding"]  
+    groupName: Merchant Acquiring
+    description: Onboard merchants to start accepting payments online or in-store, and streamline your process for registering new terminals and equipment.
     relatedDocs:
       - relatedDoc: 
         title: Boarding
-        description: Boarding end-to-end. 
         link: "/docs/english/boarding/1-boarding.md"
     relatedAPIs:
       - relatedAPI: 
         title: Create Application
-        description: Saves the whole application data.
         type: "post"        
         path: "/api/v1/boarding"
+  - title: Digital Solutions
+    groupName: Merchant Acquiring
+    description: Provides support to Fiserv customers through APIs for managing sales, payments, cryptographic control, token generation, sending SMS and emails, as well as device control. More than 40 applications are coordinated for internal and external administration of services.
+    relatedDocs:
+      - relatedDoc: 
+        title: Home
+        link: "docs/english/digitalSolutions/HomepageEditada.md"
+    relatedAPIs:
       - relatedAPI: 
-        title: Update Application
-        description: Update the whole application data.
-        type: "put"        
-        path: "/api/v1/boarding/{id}"
-      - relatedAPI: 
-        title: New Terminal
-        description: Adds a new terminal to an already boarded application.
-        type: "post"        
-        path: "/api/v1/boarding/{id}/terminals"
+        title: Get Resume
+        type: "get"        
+        path: "/bwa/cashflow/v1/resume"
   - title: Logistics
-    description:  Request new terminals to expand merchant business, paper rolls to keep selling, terminal replacements, withdrawals and confirm status for your field services requests..
-    tags: ["Logistics"]
-    bullets: ["Logistics"]  
+    groupName: Merchant Acquiring
+    description: Request new terminals to expand merchant business, paper rolls to keep selling, terminal replacements, withdrawals and confirm status for your field services requests.
     relatedDocs:
       - relatedDoc: 
         title: Financial Institution
-        description: Intended for financial institutions and acquirers providing merchant support
-        link: "docs/english/logistics/2-1-financial-institution.md"
-      - relatedDoc:
-        title: Field Services Provider
-        description: designed to assist new service providers when integrating with Fiserv.
-        link: "docs/english/logistics/2-2-field-services-provider.md"
+        link: "docs/english/logistics/2-logistics.md"
     relatedAPIs:
       - relatedAPI: 
         title: Cancel Order
-        description: Cancel Order.
         type: "post"        
         path: "/v1/cancel-order"
-      - relatedAPI: 
-        title: Install
-        description: Post API Install Request.
-        type: "post"        
-        path: "/v1/install"
-      - relatedAPI: 
-        title: Reschedule
-        description: Post API Reschedule the Visit of Technician.
-        type: "post"        
-        path: "/v1/reschedule"
   - title: Payments
-    description:  Create a seamless and secure purchase experience across all online and digital channels by leveraging our comprehensive set of features that will enable you to accept all major payment methods and enhance your customer's online shopping experience
-    tags: ["Payments"]
-    bullets: ["Payments"]  
+    groupName: Merchant Acquiring
+    description:  Create a seamless and secure purchase experience across all online and digital channels by leveraging our comprehensive set of features that will enable you to accept all major payment methods and enhance your customer's online shopping experience.
     relatedDocs:
       - relatedDoc: 
         title: Recurring Payments
-        description: The payment schedules API allows you to create and manage a recurring payment schedule for an individual consumer.
-        link: "docs/english/payments/3-11-recurring-payments.md"
-      - relatedDoc:
-        title: 3-D Secure
-        description: When using our Gateway and Fiserv as the 3-D Secure provider, the authentication is performed in-line with the existing transaction flow.
-        link: "docs/english/payments/3-5-3d-secure.md"
-      - relatedDoc: 
-        title: Tokenisation
-        description: Tokens are useful when storing the details of a customer’s payment instruments to secure and speed up checkout later.
-        link: "docs/english/payments/3-12-tokenisation.md"
-      - relatedDoc: 
-        title: Payment URL
-        description: Payment URL is a functionality that allows you to provide a link to your customers which then takes the customer to a Fiserv-hosted page to securely make the payment with their preferred payment method, whenever convenient for them.
-        link: "docs/english/payments/3-10-payment-url.md"
+        link: "docs/english/payments/3-payments.md"
     relatedAPIs:
       - relatedAPI: 
         title: Account Verification
-        description: Use this to perform an account verification for a payment card or payment token
         type: "post"        
         path: "/account-verification"
-      - relatedAPI: 
-        title: URL Creation
-        description: Use this to generate an embedding payment link.
-        type: "post"        
-        path: "/payment-url"
-      - relatedAPI: 
-        title: Token Creation
-        description: Use this to create a payment token from a payment card.
-        type: "post"        
-        path: "/payment-tokens"

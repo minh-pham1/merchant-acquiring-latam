@@ -1258,4 +1258,33 @@ components:
             - "Rejeitado (meaning Rejected)"
             - "Pago (meaning Paid)"
             - "Enviado (meaning Sent)"
+        codBandeira:
+          type: string
+          description: Scheme code
+          example: 025
+        descBandeira:
+          type: string
+          description: Scheme description
+          example: ELO Full
+        codProduto:
+          type: string
+          description: Product code
+          example: 110
+        descProduto:
+          type: string
+          description: Product description
+          example: Acq-ELO Full Credito
+        lockinType:
+          type: string
+          description: Locking type
+          example: 002 - Gravame
+          enum:
+            - "001 - Cessão"
+            - "002 - Gravame"
+            - "003 - Onus Bonus"
+            - "004 - Bloqueio Judicial"
+        finInstitutionTaxId:
+          type: string
+          description: Locking type taxId of finance institution
+          example: 73850789000143
       title: TransacaoDetalhe
