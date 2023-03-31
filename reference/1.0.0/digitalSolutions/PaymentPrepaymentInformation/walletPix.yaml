@@ -50,13 +50,13 @@ paths:
           required: false
           type: string
       responses:
-        '200':
+        "200":
           description: OK
           schema:
             $ref: '#/definitions/TransactionQRCodeDTO'
-        '404':
+        "404":
           description: Not Found
-        '500':
+        "500":
           description: Internal Server Error
   /pix/credentials/{pspCode}/{taxIdNumber1}:
     get:
@@ -123,6 +123,14 @@ definitions:
   TransactionQRCodeDTO:
     type: object
     properties:
+      institutionNumber:
+        type: string
+        example: E.g. the number '000004' refers to 'SICREDI
+        description: Alliance - institution number
+      serviceContractId:
+        type: string
+        example: E.g. 101, 104, 110, 113, 149
+        description: Alliance - service contract ID
       taxIdNumber:
         type: string
         example: E.g. CPF with 11 digits (###.###.###-##) and CNPJ with 14 digits(##.###.###/####-##)
@@ -133,49 +141,53 @@ definitions:
       terminalId:
         type: string
         description: Terminal ID linked to Merchant ID
-      status:
+      codePSP:
         type: string
-        example: 'Existing status types: UNAUTHORIZED,CANCELED,UNDONE,UNCONFIRMED,APPROVED,TIMEOUT '
-        description: QRCode transaction status
-      dateQRCodeGenerated:
+        description: PSP - Code
+      wallet:
         type: string
-        description: QRCode generation date
-      confirmationReceived:
-        type: string
-        description: Settlement date/time QRCode
-      Amount:
-        type: string
-        description: QRCode value
-      Wallet:
-        type: string
-        example: E.g. QR-Code Elo
-        description: Defines the transaction type
+        example: E.g. Pix
+        description: Wallet
       included:
         type: string
-        description: creation date
-      InstitutionNumber:
-        type: string
-        example: E.g. the number '000004' refers to 'SICREDI
-        description: 'The number of the institution according to the records in brfts '
-      ServiceContractId:
-        type: string
-        example: E.g. 101, 104, 110, 113, 149
-        description: Service contract identification number that define the parameters and rules of this contract
-      amountTransaction:
-        type: string
-      Undo date:
-        type: string
-        description: Date of authorization of undoing
-      Undo code:
-        type: string
-        description: Undo authorizing code
-      Undo reason code:
-        type: string
-        description: Undo reason code
+        description: Transaction - creation date
       nsu:
         type: string
-      pspcode:
+        description: Transaction - NSU
+      amountTransaction:
         type: string
+        description: Transaction - value
+      amountTransactionFormatted:
+        type: string
+        description: 'Transaction - formatted value '
+      dateQRCodeGenerated:
+        type: string
+        description: QRCode - generation date
+      confirmationReceived:
+        type: string
+        description: Confirmation - date and time
+      undoneDateTransaction:
+        type: string
+        description: Undone - date and time
+      undoneResponseCode:
+        type: string
+        description: Undone - response code
+      undoneReason:
+        type: string
+        description: Undone - reason
+      referenceNumberFEPAS:
+        type: string
+        description: FEPAS - reference number
+      authorizationCode:
+        type: string
+        description: Authorization Code
+      systemRetreivalRefrenceNumber:
+        type: string
+        description: SRRN
+      status:
+        type: string
+        example: 'Existing status types: UNAUTHORIZED, CANCELED, UNDONE, UNCONFIRMED, APPROVED, TIMEOUT'
+        description: Transaction - status
   CredentialDataResponse:
     type: object
     properties:
