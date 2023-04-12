@@ -39,9 +39,7 @@
         - title: Financial Institution
           link: docs/english/logistics/2-1-financial-institution.md
         - title: Field Services Provider
-          link: docs/english/logistics/2-2-field-services-provider.md      
-          sections:
-            - title: test
+          link: docs/english/logistics/2-2-field-services-provider.md
       - title: Payments
         link: docs/english/payments/3-payments.md
         sections:
