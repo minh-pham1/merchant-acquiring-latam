@@ -6,13 +6,13 @@ tags: [Release Notes, January]
 
 ## March 2023
 
-News
+What's New
 
 - Endpoints related to: Service Order Information (cancellationReasonRMP, consultationPartnerEstablishment, contractStatus, geoLocation, modalConsultation)
 - Endpoints related to: Sales Information (salesTracking)
 - Endpoints related to: Payment & Prepayment (cashflow, paymentsMade, releasedPayments, anticipationsRealized)
 
-Improvements
+Fixed
 
 - AT
 
@@ -20,11 +20,11 @@ Fixes
 
 - **BANWORKS** is now called **Digital Solutions**
 
-Known bugs
+Known Issues
 
 - AT
 
-Expired
+Obsolete
 
 - Merchant Devices - Battery Information - Off
 
@@ -54,7 +54,7 @@ Known Issues
 
 - N / A
 
-Deprecated
+Obsolete
 
 - N / A
 
@@ -78,6 +78,6 @@ Known Issues
 
 - N/A
 
-Deprecated
+Obsolete
 
 - Old portal.
