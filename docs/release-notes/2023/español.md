@@ -6,8 +6,7 @@ tags: [Release Notes, Enero, Febrero]
 
 ## Marzo de 2023
 
-
-Noticias
+Qué hay de nuevo
 
 - Puntos finales relacionados con: información de la orden de servicio (cancellationReasonRMP, consultationPartnerEstablishment, contractStatus, geoLocation, modalConsultation)
 - Puntos finales relacionados con: Información de ventas (salesTracking)
@@ -21,11 +20,11 @@ Arreglos
 
 - **BANWORKS** ahora se llama **Soluciones digitales**
 
-Errores conocidos
+Problemas conocidos
 
 - EN
 
-Venció
+Obsoleto
 
 - Dispositivos del comerciante - Información de la batería - Apagado
 
@@ -47,7 +46,7 @@ Mejoras
 
 - N / A
 
-Fijado
+Arreglos
 
 - N / A
 
@@ -71,7 +70,7 @@ Mejoras
 
 - Códigos de error, manejo de errores y notificaciones.
 
-Fijado
+Arreglos
 
 - N / A
 
