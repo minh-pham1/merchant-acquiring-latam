@@ -29,7 +29,9 @@
 ################################################################################
 
 - sections:
-  - title: Solutions
+- title: Payments
+    link: docs/english/getting-started.md
+- title: Solutions
     sections: 
       - title: Boarding
         link: docs/english/boarding/1-boarding.md
