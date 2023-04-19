@@ -29,50 +29,50 @@
 ################################################################################
 
 - sections:
-  - title: Payments
+  - title: Getting Started
     link: docs/english/getting-started.md
   - title: Solutions
-      sections: 
-        - title: Boarding
-          link: docs/english/boarding/1-boarding.md
-        - title: Logistics
-          link: docs/english/logistics/2-logistics.md
-          sections:
-          - title: Financial Institution
-            link: docs/english/logistics/2-1-financial-institution.md
-          - title: Field Services Provider
-            link: docs/english/logistics/2-2-field-services-provider.md
-        - title: Payments
-          link: docs/english/payments/3-payments.md
-          sections:
-          - title: 3-D Secure
-            link: docs/english/payments/3-5-3d-secure.md
-          - title: Card Verification
-            link: docs/english/payments/3-6-card-verification.md
-          - title: Currency Conversion
-            link: docs/english/payments/3-7-currency-conversion.md
-          - title: Error Codes
-            link: docs/english/payments/3-13-error-codes.md
-          - title: Managed Redirect
-            link: docs/english/payments/3-8-managed-redirect.md
-          - title: Orders
-            link: docs/english/payments/3-9-orders.md
-          - title: Payment Methods
-            link: docs/english/payments/3-2-payment-methods.md
-          - title: Payment Types
-            link: docs/english/payments/3-3-payment-types.md          
-          - title: Payment URL
-            link: docs/english/payments/3-10-payment-url.md
-          - title: Post-authorisation & Returns
-            link: docs/english/payments/3-4-post-auth.md
-          - title: Recurring Payments
-            link: docs/english/payments/3-11-recurring-payments.md
-          - title: Request Types
-            link: docs/english/payments/3-1-request-types.md
-          - title: Tokenization
-            link: docs/english/payments/3-12-tokenisation.md
-    - title: Brazil
+    sections: 
+    - title: Boarding
+      link: docs/english/boarding/1-boarding.md
+    - title: Logistics
+      link: docs/english/logistics/2-logistics.md
       sections:
+      - title: Financial Institution
+        link: docs/english/logistics/2-1-financial-institution.md
+      - title: Field Services Provider
+        link: docs/english/logistics/2-2-field-services-provider.md
+    - title: Payments
+      link: docs/english/payments/3-payments.md
+      sections:
+      - title: 3-D Secure
+        link: docs/english/payments/3-5-3d-secure.md
+      - title: Card Verification
+        link: docs/english/payments/3-6-card-verification.md
+      - title: Currency Conversion
+        link: docs/english/payments/3-7-currency-conversion.md
+      - title: Error Codes
+        link: docs/english/payments/3-13-error-codes.md
+      - title: Managed Redirect
+        link: docs/english/payments/3-8-managed-redirect.md
+      - title: Orders
+        link: docs/english/payments/3-9-orders.md
+      - title: Payment Methods
+        link: docs/english/payments/3-2-payment-methods.md
+      - title: Payment Types
+        link: docs/english/payments/3-3-payment-types.md          
+      - title: Payment URL
+        link: docs/english/payments/3-10-payment-url.md
+      - title: Post-authorisation & Returns
+        link: docs/english/payments/3-4-post-auth.md
+      - title: Recurring Payments
+        link: docs/english/payments/3-11-recurring-payments.md
+      - title: Request Types
+        link: docs/english/payments/3-1-request-types.md
+      - title: Tokenization
+        link: docs/english/payments/3-12-tokenisation.md
+- title: Brazil
+  sections:
         - title: Digital Solutions
           sections:
           - title: Home
@@ -91,7 +91,7 @@
             link: docs/english/digitalSolutions/PrepaymentInformation.md
           - title: Token Access
             link: docs/english/digitalSolutions/TokenGenerationforWeb-services.md
-  - title: Related Links
-    link: docs/english/related-links.md
-  - title: Release Notes
-    link: docs/release-notes/2023/english.md
+- title: Related Links
+  link: docs/english/related-links.md
+- title: Release Notes
+  link: docs/release-notes/2023/english.md
