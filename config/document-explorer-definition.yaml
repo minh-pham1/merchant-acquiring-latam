@@ -30,7 +30,7 @@
 
 - sections:
 - title: Payments
-    link: docs/english/getting-started.md
+  link: docs/english/getting-started.md
 - title: Solutions
     sections: 
       - title: Boarding
