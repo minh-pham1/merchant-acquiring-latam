@@ -6,7 +6,6 @@ tags: [Release Notes, January]
 
 ## Março 2023
 
-
 Novidades
 
 - Endpoints relacionados a: Service Order Information (cancellationReasonRMP, consultationPartnerEstablishment, contractStatus, geoLocation, modalConsultation)
@@ -25,7 +24,7 @@ Erros conhecidos
 
 - N / A
 
-Caducado
+Obsoleto
 
 - Merchant Devices - Battery Information - Desligado
 
@@ -56,7 +55,7 @@ Erros conhecidos
 
 - N / A
 
-Caducado
+Obsoleto
 
 - N / A
 
@@ -80,6 +79,6 @@ Erros conhecidos
 
 - N/A
 
-Caducado
+Obsoleto
 
 - Portal antigo.
