@@ -7,33 +7,32 @@ tags: [Release Notes, January]
 ## Março 2023
 
 
-### Novidades
+Novidades
 
 - Endpoints relacionados a: Service Order Information (cancellationReasonRMP, consultationPartnerEstablishment, contractStatus, geoLocation, modalConsultation)
 - Endpoints relacionados a: Sales Information (salesTracking)
 - Endpoints relacionados a: Payment & Prepayment (cashflow, paymentsMade, releasedPayments, anticipationsRealized)
 
-### Melhorias
+Melhorias
 
 - N / A
 
-### Correções
+Correções
 
 - **BANWORKS** passa a se chamar **Digital Solutions**
 
-### Erros conhecidos
+Erros conhecidos
 
 - N / A
 
-### Caducado
+Caducado
 
 - Merchant Devices - Battery Information - Desligado
 
 
 ## Feverreiro 2023
 
-
-### Novidades
+Novidades
 
 **BANWORKS**
 
@@ -45,19 +44,19 @@ tags: [Release Notes, January]
 - Sales Information Endpoints
 - Service Order Information Endpoints
 
-### Melhorias
+Melhorias
 
 - N / A
 
-### Correções
+Correções
 
 - N / A
 
-### Erros conhecidos
+Erros conhecidos
 
 - N / A
 
-### Caducado
+Caducado
 
 - N / A
 
@@ -65,22 +64,22 @@ tags: [Release Notes, January]
 
 v1.0.0 (a versão do documento de openAPI que a define, contendo a mudança)
 
-### Novidades
+Novidades
 
 - Migração ao novo portal
 
-### Melhorias
+Melhorias
 
 - Código de erros, tratamento de erros e notificação.
 
-### Correções
+Correções
 
 - N/A
 
-### Erros conhecidos
+Erros conhecidos
 
 - N/A
 
-### Caducado
+Caducado
 
 - Portal antigo.
