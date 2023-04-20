@@ -2,7 +2,7 @@
 tags: [Getting Started, Payments, Post-authorisation & Returns]
 ---
 
-# Post-authorisation & Returns
+# Post-autorización y Devoluciones
 
 ## /payments/{transaction-id}
 
